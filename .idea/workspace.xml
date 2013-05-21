@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369167051414" ignored="false" />
+    <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369172216750" ignored="false" />
     <file path="/app.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369099000734" ignored="false" />
     <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369149947133" ignored="false" />
     <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102198656" ignored="false" />
@@ -14,10 +15,9 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369101591297" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102750367" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369170347240" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369172165994" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369167105760" ignored="false" />
     <file path="$PROJECT_DIR$/dist/views/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369168808954" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369170302976" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +55,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/heroku/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="260" selection-end="260" vertical-scroll-proportion="0.33951497">
+            <state line="14" column="36" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,8 +156,8 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/dist/Procfile" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/views/main.html" />
       </list>
     </option>
   </component>
@@ -354,7 +363,11 @@
       <created>1369170351262</created>
       <updated>1369170351262</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="wiring up nginx">
+      <created>1369172169159</created>
+      <updated>1369172169159</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -423,7 +436,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="gonna try linode deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="wiring up nginx" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -443,6 +456,7 @@
     <MESSAGE value="trying to deploy" />
     <MESSAGE value="heroku deploy success - tweakage" />
     <MESSAGE value="gonna try linode deploy" />
+    <MESSAGE value="wiring up nginx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -518,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="37" selection-end="37" vertical-scroll-proportion="0.025185185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
@@ -534,7 +541,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/heroku/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="260" selection-end="260" vertical-scroll-proportion="0.33951497">
+        <state line="14" column="36" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

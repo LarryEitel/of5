@@ -2,3 +2,5 @@ node_modules
 .tmp
 .sass-cache
 app/components
+logs
+local_settings.py

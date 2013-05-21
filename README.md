@@ -93,33 +93,33 @@ goto `http://of.xchg.com`
 
     # Add the following
 
-    upstream m_server {
-        server 127.0.0.1:2005 fail_timeout=0;
+upstream m_server {
+    server 127.0.0.1:2005 fail_timeout=0;
+}
+
+server {
+    listen   80;
+    server_name m.xchg.com;
+    access_log  /var/log/nginx/m.xchg.com.access.log;
+    error_log  /var/log/nginx/m.xchg.com.error.log warn;
+
+    location / {
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+            proxy_redirect off;
+
+            proxy_pass   http://m_server;
     }
 
-    server {
-        listen   80;
-        server_name m.xchg.com;
-        access_log  /var/log/nginx/m.xchg.com.access.log;
-        error_log  /var/log/nginx/m.xchg.com.error.log warn;
 
-        location / {
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header Host $http_host;
-                proxy_redirect off;
-
-                proxy_pass   http://m_server;
-        }
-
-
-        location /static {
-            root /home/larry/www/of5/dist;
-        }
-
-        location /media {
-            root /home/larry/www/of5/dist;
-        }
+    location /static {
+        root /home/larry/www/of5/dist;
     }
+
+    location /media {
+        root /home/larry/www/of5/dist;
+    }
+}
 
     server {
         listen   443;

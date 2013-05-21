@@ -1,0 +1,13 @@
+<h4>Places</h4>
+<table class="table table-striped table-bordered table-hover">
+    <tbody>
+    <tr ng-repeat="plc in plcs">
+        <td ng-click="edit(plc)">{{plc.slug}}</td>
+        <td ng-click="view(plc)">{{plc.pts}}</td>
+        <td>
+            <i class="icon-view" ng-click="view(plc)">V</i> |
+            <i class="icon-edit" ng-click="edit(plc)">Ed</i>
+        </td>
+    </tr>
+    </tbody>
+</table>

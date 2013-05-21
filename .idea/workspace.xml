@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
@@ -15,7 +14,7 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369101591297" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102750367" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369170306835" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369170347240" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369167105760" ignored="false" />
     <file path="$PROJECT_DIR$/dist/views/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369168808954" ignored="false" />
     <file path="$PROJECT_DIR$/dist/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369170302976" ignored="false" />
@@ -59,7 +58,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heroku/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="28" selection-start="0" selection-end="279" vertical-scroll-proportion="0.52307695">
+            <state line="14" column="17" selection-start="260" selection-end="260" vertical-scroll-proportion="0.33951497">
               <folding />
             </state>
           </provider>
@@ -351,14 +350,18 @@
       <created>1369169198953</created>
       <updated>1369169198953</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="gonna try linode deploy">
+      <created>1369170351262</created>
+      <updated>1369170351262</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="78" width="1166" height="906" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328877" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -531,7 +534,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/heroku/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="0" selection-end="279" vertical-scroll-proportion="0.52307695">
+        <state line="14" column="17" selection-start="260" selection-end="260" vertical-scroll-proportion="0.33951497">
           <folding />
         </state>
       </provider>

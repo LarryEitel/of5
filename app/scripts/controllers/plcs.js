@@ -53,19 +53,18 @@ angular.module('of5App')
     }])
 
 
-    .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Plcs', 'Plc', function ($scope, $location, $routeParams, Plcs, Plc) {
+    .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Plcs', 'Plc', function ($scope, $location, $routeParams, Plcs) {
 
         $scope.Plcs = new Plcs();
 
         $scope.init = function () {
+            console.log('PlcsCtrl');
             $scope.Plcs
 //                .$find({where: {slug: "2a"}})
                 .$find({where: {}, max_results: 10})
-                .success(function(raw) {
-                    console.log('PlcsCtrl.raw', raw);
-                    $scope.raw = raw;
-                    var plcs = $scope.Plcs.$fetch();
-                    $scope.plcs = plcs;
+                .success(function(items) {
+                    console.log('PlcsCtrl.items', items._items);
+                    $scope.items = items._items;
                 });
         };
 

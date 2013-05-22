@@ -92,6 +92,7 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc'
+        //'-W015': true
       },
       all: [
         'Gruntfile.js',
@@ -300,8 +301,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    // 'jshint',
-    // 'test',
+    'jshint',
+    'test',
     'coffee',
     'compass:dist',
     'useminPrepare',

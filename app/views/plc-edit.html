@@ -17,7 +17,7 @@
         <input type="text" ng-model="lng">
 
         <hr>
-        <button class="btn btn-primary" ng-click="save()" ng-disabled="!hasChanges()||form.$invalid">Save</button>
+        <button class="btn btn-primary" ng-click="update()" ng-disabled="!hasChanges()||form.$invalid">Save</button>
         <button class="btn btn-warning" ng-click="abandonChanges()">Abandon</button>
         <button class="btn btn-danger" ng-click="remove()" ng-disabled="!plc.$id()">Remove</button>
     </form>

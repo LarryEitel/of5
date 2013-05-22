@@ -1,16 +1,16 @@
 
 
-<h4><a ng-href="#/">Home</a> | <a ng-href="#/plcs">Places</a> | <a ng-href="#/plc/{{plc._id}}">View</a></h4>
+<h4><a ng-href="#/">Home</a> | <a ng-href="#/plcs">Places</a> | <a ng-href="#/plc/{{item._id}}">View</a></h4>
 
 
 <div class="container-fluid" ng-controller="PlcEditCtrl">
-    <h4>{{plc.dNam}}</h4>
+    <h4>{{item.dNam}}</h4>
 
 
     <form name="form">
         <legend>Edit Place</legend>
         <label>Label</label>
-        <input type="text" ng-model="plc.lbl">
+        <input type="text" ng-model="item.lbl">
         <label>Latitude</label>
         <input type="text" ng-model="lat">
         <label>Longitude</label>
@@ -19,7 +19,7 @@
         <hr>
         <button class="btn btn-primary" ng-click="put()" ng-disabled="!hasChanges()||form.$invalid">Save</button>
         <button class="btn btn-warning" ng-click="abandonChanges()">Abandon</button>
-        <button class="btn btn-danger" ng-click="remove()" ng-disabled="!plc.$id()">Remove</button>
+        <button class="btn btn-danger" ng-click="item.$delete(item._id, item.etag)" ng-disabled="!item._id">Remove</button>
     </form>
 
 

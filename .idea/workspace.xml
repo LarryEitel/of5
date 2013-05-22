@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plc-edit.html" afterPath="$PROJECT_DIR$/app/views/plc-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plc-view.html" afterPath="$PROJECT_DIR$/app/views/plc-view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
@@ -14,13 +12,13 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369172946174" ignored="false" />
     <file path="/app.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369227560040" ignored="false" />
-    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244483174" ignored="false" />
-    <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369224039106" ignored="false" />
-    <file path="/plc-view.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244445435" ignored="false" />
-    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369232802463" ignored="false" />
+    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369252418701" ignored="false" />
+    <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369251822131" ignored="false" />
+    <file path="/plc-view.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369251487868" ignored="false" />
+    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369252506131" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102750367" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369242940234" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369250709871" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369167105760" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,17 +52,8 @@
       <file leaf-file-name="ModelCore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/ModelCore/src/ModelCore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="37" selection-start="6247" selection-end="6247" vertical-scroll-proportion="-13.84">
-              <folding>
-                <element signature="e#3994#4496#0" expanded="false" />
-                <element signature="e#6333#6783#0" expanded="false" />
-                <element signature="e#6813#7265#0" expanded="false" />
-                <element signature="e#8222#8512#0" expanded="false" />
-                <element signature="e#9154#9427#0" expanded="false" />
-                <element signature="e#9693#10394#0" expanded="false" />
-                <element signature="e#11784#11934#0" expanded="false" />
-                <element signature="e#12148#12702#0" expanded="false" />
-              </folding>
+            <state line="415" column="0" selection-start="13417" selection-end="13417" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,10 +67,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plcs.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="16" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.58448756">
+            <state line="62" column="50" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plcs.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="9" selection-start="610" selection-end="610" vertical-scroll-proportion="0.36494252">
               <folding />
             </state>
           </provider>
@@ -90,16 +88,7 @@
       <file leaf-file-name="plc-view.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="3" selection-start="406" selection-end="406" vertical-scroll-proportion="-9.807693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="39" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+            <state line="21" column="46" selection-start="709" selection-end="709" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
@@ -108,7 +97,7 @@
       <file leaf-file-name="plc-edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plc-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="53" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+            <state line="21" column="83" selection-start="784" selection-end="784" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
@@ -168,19 +157,19 @@
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/.tmp/styles/main.css" />
-        <option value="$PROJECT_DIR$/app/views/plc-edit.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/app/scripts/stub.js" />
         <option value="$PROJECT_DIR$/app/components/ModelCore/src/ModelCore.js" />
         <option value="$PROJECT_DIR$/app/views/plc-view.html" />
+        <option value="$PROJECT_DIR$/app/views/plc-edit.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+        <option value="$PROJECT_DIR$/app/views/plcs.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="32" />
+    <option name="x" value="5" />
+    <option name="y" value="2" />
     <option name="width" value="1458" />
     <option name="height" value="906" />
   </component>
@@ -322,72 +311,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModelCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModelCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -399,29 +322,10 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="PublishConfig" serverName="localhost9000" serverId="2b31a5f1-1151-4285-99f4-cfb4076afa44">
-    <servers>
-      <server id="2b31a5f1-1151-4285-99f4-cfb4076afa44">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="396c7a5c-a473-4cef-af5d-e4940322e5cb">
-        <serverdata />
-      </server>
-      <server id="477481fa-aa5f-4907-9626-2a00d21853ae">
-        <serverdata />
-      </server>
-      <server id="ca8a1342-d5a1-4ef9-930a-1b5a7466304a">
-        <serverdata />
-      </server>
-    </servers>
-  </component>
+  <component name="PublishConfig" serverName="localhost9000" serverId="2b31a5f1-1151-4285-99f4-cfb4076afa44" />
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
@@ -515,15 +419,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="32" width="1458" height="906" extended-state="0" />
+    <frame x="5" y="2" width="1458" height="906" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25358167" sideWeight="0.6724599" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25716332" sideWeight="0.6724599" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -532,6 +435,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -664,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/plc-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="53" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/stub.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -678,39 +575,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
+    <entry file="file://$PROJECT_DIR$/app/components/ModelCore/src/ModelCore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+        <state line="415" column="0" selection-start="13417" selection-end="13417" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/ModelCore/src/ModelCore.js">
+    <entry file="file://$PROJECT_DIR$/app/views/plc-edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="37" selection-start="6247" selection-end="6247" vertical-scroll-proportion="-13.84">
-          <folding>
-            <element signature="e#3994#4496#0" expanded="false" />
-            <element signature="e#6333#6783#0" expanded="false" />
-            <element signature="e#6813#7265#0" expanded="false" />
-            <element signature="e#8222#8512#0" expanded="false" />
-            <element signature="e#9154#9427#0" expanded="false" />
-            <element signature="e#9693#10394#0" expanded="false" />
-            <element signature="e#11784#11934#0" expanded="false" />
-            <element signature="e#12148#12702#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="406" selection-end="406" vertical-scroll-proportion="-9.807693">
+        <state line="21" column="83" selection-start="784" selection-end="784" vertical-scroll-proportion="-13.730769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="16" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.58448756">
+        <state line="62" column="50" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="46" selection-start="709" selection-end="709" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="9" selection-start="610" selection-end="610" vertical-scroll-proportion="0.36494252">
           <folding />
         </state>
       </provider>

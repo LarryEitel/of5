@@ -1,12 +1,14 @@
 <h4>Places</h4>
 <table class="table table-striped table-bordered table-hover">
     <tbody>
-    <tr ng-repeat="plc in plcs">
-        <td ng-click="edit(plc)">{{plc.slug}}</td>
-        <td ng-click="view(plc)">{{plc.pts}}</td>
+    <tr ng-repeat="item in Plcs.$dataset">
+        <td ng-click="edit(plc)">{{item.slug}}</td>
+        <td ng-click="view(plc)">{{item.pts}}</td>
         <td>
-            <i class="icon-view" ng-click="view(plc)">V</i> |
-            <i class="icon-edit" ng-click="edit(plc)">Ed</i>
+            <i class="icon-view" ng-click="view(item)">V</i> |
+            <i class="icon-edit" ng-click="edit(item)">Ed</i> |
+            <i class="icon-edit" ng-click="item.$delete(item._id, item.etag)">Del</i>
+            <!--<i class="icon-edit" ng-click="item.$myCustomAction(item.lbl)">Custom Action</i>-->
         </td>
     </tr>
     </tbody>
@@ -14,24 +16,24 @@
 
 
 
-<ul>
-    <li><h1>$scope.Plcs.$find()</h1></li>
-    <li ng-repeat="item in Plcs.$dataset">
-        <input ng-class="{changed: item.$isChanged('lbl')}" ng-model="item.lbl" />
-        <br/>
-        <b>Id:</b> {{item.__proto__._id}}
-        <br/>
-        <b>eTag:</b> {{item.__proto__.etag}}
-        <br/>
-        <b>Original:</b> {{item.__proto__.lbl}}
-        <br/>
-        <b>New Data:</b> {{item.lbl}}
-        <br/>
-        <b>isChanged:</b> (<b ng-class="{changed: item.$isChanged()}">{{item.$isChanged()}}</b>)
-        <br/>
-        <b>Diff:</b> {{item.$diff()}}
-        <button ng-click="item.$save()">Save</button>
-        <button ng-click="item.$delete(item._id, item.etag)">Delete</button>
-        <button ng-click="item.$myCustomAction(item.lbl)">Custom Action</button>
-    </li>
-</ul>
+
+<!--<ul>-->
+    <!--<li ng-repeat="item in Plcs.$dataset">-->
+        <!--<input ng-class="{changed: item.$isChanged('lbl')}" ng-model="item.lbl" />-->
+        <!--<br/>-->
+        <!--<b>Id:</b> {{item.__proto__._id}}-->
+        <!--<br/>-->
+        <!--<b>eTag:</b> {{item.__proto__.etag}}-->
+        <!--<br/>-->
+        <!--<b>Original:</b> {{item.__proto__.lbl}}-->
+        <!--<br/>-->
+        <!--<b>New Data:</b> {{item.lbl}}-->
+        <!--<br/>-->
+        <!--<b>isChanged:</b> (<b ng-class="{changed: item.$isChanged()}">{{item.$isChanged()}}</b>)-->
+        <!--<br/>-->
+        <!--<b>Diff:</b> {{item.$diff()}}-->
+        <!--<button ng-click="item.$save()">Save</button>-->
+        <!--<button ng-click="item.$delete(item._id, item.etag)">Delete</button>-->
+        <!--<button ng-click="item.$myCustomAction(item.lbl)">Custom Action</button>-->
+    <!--</li>-->
+<!--</ul>-->

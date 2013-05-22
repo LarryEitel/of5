@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plc-edit.html" afterPath="$PROJECT_DIR$/app/views/plc-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plc-view.html" afterPath="$PROJECT_DIR$/app/views/plc-view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/components/ModelCore" afterPath="$PROJECT_DIR$/dist/components/ModelCore" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +85,9 @@
         <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="21" column="46" selection-start="709" selection-end="709" vertical-scroll-proportion="-13.730769">
-              <folding />
+              <folding>
+                <marker date="1369251954450" expanded="true" signature="172:708" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -420,7 +418,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="2" width="1458" height="906" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -599,7 +597,9 @@
     <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="46" selection-start="709" selection-end="709" vertical-scroll-proportion="-13.730769">
-          <folding />
+          <folding>
+            <marker date="1369251954450" expanded="true" signature="172:708" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

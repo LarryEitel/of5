@@ -11,3 +11,27 @@
     </tr>
     </tbody>
 </table>
+
+
+
+<ul>
+    <li><h1>$scope.Plcs.$find()</h1></li>
+    <li ng-repeat="item in Plcs.$dataset">
+        <input ng-class="{changed: item.$isChanged('lbl')}" ng-model="item.lbl" />
+        <br/>
+        <b>Id:</b> {{item.__proto__._id}}
+        <br/>
+        <b>eTag:</b> {{item.__proto__.etag}}
+        <br/>
+        <b>Original:</b> {{item.__proto__.lbl}}
+        <br/>
+        <b>New Data:</b> {{item.lbl}}
+        <br/>
+        <b>isChanged:</b> (<b ng-class="{changed: item.$isChanged()}">{{item.$isChanged()}}</b>)
+        <br/>
+        <b>Diff:</b> {{item.$diff()}}
+        <button ng-click="item.$save()">Save</button>
+        <button ng-click="item.$delete(item._id, item.etag)">Delete</button>
+        <button ng-click="item.$myCustomAction(item.lbl)">Custom Action</button>
+    </li>
+</ul>

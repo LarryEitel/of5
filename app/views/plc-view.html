@@ -4,6 +4,27 @@
     <h4>{{plc.dNam}}</h4>
     Lat: {{lat}}
     Lng: {{lng}}
+    {{raw}}
 
-    {{plc}}
+
+
+    <ul>
+        <li><h1>OnePlc</h1></li>
+        <li ng-repeat="item in OnePlc.$dataset">
+            {{plc}} {{plc.$isChanged('lbl')}}
+            <br/>
+            <input ng-class="{changed: item.$isChanged('lbl')}" ng-model="item.lbl" />
+            <br/>
+            <b>Original:</b> {{item.__proto__.lbl}}
+            <br/>
+            <b>New Data:</b> {{item.lbl}}
+            <br/>
+            <b>isChanged:</b> (<b ng-class="{changed: item.$isChanged()}">{{item.$isChanged()}}</b>)
+            <br/>
+            <b>Diff:</b> {{item.$diff()}}
+            <br/>
+            <button ng-click="item.$put()">Save</button>
+            <button ng-click="item.$delete()">Delete</button>
+        </li>
+    </ul>
 </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('of5App', [])
+angular.module('of5App', ['ModelCore'])
     .constant('XCHGLAB_CONFIG', {API_KEY: 'testkey'})
     .config(function ($routeProvider) {
         $routeProvider
@@ -23,8 +23,37 @@ angular.module('of5App', [])
             .otherwise({redirectTo: '/'});
     })
     .factory('Plc', function (xchglabResourceHttp) {
-        return xchglabResourceHttp('plcs');
+
+        var Plc = xchglabResourceHttp('plcs');
+
+        Plc.$put = function(data, successcb, errorcb) {
+            var httpPromise;
+
+            console.log('$put', this.etag);
+            console.log('tkn', this.tkn);
+        };
+
+        return Plc;
     })
+
+    .factory("Plcs",function(ModelCore) {
+        return ModelCore.instance({
+            $type : "Plcs",
+            $pkField : "_id",
+            $settings : {
+                dataField : {
+                    many : "_items"
+                },
+                urls : {
+                    base : "http://exi.xchg.com/api/plcs"
+                }
+            },
+            $myCustomAction : function(aaa) {
+                console.log(aaa,this);
+            }
+        });
+    })
+
     .factory('User', function (xchglabResourceHttp) {
         return xchglabResourceHttp('users');
     })

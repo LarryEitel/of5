@@ -1,11 +1,7 @@
-
-
 <h4><a ng-href="#/">Home</a> | <a ng-href="#/plcs">Places</a> | <a ng-href="#/plc/{{item._id}}">View</a></h4>
-
 
 <div class="container-fluid" ng-controller="PlcEditCtrl">
     <h4>{{item.dNam}}</h4>
-
 
     <form name="form">
         <legend>Edit Place</legend>
@@ -21,8 +17,4 @@
         <button class="btn btn-warning" ng-click="abandonChanges()">Abandon</button>
         <button class="btn btn-danger" ng-click="item.$delete(item._id, item.etag)" ng-disabled="!item._id">Remove</button>
     </form>
-
-
-    {{plc}}
-
 </div>

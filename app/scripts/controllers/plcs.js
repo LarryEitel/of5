@@ -1,99 +1,89 @@
 'use strict';
 
 angular.module('of5App')
+  // ==============================================
+  .controller('PlcEditCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+    function ($scope, $location, $routeParams, Restangular) {
 
-  .controller('PlcEditCtrl', ['$scope', '$location', '$routeParams', 'Plcs', 'Plc', 'User',
-    function ($scope, $location, $routeParams, Plcs, Plc, User) {
+      var Plc = Restangular.one('plcs', $routeParams.id);
 
-      $scope.Plcs = new Plcs();
-      $scope.init = function () {
-        $scope.Plcs
-          .$getById($routeParams.id)
-          .success(function (raw) {
+      Plc.get({single: true})
+        .then(function (item) {
+          $scope.item = item;
+          $scope.lat = item.pts[0];
+          $scope.lng = item.pts[1];
 
-            var item = $scope.Plcs.$fetch();
-            $scope.raw = raw;
-            $scope.item = item;
-            $scope.lat = item.pts[0];
-            $scope.lng = item.pts[1];
-          });
-      };
-
-      $scope.init();
+        }, function errorCallback() {
+          console.log('Oops error from server :(');
+        });
 
 //        var changeError, changeSuccess, plcCopy;
-      var changeError, changeSuccess;
-
-      $scope.put = function () {
-        var actions;
-        console.log('PlcEditCtrl.put');
-        actions = {
-          "$set": {
-            "flds": {
-              "lbl": $scope.plc.lbl
-            }
-          }
-        };
-        return Plc.put(JSON.stringify({
-          "actions": actions
-        }), changeSuccess, changeError);
-      };
-
-      changeSuccess = function () {
-        return $location.path("/plcs");
-      };
-      changeError = function () {
-        throw new Error("Something went wrong...");
-      };
+//      var changeError, changeSuccess;
+//
+//      $scope.put = function () {
+//        var actions;
+//        console.log('PlcEditCtrl.put');
+//        actions = {
+//          "$set": {
+//            "flds": {
+//              "lbl": $scope.plc.lbl
+//            }
+//          }
+//        };
+//        return Plc.put(JSON.stringify({
+//          "actions": actions
+//        }), changeSuccess, changeError);
+//      };
+//
+//      changeSuccess = function () {
+//        return $location.path("/plcs");
+//      };
+//      changeError = function () {
+//        throw new Error("Something went wrong...");
+//      };
 
       $scope.abandonChanges = function () {
-        return $location.path("/plc/" + $scope.item._id);
+        return $location.path('/plc/' + $scope.item._id);
       };
 
     }])
 
 
-  .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Plcs', 'Plc', function ($scope, $location, $routeParams, Plcs) {
+  // ==============================================
+  .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+    function ($scope, $location, $routeParams, Restangular) {
 
-    $scope.Plcs = new Plcs();
+      var Plcs = Restangular.all('plcs');
 
-    $scope.init = function () {
-      console.log('PlcsCtrl');
-      $scope.Plcs
-//                .$find({where: {slug: "2a"}})
-        .$find({where: {}, max_results: 10})
-        .success(function (items) {
-          console.log('PlcsCtrl.items', items._items);
+      Plcs.getList({where: JSON.stringify({}), 'max_results': 10})
+        .then(function (items) {
           $scope.items = items._items;
+
+        }, function errorCallback() {
+          console.log('Oops error from server :(');
         });
-    };
 
-    $scope.init();
-
-    $scope.edit = function (plc) {
-      return $location.path("/plc/" + plc._id + "/edit");
-    };
-    $scope.view = function (plc) {
-      return $location.path("/plc/" + plc._id);
-    };
-  }])
+      $scope.edit = function (item) {
+        return $location.path('/plc/' + item._id + '/edit');
+      };
+      $scope.view = function (item) {
+        return $location.path('/plc/' + item._id);
+      };
+    }])
 
 
-  .controller('PlcViewCtrl', ['$scope', '$routeParams', 'Plcs', 'Plc', 'User'/*, 'plc'*/, function ($scope, $routeParams, Plcs, Plc, User/*, plc*/) {
-    $scope.Plcs = new Plcs();
-    $scope.init = function () {
-      $scope.Plcs
-        .$getById($routeParams.id)
-        .success(function (raw) {
+  // ==============================================
+  .controller('PlcViewCtrl', ['$scope', '$routeParams', 'Restangular',
+    function ($scope, $routeParams, Restangular) {
 
-          var item = $scope.Plcs.$fetch();
-          $scope.raw = raw;
+      var Plc = Restangular.one('plcs', $routeParams.id);
+
+      Plc.get({single: true})
+        .then(function (item) {
           $scope.item = item;
-          $scope.lat = item.pts[0];
-          $scope.lng = item.pts[1];
-        });
-    };
 
-    $scope.init();
-  }])
+        }, function errorCallback() {
+          console.log('Oops error from server :(');
+        });
+    }])
 ;

@@ -7,9 +7,11 @@
             <td ng-click="edit(item)">{{item.slug}}</td>
             <td ng-click="view(item)">{{item.pts}}</td>
             <td>
-                <i class="icon-view" ng-click="view(item)">V</i> |
-                <i class="icon-edit" ng-click="edit(item)">Ed</i> |
-                <i class="icon-edit" ng-click="item.$delete(item._id, item.etag)">Del</i>
+
+                <button class="btn btn-primary" ng-click="view(item)">View</button>
+                <button class="btn btn-warning" ng-click="edit(item)">Edit</button>
+                <button class="btn btn-danger" ng-click="remove(item)" ng-disabled="!item._id">Remove</button>
+
             </td>
         </tr>
         </tbody>

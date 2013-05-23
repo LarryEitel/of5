@@ -4,20 +4,11 @@
 <div class="container-fluid" ng-controller="PlcViewCtrl">
     <h4>{{item.dNam}}</h4>
     Lat: {{lat}}
+    <br/>
     Lng: {{lng}}
+    <br/>
 
-
-    <!--<br/>-->
-    <!--<input ng-class="{changed: item.$isChanged('lbl')}" ng-model="item.lbl" />-->
-    <!--<br/>-->
-    <!--<b>Original:</b> {{item.__proto__.lbl}}-->
-    <!--<br/>-->
-    <!--<b>New Data:</b> {{item.lbl}}-->
-    <!--<br/>-->
-    <!--<b>isChanged:</b> (<b ng-class="{changed: item.$isChanged()}">{{item.$isChanged()}}</b>)-->
-    <!--<br/>-->
-    <!--<b>Diff:</b> {{item.$diff()}}-->
-    <!--<br/>-->
-    <button ng-click="item.$put()">Save</button>
-    <button ng-click="item.$delete(item._id, item.etag)">Delete</button>
+    <br/>
+    <button class="btn btn-warning" ng-click="edit(item)">Edit</button>
+    <button class="btn btn-danger" ng-click="remove(item)" ng-disabled="!item._id">Remove</button>
 </div>

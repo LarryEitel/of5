@@ -1,6 +1,25 @@
 'use strict';
 
 angular.module('of5App')
+
+
+  // ==============================================
+  .controller('PlcDeleteCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+    function ($scope, $location, $routeParams, Restangular) {
+      console.log($routeParams.id);
+      var Plc = Restangular.one('plcs', $routeParams.id);
+
+      Plc.remove()
+        .then(function () {
+          console.log('Removed');
+          return $location.path('/plcs');
+        }, function errorCallback() {
+          console.log('Oops error from server :(');
+          return $location.path('/plc/' + $routeParams.id);
+        });
+    }])
+
+
   // ==============================================
   .controller('PlcEditCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
     function ($scope, $location, $routeParams, Restangular) {
@@ -17,6 +36,9 @@ angular.module('of5App')
           console.log('Oops error from server :(');
         });
 
+      $scope.remove = function (item) {
+        return $location.path('/plc/' + item._id + '/delete');
+      };
 //        var changeError, changeSuccess, plcCopy;
 //      var changeError, changeSuccess;
 //
@@ -24,22 +46,22 @@ angular.module('of5App')
 //        var actions;
 //        console.log('PlcEditCtrl.put');
 //        actions = {
-//          "$set": {
-//            "flds": {
-//              "lbl": $scope.plc.lbl
+//          '$set': {
+//            'flds': {
+//              'lbl': $scope.plc.lbl
 //            }
 //          }
 //        };
 //        return Plc.put(JSON.stringify({
-//          "actions": actions
+//          'actions': actions
 //        }), changeSuccess, changeError);
 //      };
 //
 //      changeSuccess = function () {
-//        return $location.path("/plcs");
+//        return $location.path('/plcs');
 //      };
 //      changeError = function () {
-//        throw new Error("Something went wrong...");
+//        throw new Error('Something went wrong...');
 //      };
 
       $scope.abandonChanges = function () {
@@ -63,6 +85,10 @@ angular.module('of5App')
           console.log('Oops error from server :(');
         });
 
+      $scope.remove = function (item) {
+        return $location.path('/plc/' + item._id + '/delete');
+      };
+
       $scope.edit = function (item) {
         return $location.path('/plc/' + item._id + '/edit');
       };
@@ -73,17 +99,24 @@ angular.module('of5App')
 
 
   // ==============================================
-  .controller('PlcViewCtrl', ['$scope', '$routeParams', 'Restangular',
-    function ($scope, $routeParams, Restangular) {
+  .controller('PlcViewCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+    function ($scope, $location, $routeParams, Restangular) {
 
       var Plc = Restangular.one('plcs', $routeParams.id);
 
-      Plc.get({single: true})
+      Plc.get()
         .then(function (item) {
           $scope.item = item;
+          $scope.lat = item.pts[0];
+          $scope.lng = item.pts[1];
 
         }, function errorCallback() {
           console.log('Oops error from server :(');
         });
+
+      $scope.remove = function (item) {
+        return $location.path('/plc/' + item._id + '/delete');
+      };
+
     }])
 ;

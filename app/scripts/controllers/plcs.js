@@ -4,41 +4,58 @@ angular.module('of5App')
 
 
   // ==============================================
-  .controller('PlcDeleteCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
-    function ($scope, $location, $routeParams, Restangular) {
-      console.log($routeParams.id);
-      var Plc = Restangular.one('plcs', $routeParams.id);
-
-      Plc.remove()
-        .then(function () {
-          console.log('Removed');
-          return $location.path('/plcs');
-        }, function errorCallback() {
-          console.log('Oops error from server :(');
-          return $location.path('/plc/' + $routeParams.id);
-        });
-    }])
-
-
-  // ==============================================
-  .controller('PlcEditCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+  .controller('PlcFormCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
     function ($scope, $location, $routeParams, Restangular) {
 
-      var Plc = Restangular.one('plcs', $routeParams.id);
+      var insertMode = $location.$$path === '/plc/insert';
 
-      Plc.get({single: true})
-        .then(function (item) {
-          $scope.item = item;
-          $scope.lat = item.pts[0];
-          $scope.lng = item.pts[1];
+      if (insertMode) {
+        console.log('Insert mode');
 
-        }, function errorCallback() {
-          console.log('Oops error from server :(');
-        });
+      } else {
+        console.log('Edit mode');
+        var Plc = Restangular.one('plcs', $routeParams.id);
+
+        Plc.get()
+          .then(function (item) {
+            $scope.item = item;
+
+            if (undefined !== item.pts){
+              $scope.lat = item.pts[0];
+              $scope.lng = item.pts[1];
+            }
+
+          }, function errorCallback() {
+            console.log('Oops error from server :(');
+          });
+      }
 
       $scope.remove = function (item) {
-        return $location.path('/plc/' + item._id + '/delete');
+        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+
+        if (confirmRemove) {
+          var Plc = Restangular.one('plcs', item._id);
+          Plc.remove()
+            .then(function () {
+              return $location.path('/plcs');
+            }, function errorCallback() {
+              console.log('Oops error from server :(');
+              return $location.path('/plc/' + $routeParams.id);
+            });
+        }
       };
+
+      $scope.save = function (item) {
+        var data = 'doc=' + JSON.stringify(item);
+        if (insertMode) {
+          var Plcs = Restangular.all('plcs');
+          Plcs.post(data).then(function(itemAdded) {
+            return $location.path('/plc/' + itemAdded.doc._id);
+          });
+
+        }
+      };
+
 //        var changeError, changeSuccess, plcCopy;
 //      var changeError, changeSuccess;
 //
@@ -86,9 +103,23 @@ angular.module('of5App')
         });
 
       $scope.remove = function (item) {
-        return $location.path('/plc/' + item._id + '/delete');
+        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+
+        if (confirmRemove) {
+          var Plc = Restangular.one('plcs', item._id);
+          Plc.remove()
+            .then(function () {
+              return $location.path('/plcs');
+            }, function errorCallback() {
+              console.log('Oops error from server :(');
+              return $location.path('/plc/' + $routeParams.id);
+            });
+        }
       };
 
+      $scope.insert = function () {
+        return $location.path('/plc/insert');
+      };
       $scope.edit = function (item) {
         return $location.path('/plc/' + item._id + '/edit');
       };
@@ -107,15 +138,29 @@ angular.module('of5App')
       Plc.get()
         .then(function (item) {
           $scope.item = item;
-          $scope.lat = item.pts[0];
-          $scope.lng = item.pts[1];
+          if (undefined !== item.pts){
+            $scope.lat = item.pts[0];
+            $scope.lng = item.pts[1];
+          }
+
 
         }, function errorCallback() {
           console.log('Oops error from server :(');
         });
 
       $scope.remove = function (item) {
-        return $location.path('/plc/' + item._id + '/delete');
+        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+
+        if (confirmRemove) {
+          var Plc = Restangular.one('plcs', item._id);
+          Plc.remove()
+            .then(function () {
+              return $location.path('/plcs');
+            }, function errorCallback() {
+              console.log('Oops error from server :(');
+              return $location.path('/plc/' + $routeParams.id);
+            });
+        }
       };
 
     }])

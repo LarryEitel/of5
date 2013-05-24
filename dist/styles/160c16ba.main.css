@@ -38,7 +38,7 @@ audio:not([controls]) {
 /* line 44, ../../app/styles/compass_twitter_bootstrap/_reset.scss */
 html {
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
+  /*-webkit-text-size-adjust: 100%;*/
   -ms-text-size-adjust: 100%;
 }
 
@@ -5598,10 +5598,10 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 41, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
 .modal.fade {
-  -webkit-transition: "opacity .3s linear, top .3s ease-out";
+  /*-webkit-transition: "opacity .3s linear, top .3s ease-out";*/
   -moz-transition: "opacity .3s linear, top .3s ease-out";
   -o-transition: "opacity .3s linear, top .3s ease-out";
-  transition: "opacity .3s linear, top .3s ease-out";
+  /*transition: "opacity .3s linear, top .3s ease-out";*/
   top: -25%;
 }
 /* line 45, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
@@ -6269,7 +6269,7 @@ a.label:hover, a.badge:hover {
   -moz-animation: progress-bar-stripes 2s linear infinite;
   -ms-animation: progress-bar-stripes 2s linear infinite;
   -o-animation: progress-bar-stripes 2s linear infinite;
-  animation: progress-bar-stripes 2s linear infinite;
+  /*animation: progress-bar-stripes 2s linear infinite;*/
 }
 
 /* line 93, ../../app/styles/compass_twitter_bootstrap/_progress-bars.scss */

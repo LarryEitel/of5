@@ -1,0 +1,32 @@
+.directive('buttonDelete', function($compile)      {
+  return {
+    restrict: 'E',
+    replace: true,
+    template: '<a class="button-delete"><i style="margin-top: 4px;" class="icon-remove"></i></a>',
+    link: function(scope, element) {
+      //            debugger;
+      //element.bind('click', function(e) {
+      //                var popover = $();
+      //                element.clickover({content: 'test'});
+      element.clickover({
+        global: true,
+        title: 'Are you sure?',
+        content: function() {
+          //debugger;
+          var element = $compile('<div class="btn-toolbar"><button id="button-confirm-delete-cancel" data-dismiss="clickover" class="btn">Cancel</button><button id="button-confirm-delete-ok" class="btn btn-danger" ng-click="destroy(v)">Delete</button></div>')(scope.$parent);
+          return element.html();
+        }
+        //});
+      });
+
+    }
+  };
+})
+
+
+
+$scope.destroy = function(_id) {
+    console.log('destroy called (' + _id + ')');
+};
+
+<button-delete />

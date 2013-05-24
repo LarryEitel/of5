@@ -8,13 +8,14 @@ angular.module('of5App', ['restangular'])
       { templateUrl: 'views/main.html', controller: 'MainCtrl'
       })
       .when('/plcs', {templateUrl: 'views/plcs.html', controller: 'PlcsCtrl'})
-      .when('/plc/:id/edit', {templateUrl: 'views/plc-edit.html', controller: 'PlcEditCtrl'})
-      .when('/plc/:id/delete', {templateUrl: 'views/plc-delete.html', controller: 'PlcDeleteCtrl'})
+      .when('/plc/:id/edit', {templateUrl: 'views/plc-form.html', controller: 'PlcFormCtrl'})
+      .when('/plc/insert', {templateUrl: 'views/plc-form.html', controller: 'PlcFormCtrl'})
       .when('/plc/:id', {templateUrl: 'views/plc-view.html', controller: 'PlcViewCtrl'})
       .otherwise({redirectTo: '/'});
   })
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx';
+    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 //    $httpProvider.defaults.headers.get['Gonto-id'] = 'P';
   }])
   .config(
@@ -25,12 +26,14 @@ angular.module('of5App', ['restangular'])
         // what's this
         RestangularProvider.setListTypeIsArray(false);
 
-        RestangularProvider.setResponseExtractor(function(response, operation/*, what*/) {
-          if (operation === 'get') {
-            return response;
-          } else if (operation === 'getList') {
-            return response;
-          }
+        RestangularProvider.setResponseExtractor(function(response/*, operation, what*/) {
+          return response;
+//          if (operation === 'get') {
+//            return response;
+//          } else if (operation === 'getList') {
+//            return response;
+//          }
         });
       } ])
+
 ;

@@ -91,8 +91,8 @@ module.exports = function (grunt) {
     },
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
-        //'-W015': true
+        jshintrc: '.jshintrc',
+        '-W117': true
       },
       all: [
         'Gruntfile.js',

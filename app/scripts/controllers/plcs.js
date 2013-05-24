@@ -26,6 +26,7 @@ angular.module('of5App')
             console.log('Oops error from server :(');
           });
       }
+      
       $scope.remove = function (item) {
         var confirmRemove = confirm('Are you absolutely sure you want to delete?');
 

@@ -10,19 +10,16 @@ angular.module('of5App')
       var insertMode = $location.$$path === '/plc/insert';
 
       if (insertMode) {
-        console.log('Insert mode');
-
       } else {
-        console.log('Edit mode');
         var Plc = Restangular.one('plcs', $routeParams.id);
 
         Plc.get()
           .then(function (item) {
-            $scope.item = item;
-
+            $scope.item = {};
+            $scope.item.lbl = item.lbl;
             if (undefined !== item.pts){
-              $scope.lat = item.pts[0];
-              $scope.lng = item.pts[1];
+              $scope.item.lat = item.pts[0];
+              $scope.item.lng = item.pts[1];
             }
 
           }, function errorCallback() {
@@ -46,13 +43,29 @@ angular.module('of5App')
       };
 
       $scope.save = function (item) {
-        var data = 'doc=' + JSON.stringify(item);
+        var data = {};
         if (insertMode) {
+          data = 'doc=' + JSON.stringify(item);
           var Plcs = Restangular.all('plcs');
-          Plcs.post(data).then(function(itemAdded) {
-            return $location.path('/plc/' + itemAdded.doc._id);
+          Plcs.post(data).then(function() {
+            return $location.path('/plcs/');
+          }, function errorCallback() {
+            console.log('Oops error from server :(');
           });
+        } else {
 
+          var flds = item;
+          flds.pts = [item.lat, item.lng];
+          delete flds.lat;
+          delete flds.lng;
+
+          data = JSON.stringify({'actions': {'$set': {'flds': flds}}});
+
+          Plc.customPUT(undefined, undefined, undefined, data).then(function(itemUpdated) {
+            return $location.path('/plc/' + itemUpdated.doc._id);
+          }, function errorCallback() {
+            console.log('Oops error from server :(');
+          });
         }
       };
 
@@ -94,7 +107,8 @@ angular.module('of5App')
 
       var Plcs = Restangular.all('plcs');
 
-      Plcs.getList({where: JSON.stringify({}), 'max_results': 10})
+
+      Plcs.getList({where: JSON.stringify({}), 'max_results': 5})
         .then(function (items) {
           $scope.items = items._items;
 
@@ -102,28 +116,63 @@ angular.module('of5App')
           console.log('Oops error from server :(');
         });
 
-      $scope.remove = function (item) {
+      $scope.add = function () {
+        var data = 'doc=' + JSON.stringify($scope.newItem);
+        var Plcs = Restangular.all('plcs');
+        Plcs.post(data).then(function(itemAdded) {
+          $scope.newItem._id = itemAdded.doc._id;
+          $scope.items.push($scope.newItem);
+          $scope.newItem = {};
+
+          // todo Can't set Pristine
+          $scope.myForm.$setPristine();
+          $scope.myForm.$pristine = true;
+        });
+      };
+
+      $scope.remove = function ($index) {
         var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+//        var confirmRemove = true;
 
         if (confirmRemove) {
+          var item = $scope.items[$index];
           var Plc = Restangular.one('plcs', item._id);
           Plc.remove()
             .then(function () {
-              return $location.path('/plcs');
+              $scope.items.splice($index, 1);
             }, function errorCallback() {
               console.log('Oops error from server :(');
               return $location.path('/plc/' + $routeParams.id);
             });
         }
       };
+//
+//      $scope.remove = function (item) {
+//        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+//
+//        if (confirmRemove) {
+//          var Plc = Restangular.one('plcs', item._id);
+//          Plc.remove()
+//            .then(function () {
+//              return $location.path('/plcs');
+//            }, function errorCallback() {
+//              console.log('Oops error from server :(');
+//              return $location.path('/plc/' + $routeParams.id);
+//            });
+//        }
+//      };
+
+
 
       $scope.insert = function () {
         return $location.path('/plc/insert');
       };
-      $scope.edit = function (item) {
+      $scope.edit = function ($index) {
+        var item = $scope.items[$index];
         return $location.path('/plc/' + item._id + '/edit');
       };
-      $scope.view = function (item) {
+      $scope.view = function ($index) {
+        var item = $scope.items[$index];
         return $location.path('/plc/' + item._id);
       };
     }])
@@ -161,6 +210,10 @@ angular.module('of5App')
               return $location.path('/plc/' + $routeParams.id);
             });
         }
+      };
+
+      $scope.edit = function (item) {
+        return $location.path('/plc/' + item._id + '/edit');
       };
 
     }])

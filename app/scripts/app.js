@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('of5App', ['restangular'])
+angular.module('of5App', ['restangular'/*,'ui'*/])
   .constant('XCHGLAB_CONFIG', {API_KEY: 'testkey'})
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +25,15 @@ angular.module('of5App', ['restangular'])
 
         // what's this
         RestangularProvider.setListTypeIsArray(false);
+
+//        RestangularProvider.setRequestInterceptor(function(element, operation, route, url) {
+//          if (operation === 'put') {
+//            element.actions = '{"$set":{"flds":{"lbl":"Larry"}}}';
+//            delete element.id;
+//          }
+//
+//          return element;
+//        });
 
         RestangularProvider.setResponseExtractor(function(response/*, operation, what*/) {
           return response;

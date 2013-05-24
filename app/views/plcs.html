@@ -1,19 +1,45 @@
 <h4>Places</h4>
+
 <div ng-controller="PlcsCtrl" ng-cloak>
 
-    <table class="table table-striped table-bordered table-hover">
-        <tbody>
-        <tr ng-repeat="item in items">
-            <td ng-click="edit(item)">{{item.slug}}</td>
-            <td ng-click="view(item)">{{item.pts}}</td>
-            <td>
+    <ul>
+    <li ng-repeat="item in items">
+        <span ng-click="view($index)">
+            <b>{{item.lbl}}</b>
+            {{item.pts}}
+        </span>
+        <b>
+        <span ng-click="edit($index)">Edit</span>
+        <!--<button class="btn btn-danger" ng-click="remove(item)" ng-disabled="!item._id">Remove</button>-->
+        <span ng-click="remove($index)" ng-disabled="!item._id">X</span>
+        </b>
+        <br/>
+    </li>
+    </ul>
 
-                <button class="btn btn-primary" ng-click="view(item)">View</button>
-                <button class="btn btn-warning" ng-click="edit(item)">Edit</button>
-                <button class="btn btn-danger" ng-click="remove(item)" ng-disabled="!item._id">Remove</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <button class="btn btn-primary" ng-click="insert()">Add New Place</button>
+    <br/>
+    <button class="btn btn-primary" ng-click="insert()">Add</button>
+
+
+    <!--<form name="myForm" ng-submit="add()">-->
+        <!--<legend>Add New Place</legend>-->
+        <!--<label>Label</label>-->
+        <!--<span class="error" ng-show="myForm.lbl.$error.required">*</span>-->
+        <!--<input name="lbl" type="text" ng-model="newItem.lbl" size="20" required>-->
+        <!--<br/>-->
+
+        <!--<label>Latitude</label>-->
+        <!--<input type="text" ng-model="newItem.lat" size="20">-->
+        <!--<br/>-->
+
+        <!--<label>Longitude</label>-->
+        <!--<input type="text" ng-model="newItem.lng" size="20">-->
+        <!--<br/>-->
+
+        <!--<input type="submit" class="btn btn-primary" value="Add">-->
+        <!--<span ng-click="abandonChanges()"-->
+              <!--ng-show="myForm.$dirty"-->
+              <!--ng-disabled="!hasChanges()||form.$invalid">Abandon</span>-->
+
+    <!--</form>-->
 </div>

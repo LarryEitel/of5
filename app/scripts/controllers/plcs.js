@@ -26,7 +26,8 @@ angular.module('of5App')
             console.log('Oops error from server :(');
           });
       }
-      
+
+
       $scope.remove = function (item) {
         var confirmRemove = confirm('Are you absolutely sure you want to delete?');
 
@@ -54,12 +55,12 @@ angular.module('of5App')
           });
         } else {
 
-          var flds = item;
-          flds.pts = [item.lat, item.lng];
-          delete flds.lat;
-          delete flds.lng;
 
-          data = JSON.stringify({'actions': {'$set': {'flds': flds}}});
+          item.pts = [item.lat, item.lng];
+          delete item.lat;
+          delete item.lng;
+
+          data = JSON.stringify({'actions': {'$set': {'flds': item}}});
 
           Plc.customPUT(undefined, undefined, undefined, data).then(function(itemUpdated) {
             return $location.path('/plc/' + itemUpdated.doc._id);

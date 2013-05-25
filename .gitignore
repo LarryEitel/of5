@@ -1,6 +1,6 @@
-node_modules
+#node_modules
 .tmp
 .sass-cache
-app/components
+#app/components
 logs
 local_settings.py

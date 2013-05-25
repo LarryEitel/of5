@@ -15,7 +15,7 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369415596503" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369424643541" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511081899" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260926684" ignored="false" />
@@ -65,7 +65,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="1" selection-start="32" selection-end="32" vertical-scroll-proportion="0.07063712">
+            <state line="6" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.14127424">
               <folding />
             </state>
           </provider>
@@ -203,42 +203,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,7 +410,11 @@
       <created>1369424646212</created>
       <updated>1369424646212</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="push more components, etc">
+      <created>1369511085350</created>
+      <updated>1369511085350</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -535,7 +503,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="got put working" />
+    <option name="LAST_COMMIT_MESSAGE" value="push more components, etc" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -557,6 +525,7 @@
     <MESSAGE value="gonna try linode deploy" />
     <MESSAGE value="wiring up nginx" />
     <MESSAGE value="got put working" />
+    <MESSAGE value="push more components, etc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,7 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="32" selection-end="32" vertical-scroll-proportion="0.07063712">
+        <state line="6" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.14127424">
           <folding />
         </state>
       </provider>

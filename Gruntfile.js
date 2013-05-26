@@ -10,6 +10,7 @@ module.exports = function (grunt) {
 
   // configurable paths
   var yeomanConfig = {
+    data: 'data',
     app: 'app',
     dist: 'dist'
   };
@@ -257,33 +258,45 @@ module.exports = function (grunt) {
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*'
           ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.data %>',
+          dest: '<%= yeoman.dist %>/data',
+          src: ['**/*.json']
         }]
       }
+    },
+    yaml: {
+      dist: {
+        options: {
+          ignored: /^_/,
+          space: 2,
+          constructors: {
+            '!include': function (node, yaml) {
+              var data = require('fs').readFileSync(node.value, 'utf-8');
+              return yaml.load(data);
+            }
+          }
+        },
+        files: [
+          {expand: true, cwd: '<%= yeoman.data %>', src: ['**/*.yaml'], dest: '<%= yeoman.data %>'}
+        ]
+      }
     }
-    // copy: {
-    //     dist: {
-    //         files: [{
-    //             expand: true,
-    //             dest: '<%= yeoman.dist %>',
-    //             cwd: 'heroku',
-    //             src: '*',
-    //             rename: function (dest, src) {
-    //                 var path = require('path');
-    //                 if (src === 'distpackage.json') {
-    //                     return path.join(dest, 'package.json');
-    //                 }
-    //                 return path.join(dest, src);
-    //             }
-    //         }]
-    //     }
-    // }
   });
 
   grunt.renameTask('regarde', 'watch');
 
+  grunt.registerTask('doyaml', [
+    'yaml:dist'
+  ]);
+
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
+    'yaml:dist',
     'compass:server',
     'livereload-start',
     'connect:livereload',
@@ -305,6 +318,7 @@ module.exports = function (grunt) {
     // 'test',
     'coffee',
     'compass:dist',
+    'yaml:dist',
     'useminPrepare',
     'imagemin',
     'cssmin',

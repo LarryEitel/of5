@@ -3,7 +3,10 @@
 <div ng-controller="PlcsCtrl" ng-cloak="">
 
   <div class="input-prepend">
-    <input type="search" results="" ng-model="search" class="search-query" placeholder="Search" autofocus="" required="" ui-keydown="{esc: 'doClear()'}">
+    <form name="searchForm">
+      <input type="search" results="" ng-model="search" class="search-query" placeholder="Search" autofocus="" required="" ui-keydown="{esc: 'doClear()'}">
+      <button class="btn btn-warning" ng-click="doClear()" ng-show="search">Reset</button>
+    </form>
   </div>
 
   <table class="table table-striped table-bordered table-hover">

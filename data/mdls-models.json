@@ -1,0 +1,594 @@
+{
+  "Cmp": {
+    "meta": {
+      "desc": "Company",
+      "colNam": "cnts",
+      "dNam": "Company",
+      "dNamPlural": "Companies",
+      "dNamS": "cmp",
+      "dNamSPlural": "cmps"
+    },
+    "fields": {
+      "_c": {
+        "default": "cmp"
+      },
+      "cNam": {
+        "dNam": "Company Name",
+        "type": "string",
+        "required": true
+      },
+      "cNamS": {
+        "dNam": "Short or Abbreviated Company Name",
+        "type": "string"
+      },
+      "symbol": {
+        "dNam": "Company Trading Symbol",
+        "type": "string",
+        "note": "maybe just use base code field"
+      }
+    }
+  },
+  "Cnt": {
+    "meta": {
+      "baseClass": "D",
+      "desc": "Base class for all Contacts",
+      "colNam": "cnts",
+      "dNam": "Contact",
+      "dNamPlural": "Contacts",
+      "dNamS": "cnt",
+      "dNamSPlural": "cnts"
+    },
+    "fields": {
+      "_c": {
+        "default": "cnt"
+      },
+      "emails": {
+        "dNam": "Emails",
+        "desc": "Emails.",
+        "type": [
+          "Email"
+        ]
+      },
+      "log": {
+        "dNam": "Log",
+        "desc": "Log.",
+        "type": [
+          "Log"
+        ]
+      },
+      "plcs": {
+        "dNam": "Places",
+        "desc": "Places.",
+        "type": [
+          "Plc"
+        ]
+      },
+      "rBy": {
+        "dNam": "Referred or Registered By",
+        "type": "ObjectID"
+      },
+      "tels": {
+        "dNam": "Telephones",
+        "desc": "Telephones.",
+        "type": [
+          "Tel"
+        ]
+      }
+    }
+  },
+  "D": {
+    "meta": {
+      "desc": "Base class",
+      "colNam": "none",
+      "dNam": "Document",
+      "dNamPlural": "Documents",
+      "dNamS": "d",
+      "dNamSPlural": "ds"
+    },
+    "fields": {
+      "_c": {
+        "dNam": "Class Code",
+        "desc": "Class Code",
+        "type": "array",
+        "required": true
+      },
+      "_eIds": {
+        "dNam": "Element Ids",
+        "desc": "Used to uniquely identify an item in a list.",
+        "type": "object"
+      },
+      "_id": {
+        "dNam": "Mongo ObjectID",
+        "desc": "Unique ID",
+        "type": "ObjectID",
+        "required": true
+      },
+      "code": {
+        "dNam": "Code",
+        "desc": "Code.",
+        "type": "string",
+        "note": "Generic code"
+      },
+      "cBy": {
+        "dNam": "Created By",
+        "desc": "Created by.",
+        "type": "ObjectID",
+        "required": true
+      },
+      "cOn": {
+        "dNam": "When Created",
+        "desc": "When created.",
+        "type": "datetime",
+        "required": true,
+        "note": "This is redundant because ObjectID has this information"
+      },
+      "dId": {
+        "dNam": "Document Id",
+        "desc": "Unique auto-incremented ID.",
+        "type": "integer",
+        "required": true,
+        "note": "This MAY be an issue with scaling in MongoDb"
+      },
+      "dNam": {
+        "dNam": "Display Name",
+        "desc": "Default string displayed for document and in search results",
+        "type": "string",
+        "required": true,
+        "note": "This is generated on a per class basis."
+      },
+      "dBy": {
+        "dNam": "Deleted By",
+        "desc": "Deleted by.",
+        "type": "ObjectID"
+      },
+      "dOn": {
+        "dNam": "When Deleted",
+        "desc": "When deleted.",
+        "type": "datetime"
+      },
+      "note": {
+        "dNam": "Public Note",
+        "desc": "Public note.",
+        "type": "string"
+      },
+      "noteAdmin": {
+        "dNam": "Administrator Note",
+        "desc": "Administrator note.",
+        "type": "string"
+      },
+      "notePriv": {
+        "dNam": "Private Note",
+        "desc": "Private note.",
+        "type": "string"
+      },
+      "oBy": {
+        "dNam": "Owned By",
+        "desc": "Owned is determined by cBy (created by). Subsequently others by take ownership of this document.",
+        "type": "ObjectID"
+      },
+      "oOn": {
+        "dNam": "When Owned",
+        "desc": "Date and time owned subsequent to created date-time.",
+        "type": "datetime"
+      },
+      "pBy": {
+        "dNam": "Published By",
+        "desc": "Owned is determined by cBy (created by). Subsequently others by take ownership of this document.",
+        "type": "ObjectID"
+      },
+      "pOn": {
+        "dNam": "When Published",
+        "desc": "When published.",
+        "type": "datetime"
+      },
+      "slug": {
+        "dNam": "Slug",
+        "desc": "Unique auto-generated slug.",
+        "type": "string",
+        "required": true
+      },
+      "status": {
+        "dNam": "Status Number Code",
+        "desc": "Status number used to indicate process steps down to 1 which indicated published.",
+        "type": "integer"
+      },
+      "typ": {
+        "dNam": "Item Type",
+        "type": "Typ"
+      },
+      "uBy": {
+        "dNam": "Updated By",
+        "desc": "Updated by.",
+        "type": "ObjectID"
+      },
+      "uOn": {
+        "dNam": "When Updated",
+        "desc": "When updated.",
+        "type": "datetime"
+      },
+      "vBy": {
+        "dNam": "Verified By",
+        "type": "ObjectID"
+      },
+      "vOn": {
+        "dNam": "When Verified",
+        "type": "datetime"
+      }
+    }
+  },
+  "Email": {
+    "meta": {
+      "baseClass": "Email",
+      "desc": "One or emails",
+      "colNam": "none",
+      "dNam": "Email",
+      "dNamPlural": "Emails",
+      "dNamS": "email",
+      "dNamSPlural": "emails"
+    },
+    "fields": {
+      "_c": {
+        "default": "email"
+      },
+      "address": {
+        "dNam": "Email Address",
+        "desc": "Email address.",
+        "type": "string"
+      }
+    }
+  },
+  "Embed": {
+    "meta": {
+      "baseClass": "D",
+      "desc": "Base class",
+      "colNam": "none",
+      "dNam": "Embed",
+      "dNamPlural": "Embeds",
+      "dNamS": "embed",
+      "dNamSPlural": "embeds",
+      "note": "Base class for embedding list of objects  ie  list of emails."
+    },
+    "fields": {
+      "_eId": {
+        "dNam": "Element Id",
+        "desc": "Used to uniquely identify an item in a list.",
+        "type": "integer"
+      },
+      "prim": {
+        "dNam": "Element Id",
+        "desc": "When multiple emails appear in a list. indicates which is prim. At most one may be prim.",
+        "type": "boolean"
+      },
+      "typ": "Typ",
+      "w": {
+        "dNam": "Element Id",
+        "desc": "Sort list by weight value.",
+        "type": "integer",
+        "note": "Possibly use a Priority number instead."
+      }
+    }
+  },
+  "Loc": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "locs",
+      "dNam": "Locale",
+      "desc": "Translated Words and Terms keyed off of <class.dNamS.dNamS>. For example Telephone type (tel.typ.dNamS).",
+      "dNamPlural": "Locales",
+      "dNamS": "loc",
+      "dNamSPlural": "locs"
+    },
+    "fields": {
+      "_c": {
+        "default": "loc"
+      },
+      "clsNamS": {
+        "dNam": "Short Class Name",
+        "desc": "Short class name like tel email etc",
+        "type": "string",
+        "required": true
+      },
+      "group": {
+        "dNam": "Class Type Group",
+        "desc": "Perhaps a Class has more than one type like family status or hobbies or professions etc",
+        "type": "string"
+      },
+      "key": {
+        "dNam": "Expression Key",
+        "desc": "Expression Key like tel.other tel.main email.personal etc",
+        "type": "string"
+      },
+      "locStrs": {
+        "dNam": "Translated Locale String",
+        "type": [
+          "LocStr"
+        ]
+      }
+    }
+  },
+  "LocStr": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "locstrs",
+      "dNam": "Locale String",
+      "desc": "Translated Locale Strings",
+      "dNamPlural": "Locale Strings",
+      "dNamS": "locstr",
+      "dNamSPlural": "locstrs"
+    },
+    "fields": {
+      "_c": {
+        "default": "locstr"
+      },
+      "key": {
+        "dNam": "Expression Key",
+        "desc": "Expression Key like tel.other tel.main email.personal etc",
+        "type": "string"
+      },
+      "lngIso": {
+        "dNam": "Language ISO Code",
+        "desc": "see www.loc.gov/standards/iso639-2/php/English_list.php",
+        "type": "string",
+        "required": true
+      },
+      "locStrs": {
+        "dNam": "Translated Locale String",
+        "type": [
+          "LocStr"
+        ]
+      }
+    }
+  },
+  "Plc": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "plcs",
+      "dNam": "Place",
+      "dNamPlural": "Places",
+      "dNamS": "plc",
+      "dNamSPlural": "plcs"
+    },
+    "fields": {
+      "pNam": {
+        "dNam": "Place Name",
+        "type": "string"
+      },
+      "pNamS": {
+        "dNam": "Short or Abbreviated Place Name",
+        "type": "string"
+      },
+      "pt": {
+        "dNam": "Lat/Lng Coordinate",
+        "dNamS": "ll",
+        "type": "Pt"
+      }
+    }
+  },
+  "Prs": {
+    "meta": {
+      "desc": "Person",
+      "colNam": "cnts",
+      "dNam": "Person",
+      "dNamPlural": "Persons",
+      "dNamS": "prs",
+      "dNamSPlural": "prss"
+    },
+    "fields": {
+      "_c": {
+        "default": "prs"
+      },
+      "bOn": {
+        "dNam": "Date-Time Born",
+        "type": "datetime"
+      },
+      "fNam": {
+        "dNam": "First Name",
+        "type": "string"
+      },
+      "fNam2": {
+        "dNam": "Second First Name",
+        "type": "string"
+      },
+      "gen": {
+        "dNam": "Gender",
+        "type": "string",
+        "format": "tolower",
+        "valid": "m/f"
+      },
+      "lNam": {
+        "dNam": "Last Name",
+        "type": "string"
+      },
+      "lNam2": {
+        "dNam": "Second Last Name",
+        "type": "string"
+      },
+      "prefix": {
+        "dNam": "Prefix",
+        "desc": "Prefix like Mr Mrs etc",
+        "type": "string"
+      },
+      "suffix": {
+        "dNam": "Suffix",
+        "desc": "Suffix like MD DDS etc",
+        "type": "string"
+      },
+      "fam": {
+        "dNam": "Family Status",
+        "type": "Typ"
+      }
+    }
+  },
+  "Rdt": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "none",
+      "dNam": "Robust Date Time",
+      "dNamPlural": "Robust Date Times",
+      "dNamS": "rdt",
+      "dNamSPlural": "rdts",
+      "note": "Handle non-standard date and times"
+    },
+    "fields": {
+      "when": {
+        "dNam": "When",
+        "type": "string"
+      },
+      "whenTyp": {
+        "dNam": "When Type",
+        "type": "Typ"
+      }
+    }
+  },
+  "Role": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "roles",
+      "dNam": "Role",
+      "dNamPlural": "Roles",
+      "dNamS": "role",
+      "dNamSPlural": "roles"
+    },
+    "fields": {
+      "_c": {
+        "default": "role"
+      },
+      "name": {
+        "dNam": "Role Name",
+        "desc": "Role name.",
+        "type": "string",
+        "required": true
+      },
+      "desc": {
+        "dNam": "Description",
+        "desc": "Description.",
+        "type": "string"
+      }
+    }
+  },
+  "SN": {
+    "meta": {
+      "baseClass": "Embed",
+      "desc": "One or social networks",
+      "colNam": "none",
+      "dNam": "Social Network",
+      "dNamPlural": "Social Networks",
+      "dNamS": "sn",
+      "dNamSPlural": "sns"
+    },
+    "fields": {
+      "_c": {
+        "default": "tel"
+      },
+      "id": {
+        "dNam": "Net User or ID",
+        "desc": "Phone number.",
+        "type": "string",
+        "required": true
+      },
+      "protocol": {
+        "dNam": "Protocol",
+        "desc": "Protocol such as aim msn yahoo skype qq gtalk icq jabber",
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "Tel": {
+    "meta": {
+      "baseClass": "Embed",
+      "desc": "One or telephones",
+      "colNam": "none",
+      "dNam": "Telephone",
+      "dNamPlural": "Telephones",
+      "dNamS": "tel",
+      "dNamSPlural": "tels"
+    },
+    "fields": {
+      "_c": {
+        "default": "tel"
+      },
+      "text": {
+        "dNam": "Phone Number",
+        "desc": "Phone number.",
+        "type": "string"
+      }
+    }
+  },
+  "Typ": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "typs",
+      "dNam": "Type",
+      "dNamPlural": "Types",
+      "dNamS": "typ",
+      "dNamSPlural": "typs"
+    },
+    "fields": {
+      "_c": {
+        "default": "typ"
+      },
+      "locs": [
+        "LocStr"
+      ],
+      "nam": {
+        "dNam": "Type Name",
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "User": {
+    "meta": {
+      "desc": "User",
+      "colNam": "cnts",
+      "dNam": "User",
+      "dNamPlural": "Users",
+      "dNamS": "user",
+      "dNamSPlural": "users"
+    },
+    "fields": {
+      "_c": {
+        "default": "user"
+      },
+      "actv": {
+        "dNam": "Account Active",
+        "type": "boolean"
+      },
+      "cfOn": {
+        "dNam": "When Account Confirmed",
+        "type": "datetime"
+      },
+      "pw": {
+        "dNam": "Password",
+        "type": "string"
+      },
+      "roles": {
+        "dNam": "Roles",
+        "type": [
+          "Role"
+        ]
+      },
+      "tkn": {
+        "dNam": "Token",
+        "type": "string"
+      },
+      "uNam": {
+        "dNam": "User Name",
+        "type": "string"
+      }
+    }
+  },
+  "Dx": {
+    "collection": "dxs",
+    "dNam": "Document Link",
+    "dNamS": "dx",
+    "dNamPlural": "Document Links"
+  },
+  "DxRel": {
+    "collection": "dxrels",
+    "dNam": "Document Link Relationship",
+    "dNamS": "dxRel",
+    "dNamPlural": "Document Link Relationships"
+  }
+}

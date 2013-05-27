@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('of5App', ['restangular'/*,'ui'*/])
+angular.module('of5App', ['restangular','ui.bootstrap'])
   .constant('XCHGLAB_CONFIG', {API_KEY: 'testkey'})
   .config(function ($routeProvider) {
     $routeProvider

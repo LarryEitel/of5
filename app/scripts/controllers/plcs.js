@@ -1,6 +1,109 @@
 'use strict';
 
 angular.module('of5App')
+  // ==============================================
+  .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
+    function ($scope, $location, $routeParams, Restangular) {
+
+      $scope.items = [];
+      $scope.lastItemsWithInfo = null;
+      $scope.maxId = null;
+      $scope.itemsPerPage = 5;
+      $scope.page = 1;
+      $scope.search = '';
+
+      var Plcs = Restangular.all('plcs');
+
+      console.log($scope.search);
+
+      var qry = {};
+      $scope.$watch('search', function() {
+        $scope.doSearch();
+      });
+
+      $scope.doSearch = function () {
+        if ($scope.search){
+          qry.where = JSON.stringify(
+            {dNam:{$regex: $scope.search, $options:'i'}}
+            );
+        } else {
+          qry = {};
+        }
+
+        Plcs.getList(qry, {maxResults: $scope.itemsPerPage})
+          .then(function (items) {
+            $scope.items = items._items;
+
+          }, function errorCallback() {
+            console.log('Oops error from server :(');
+          });
+      };
+
+      $scope.add = function () {
+        var data = 'doc=' + JSON.stringify($scope.newItem);
+        var Plcs = Restangular.all('plcs');
+        Plcs.post(data).then(function(itemAdded) {
+          $scope.newItem._id = itemAdded.doc._id;
+          $scope.items.push($scope.newItem);
+          $scope.newItem = {};
+
+          // todo Can't set Pristine
+          $scope.myForm.$setPristine();
+          $scope.myForm.$pristine = true;
+        });
+      };
+
+      $scope.remove = function ($index) {
+        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+//        var confirmRemove = true;
+
+        if (confirmRemove) {
+          var item = $scope.items[$index];
+          var Plc = Restangular.one('plcs', item._id);
+          Plc.remove()
+            .then(function () {
+              $scope.items.splice($index, 1);
+            }, function errorCallback() {
+              console.log('Oops error from server :(');
+              return $location.path('/plc/' + $routeParams.id);
+            });
+        }
+      };
+//
+//      $scope.remove = function (item) {
+//        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
+//
+//        if (confirmRemove) {
+//          var Plc = Restangular.one('plcs', item._id);
+//          Plc.remove()
+//            .then(function () {
+//              return $location.path('/plcs');
+//            }, function errorCallback() {
+//              console.log('Oops error from server :(');
+//              return $location.path('/plc/' + $routeParams.id);
+//            });
+//        }
+//      };
+
+
+
+      $scope.insert = function () {
+        return $location.path('/plc/insert');
+      };
+      $scope.edit = function ($index) {
+        var item = $scope.items[$index];
+        return $location.path('/plc/' + item._id + '/edit');
+      };
+      $scope.view = function ($index) {
+        var item = $scope.items[$index];
+        return $location.path('/plc/' + item._id);
+      };
+
+      //do the search  for the first time
+      $scope.doSearch();
+
+    }])
+
 
 
   // ==============================================
@@ -101,82 +204,6 @@ angular.module('of5App')
 
     }])
 
-
-  // ==============================================
-  .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
-    function ($scope, $location, $routeParams, Restangular) {
-
-      var Plcs = Restangular.all('plcs');
-
-
-      Plcs.getList({where: JSON.stringify({}), 'max_results': 5})
-        .then(function (items) {
-          $scope.items = items._items;
-
-        }, function errorCallback() {
-          console.log('Oops error from server :(');
-        });
-
-      $scope.add = function () {
-        var data = 'doc=' + JSON.stringify($scope.newItem);
-        var Plcs = Restangular.all('plcs');
-        Plcs.post(data).then(function(itemAdded) {
-          $scope.newItem._id = itemAdded.doc._id;
-          $scope.items.push($scope.newItem);
-          $scope.newItem = {};
-
-          // todo Can't set Pristine
-          $scope.myForm.$setPristine();
-          $scope.myForm.$pristine = true;
-        });
-      };
-
-      $scope.remove = function ($index) {
-        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
-//        var confirmRemove = true;
-
-        if (confirmRemove) {
-          var item = $scope.items[$index];
-          var Plc = Restangular.one('plcs', item._id);
-          Plc.remove()
-            .then(function () {
-              $scope.items.splice($index, 1);
-            }, function errorCallback() {
-              console.log('Oops error from server :(');
-              return $location.path('/plc/' + $routeParams.id);
-            });
-        }
-      };
-//
-//      $scope.remove = function (item) {
-//        var confirmRemove = confirm('Are you absolutely sure you want to delete?');
-//
-//        if (confirmRemove) {
-//          var Plc = Restangular.one('plcs', item._id);
-//          Plc.remove()
-//            .then(function () {
-//              return $location.path('/plcs');
-//            }, function errorCallback() {
-//              console.log('Oops error from server :(');
-//              return $location.path('/plc/' + $routeParams.id);
-//            });
-//        }
-//      };
-
-
-
-      $scope.insert = function () {
-        return $location.path('/plc/insert');
-      };
-      $scope.edit = function ($index) {
-        var item = $scope.items[$index];
-        return $location.path('/plc/' + item._id + '/edit');
-      };
-      $scope.view = function ($index) {
-        var item = $scope.items[$index];
-        return $location.path('/plc/' + item._id);
-      };
-    }])
 
 
   // ==============================================

@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "AngularUI"
+  },
+  "name": "angular-ui-map",
+  "version": "0.0.2",
+  "homepage": "http://angular-ui.github.com",
+  "keywords": [
+    "angular",
+    "angularui",
+    "map"
+  ],
+  "main": "./src/map.js",
+  "dependencies": {
+    "angular": ">= 1.0.2",
+    "angular-ui-utils": "latest"
+  },
+  "devDependencies": {
+    "angular-mocks": ">= 1.0.2"
+  },
+  "gitHead": "be3c9c51bf8c22f1286b8afe94f61f8c48c92b5e",
+  "readme": "# AngularUI - The companion suite for AngularJS\r\n\r\n***\r\n\r\n[![Build Status](https://secure.travis-ci.org/angular-ui/ui-map.png)](http://travis-ci.org/angular-ui/ui-map)\r\n\r\n## Usage\r\n\r\n### Requirements\r\n\r\n* **AngularJS v1.0.0+** is currently required.\r\n* **jQuery / Plugins** _(depends on directive)._ Check specific directive dependencies for more information\r\n\r\n## Installation\r\n\r\nThe repository comes with the modules pre-built and compressed into the `build/` directory.\r\n\r\n```javascript\r\nangular.module('myApp', ['ui']);\r\n```\r\n\r\nThe modules can be found in the [Directives](https://github.com/angular-ui/angular-ui/tree/master/modules/directives) and [Filters](https://github.com/angular-ui/angular-ui/tree/master/modules/filters) folders. Check out the readme file associated with each module for specific module usage information.\r\n\r\n## Development\r\n\r\nYou do not need to build the project to use it - see above - but if you are working on it then this is what you need to know.\r\n\r\n### Requirements\r\n\r\n0. Install [Node.js](http://nodejs.org/) and NPM (should come with)\r\n\r\n1. Install local dependencies:\r\n\r\n```bash\r\n$ npm install\r\n```\r\n\r\n2. Install global dependencies `grunt`, `coffee-script`, and `testacular`:\r\n\r\n```bash\r\n$ npm install -g testacular coffee-script grunt\r\n```\r\n\r\n### Build Files & Run Tests\r\n\r\nBefore you commit, always run `grunt` to build and test everything once.\r\n\r\n```bash\r\n$ grunt\r\n```\r\n\r\n### Test & Develop\r\n\r\nThe modules come with unit tests that should be run on any changes and certainly before commiting changes to the project.  The unit tests should also provide further insight into the usage of the modules.\r\n\r\nFirst, start the testacular server:\r\n```bash\r\n$ grunt server\r\n```\r\nThen, open your browser to http://localhost:8080 and run the watch command to re-run tests on every save:\r\n```bash\r\n$ grunt watch\r\n```\r\n\r\n### Publishing\r\n\r\nFor core team: if you wish to publish a new version follow these steps:\r\n\r\n1. Bump the version number inside `package.json`\r\n2. Build and test\r\n3. Commit the updated `package.json` and `build/` folder on their own commit\r\n4. Tag the commit: `git tag v[maj].[min].[patch]`\r\n5. Push the tag: `git push [angular-ui] master --tags`\r\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-ui-map@0.0.2",
+  "description": "***",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular-ui/ui-map.git"
+  }
+}

@@ -1,7 +1,12 @@
 <h4>Places</h4>
+<h4>Search</h4>
 
 <div ng-controller="PlcsCtrl" ng-cloak="">
 
+    <div class="input-prepend">
+        <!--<button class="btn btn-primary" ng-click="doSearch()" type="button"><i class=""></i>Search</button>-->
+         <input type="search" ng-model="search" class="search-query" placeholder="Search" ui-keypress="{enter: 'doSearch()', escape: 'doClear()'}" autofocus="">
+    </div>
     <ul>
     <li ng-repeat="item in items">
         <span ng-click="view($index)">
@@ -9,7 +14,7 @@
             {{item.pts}}
         </span>
         <b>
-        <span ng-click="edit($index)">Edit</span>
+        <span ng-click="edit($index)"><i class="icon-pencil"></i></span>
         <!--<button class="btn btn-danger" ng-click="remove(item)" ng-disabled="!item._id">Remove</button>-->
         <span ng-click="remove($index)" ng-disabled="!item._id">X</span>
         </b>

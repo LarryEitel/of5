@@ -257,8 +257,9 @@ module.exports = function (grunt) {
             '*.{ico,txt}',
             '.htaccess',
             'components/**/*',
-            'img/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
+            'img/**/*',
+            'styles/main.css',
+            'styles/bootstrap.css'
           ]
         },
         {

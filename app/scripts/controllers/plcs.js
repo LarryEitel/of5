@@ -10,18 +10,40 @@ angular.module('of5App')
       $scope.maxId = null;
       $scope.itemsPerPage = 5;
       $scope.page = 1;
-      $scope.search = '';
+
+      if ($routeParams.q) {
+        $scope.search = $routeParams.q;
+      }
+
+      $scope.location = $location;
+      $scope.routeParams = $routeParams;
+      $scope.$watch('routeParams', (function(newVal, oldVal) {
+        return angular.forEach(newVal, function(v, k) {
+          return $location.search(k, v);
+        });
+      }), true);
+
+      $scope.$watch('search', (function(newVal, oldVal) {
+        if (!newVal) {
+          delete $location.q;
+          return;
+        }
+        return $location.search('q', newVal);
+      }), true);
 
       var Plcs = Restangular.all('plcs');
 
-      console.log($scope.search);
-
       var qry = {};
-      $scope.$watch('search', function() {
+
+      $scope.doClear = function () {
+        $scope.search = '';
+        $scope.location.q = '';
+        $scope.routeParams.q = '';
         $scope.doSearch();
-      });
+      };
 
       $scope.doSearch = function () {
+        // console.log('doSearch');
         if ($scope.search){
           qry.where = JSON.stringify(
             {dNam:{$regex: $scope.search, $options:'i'}}

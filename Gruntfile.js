@@ -93,7 +93,9 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc',
-        '-W117': true
+        '-W117': true,
+        '-W098': true, // <var> is defined but never used
+        '-W068': true // Wrapping non-IIFE function literals in parens is unnecessary.
       },
       all: [
         'Gruntfile.js',

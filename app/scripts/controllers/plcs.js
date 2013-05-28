@@ -10,6 +10,7 @@ angular.module('of5App')
       $scope.maxId = null;
       $scope.itemsPerPage = 5;
       $scope.page = 1;
+      $scope.search = '';
 
       if ($routeParams.q) {
         $scope.search = $routeParams.q;
@@ -23,13 +24,13 @@ angular.module('of5App')
         });
       }), true);
 
-      $scope.$watch('search', (function(newVal, oldVal) {
-        if (!newVal) {
-          delete $location.q;
-          return;
-        }
-        return $location.search('q', newVal);
-      }), true);
+      // $scope.$watch('search', (function(newVal, oldVal) {
+      //   if (!newVal) {
+      //     delete $location.q;
+      //     return;
+      //   }
+      //   return $location.search('q', newVal);
+      // }), true);
 
       var Plcs = Restangular.all('plcs');
 
@@ -55,7 +56,7 @@ angular.module('of5App')
         Plcs.getList(qry, {maxResults: $scope.itemsPerPage})
           .then(function (items) {
             $scope.items = items._items;
-
+            $location.search('q', $scope.search);
           }, function errorCallback() {
             console.log('Oops error from server :(');
           });

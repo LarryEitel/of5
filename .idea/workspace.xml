@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\styles\160c16ba.main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\styles\d8f93507.bootstrap.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/favicon.ico" afterPath="$PROJECT_DIR$/app/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/favicon.ico" afterPath="$PROJECT_DIR$/dist/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/main.html" afterPath="$PROJECT_DIR$/dist/views/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/plcs.html" afterPath="$PROJECT_DIR$/dist/views/plcs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -11,18 +23,18 @@
     <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369671916338" ignored="false" />
     <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369350118598" ignored="false" />
     <file path="/plc-view.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369352062974" ignored="false" />
-    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369671887493" ignored="false" />
+    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369707429050" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369588142690" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369703108984" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369687592165" ignored="false" />
-    <file path="/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369680128377" ignored="false" />
+    <file path="/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369705068519" ignored="false" />
     <file path="/main.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319717282" ignored="false" />
     <file path="/plc-form.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369423532795" ignored="false" />
     <file path="/restangular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369417797498" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369692154934" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/css/glyphicons.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369702782431" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,43 +66,28 @@
       <file leaf-file-name="plcs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="32" column="0" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1369706799124" expanded="true" signature="1654:4186" placeholder="[...]" />
+                <marker date="1369706799124" expanded="true" signature="1654:4185" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="restangular.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/restangular/src/restangular.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="19" selection-start="6541" selection-end="6544" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="35" selection-start="623" selection-end="623" vertical-scroll-proportion="0.22666667">
+            <state line="32" column="22" selection-start="1711" selection-end="1711" vertical-scroll-proportion="-13.076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="39" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -114,11 +111,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plcs.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="9" selection-start="807" selection-end="807" vertical-scroll-proportion="-11.769231">
-              <folding />
+            <state line="7" column="35" selection-start="444" selection-end="444" vertical-scroll-proportion="0.22666667">
+              <folding>
+                <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.tmp/styles/main.css" />
         <option value="$PROJECT_DIR$/app/views/plc-edit.html" />
         <option value="$PROJECT_DIR$/app/views/plc-view.html" />
         <option value="$PROJECT_DIR$/app/views/plc-delete.html" />
@@ -155,15 +154,16 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/styles/bootstrap.css" />
-        <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/views/plcs.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="16" />
     <option name="y" value="8" />
-    <option name="width" value="966" />
+    <option name="width" value="1049" />
     <option name="height" value="906" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -238,7 +238,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,11 +252,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".tmp" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,7 +270,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".tmp" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,14 +443,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="8" width="966" height="906" extended-state="0" />
+    <frame x="16" y="8" width="1049" height="906" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24668142" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34751773" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -534,16 +538,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="15" selection-end="216" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6272" column="1" selection-start="176932" selection-end="176932" vertical-scroll-proportion="0.19746122" />
@@ -561,9 +555,7 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="442" column="23" selection-start="9623" selection-end="9623" vertical-scroll-proportion="0.33240998">
-          <folding />
-        </state>
+        <state line="442" column="23" selection-start="9623" selection-end="9623" vertical-scroll-proportion="0.33240998" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
@@ -596,15 +588,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+        <state line="25" column="0" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="32" column="0" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1369706799124" expanded="true" signature="1654:4186" placeholder="[...]" />
+            <marker date="1369706799124" expanded="true" signature="1654:4185" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -617,22 +612,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="17" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.37089872">
+        <state line="70" column="17" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.37089872" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/modernizr/modernizr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="1711" selection-end="1711" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="39" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="9" selection-start="807" selection-end="807" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="623" selection-end="623" vertical-scroll-proportion="0.22666667">
-          <folding />
+        <state line="7" column="35" selection-start="444" selection-end="444" vertical-scroll-proportion="0.22666667">
+          <folding>
+            <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

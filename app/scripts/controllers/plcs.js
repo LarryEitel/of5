@@ -141,11 +141,20 @@ angular.module('of5App')
 
         Plc.get()
           .then(function (item) {
+            $scope.dNam = item.dNam;
             $scope.item = {};
-            $scope.item.lbl = item.lbl;
-            if (undefined !== item.pts){
-              $scope.item.lat = item.pts[0];
-              $scope.item.lng = item.pts[1];
+            $scope.item.nam = item.nam || '';
+            $scope.item.namS = item.namS || '';
+            $scope.item.addr = item.addr;
+            $scope.item.desc = item.desc;
+            if (typeof(item.tags) !== 'undefined') {
+              $scope.item.tags = item.tags.join(',');
+            } else {
+              $scope.item.tags = '';
+            }
+            if (typeof(item.pt) !== 'undefined'){
+              $scope.item.lng = item.pt[0];
+              $scope.item.lat = item.pt[1];
             }
 
           }, function errorCallback() {
@@ -181,8 +190,12 @@ angular.module('of5App')
           });
         } else {
 
+          if (undefined !== item.tags) {
+            item.tags = item.tags.split(',');
+          }
 
-          item.pts = [item.lat, item.lng];
+
+          item.pts = [item.lng, item.lat];
           delete item.lat;
           delete item.lng;
 

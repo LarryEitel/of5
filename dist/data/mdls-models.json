@@ -1,4 +1,71 @@
 {
+  "Bdry": {
+    "meta": {
+      "baseClass": "D",
+      "colNam": "bdrys",
+      "dNam": "Boundary",
+      "dNamPlural": "Boundaries",
+      "dNamS": "bdry",
+      "dNamSPlural": "boundaries"
+    },
+    "fields": {
+      "donotcall": {
+        "dNam": "Do Not Call",
+        "type": "boolean"
+      },
+      "bBox": {
+        "dNam": "Bound Box of All Polygons",
+        "dNamS": "bBox",
+        "type": [
+          "topLatitude",
+          "rightLongitude",
+          "bottomLatitude",
+          "leftLatitude"
+        ],
+        "note": "perhaps a diff struct based on how google maps calc bBox from poly"
+      },
+      "bdry": {
+        "dNam": "Parent bdry Slug value",
+        "type": "string",
+        "note": "Used to link this place to another boundary. Later will use field 'pars'"
+      },
+      "centerPt": {
+        "dNam": "Center Latitude/Longitude of All Polygons",
+        "dNamS": "centerPt",
+        "type": "Pt"
+      },
+      "doorCount": {
+        "dNam": "Door Count",
+        "type": "integer",
+        "note": "there are plcs/places that are only points of reference rather than actual doors."
+      },
+      "polys": {
+        "dNam": "Boundary Polygons",
+        "dNamS": "polys",
+        "type": [
+          "Poly"
+        ],
+        "note": "Since boundaries, such as business may be comprised of non-contiguous boundaries."
+      },
+      "typ": {
+        "dNam": "Type of Boundary",
+        "dNamS": "typ",
+        "type": "string",
+        "choices": [
+          "cong",
+          "cong-area",
+          "cong-terr",
+          "cong-terr-biz",
+          "cong-terr-closed"
+        ]
+      },
+      "w": {
+        "dNam": "Sort Weight",
+        "type": "float",
+        "note": "Used to sort items grouped by par (territory)"
+      }
+    }
+  },
   "Cmp": {
     "meta": {
       "desc": "Company",
@@ -122,6 +189,10 @@
         "required": true,
         "note": "This is redundant because ObjectID has this information"
       },
+      "desc": {
+        "dNam": "Description",
+        "type": "string"
+      },
       "dId": {
         "dNam": "Document Id",
         "desc": "Unique auto-incremented ID.",
@@ -145,6 +216,33 @@
         "dNam": "When Deleted",
         "desc": "When deleted.",
         "type": "datetime"
+      },
+      "iDCode": {
+        "dNam": "Id Code",
+        "desc": "Generic Code",
+        "type": "string",
+        "note": "Generic Code"
+      },
+      "iDFloat": {
+        "dNam": "Float Id",
+        "desc": "Generic Float",
+        "type": "float",
+        "note": "Although javascript see all numbers the same you can use this field specifically for float/double numbers"
+      },
+      "iDInt": {
+        "dNam": "Integer Id",
+        "desc": "Generic Integer",
+        "type": "integer",
+        "note": "Generic Integer"
+      },
+      "nam": {
+        "dNam": "Name",
+        "desc": "Primary name/title of this doc.",
+        "type": "string"
+      },
+      "namS": {
+        "dNam": "Short or Abbreviation of Name",
+        "type": "string"
       },
       "note": {
         "dNam": "Public Note",
@@ -193,8 +291,10 @@
         "type": "integer"
       },
       "typ": {
-        "dNam": "Item Type",
-        "type": "Typ"
+        "dNam": "Type of Place",
+        "dNamS": "typ",
+        "type": "string",
+        "note": "If people are not expected at this place, set typ == 'ptofref' point of reference for now."
       },
       "uBy": {
         "dNam": "Updated By",
@@ -213,12 +313,17 @@
       "vOn": {
         "dNam": "When Verified",
         "type": "datetime"
+      },
+      "w": {
+        "dNam": "Sort Weight",
+        "type": "float",
+        "note": "Used to sort items grouped by par (territory)"
       }
     }
   },
   "Email": {
     "meta": {
-      "baseClass": "Email",
+      "baseClass": "ListBase",
       "desc": "One or emails",
       "colNam": "none",
       "dNam": "Email",
@@ -237,15 +342,15 @@
       }
     }
   },
-  "Embed": {
+  "ListBase": {
     "meta": {
       "baseClass": "D",
-      "desc": "Base class",
+      "desc": "Base class for embedded lists.",
       "colNam": "none",
-      "dNam": "Embed",
-      "dNamPlural": "Embeds",
-      "dNamS": "embed",
-      "dNamSPlural": "embeds",
+      "dNam": "ListBase",
+      "dNamPlural": "ListBases",
+      "dNamS": "listbase",
+      "dNamSPlural": "listbases",
       "note": "Base class for embedding list of objects  ie  list of emails."
     },
     "fields": {
@@ -258,13 +363,6 @@
         "dNam": "Element Id",
         "desc": "When multiple emails appear in a list. indicates which is prim. At most one may be prim.",
         "type": "boolean"
-      },
-      "typ": "Typ",
-      "w": {
-        "dNam": "Element Id",
-        "desc": "Sort list by weight value.",
-        "type": "integer",
-        "note": "Possibly use a Priority number instead."
       }
     }
   },
@@ -339,6 +437,72 @@
       }
     }
   },
+  "Note": {
+    "meta": {
+      "baseClass": "ListBase",
+      "dNam": "Note",
+      "dNamPlural": "Notes",
+      "dNamS": "note",
+      "dNamSPlural": "notes"
+    },
+    "fields": {
+      "_c": {
+        "default": "note"
+      },
+      "title": {
+        "dNam": "Title or Subject",
+        "type": "string",
+        "required": true
+      },
+      "noteHtml": {
+        "dNam": "Note HTML",
+        "desc": "Note parsed for rendering",
+        "type": "string"
+      }
+    }
+  },
+  "Par": {
+    "meta": {
+      "baseClass": "ListBase",
+      "desc": "One or parent references other docs can be parents of subject Document.",
+      "colNam": "none",
+      "dNam": "Par",
+      "dNamPlural": "Pars",
+      "dNamS": "par",
+      "dNamSPlural": "pars",
+      "unique_with": [
+        "p_c",
+        "p_slug",
+        "c_role"
+      ]
+    },
+    "fields": {
+      "_c": {
+        "default": "par"
+      },
+      "p_c": {
+        "dNam": "Parent Class",
+        "type": "string"
+      },
+      "p_slug": {
+        "dNam": "Parent Slug",
+        "type": "string"
+      },
+      "c_role": {
+        "dNam": "Child Role",
+        "type": "string"
+      },
+      "c_mask": {
+        "dNam": "Child Role Mask",
+        "type": "string"
+      },
+      "shr": {
+        "dNam": "Share Mask",
+        "type": "string",
+        "desc": "Possible way to further determine how to share."
+      }
+    }
+  },
   "Plc": {
     "meta": {
       "baseClass": "D",
@@ -349,18 +513,84 @@
       "dNamSPlural": "plcs"
     },
     "fields": {
+      "addr": {
+        "dNam": "Address",
+        "type": "string",
+        "note": "Street + <house number or apartment number>"
+      },
+      "bdry": {
+        "dNam": "Boundary Slug",
+        "type": "string"
+      },
+      "mkrCode": {
+        "dNam": "Marker Code",
+        "desc": "Number of attempts made to make contact",
+        "dNamS": "mkrCode",
+        "type": "integer",
+        "min": 0,
+        "max": 3
+      },
+      "mkrNo": {
+        "dNam": "Marker Number",
+        "dNamS": "mkrNo",
+        "type": "integer"
+      },
+      "mkrOk": {
+        "dNam": "Marker Status",
+        "desc": "Marker ok status. Contact was made. Bottom-left flag on",
+        "dNamS": "mkrCode",
+        "type": "boolean"
+      },
+      "pt": {
+        "dNam": "Lng/Lat Coordinate",
+        "dNamS": "pt",
+        "type": "Pt",
+        "desc": "longitude,latitude x,y",
+        "note": "see http://geojson.org/geojson-spec.html"
+      }
+    }
+  },
+  "Poly": {
+    "meta": {
+      "baseClass": "ListBase",
+      "dNam": "Polygon",
+      "dNamPlural": "Polygons",
+      "dNamS": "poly",
+      "dNamSPlural": "polys"
+    },
+    "fields": {
+      "bBox": {
+        "dNam": "Bound Box of All Polygons",
+        "dNamS": "bBox",
+        "type": [
+          "topLatitude",
+          "rightLongitude",
+          "bottomLatitude",
+          "leftLatitude"
+        ]
+      },
       "pNam": {
-        "dNam": "Place Name",
+        "dNam": "Polygon Name",
         "type": "string"
       },
       "pNamS": {
-        "dNam": "Short or Abbreviated Place Name",
+        "dNam": "Short or Abbreviated Polygon Name",
         "type": "string"
       },
-      "pt": {
-        "dNam": "Lat/Lng Coordinate",
-        "dNamS": "ll",
+      "ptCenter": {
+        "dNam": "Center of All Polygons",
+        "dNamS": "ptCenter",
         "type": "Pt"
+      },
+      "pts": {
+        "dNam": "Polygon Points",
+        "dNamS": "pts",
+        "type": [
+          [
+            "float",
+            "float"
+          ]
+        ]
       }
     }
   },
@@ -419,6 +649,50 @@
       }
     }
   },
+  "Pth": {
+    "meta": {
+      "baseClass": "ListBase",
+      "desc": "One or parent references representing each ancestor to the top. For example, given subject document is a place named Atlanta and its role is office, you might have Pl.atlanta-ga.office, [Pl.atlanta-ga,Cmp.ni]",
+      "colNam": "none",
+      "dNam": "Pth",
+      "dNamPlural": "Pths",
+      "dNamS": "pth",
+      "dNamSPlural": "pths",
+      "unique_with": [
+        "p_c",
+        "p_slug",
+        "c_role"
+      ]
+    },
+    "fields": {
+      "_c": {
+        "default": "pth"
+      },
+      "p_c": {
+        "dNam": "Class of Top Parent",
+        "desc": "For example, given subject document is a place named Atlanta",
+        "type": "string"
+      },
+      "p_slug": {
+        "dNam": "Parent Slug",
+        "type": "string"
+      },
+      "c_role": {
+        "dNam": "Child Role",
+        "type": "string"
+      },
+      "pth": {
+        "dNam": "Path",
+        "type": "string",
+        "desc": "For example Cmp.ni.admin.11"
+      },
+      "uris": {
+        "dNam": "URIs",
+        "type": "list",
+        "desc": "List of [p_c.p_slug.c_role] that represent a path to top parent."
+      }
+    }
+  },
   "Rdt": {
     "meta": {
       "baseClass": "D",
@@ -468,7 +742,7 @@
   },
   "SN": {
     "meta": {
-      "baseClass": "Embed",
+      "baseClass": "ListBase",
       "desc": "One or social networks",
       "colNam": "none",
       "dNam": "Social Network",
@@ -496,7 +770,7 @@
   },
   "Tel": {
     "meta": {
-      "baseClass": "Embed",
+      "baseClass": "ListBase",
       "desc": "One or telephones",
       "colNam": "none",
       "dNam": "Telephone",
@@ -578,17 +852,5 @@
         "type": "string"
       }
     }
-  },
-  "Dx": {
-    "collection": "dxs",
-    "dNam": "Document Link",
-    "dNamS": "dx",
-    "dNamPlural": "Document Links"
-  },
-  "DxRel": {
-    "collection": "dxrels",
-    "dNam": "Document Link Relationship",
-    "dNamS": "dxRel",
-    "dNamPlural": "Document Link Relationships"
   }
 }

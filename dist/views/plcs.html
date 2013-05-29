@@ -3,7 +3,7 @@
 <div ng-controller="PlcsCtrl" ng-cloak="">
 
     <form class="form-horizontal" name="searchForm" ng-submit="doSearch()">
-      <input type="search" results="" ng-model="search" class="search-query" placeholder="Search" autofocus="" required="" ui-keydown="{esc: 'doClear()'}, 13:'doSearch()'">
+      <input type="search" results="" ng-model="search" class="search-query" placeholder="Search" autofocus="" required="" ui-keydown="{esc: 'doClear()', 13:'doSearch()'}">
       <span ng-click="doSearch()"><i class="glyphicons-icon right_arrow" style="margin-top: -10px"></i></span>
       <span ng-click="doClear()" ng-show="search"><i class="glyphicons-icon remove" style="margin: -10px 0 0 -10px"></i></span>
     </form>
@@ -14,8 +14,18 @@
         <td>
           <span ng-click="edit($index)"><i class="halflings-icon edit"></i></span>
           <span ng-click="remove($index)" ng-disabled="!item._id"><i class="halflings-icon trash"></i></span>
-          <b><span ng-click="view($index)">{{item.lbl}}</span></b>
-            {{item.pts}}
+        </td>
+        <td><span>{{item.mkrNo}}</span></td>
+        <td>
+          <b><span ng-click="view($index)">{{item.dNam}}</span></b>
+
+          <span ng-show="item.tags">
+            &nbsp;
+            <span ng-repeat="tag in item.tags">
+              <b>{{tag}}</b>
+            </span>
+          </span>
+
         </td>
     </tr>
     </tbody>

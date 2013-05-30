@@ -5,58 +5,61 @@ angular.module('of5App')
   .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
     function ($scope, $location, $routeParams, Restangular) {
 
+      var defaultRouteArgs = {
+        sort: 'bdry,-w',
+        pp: 5, // items per page
+        pg: 5 // page
+      };
+
       $scope.items = [];
       $scope.lastItemsWithInfo = null;
       $scope.maxId = null;
-      $scope.itemsPerPage = 5;
-      $scope.page = 1;
-      $scope.search = '';
+      $scope.q = $routeParams.q;
+      $scope.pp = $routeParams.pp;
+      $scope.pg = $routeParams.pg;
+      $scope.args = defaultRouteArgs;
 
-      if ($routeParams.q) {
-        $scope.search = $routeParams.q;
+      if (!$routeParams.sort) {
+        $routeParams.sort = defaultRouteArgs.sort;
       }
 
       $scope.location = $location;
       $scope.routeParams = $routeParams;
+
+
       $scope.$watch('routeParams', (function(newVal, oldVal) {
         return angular.forEach(newVal, function(v, k) {
-          return $location.search(k, v);
+          if (k !== 'where') {
+            return $location.search(k, v);
+          }
         });
       }), true);
-
-      // $scope.$watch('search', (function(newVal, oldVal) {
-      //   if (!newVal) {
-      //     delete $location.q;
-      //     return;
-      //   }
-      //   return $location.search('q', newVal);
-      // }), true);
 
       var Plcs = Restangular.all('plcs');
 
       var qry = {};
 
       $scope.doClear = function () {
-        $scope.search = '';
+        $scope.q = '';
         $scope.location.q = '';
         $scope.routeParams.q = '';
         $scope.doSearch();
       };
 
       $scope.doSearch = function () {
-        // console.log('doSearch');
-        if ($scope.search){
-          qry.where = JSON.stringify(
-            {dNam:{$regex: $scope.search, $options:'i'}}
+        var args = $routeParams;
+        if ($scope.q){
+          args.where = JSON.stringify(
+            {dNam:{$regex: $scope.q, $options:'i'}}
             );
-        } else {
-          qry = {};
         }
 
-        Plcs.getList(qry, {maxResults: $scope.itemsPerPage})
+        Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;
-            $location.search('q', $scope.search);
+            if ($scope.q) {
+              $location.search('q', $scope.q);
+            }
           }, function errorCallback() {
             console.log('Oops error from server :(');
           });

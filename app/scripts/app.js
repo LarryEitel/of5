@@ -16,12 +16,12 @@ angular.module('of5App', ['restangular','ui.bootstrap', 'ui.keypress'])
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx';
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-//    $httpProvider.defaults.headers.get['Gonto-id'] = 'P';
   }])
   .config(
     ['RestangularProvider',
       function(RestangularProvider) {
         RestangularProvider.setBaseUrl('http://exi.xchg.com/api');
+//        RestangularProvider.setBaseUrl('http://localhost:5000/api');
 
         // what's this
         RestangularProvider.setListTypeIsArray(false);

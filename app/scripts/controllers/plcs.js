@@ -2,11 +2,11 @@
 
 angular.module('of5App')
   // ==============================================
-  .controller('PlcsCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
-    function ($scope, $location, $routeParams, Restangular) {
+  .controller('PlcsCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular',
+    function ($rootScope, $scope, $location, $routeParams, Restangular) {
 
       var defaultRouteArgs = {
-        sort: 'bdry,-w',
+        sort: 'bdry,w',
         pp: 5, // items per page
         pg: 5 // page
       };
@@ -23,6 +23,7 @@ angular.module('of5App')
         $routeParams.sort = defaultRouteArgs.sort;
       }
 
+      $rootScope.returnRoute = $location.$$url;
       $scope.location = $location;
       $scope.routeParams = $routeParams;
 
@@ -133,19 +134,23 @@ angular.module('of5App')
 
 
   // ==============================================
-  .controller('PlcFormCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
-    function ($scope, $location, $routeParams, Restangular) {
+  .controller('PlcFormCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular',
+    function ($rootScope, $scope, $location, $routeParams, Restangular) {
 
       var insertMode = $location.$$path === '/plc/insert';
 
       if (insertMode) {
+        $scope.mode = 'Add New';
       } else {
+        $scope.mode = 'Update';
         var Plc = Restangular.one('plcs', $routeParams.id);
 
         Plc.get()
           .then(function (item) {
             $scope.dNam = item.dNam;
             $scope.item = {};
+            $scope.item._id = item._id || null;
+            $scope.item.bdry = item.bdry || '';
             $scope.item.nam = item.nam || '';
             $scope.item.namS = item.namS || '';
             $scope.item.addr = item.addr;
@@ -183,29 +188,37 @@ angular.module('of5App')
 
       $scope.save = function (item) {
         var data = {};
+        console.log('save');
         if (insertMode) {
           data = 'doc=' + JSON.stringify(item);
           var Plcs = Restangular.all('plcs');
           Plcs.post(data).then(function() {
-            return $location.path('/plcs/');
+            window.location.href = '#' + $rootScope.returnRoute;
           }, function errorCallback() {
             console.log('Oops error from server :(');
           });
-        } else {
 
-          if (undefined !== item.tags) {
+
+        } else {
+          if (undefined !== item.tags && item.tags > '') {
             item.tags = item.tags.split(',');
+          } else {
+            item.tags = [];
           }
 
 
-          item.pts = [item.lng, item.lat];
-          delete item.lat;
-          delete item.lng;
+          if (undefined !== item.lng && undefined !== item.lat) {
+            item.pt = [item.lng, item.lat];
+            delete item.lat;
+            delete item.lng;
+          }
+          delete item._id;
 
+          console.log('item', item);
           data = JSON.stringify({'actions': {'$set': {'flds': item}}});
 
           Plc.customPUT(undefined, undefined, undefined, data).then(function(itemUpdated) {
-            return $location.path('/plc/' + itemUpdated.doc._id);
+            window.location.href = '#' + $rootScope.returnRoute;
           }, function errorCallback() {
             console.log('Oops error from server :(');
           });
@@ -246,17 +259,17 @@ angular.module('of5App')
 
 
   // ==============================================
-  .controller('PlcViewCtrl', ['$scope', '$location', '$routeParams', 'Restangular',
-    function ($scope, $location, $routeParams, Restangular) {
+  .controller('PlcViewCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular',
+    function ($rootScope, $scope, $location, $routeParams, Restangular) {
 
       var Plc = Restangular.one('plcs', $routeParams.id);
 
       Plc.get()
         .then(function (item) {
           $scope.item = item;
-          if (undefined !== item.pts){
-            $scope.lat = item.pts[0];
-            $scope.lng = item.pts[1];
+          if (undefined !== item.pt){
+            $scope.lng = item.pt[0];
+            $scope.lat = item.pt[1];
           }
 
 
@@ -271,10 +284,12 @@ angular.module('of5App')
           var Plc = Restangular.one('plcs', item._id);
           Plc.remove()
             .then(function () {
-              return $location.path('/plcs');
+//              return $location.path('/plcs');
+              window.location.href = '#' + $rootScope.returnRoute;
             }, function errorCallback() {
               console.log('Oops error from server :(');
-              return $location.path('/plc/' + $routeParams.id);
+              window.location.href = '#' + $rootScope.returnRoute;
+//              return $location.path('/plc/' + $routeParams.id);
             });
         }
       };

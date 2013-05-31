@@ -6,7 +6,12 @@ angular.module('of5App')
     function ($rootScope, $scope, $location, $routeParams, Restangular) {
 
       var defaultRouteArgs = {
+        cngSlug: 'crherbs',
+        cngAreaSlug: 'crherbsca',
+        cngAreaTerrSlug: 'crherbsca12',
+        q: '',
         sort: 'bdry,w',
+        filter: 'cngAreaTerr:crherbs',
         pp: 5, // items per page
         pg: 5 // page
       };
@@ -14,23 +19,60 @@ angular.module('of5App')
       $scope.items = [];
       $scope.lastItemsWithInfo = null;
       $scope.maxId = null;
-      $scope.q = $routeParams.q;
-      $scope.pp = $routeParams.pp;
-      $scope.pg = $routeParams.pg;
+//      $scope.cngId = $routeParams.cngSlug || defaultRouteArgs.cngSlug;
+//      $scope.cngAreaId = $routeParams.cngAreaSlug || defaultRouteArgs.cngAreaSlug;
+//      $scope.cngAreaTerrId = $routeParams.cngAreaTerrSlug || defaultRouteArgs.cngAreaTerrSlug;
+//      $scope.filter = $routeParams.filter || defaultRouteArgs.filter;
+      $scope.q = $routeParams.q || defaultRouteArgs.q;
+      $scope.pp = $routeParams.pp || defaultRouteArgs.pp;
+      $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
+      $scope.sort = $routeParams.sort || defaultRouteArgs.sort;
       $scope.args = defaultRouteArgs;
 
-      if (!$routeParams.sort) {
-        $routeParams.sort = defaultRouteArgs.sort;
-      }
+      $scope.cngs = [
+        {slug: 'crherbs', 'nam': 'Belen Sur'}
+      ];
+
+      $scope.cngAreas = [
+        {bdry: 'crherbs', slug: 'crherbsca', 'nam': 'Cariari'},
+        {bdry: 'crherbs', slug: 'crherbsla', 'nam': 'Los Arcos'}
+      ];
+
+      $scope.cngAreaTerrs = [
+//        {slug: '', 'nam': ''},
+        {bdry: 'crherbsca', slug: 'crherbsca01', 'nam': 'CA-01 (bogus)'},
+        {bdry: 'crherbsca', slug: 'crherbsca12', 'nam': 'CA-12'},
+        {bdry: 'crherbsla', slug: 'crherbsla01', 'nam': 'LA-01 (bogus)'},
+        {bdry: 'crherbsla', slug: 'crherbsla02', 'nam': 'LA-02 (bogus)'}
+      ];
+
+      if (!$routeParams.sort) {$routeParams.sort = defaultRouteArgs.sort;}
+//      if (!$routeParams.filter) {$routeParams.filter = defaultRouteArgs.filter;}
+//      if (!$routeParams.cngId) {$routeParams.cngId = defaultRouteArgs.cngId;}
+//      if (!$routeParams.cngAreaId) {$routeParams.cngAreaId = defaultRouteArgs.cngAreaId;}
+//      if (!$routeParams.cngAreaTerrId) {$routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;}
 
       $rootScope.returnRoute = $location.$$url;
+
+
       $scope.location = $location;
       $scope.routeParams = $routeParams;
 
 
+      $scope.$watch('cngAreaTerrId', function(newValue) {
+        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
+        console.log('newValue:' + angular.toJson(newValue));
+        $location.search('cngAreaTerrId', newValue);
+        $scope.cngAreaTerrId = newValue;
+      });
+
+
       $scope.$watch('routeParams', (function(newVal, oldVal) {
         return angular.forEach(newVal, function(v, k) {
+
           if (k !== 'where') {
+            console.log('$scope.$watch', k, v);
+            $scope[k] = v;
             return $location.search(k, v);
           }
         });
@@ -41,20 +83,26 @@ angular.module('of5App')
       var qry = {};
 
       $scope.doClear = function () {
-        $scope.q = '';
-        $scope.location.q = '';
-        $scope.routeParams.q = '';
+        $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q;
+        $scope.cngId = $scope.location.cngId = $scope.routeParams.cngId = defaultRouteArgs.cngId;
+        $scope.cngAreaId = $scope.location.cngAreaId = $scope.routeParams.cngAreaId = defaultRouteArgs.cngAreaId;
+        $scope.cngAreaTerrId = $scope.location.cngAreaTerrId = $scope.routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;
         $scope.doSearch();
       };
 
+      // doSearch -------------------------------------------
       $scope.doSearch = function () {
-        var args = $routeParams;
-        if ($scope.q){
-          args.where = JSON.stringify(
-            {dNam:{$regex: $scope.q, $options:'i'}}
-            );
-        }
+        var args = {};
+        console.log('doSearch', $routeParams);
+        var whereParts = {};
+        if ($scope.q)                   { whereParts.dNam = {$regex: $scope.q, $options:'i'}; }
+        if (typeof($routeParams.cngAreaTerrId) !== 'boolean' &&
+          $routeParams.cngAreaTerrId) { whereParts.bdry = $routeParams.cngAreaTerrId; }
+        if (whereParts)                 { args.where = JSON.stringify(whereParts); }
 
+        if ($routeParams.sort)          { args.sort = $routeParams.sort; }
+
+        console.log('args', args);
         Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;

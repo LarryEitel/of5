@@ -60,8 +60,8 @@ angular.module('of5App')
 
 
       $scope.$watch('cngAreaTerrId', function(newValue) {
-        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
-        console.log('newValue:' + angular.toJson(newValue));
+//        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
+//        console.log('newValue:' + angular.toJson(newValue));
         $location.search('cngAreaTerrId', newValue);
         $scope.cngAreaTerrId = newValue;
       });
@@ -71,7 +71,7 @@ angular.module('of5App')
         return angular.forEach(newVal, function(v, k) {
 
           if (k !== 'where') {
-            console.log('$scope.$watch', k, v);
+//            console.log('$scope.$watch', k, v);
             $scope[k] = v;
             return $location.search(k, v);
           }
@@ -93,7 +93,7 @@ angular.module('of5App')
       // doSearch -------------------------------------------
       $scope.doSearch = function () {
         var args = {};
-        console.log('doSearch', $routeParams);
+//        console.log('doSearch', $routeParams);
         var whereParts = {};
         if ($scope.q)                   { whereParts.dNam = {$regex: $scope.q, $options:'i'}; }
         if (typeof($routeParams.cngAreaTerrId) !== 'boolean' &&
@@ -102,7 +102,7 @@ angular.module('of5App')
 
         if ($routeParams.sort)          { args.sort = $routeParams.sort; }
 
-        console.log('args', args);
+//        console.log('args', args);
         Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;

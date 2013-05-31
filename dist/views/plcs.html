@@ -18,9 +18,9 @@
           <span ng-click="remove($index)" ng-disabled="!item._id"><i class="halflings-icon trash"></i></span>
         </td>
         <td ng-click="view($index)"><span>{{item.mkrNo}}</span></td>
-        <td><span style="font-size: .7em">{{item.bdry}} - p{{item.dId}}</span></td>
+        <td><span style="font-size: .7em"><span ng-show="!cngAreaTerrId">{{item.bdry.substr(7)}} - </span>p{{item.dId}}</span></td>
         <td>
-          <b><spa>{{item.dNam}}</spa></b>
+          <b><span>{{item.dNam}}</span></b>
 
           <span ng-show="item.tags">
             &nbsp;|&nbsp;

@@ -5,7 +5,7 @@
   //then we just use ui-event to catch events from an element
   function bindMapEvents(scope, eventsStr, googleObject, element) {
     angular.forEach(eventsStr.split(' '), function (eventName) {
-      //Prefix all googlemap events with 'map-', so eg 'click' 
+      //Prefix all googlemap events with 'map-', so eg 'click'
       //for the googlemap doesn't interfere with a normal 'click' event
       google.maps.event.addListener(googleObject, eventName, function (event) {
         element.triggerHandler('map-' + eventName, event);
@@ -79,7 +79,7 @@
       };
     }]);
 
-  /* 
+  /*
    * Map overlay directives all work the same. Take map marker for example
    * <ui-map-marker="myMarker"> will $watch 'myMarker' and each time it changes,
    * it will hook up myMarker's events to the directive dom element.  Then

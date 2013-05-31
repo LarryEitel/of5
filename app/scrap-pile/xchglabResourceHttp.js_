@@ -1,6 +1,6 @@
 'use strict';
 
-// angular.module('of5App')
+// angular.module('ofApp')
 //   .factory('xchglabResourceHttp', function () {
 //     // Service logic
 //     // ...
@@ -16,7 +16,7 @@
 //   });
 
 
-angular.module('of5App')
+angular.module('ofApp')
   .factory('xchglabResourceHttp', ['XCHGLAB_CONFIG', '$http', function (XCHGLAB_CONFIG, $http) {
 
     function XchglabResourceFactory(resource) {

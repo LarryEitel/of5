@@ -11,7 +11,7 @@
     "angular-ui": "~0.4.0",
     "restangular": "~0.6.6",
     "jquery": "~2.0.0",
-    "jquery-ui": "~1.10.3",
+    //"jquery-ui": "~1.10.3",
     "angular-bootstrap": "~0.3.0",
     "angular-ui-utils": "~0.0.2",
     "angular-ui-map": "~0.0.2",

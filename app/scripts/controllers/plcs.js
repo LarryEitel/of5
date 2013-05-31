@@ -1,11 +1,20 @@
 'use strict';
 
-angular.module('of5App')
+
+
+angular.module('ofApp')
   // ==============================================
   .controller('PlcsCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular',
     function ($rootScope, $scope, $location, $routeParams, Restangular) {
 
+      $scope.gMap = {myMap: undefined};
+      $scope.gMap.latLngFromLl = function(ll) {
+        var LatLng = ll.split(',');
+        return new google.maps.LatLng(LatLng[0], LatLng[1]);
+      };
+      var SJO = $scope.gMap.latLngFromLl('9.988002927, -84.20538052916');
       var defaultRouteArgs = {
+        ll: SJO,
         cngSlug: 'crherbs',
         cngAreaSlug: 'crherbsca',
         cngAreaTerrSlug: 'crherbsca12',
@@ -16,13 +25,73 @@ angular.module('of5App')
         pg: 5 // page
       };
 
+      $scope.gMap.myMarkers = [];
+      $scope.gMap.myMarkers.push(new google.maps.Marker({
+        map: $scope.gMap.myMap,
+        position: defaultRouteArgs.ll
+      }));
+
+      $scope.gMap.reLoadMkrs = function() {
+        $scope.gMap.myMarkers.push(new google.maps.Marker({
+          map: $scope.gMap.myMap,
+          position: ll
+        }));
+      };
+
+      $scope.gMap.addMarker = function($event) {
+        $scope.gMap.myMarkers.push(new google.maps.Marker({
+          map: $scope.gMap.myMap,
+          position: $event.latLng
+        }));
+      };
+
+      $scope.gMap.setMarkerPosition = function(marker, lat, lng) {
+        marker.setPosition(new google.maps.LatLng(lat, lng));
+      };
+
+      $scope.gMap.mapOptions = {
+        center: defaultRouteArgs.ll,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      $scope.$watch('myMap', function(){
+        $scope.setHome();
+      });
+
+      $scope.setHome = function() {
+        $scope.homeMarker = new google.maps.Marker({
+          map: $scope.gMap.myMap,
+          position: $scope.gMap.mapOptions.center
+        });
+      };
+
+//    $scope.setZoomMessage = function(zoom) {
+//      $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
+//      console.log(zoom,'zoomed')
+//    };
+//
+//    $scope.openMarkerInfo = function(marker) {
+//      $scope.currentMarker = marker;
+//      $scope.currentMarkerLat = marker.getPosition().lat();
+//      $scope.currentMarkerLng = marker.getPosition().lng();
+//      $scope.myInfoWindow.open($scope.myMap, marker);
+//    };
+//
+//    $scope.setMarkerPosition = function(marker, lat, lng) {
+//      marker.setPosition(new google.maps.LatLng(lat, lng));
+//    };
+
+
+
+
       $scope.items = [];
       $scope.lastItemsWithInfo = null;
       $scope.maxId = null;
-//      $scope.cngId = $routeParams.cngSlug || defaultRouteArgs.cngSlug;
-//      $scope.cngAreaId = $routeParams.cngAreaSlug || defaultRouteArgs.cngAreaSlug;
-//      $scope.cngAreaTerrId = $routeParams.cngAreaTerrSlug || defaultRouteArgs.cngAreaTerrSlug;
-//      $scope.filter = $routeParams.filter || defaultRouteArgs.filter;
+  //      $scope.cngId = $routeParams.cngSlug || defaultRouteArgs.cngSlug;
+  //      $scope.cngAreaId = $routeParams.cngAreaSlug || defaultRouteArgs.cngAreaSlug;
+  //      $scope.cngAreaTerrId = $routeParams.cngAreaTerrSlug || defaultRouteArgs.cngAreaTerrSlug;
+  //      $scope.filter = $routeParams.filter || defaultRouteArgs.filter;
       $scope.q = $routeParams.q || defaultRouteArgs.q;
       $scope.pp = $routeParams.pp || defaultRouteArgs.pp;
       $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
@@ -39,7 +108,7 @@ angular.module('of5App')
       ];
 
       $scope.cngAreaTerrs = [
-//        {slug: '', 'nam': ''},
+  //        {slug: '', 'nam': ''},
         {bdry: 'crherbsca', slug: 'crherbsca01', 'nam': 'CA-01 (bogus)'},
         {bdry: 'crherbsca', slug: 'crherbsca12', 'nam': 'CA-12'},
         {bdry: 'crherbsla', slug: 'crherbsla01', 'nam': 'LA-01 (bogus)'},
@@ -47,10 +116,10 @@ angular.module('of5App')
       ];
 
       if (!$routeParams.sort) {$routeParams.sort = defaultRouteArgs.sort;}
-//      if (!$routeParams.filter) {$routeParams.filter = defaultRouteArgs.filter;}
-//      if (!$routeParams.cngId) {$routeParams.cngId = defaultRouteArgs.cngId;}
-//      if (!$routeParams.cngAreaId) {$routeParams.cngAreaId = defaultRouteArgs.cngAreaId;}
-//      if (!$routeParams.cngAreaTerrId) {$routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;}
+  //      if (!$routeParams.filter) {$routeParams.filter = defaultRouteArgs.filter;}
+  //      if (!$routeParams.cngId) {$routeParams.cngId = defaultRouteArgs.cngId;}
+  //      if (!$routeParams.cngAreaId) {$routeParams.cngAreaId = defaultRouteArgs.cngAreaId;}
+  //      if (!$routeParams.cngAreaTerrId) {$routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;}
 
       $rootScope.returnRoute = $location.$$url;
 
@@ -60,8 +129,8 @@ angular.module('of5App')
 
 
       $scope.$watch('cngAreaTerrId', function(newValue) {
-//        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
-//        console.log('newValue:' + angular.toJson(newValue));
+  //        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
+  //        console.log('newValue:' + angular.toJson(newValue));
         $location.search('cngAreaTerrId', newValue);
         $scope.cngAreaTerrId = newValue;
       });
@@ -71,7 +140,7 @@ angular.module('of5App')
         return angular.forEach(newVal, function(v, k) {
 
           if (k !== 'where') {
-//            console.log('$scope.$watch', k, v);
+  //            console.log('$scope.$watch', k, v);
             $scope[k] = v;
             return $location.search(k, v);
           }
@@ -84,16 +153,15 @@ angular.module('of5App')
 
       $scope.doClear = function () {
         $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q;
-        $scope.cngId = $scope.location.cngId = $scope.routeParams.cngId = defaultRouteArgs.cngId;
-        $scope.cngAreaId = $scope.location.cngAreaId = $scope.routeParams.cngAreaId = defaultRouteArgs.cngAreaId;
-        $scope.cngAreaTerrId = $scope.location.cngAreaTerrId = $scope.routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;
+  //        $scope.cngId = $sco-
+  // ah.//17d = $scope.location.cngAreaTerrId = $scope.routeParams.cngAreaTerrId = defaultRouteArgs.cngAreaTerrId;
         $scope.doSearch();
       };
 
       // doSearch -------------------------------------------
       $scope.doSearch = function () {
         var args = {};
-//        console.log('doSearch', $routeParams);
+  //        console.log('doSearch', $routeParams);
         var whereParts = {};
         if ($scope.q)                   { whereParts.dNam = {$regex: $scope.q, $options:'i'}; }
         if (typeof($routeParams.cngAreaTerrId) !== 'boolean' &&
@@ -102,7 +170,7 @@ angular.module('of5App')
 
         if ($routeParams.sort)          { args.sort = $routeParams.sort; }
 
-//        console.log('args', args);
+  //        console.log('args', args);
         Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;

@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/halflings.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="of5App">
+  <body ng-app="ofApp">
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -46,12 +46,18 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
 
-    <!--<script src="components/jquery/jquery.min.js"></script>-->
+    <script src="components/jquery/jquery.min.js"></script>
     <!--<script src="components/jquery-ui/ui/jquery-ui.js"></script>-->
-    <script src="components/modernizr/modernizr.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initCall"></script>-->
+    <!--<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+
+
     <script src="components/angular/angular.js"></script>
+    <script src="components/angular-ui/build/angular-ui.min.js"></script>
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="components/angular-ui-utils/modules/keypress/keypress.js"></script>
+    <script src="components/angular-ui-map/src/map.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/angular-cookies/angular-cookies.js"></script>
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
@@ -60,6 +66,7 @@
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <!--<script src="scripts/map.js"></script>-->
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/plcs.js"></script>
     <!-- endbuild -->

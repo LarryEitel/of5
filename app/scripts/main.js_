@@ -1,0 +1,48 @@
+require.config({
+  paths: {
+    jquery: 'components/jquery/jquery.min',
+    modernizr: 'components/modernizr/modernizr',
+    lodash: 'components/lodash/lodash',
+    text: 'components/require/text',
+    angular: 'components/angular/angular.min',
+    angularResource: 'components/angular-resource/angular-resource',
+    angularCookies: 'components/angular-cookies/angular-cookies',
+    angularSanitize: 'components/angular-sanitize/angular-sanitize',
+    keypress: 'components/angular-ui-utils/modules/keypress/keypress',
+    restangular: 'components/restangular/src/restangular',
+    angularUiMap: 'components/angular-ui-map/src/map',
+    map: 'scripts/map',
+    main: 'scripts/controllers/main',
+    plcs: 'scripts/controllers/plcs',
+    uiBootstrapTpls: 'components/angular-bootstrap/ui-bootstrap-tpls.min'
+  },
+  baseUrl: '',
+  shim: {
+    'angular' : {'exports' : 'angular'},
+    'angularMocks': {deps:['angular'], 'exports':'angular.mock'}
+  },
+  priority: [
+    "angular"
+  ]
+});
+
+require( [
+  'jquery',
+  'angular',
+  'restangular',
+  'app',
+  'main',
+  'plcs',
+  'map'
+], function($, angular, restangular, app, map, routes) {
+  'use strict';
+  $(document).ready(function () {
+    var $html = $('html');
+    angular.bootstrap($html, [app['name']]);
+    // Because of RequireJS we need to bootstrap the app app manually
+    // and Angular Scenario runner won't be able to communicate with our app
+    // unless we explicitely mark the container as app holder
+    // More info: https://groups.google.com/forum/#!msg/angular/yslVnZh9Yjk/MLi3VGXZLeMJ
+    $html.addClass('ng-app');
+  });
+});

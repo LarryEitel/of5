@@ -4,15 +4,71 @@
 
 angular.module('ofApp')
   // ==============================================
-  .controller('PlcsCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular',
-    function ($rootScope, $scope, $location, $routeParams, Restangular) {
+  .controller('PlcsCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular', '$timeout', '$log', '$anchorScroll',
+    function ($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll) {
 
-      $scope.gMap = {myMap: undefined};
+
+      var SJO = {latitude: 9.988002927, longitude: -84.20538052916};
+      var defaultCenter = SJO;
+
+
+      angular.extend($scope, {
+        position: {
+          coords: defaultCenter
+        },
+
+        /** the initial center of the map */
+        centerProperty: defaultCenter,
+
+        /** the initial zoom level of the map */
+        zoomProperty: 13,
+
+        /** list of markers to put in the map */
+        markersProperty: [ {
+          latitude: defaultCenter.latitude,
+          longitude: defaultCenter.longitude,
+          draggable: true,
+          mkrNo: 6,
+          mkrState: 0
+        }],
+
+        // These 2 properties will be set when clicking on the map
+        clickedLatitudeProperty: null,
+        clickedLongitudeProperty: null,
+
+        eventsProperty: {
+          click: function (mapModel, eventName, originalEventArgs) {
+            // 'this' is the directive's scope
+            $log.log('user defined event on map directive with scope', this);
+            $log.log('user defined event: ' + eventName, mapModel, originalEventArgs);
+          }
+        }
+      });
+
+      $scope.itemMkrClick = function(index) {
+        $scope.selectedItemIndex = index;
+//        console.log('itemMkrClick', index, $scope.items[index]);
+        if ($scope.items[index].pt !== undefined) {
+//          console.log('pt not undefined');
+          var pt = $scope.items[index].pt;
+//          console.log('pt', pt);
+////          $scope.centerProperty = {latitude: pt[0], longitude: pt[1]};
+          $scope.position.coords = {latitude: pt[1], longitude: pt[0]};
+        }
+//        $location.hash('top');
+//        $anchorScroll();{
+//        console.log('resize');
+//        google.maps.event.trigger(this, 'resize');
+        $location.hash('top');
+        $anchorScroll();
+      };
+
+
+      $scope.gMap = {};
       $scope.gMap.latLngFromLl = function(ll) {
         var LatLng = ll.split(',');
         return new google.maps.LatLng(LatLng[0], LatLng[1]);
       };
-      var SJO = $scope.gMap.latLngFromLl('9.988002927, -84.20538052916');
       var defaultRouteArgs = {
         ll: SJO,
         cngSlug: 'crherbs',
@@ -31,40 +87,33 @@ angular.module('ofApp')
         position: defaultRouteArgs.ll
       }));
 
-      $scope.gMap.reLoadMkrs = function() {
-        $scope.gMap.myMarkers.push(new google.maps.Marker({
-          map: $scope.gMap.myMap,
-          position: ll
-        }));
-      };
-
       $scope.gMap.addMarker = function($event) {
         $scope.gMap.myMarkers.push(new google.maps.Marker({
           map: $scope.gMap.myMap,
           position: $event.latLng
         }));
       };
+//
+//      $scope.map.setMarkerPosition = function(marker, lat, lng) {
+//        marker.setPosition(new google.maps.LatLng(lat, lng));
+//      };
 
-      $scope.gMap.setMarkerPosition = function(marker, lat, lng) {
-        marker.setPosition(new google.maps.LatLng(lat, lng));
-      };
-
-      $scope.gMap.mapOptions = {
-        center: defaultRouteArgs.ll,
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-
-      $scope.$watch('myMap', function(){
-        $scope.setHome();
-      });
-
-      $scope.setHome = function() {
-        $scope.homeMarker = new google.maps.Marker({
-          map: $scope.gMap.myMap,
-          position: $scope.gMap.mapOptions.center
-        });
-      };
+//      $scope.gMap.mapOptions = {
+//        center: defaultRouteArgs.ll,
+//        zoom: 13,
+//        mapTypeId: google.maps.MapTypeId.ROADMAP
+//      };
+//
+//      $scope.$watch('myMap', function(){
+//        $scope.setHome();
+//      });
+//
+//      $scope.setHome = function() {
+//        $scope.homeMarker = new google.maps.Marker({
+//          map: $scope.gMap.myMap,
+//          position: $scope.gMap.mapOptions.center
+//        });
+//      };
 
 //    $scope.setZoomMessage = function(zoom) {
 //      $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
@@ -174,6 +223,11 @@ angular.module('ofApp')
         Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;
+
+
+
+
+
             if ($scope.q) {
               $location.search('q', $scope.q);
             }

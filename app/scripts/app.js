@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ofApp', ['restangular','ui.bootstrap', 'ui'])
+angular.module('ofApp', ['restangular','ui.bootstrap', 'ui', 'google-maps'])
   .constant('XCHGLAB_CONFIG', {API_KEY: 'testkey'})
   .config(function ($routeProvider) {
     $routeProvider
@@ -44,5 +44,14 @@ angular.module('ofApp', ['restangular','ui.bootstrap', 'ui'])
 //          }
         });
       } ])
+  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
+//    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+//      $location.hash($routeParams.scrollTo);
+//      $anchorScroll();
+//    });
+    var rootScope;
+    rootScope = $rootScope;
+    rootScope.navBarHeight = 40;
+  })
 
 ;

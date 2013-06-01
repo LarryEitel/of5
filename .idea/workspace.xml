@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\app\components\angular-ui\ui-map" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\app\components\angular-ui\ui-utils" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\.htaccess" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\404.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\app.js" afterPath="" />
@@ -120,8 +118,107 @@
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\tasks\directory_names_concat.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\package.json" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\test\karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\ui-map" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\ui-utils" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui-ieshiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui-ieshiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\build\angular-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\common\ieshiv\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\common\ieshiv\ieshiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\common\module.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\common\stylesheets\angular-ui.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\common\stylesheets\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\grunt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\animate\animate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\animate\test\animateSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\calendar\calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\calendar\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\calendar\test\calendarSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\codemirror\codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\codemirror\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\codemirror\test\codemirrorSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\currency\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\currency\currency.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\currency\stylesheets\currency.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\currency\test\currencySpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\date\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\date\date.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\date\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\date\test\dateSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\event\event.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\event\test\eventSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\if\if.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\if\test\ifSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\jq\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\jq\jq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\jq\test\jqSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\keypress\keypress.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\keypress\test\keydownSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\keypress\test\keypressSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\keypress\test\keyupSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\map\map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\map\test\mapSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\mask\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\mask\mask.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\mask\test\maskSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\reset\reset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\reset\stylesheets\reset.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\reset\test\resetSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\route\route.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\route\test\routeSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\scrollfix\scrollfix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\scrollfix\test\scrollfixSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\select2\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\select2\select2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\select2\test\select2Spec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\showhide\showhide.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\showhide\test\showhideSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\sortable\REDME.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\sortable\sortable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\sortable\test\sortableSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\tinymce\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\tinymce\test\tinymceSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\tinymce\tinymce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\validate\test\validateSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\directives\validate\validate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\format\format.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\format\test\formatSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\highlight\highlight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\highlight\highlight.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\highlight\test\highlightSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\inflector\inflector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\inflector\test\inflectorSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\unique\test\uniqueSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\modules\filters\unique\unique.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\templates\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\templates\dependencies.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\templates\stylesheets\template.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\templates\template.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\templates\test\templateSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\angular-1.0.1\angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\angular-1.0.1\angular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\angular\angular-1.0.0rc4.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\angular\angular-1.0.0rc5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\angular\angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\bootstrap\bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\calendar\calendar.js.min" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\codemirror\codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\googlemaps\googlemaps.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\jquery\jquery-1.7.2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\jquery\jquery-ui-1.8.18.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\maskedinput\jquery.maskedinput-1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\select2\select2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\tinymce\jquery.tinymce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\lib\tinymce\tiny_mce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui\test\test-config.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\angular.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\angular.min.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\bower.json" afterPath="" />
@@ -1265,37 +1362,33 @@
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\favicon.ico" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\index.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\scripts\1217de6b.scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\scripts\00d6d745.scripts.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\styles\d5143d55.main.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\main.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-form.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-view.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plcs.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/angular-ui-map/src/map.js" afterPath="$PROJECT_DIR$/app/components/angular-ui-map/src/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scrap-pile/xchglabResourceHttp.js_" afterPath="$PROJECT_DIR$/app/scrap-pile/xchglabResourceHttp.js_" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319823538" ignored="false" />
-    <file path="/app.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369421128910" ignored="false" />
-    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370034348452" ignored="false" />
+    <file path="/app.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370104138286" ignored="false" />
+    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370123618810" ignored="false" />
     <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369350118598" ignored="false" />
     <file path="/plc-view.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369945880479" ignored="false" />
-    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370033036973" ignored="false" />
+    <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370117736512" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
     <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369934595136" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369687592165" ignored="false" />
-    <file path="/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370024302650" ignored="false" />
+    <file path="/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370105296519" ignored="false" />
     <file path="/main.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319717282" ignored="false" />
     <file path="/plc-form.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369941291687" ignored="false" />
     <file path="/restangular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369417797498" ignored="false" />
@@ -1428,6 +1521,7 @@
     <file path="$PROJECT_DIR$/dist/components/bootstrap/less/pager.less" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369754336057" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/jquery-ui/themes/ui-darkness/jquery-ui.min.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369754336057" ignored="false" />
     <file path="/map.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370028148225" ignored="false" />
+    <file path="/angular-google-maps.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370125251038" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1450,64 +1544,30 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1901" selection-end="2055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plcs.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="0" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.2914634">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/src/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="67" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+            <state line="31" column="14" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1864#3294#0" expanded="false" />
+                <element signature="e#6453#6696#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="angular-google-maps.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/scripts/components/angular-google-maps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="53" selection-start="2546" selection-end="2546" vertical-scroll-proportion="-12.423077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plc-form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/plc-form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.9615384">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plc-view.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="9" selection-start="278" selection-end="278" vertical-scroll-proportion="-5.230769">
-              <folding />
+            <state line="445" column="22" selection-start="11890" selection-end="11890" vertical-scroll-proportion="0.40609756">
+              <folding>
+                <element signature="e#1325#2788#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1515,11 +1575,11 @@
       <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1580" selection-end="2390" vertical-scroll-proportion="-20.923077">
+            <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="-20.923077">
               <folding>
                 <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -1544,7 +1604,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/plc-delete.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/scrap-pile/button-delete.js-.js" />
         <option value="$PROJECT_DIR$/app/scrap-pile/button-delete.js_" />
@@ -1555,10 +1614,11 @@
         <option value="$PROJECT_DIR$/app/components/restangular/src/restangular.js" />
         <option value="$PROJECT_DIR$/app/views/plc-form.html" />
         <option value="$PROJECT_DIR$/app/views/plc-view.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/components/angular-ui-map/src/map.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
+        <option value="$PROJECT_DIR$/app/scripts/components/angular-google-maps.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
       </list>
     </option>
@@ -1566,7 +1626,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
     <option name="y" value="8" />
-    <option name="width" value="1159" />
+    <option name="width" value="969" />
     <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1641,7 +1701,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1659,37 +1719,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="angular-ui-map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-ui-map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1707,15 +1741,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-ui-map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1884,14 +1914,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="8" width="1159" height="1031" extended-state="0" />
+    <frame x="7" y="8" width="969" height="1031" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22515953" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22515953" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1979,11 +2009,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/styles/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="17" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.37089872" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/modernizr/modernizr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -2031,20 +2056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/restangular/src/restangular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="595" column="5" selection-start="21478" selection-end="21478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/test/mapSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2997572">
@@ -2061,29 +2072,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="40" selection-start="1782" selection-end="1782" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/src/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="67" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+        <state line="5" column="67" selection-start="278" selection-end="278" vertical-scroll-proportion="0.10315534">
           <folding>
             <element signature="e#1864#3294#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/components/restangular/src/restangular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="53" selection-start="2546" selection-end="2546" vertical-scroll-proportion="-12.423077">
+        <state line="295" column="0" selection-start="9885" selection-end="21460" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#9903#21459#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1901" selection-end="2055" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1580" selection-end="2390" vertical-scroll-proportion="-20.923077">
+        <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="-20.923077">
           <folding>
             <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -2091,8 +2118,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.2914634">
-          <folding />
+        <state line="31" column="14" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6453#6696#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/components/angular-google-maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="445" column="22" selection-start="11890" selection-end="11890" vertical-scroll-proportion="0.40609756">
+          <folding>
+            <element signature="e#1325#2788#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

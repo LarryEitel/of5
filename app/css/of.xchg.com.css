@@ -1,0 +1,70 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar-inner {
+    background-color: lightBlue;
+    background-image: -moz-linear-gradient(center top , lightBlue, #222222);
+}
+table.nav tr td img {
+    height: 30px;
+    padding: 0;
+    width: 30px;
+}
+.masthead {
+    margin-bottom: 72px;
+    padding-top: 36px;
+}
+.jumbotron {
+    position: relative;
+}
+.masthead h1 {
+    margin-bottom: 18px;
+}
+.masthead h1, .masthead h2, .masthead p {
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.container-fluid {
+    margin-top: 40px;
+}
+#map {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+#map img {
+    max-width: none;
+}
+#map-crosshair {
+    text-align: center;
+}
+#map-crosshair img {
+    left: 50%;
+    margin-left: -16px;
+    margin-top: 8px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+#map-info {
+    background-color: grey;
+    bottom: 0;
+    color: #000000;
+    height: 50px;
+    opacity: 0.5;
+    position: fixed;
+    width: 50%;
+    z-index: 9999;
+}

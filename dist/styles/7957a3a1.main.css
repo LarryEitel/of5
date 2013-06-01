@@ -9769,3 +9769,7 @@ html .halflings {
 .halflings-icon.collapse-top {
   background-position: -456px -168px;
 }
+
+.google-map img {
+  max-width: none;
+}

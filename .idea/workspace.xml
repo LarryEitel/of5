@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +16,7 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370117736512" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369102621552" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369934595136" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370127651203" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369687592165" ignored="false" />
@@ -172,10 +173,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1901" selection-end="2055" vertical-scroll-proportion="0.0">
+            <state line="2" column="55" selection-start="70" selection-end="70" vertical-scroll-proportion="0.040236685">
               <folding />
             </state>
           </provider>
@@ -185,28 +186,15 @@
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="30" column="14" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#6381#6624#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-google-maps.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/components/angular-google-maps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="431" column="13" selection-start="11470" selection-end="11470" vertical-scroll-proportion="-5.84">
-              <folding>
-                <element signature="e#1327#2790#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="58" selection-start="3781" selection-end="3781" vertical-scroll-proportion="0.7887668">
+            <state line="60" column="45" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-6.923077">
               <folding />
             </state>
           </provider>
@@ -215,13 +203,8 @@
       <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="-20.923077">
-              <folding>
-                <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -255,11 +238,11 @@
         <option value="$PROJECT_DIR$/app/views/plc-form.html" />
         <option value="$PROJECT_DIR$/app/views/plc-view.html" />
         <option value="$PROJECT_DIR$/app/components/angular-ui-map/src/map.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
         <option value="$PROJECT_DIR$/app/scripts/components/angular-google-maps.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -421,20 +404,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -446,8 +415,8 @@
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="localhost9000" serverId="2b31a5f1-1151-4285-99f4-cfb4076afa44" />
   <component name="RecentsManager">
@@ -607,7 +576,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22491731" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23042999" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -702,120 +671,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="30" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/spec/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="354" selection-end="354" vertical-scroll-proportion="0.32963988">
-          <folding />
-        </state>
+        <state line="14" column="19" selection-start="354" selection-end="354" vertical-scroll-proportion="0.32963988" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/restangular/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plc-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
+        <state line="3" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.9615384" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plc-view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="9" selection-start="278" selection-end="278" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
+        <state line="8" column="9" selection-start="278" selection-end="278" vertical-scroll-proportion="-5.230769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/restangular/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/test/mapSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2997572">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2997572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/test/googlemaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.35072815">
-          <folding>
-            <element signature="e#404#4553#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="20" column="4" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.35072815" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/angular-ui-map/src/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="67" selection-start="278" selection-end="278" vertical-scroll-proportion="0.10315534">
-          <folding>
-            <element signature="e#1864#3294#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="5" column="67" selection-start="278" selection-end="278" vertical-scroll-proportion="0.10315534" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/restangular/src/restangular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="295" column="0" selection-start="9885" selection-end="21460" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#9903#21459#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="295" column="0" selection-start="9885" selection-end="21460" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="-20.923077">
-          <folding>
-            <element signature="n#style#0;n#i#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="32" column="10" selection-start="1527" selection-end="1698" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="14" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6381#6624#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/components/angular-google-maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="431" column="13" selection-start="11470" selection-end="11470" vertical-scroll-proportion="-5.84">
-          <folding>
-            <element signature="e#1327#2790#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1901" selection-end="2055" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="58" selection-start="3781" selection-end="3781" vertical-scroll-proportion="0.7887668">
+        <state line="60" column="45" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="55" selection-start="70" selection-end="70" vertical-scroll-proportion="0.040236685">
           <folding />
         </state>
       </provider>

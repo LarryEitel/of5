@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ofApp', ['restangular','ui.bootstrap', 'ui', 'google-maps'])
+angular.module('ofApp', ['restangular','ui.bootstrap', 'google-maps'])
   .constant('XCHGLAB_CONFIG', {API_KEY: 'testkey'})
   .config(function ($routeProvider) {
     $routeProvider

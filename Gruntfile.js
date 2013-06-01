@@ -97,6 +97,7 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc',
         '-W117': true,
         '-W098': true, // <var> is defined but never used
+        '-W083': true, // Don't make functions within a loop.
         '-W068': true // Wrapping non-IIFE function literals in parens is unnecessary.
       },
       all: [

@@ -64,11 +64,11 @@ angular.module('ofApp')
       };
 
 
-      $scope.gMap = {};
-      $scope.gMap.latLngFromLl = function(ll) {
-        var LatLng = ll.split(',');
-        return new google.maps.LatLng(LatLng[0], LatLng[1]);
-      };
+      // $scope.gMap = {};
+      // $scope.gMap.latLngFromLl = function(ll) {
+      //   var LatLng = ll.split(',');
+      //   return new google.maps.LatLng(LatLng[0], LatLng[1]);
+      // };
       var defaultRouteArgs = {
         ll: SJO,
         cngSlug: 'crherbs',
@@ -81,18 +81,18 @@ angular.module('ofApp')
         pg: 5 // page
       };
 
-      $scope.gMap.myMarkers = [];
-      $scope.gMap.myMarkers.push(new google.maps.Marker({
-        map: $scope.gMap.myMap,
-        position: defaultRouteArgs.ll
-      }));
+      // $scope.gMap.myMarkers = [];
+      // $scope.gMap.myMarkers.push(new google.maps.Marker({
+      //   map: $scope.gMap.myMap,
+      //   position: defaultRouteArgs.ll
+      // }));
 
-      $scope.gMap.addMarker = function($event) {
-        $scope.gMap.myMarkers.push(new google.maps.Marker({
-          map: $scope.gMap.myMap,
-          position: $event.latLng
-        }));
-      };
+      // $scope.gMap.addMarker = function($event) {
+      //   $scope.gMap.myMarkers.push(new google.maps.Marker({
+      //     map: $scope.gMap.myMap,
+      //     position: $event.latLng
+      //   }));
+      // };
 //
 //      $scope.map.setMarkerPosition = function(marker, lat, lng) {
 //        marker.setPosition(new google.maps.LatLng(lat, lng));

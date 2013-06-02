@@ -207,6 +207,7 @@ module.exports = function (grunt) {
             'data/**/*',
             'components/**/*',
             'views/**/*',
+            'fonts/**/*.{ttf}',
             'css/**/*',
             'images/**/*.{png,jpg,jpeg,gif.ico,svg}',
             'img/**/*.{png,jpg,jpeg,gif.ico,svg}'

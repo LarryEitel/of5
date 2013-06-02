@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\404.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\1d62acb4.ourfield.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\39723bc0.glyphicons.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\44b52e74.halflings.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\5de6888b.of.xchg.com.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\70f8c465.style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\d812976d.map.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\2d5413a7.glyphicons.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\7da132aa.glyphicons_halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\8e3bd4d2.glyphicons_halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\972cb88e.glyphicons-white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\04c9c594.apple-touch-icon-72x72-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\23bb1446.glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\5d462625.glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\6f1a9932.apple-touch-icon-114x114-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\9ceb89de.apple-touch-icon-57x57.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\9ceb89de.apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\dfa2fd80.apple-touch-icon-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\scripts\27c4cc5c.scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\styles\7957a3a1.main.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\main.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-view.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plcs.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -203,19 +173,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="175" selection-end="175" vertical-scroll-proportion="0.08047337">
+            <state line="9" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="13" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.33333334">
+            <state line="56" column="35" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.47103274">
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -291,8 +261,8 @@
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/config.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -568,7 +538,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977699" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28665933" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28665933" sideWeight="0.67112297" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -734,19 +704,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="13" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.33333334">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="9" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="175" selection-end="175" vertical-scroll-proportion="0.08047337">
-          <folding />
+        <state line="56" column="35" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.47103274">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

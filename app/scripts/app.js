@@ -44,6 +44,9 @@ angular.module('ofApp', ['restangular','ui.bootstrap', 'google-maps'])
 //          }
         });
       } ])
+//  .constant('magicNumber', 42)
+//  .constant('bookTitle', "Hitchhiker's Guide")
+
 //  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
 ////    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
 ////      $location.hash($routeParams.scrollTo);

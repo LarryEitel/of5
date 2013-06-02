@@ -22,14 +22,14 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
-      coffee: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
+      // coffee: {
+      //   files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+      //   tasks: ['coffee:dist']
+      // },
+      // coffeeTest: {
+      //   files: ['test/spec/{,*/}*.coffee'],
+      //   tasks: ['coffee:test']
+      // },
       // compass: {
       //   files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
       //   tasks: ['compass']
@@ -111,43 +111,43 @@ module.exports = function (grunt) {
         singleRun: true
       }
     },
-    coffee: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
-      }
-    },
-    compass: {
-      options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: '<%= yeoman.app %>/components',
-        relativeAssets: true
-      },
-      dist: {},
-      server: {
-        options: {
-          debugInfo: true
-        }
-      }
-    },
+    // coffee: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.app %>/scripts',
+    //       src: '{,*/}*.coffee',
+    //       dest: '.tmp/scripts',
+    //       ext: '.js'
+    //     }]
+    //   },
+    //   test: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'test/spec',
+    //       src: '{,*/}*.coffee',
+    //       dest: '.tmp/spec',
+    //       ext: '.js'
+    //     }]
+    //   }
+    // },
+    // compass: {
+    //   options: {
+    //     sassDir: '<%= yeoman.app %>/styles',
+    //     cssDir: '.tmp/styles',
+    //     imagesDir: '<%= yeoman.app %>/images',
+    //     javascriptsDir: '<%= yeoman.app %>/scripts',
+    //     fontsDir: '<%= yeoman.app %>/styles/fonts',
+    //     importPath: '<%= yeoman.app %>/components',
+    //     relativeAssets: true
+    //   },
+    //   dist: {},
+    //   server: {
+    //     options: {
+    //       debugInfo: true
+    //     }
+    //   }
+    // },
     concat: {
       dist: {
         files: {
@@ -230,7 +230,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>/scripts',
-          src: '*.js',
+          src: ['*.js', '!config.js'],
           dest: '<%= yeoman.dist %>/scripts'
         }]
       }
@@ -267,6 +267,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
+            '!scripts/config.js', // important
             'app.js',
             '*.{ico,txt}',
             '.htaccess',
@@ -279,6 +280,15 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: 'scripts/config_of.xchg.com.js',
+          dest: '<%= yeoman.dist %>',
+          rename: function(dest, src) {
+            return dest + '/scripts/config.js';
+          }
+        },
+        {
+          expand: true,
           dot: true,
           cwd: '<%= yeoman.data %>',
           dest: '<%= yeoman.dist %>/data',
@@ -286,17 +296,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-//    copylogo: {
-//      dist: {
-//        files: [{
-//          expand: true,
-//          dot: true,
-//          cwd: '<%= yeoman.app %>',
-//          dest: '<%= yeoman.dist %>',
-//          src: ['img/logo.png']
-//        }]
-//      }
-//    },
     yaml: {
       dist: {
         options: {
@@ -335,8 +334,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'coffee',
-    'compass',
+    // 'coffee',
+    // 'compass',
     'connect:test',
     'karma'
   ]);
@@ -358,7 +357,6 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
     'rev',
-//    'copylogo',
     'usemin'
   ]);
 

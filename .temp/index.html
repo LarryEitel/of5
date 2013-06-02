@@ -20,13 +20,19 @@
     <meta name="robots" content="index, follow">
     <title> OurField : Sandbox </title>
     <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/ae7c47bf.apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" href="img/ae7c47bf.apple-touch-icon.png">
-    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="img/73647259.apple-touch-icon-72x72-precomposed.png">
-    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="img/7d9bbbe0.apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-114x114-precomposed.png">
     <link rel="publisher" href="https://plus.google.com/109995415644936562121">
 
-    <link rel="stylesheet" href="styles/d363614c.main.css">
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/glyphicons.css">
+    <link rel="stylesheet" href="css/halflings.css">
+    <link rel="stylesheet" href="css/map.css">
+    <!-- endbuild -->
 
 
 
@@ -83,18 +89,26 @@
     <!--<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="components/angular/angular.js"></script>
     <!--<script src="components/angular-ui/build/angular-ui.min.js"></script>-->
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <!--<script src="components/angular-ui-utils/modules/event/event.js"></script>-->
     <script src="components/angular-ui-utils/modules/keypress/keypress.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-cookies.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-sanitize.min.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
+    <script src="components/angular-cookies/angular-cookies.js"></script>
+    <script src="components/angular-sanitize/angular-sanitize.js"></script>
     <script src="components/lodash/lodash.js"></script>
     <script src="components/restangular/src/restangular.js"></script>
 
-    <script src="scripts/7a4eb0bd.scripts.js"></script>
+    <!-- build:js scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config.js"></script>
+    <!--<script src="scripts/directives/google-plus-signin.js"></script>-->
+    <script src="scripts/angular-google-maps.js"></script>
+    <!--<script src="scripts/map.js"></script>-->
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/plcs.js"></script>
+    <!-- endbuild -->
   </body>
 
 

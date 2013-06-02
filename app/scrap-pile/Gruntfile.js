@@ -12,7 +12,6 @@ module.exports = function (grunt) {
   var yeomanConfig = {
     data: 'data',
     app: 'app',
-    temp: '.temp',
     dist: 'dist'
   };
 
@@ -23,6 +22,18 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
+      // coffee: {
+      //   files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+      //   tasks: ['coffee:dist']
+      // },
+      // coffeeTest: {
+      //   files: ['test/spec/{,*/}*.coffee'],
+      //   tasks: ['coffee:test']
+      // },
+      // compass: {
+      //   files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+      //   tasks: ['compass']
+      // },
       livereload: {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
@@ -74,7 +85,6 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= yeoman.temp %>/*',
             '<%= yeoman.dist %>/*',
             '!<%= yeoman.dist %>/.git*'
           ]
@@ -101,40 +111,88 @@ module.exports = function (grunt) {
         singleRun: true
       }
     },
-    yaml: {
+    // coffee: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.app %>/scripts',
+    //       src: '{,*/}*.coffee',
+    //       dest: '.tmp/scripts',
+    //       ext: '.js'
+    //     }]
+    //   },
+    //   test: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'test/spec',
+    //       src: '{,*/}*.coffee',
+    //       dest: '.tmp/spec',
+    //       ext: '.js'
+    //     }]
+    //   }
+    // },
+    // compass: {
+    //   options: {
+    //     sassDir: '<%= yeoman.app %>/styles',
+    //     cssDir: '.tmp/styles',
+    //     imagesDir: '<%= yeoman.app %>/images',
+    //     javascriptsDir: '<%= yeoman.app %>/scripts',
+    //     fontsDir: '<%= yeoman.app %>/styles/fonts',
+    //     importPath: '<%= yeoman.app %>/components',
+    //     relativeAssets: true
+    //   },
+    //   dist: {},
+    //   server: {
+    //     options: {
+    //       debugInfo: true
+    //     }
+    //   }
+    // },
+    concat: {
       dist: {
-        options: {
-          ignored: /^_/,
-          space: 2,
-          constructors: {
-            '!include': function (node, yaml) {
-              var data = require('fs').readFileSync(node.value, 'utf-8');
-              return yaml.load(data);
-            }
-          }
+        files: [{
+          '<%= yeoman.dist %>/scripts/scripts.js': [
+            '.tmp/scripts/{,*/}*.js',
+            '<%= yeoman.app %>/scripts/{,*/}*.js',
+            '!<%= yeoman.app %>/scripts/config.js'
+          ]
         },
-        files: [
-          {expand: true, cwd: '<%= yeoman.data %>', src: ['**/*.yaml'], dest: '<%= yeoman.data %>'}
-        ]
+        {
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: 'scripts/config_of.xchg.com.js',
+          dest: '<%= yeoman.dist %>',
+          rename: function(dest, src) {
+            return dest + '/scripts/config.js';
+          }
+        }]
       }
     },
     useminPrepare: {
-      html: '<%= yeoman.temp %>/index.html',
+      html: '<%= yeoman.app %>/index.html',
       options: {
         dest: '<%= yeoman.dist %>'
+      }
+    },
+    usemin: {
+      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      css: ['<%= yeoman.dist %>/styles/{,*/}*.css',
+        '<%= yeoman.dist %>/css/{,*/}*.css'],
+      options: {
+        dirs: ['<%= yeoman.dist %>']
       }
     },
     imagemin: {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.temp %>/images',
+          cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg}',
           dest: '<%= yeoman.dist %>/images'
         },
         {
           expand: true,
-          cwd: '<%= yeoman.temp %>/img',
+          cwd: '<%= yeoman.app %>/img',
           src: ['{,*/}*.{png,jpg,jpeg}', '!img/logo.png'],
           dest: '<%= yeoman.dist %>/img'
         }]
@@ -145,8 +203,8 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.dist %>/styles/main.css': [
             '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.temp %>/css/{,*/}*.css',
-            '<%= yeoman.temp %>/styles/{,*/}*.css'
+            '<%= yeoman.app %>/css/{,*/}*.css',
+            '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
         }
       }
@@ -166,72 +224,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.temp %>',
+          cwd: '<%= yeoman.app %>',
           src: ['*.html', 'views/*.html'],
           dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
-    concat: {
-      dist: {
-        files: [{
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '.tmp/scripts/{,*/}*.js',
-            '<%= yeoman.temp %>/scripts/{,*/}*.js',
-          ]
-        //},
-        // {
-        //   expand: true,
-        //   cwd: '<%= yeoman.app %>',
-        //   src: '/scripts/config_of.xchg.com.js',
-        //   dest: '<%= yeoman.dist %>',
-        //   rename: function(dest, src) {
-        //     return dest + '/scripts/config.js';
-        //   }
-        }]
-      }
-    },
-    copy: {
-      temp: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.temp %>',
-          src: [
-            'scripts/**/*',
-            '!scripts/config_of.xchg.com.js', // important
-            '!scripts/config.js', // important
-            '*.{ico,txt,js,html}',
-            '.htaccess',
-            'data/**/*',
-            'components/**/*',
-            'views/**/*',
-            'css/**/*',
-            'images/**/*.{png,jpg,jpeg,gif.ico,svg}',
-            'fonts/**/*.{ttf}',
-            'img/**/*.{png,jpg,jpeg,gif.ico,svg}'
-          ]
-        },
-        {
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: 'scripts/config_of.xchg.com.js',
-          dest: '<%= yeoman.temp %>',
-          rename: function(dest, src) {
-            return dest + '/scripts/config.js';
-          }
-        }]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.temp %>',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.{ico,txt,js,html}'
-          ]
         }]
       }
     },
@@ -274,12 +269,58 @@ module.exports = function (grunt) {
         }
       }
     },
-    usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css',
-        '<%= yeoman.dist %>/css/{,*/}*.css'],
-      options: {
-        dirs: ['<%= yeoman.dist %>']
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '!scripts/config.js', // important
+            'app.js',
+            '*.{ico,txt}',
+            '.htaccess',
+            'components/**/*',
+            'css/**/*',
+            'images/**/*.{png,jpg,jpeg,gif.ico,svg}',
+            'fonts/**/*.{ttf}',
+            'img/**/*.{png,jpg,jpeg,gif.ico,svg}'
+          ]
+        },
+        {
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: 'scripts/config_of.xchg.com.js',
+          dest: '<%= yeoman.dist %>',
+          rename: function(dest, src) {
+            return dest + '/scripts/config.js';
+          }
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.data %>',
+          dest: '<%= yeoman.dist %>/data',
+          src: ['**/*.json']
+        }]
+      }
+    },
+    yaml: {
+      dist: {
+        options: {
+          ignored: /^_/,
+          space: 2,
+          constructors: {
+            '!include': function (node, yaml) {
+              var data = require('fs').readFileSync(node.value, 'utf-8');
+              return yaml.load(data);
+            }
+          }
+        },
+        files: [
+          {expand: true, cwd: '<%= yeoman.data %>', src: ['**/*.yaml'], dest: '<%= yeoman.data %>'}
+        ]
       }
     }
   });
@@ -292,7 +333,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
+    // 'coffee:dist',
     'yaml:dist',
+    // 'compass:server',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -301,6 +344,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    // 'coffee',
+    // 'compass',
     'connect:test',
     'karma'
   ]);
@@ -309,14 +354,15 @@ module.exports = function (grunt) {
     'clean:dist',
     'jshint',
     // 'test',
+    // 'coffee',
+    // 'compass:dist',
     'yaml:dist',
-    'copy:temp',
     'useminPrepare',
     'imagemin',
     'cssmin',
     'htmlmin',
     'concat',
-    'copy:dist',
+    'copy',
     'cdnify',
     'ngmin',
     'uglify',

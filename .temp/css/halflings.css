@@ -531,13 +531,13 @@ html .halflings {
   *margin-right: .3em;
 }
 .no-inlinesvg .halflings-icon {
-  background-image: url(../images/8e3bd4d2.glyphicons_halflings.png);
+  background-image: url(../images/glyphicons_halflings.png);
 }
 .halflings-icon.white {
   background-image: url(../images/glyphicons_halflings-white.svg);
 }
 .no-inlinesvg .halflings-icon.white {
-  background-image: url(../images/7da132aa.glyphicons_halflings-white.png);
+  background-image: url(../images/glyphicons_halflings-white.png);
 }
 .halflings-icon.glass {
   background-position: 0 0;

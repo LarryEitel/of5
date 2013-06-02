@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config_of.xchg.com.js" afterPath="$PROJECT_DIR$/app/scripts/config_of.xchg.com.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\scripts\3f53a125.config.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,7 +155,7 @@
     <file path="/angular-google-maps.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370125251038" ignored="false" />
     <file path="/Gruntfile.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370186426225" ignored="false" />
     <file path="/config.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370196161186" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370200350056" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/index.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370201150537" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="35" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.40680102">
+            <state line="56" column="21" selection-start="2600" selection-end="2608" vertical-scroll-proportion="0.40680102">
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -715,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="35" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.40680102">
+        <state line="56" column="21" selection-start="2600" selection-end="2608" vertical-scroll-proportion="0.40680102">
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

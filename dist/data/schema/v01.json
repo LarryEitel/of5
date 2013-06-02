@@ -1,0 +1,59 @@
+{
+  "bnd": {
+    "fullName": [
+      "Boundary",
+      "Boundaries"
+    ],
+    "description": "Areas with a boundary/polygon.",
+    "fields": {
+      "nam": {
+        "fullName": [
+          "Name"
+        ],
+        "namS": [
+          "Name"
+        ],
+        "type": "string",
+        "examples": {
+          "cng": "Congregation",
+          "cng-area": "Congregation Area",
+          "cng-terr": "Congregation Territory"
+        },
+        "required": false
+      },
+      "namS": {
+        "fullName": [
+          "Name Short"
+        ],
+        "type": "string",
+        "description": "Short or abbreviation of name.",
+        "required": false
+      },
+      "desc": {
+        "fullName": [
+          "Description"
+        ],
+        "type": "string",
+        "examples": {
+          "cng": "Congregation",
+          "cng-area": "Congregation Area",
+          "cng-terr": "Congregation Territory"
+        },
+        "required": false
+      },
+      "type": {
+        "fullName": [
+          "Type"
+        ],
+        "description": "Type of boundary.",
+        "type": "string",
+        "examples": {
+          "cng": "Congregation",
+          "cng-area": "Congregation Area",
+          "cng-terr": "Congregation Territory"
+        },
+        "required": false
+      }
+    }
+  }
+}

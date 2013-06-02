@@ -230,6 +230,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.temp %>',
           dest: '<%= yeoman.dist %>',
           src: [
+            'components/**/*',
             '*.{ico,txt,js,html}'
           ]
         }]

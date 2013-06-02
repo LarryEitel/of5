@@ -209,7 +209,6 @@ module.exports = function (grunt) {
             'views/**/*',
             'css/**/*',
             'images/**/*.{png,jpg,jpeg,gif.ico,svg}',
-            'fonts/**/*.{ttf}',
             'img/**/*.{png,jpg,jpeg,gif.ico,svg}'
           ]
         },
@@ -231,6 +230,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             'components/**/*',
+            'fonts/**/*.{ttf}',
             '*.{ico,txt,js,html}'
           ]
         }]

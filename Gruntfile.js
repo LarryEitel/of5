@@ -222,9 +222,9 @@ module.exports = function (grunt) {
             '.htaccess',
             'components/**/*',
             'css/**/*',
-            'images/**/*.{png,jpg,jpeg,gif.ico}',
+            'images/**/*.{png,jpg,jpeg,gif,ico,svg}',
             'fonts/**/*.{ttf}',
-            'img/**/*.{png,jpg,jpeg,gif.ico}'
+            'img/**/*.{png,jpg,jpeg,gif,ico,svg}'
           ]
         },
         {

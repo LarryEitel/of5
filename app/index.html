@@ -50,12 +50,11 @@
     <![endif]-->
     <!-- Add your site or application content here -->
 
-    <!--data-clientId="389499396751-na26guo6nsi4fvvif45ub9gcpru08q47.apps.googleusercontent.com"-->
     <div id="gConnect" ng-controller="GPlsCtrl">
       <button class="g-signin"
         data-scope="https://www.googleapis.com/auth/plus.login"
         data-requestvisibleactions="http://schemas.google.com/AddActivity"
-        data-clientId="389499396751"
+        data-clientId="{{clientId}}"
         data-callback="onSignInCallback"
         data-theme="dark"
         data-cookiepolicy="single_host_origin">

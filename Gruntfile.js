@@ -183,7 +183,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: '<%= yeoman.app %>/img',
-          src: '{,*/}*.{png,jpg,jpeg}',
+          src: ['{,*/}*.{png,jpg,jpeg}', '!img/logo.png'],
           dest: '<%= yeoman.dist %>/img'
         }]
       }
@@ -253,7 +253,8 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/css/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif.ico}',
             '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif.ico}',
-            '<%= yeoman.dist %>/fonts/*.{ttf}'
+            '<%= yeoman.dist %>/fonts/*.{ttf}',
+            '!<%= yeoman.dist %>/img/logo.png'
           ]
         }
       }
@@ -285,6 +286,17 @@ module.exports = function (grunt) {
         }]
       }
     },
+//    copylogo: {
+//      dist: {
+//        files: [{
+//          expand: true,
+//          dot: true,
+//          cwd: '<%= yeoman.app %>',
+//          dest: '<%= yeoman.dist %>',
+//          src: ['img/logo.png']
+//        }]
+//      }
+//    },
     yaml: {
       dist: {
         options: {
@@ -346,6 +358,7 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
     'rev',
+//    'copylogo',
     'usemin'
   ]);
 

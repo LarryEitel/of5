@@ -4,4 +4,5 @@ node_modules
 #app/components
 logs
 local_settings.py
+_devToDos.txt
 *.pyc

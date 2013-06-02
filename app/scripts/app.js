@@ -44,14 +44,14 @@ angular.module('ofApp', ['restangular','ui.bootstrap', 'google-maps'])
 //          }
         });
       } ])
-  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
-//    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-//      $location.hash($routeParams.scrollTo);
-//      $anchorScroll();
-//    });
-    var rootScope;
-    rootScope = $rootScope;
-    rootScope.navBarHeight = 40;
-  })
+//  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
+////    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+////      $location.hash($routeParams.scrollTo);
+////      $anchorScroll();
+////    });
+//    var rootScope;
+//    rootScope = $rootScope;
+//    rootScope.navBarHeight = 40;
+//  })
 
 ;

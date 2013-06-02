@@ -6179,8 +6179,8 @@ html .halflings {
 }
 @font-face {
   font-family: 'Glyphicons';
-  src: url('../fonts/de53c9a9.glyphicons-regular.eot');
-  src: url('../fonts/de53c9a9.glyphicons-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/08a50d50.glyphicons-regular.woff') format('woff'), url('../fonts/487c603c.glyphicons-regular.ttf') format('truetype'), url('../fonts/82bbe714.glyphicons-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-regular.eot');
+  src: url('../fonts/glyphicons-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-regular.woff') format('woff'), url('../fonts/glyphicons-regular.ttf') format('truetype'), url('../fonts/glyphicons-regular.svg#glyphicons_halflingsregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -7482,7 +7482,7 @@ html .halflings {
   background-image: url(../images/2d5413a7.glyphicons.png);
 }
 .glyphicons-icon.white {
-  background-image: url(../images/d5cdc48e.glyphicons-white.svg);
+  background-image: url(../images/glyphicons-white.svg);
 }
 .no-inlinesvg .glyphicons-icon.white {
   background-image: url(../images/972cb88e.glyphicons-white.png);
@@ -8761,8 +8761,8 @@ html .halflings {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/94bd2e46.glyphiconshalflings-regular.eot');
-  src: url('../fonts/94bd2e46.glyphiconshalflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/56867d94.glyphiconshalflings-regular.woff') format('woff'), url('../fonts/d8708b8f.glyphiconshalflings-regular.ttf') format('truetype'), url('../fonts/d482b7e5.glyphiconshalflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphiconshalflings-regular.eot');
+  src: url('../fonts/glyphiconshalflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphiconshalflings-regular.woff') format('woff'), url('../fonts/glyphiconshalflings-regular.ttf') format('truetype'), url('../fonts/glyphiconshalflings-regular.svg#glyphicons_halflingsregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -9272,7 +9272,7 @@ html .halflings {
   height: 14px;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url(../images/b6cc2479.glyphicons_halflings.svg);
+  background-image: url(../images/glyphicons_halflings.svg);
   background-position: 0 0;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -9284,7 +9284,7 @@ html .halflings {
   background-image: url(../images/8e3bd4d2.glyphicons_halflings.png);
 }
 .halflings-icon.white {
-  background-image: url(../images/232a44e7.glyphicons_halflings-white.svg);
+  background-image: url(../images/glyphicons_halflings-white.svg);
 }
 .no-inlinesvg .halflings-icon.white {
   background-image: url(../images/7da132aa.glyphicons_halflings-white.png);

@@ -271,9 +271,9 @@ module.exports = function (grunt) {
             '.htaccess',
             'components/**/*',
             'css/**/*',
-            'images/**/*.{png,jpg,jpeg,gif.ico}',
+            'images/**/*.{png,jpg,jpeg,gif.ico,svg}',
             'fonts/**/*.{ttf}',
-            'img/**/*.{png,jpg,jpeg,gif.ico}'
+            'img/**/*.{png,jpg,jpeg,gif.ico,svg}'
           ]
         },
         {
@@ -312,9 +312,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
-    'coffee:dist',
+    // 'coffee:dist',
     'yaml:dist',
-    'compass:server',
+    // 'compass:server',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -333,8 +333,8 @@ module.exports = function (grunt) {
     'clean:dist',
     'jshint',
     // 'test',
-    'coffee',
-    'compass:dist',
+    // 'coffee',
+    // 'compass:dist',
     'yaml:dist',
     'useminPrepare',
     'imagemin',

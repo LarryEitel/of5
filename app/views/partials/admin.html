@@ -1,0 +1,19 @@
+<h1>Admin</h1><p>This view is only visible to administrators.</p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Username</th>
+    <th>Role</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr data-ng-repeat="user in users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.username }}</td>
+    <td><span
+        data-ng-class="{&quot;label-info&quot;: user.role == userRoles.user, &quot;label-success&quot;: user.role == userRoles.admin}"
+        class="label">{{ getUserRoleText(user.role) }}</span></td>
+  </tr>
+  </tbody>
+</table>

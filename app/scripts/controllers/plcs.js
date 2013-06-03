@@ -7,7 +7,6 @@ angular.module('ofApp')
   .controller('PlcsCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'Restangular', '$timeout', '$log', '$anchorScroll',
     function ($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll) {
 
-
       var SJO = {latitude: 9.988002927, longitude: -84.20538052916};
       var defaultCenter = SJO;
 

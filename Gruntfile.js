@@ -263,9 +263,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
-    'coffee:dist',
     'yaml:dist',
-    'compass:server',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -294,6 +292,10 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin'
+  ]);
+
+  grunt.registerTask('lint', [
+    'jshint'
   ]);
 
   grunt.registerTask('default', ['build']);

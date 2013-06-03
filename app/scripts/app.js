@@ -56,5 +56,11 @@ angular.module('ofApp', ['restangular','ui.bootstrap', 'google-maps'])
 //    rootScope = $rootScope;
 //    rootScope.navBarHeight = 40;
 //  })
+//  .controller('HeaderCtrl', ['$scope', '$location', '$route', 'security', 'breadcrumbs', 'notifications', 'httpRequestTracker',
+//    function ($scope, $location, $route, security, breadcrumbs, notifications, httpRequestTracker) {
+  .controller('HeaderCtrl', ['$scope', '$location', '$route',
+    function ($scope, $location, $route ) {
+      $scope.location = $location;
 
+    }])
 ;

@@ -1,0 +1,66 @@
+<div class="navbar navbar-fixed-top">
+
+  <div class="navbar-inner">
+    <table class="nav pull">
+      <tr>
+        <td>
+          <a href="#/" id="home-button">
+            <img title="Home" src="images/2e254ab4.home.png">
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="nav pull-right">
+      <tr>
+        <td id="map-button" ng-show="!mapShown()">
+          <a href="#/map">
+            <img title="Map" src="images/3ba3ecce.map.png">
+          </a>
+        </td>
+
+
+        <td id="map-position-button" ng-show="mapShown()">
+          <img title="Position" src="images/ccfd3b43.position.png">
+        </td>
+
+        <td id="map-add-button" ng-show="mapShown()">
+          <img title="Add" src="images/6fab796e.add.png">
+        </td>
+
+        <!--
+            TODO: check if positionTracking is on and current position is not 'close' (how?), prompt to navigate from current position to this 'center' point. Or if user has a 'home' position (private), offer to get directions home.
+            The following will return directions from saddr to daddr:
+            http://maps.google.com/?saddr=9.993552791991132,-84.20888416469096&daddr=9.9829723,-84.1699572
+        -->
+        <td id="map-directions-button" ng-show="mapShown()">
+          <a href="https://maps.google.com/maps?q={{mapCenter.lat}},{{mapCenter.lng}}&t={{mapType}}&z={{mapZoom}}">
+            <img title="Directions" src="images/9f377750.directions.png">
+          </a>
+        </td>
+
+        <td id="search-button">
+          <a href="#/search">
+            <img title="Search" src="images/09d5e908.search.png">
+          </a>
+        </td>
+
+        <td id="list-button" ng-show="mapShown()">
+          <a href="#/list">
+            <img title="List" src="images/b2780a3c.list.png">
+          </a>
+        </td>
+
+        <td id="layers-button" ng-show="mapShown()">
+          <img title="Layers" src="images/e8520816.layers.png">
+        </td>
+
+        <td id="menu-button">
+          <a href="#/menu">
+            <img title="Menu" src="images/77a3def4.menu.png">
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

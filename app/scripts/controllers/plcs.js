@@ -210,10 +210,30 @@ angular.module('ofApp')
       $scope.doSearch = function () {
         var args = {};
   //        console.log('doSearch', $routeParams);
+        var q = $scope.q;
         var whereParts = {};
-        if ($scope.q)                   { whereParts.dNam = {$regex: $scope.q, $options:'i'}; }
         if (typeof($routeParams.cngAreaTerrId) !== 'boolean' &&
           $routeParams.cngAreaTerrId) { whereParts.bdry = $routeParams.cngAreaTerrId; }
+
+        // find and setup quick search of plcs base on 'qp' id code.
+        // each place has a base56 char string. They are prefaced in list with a qp which means
+        // quick place 'qp' + id. That way it is easy to do quick search of any place.
+        // can place any number of these in search input.
+        var quickFindPlcIds = q.match(/qp\w+/g);
+        if (quickFindPlcIds) {
+          // mongo: db.col.find({id: {'$in': ['LL','LV']}})
+          var plcIds = [];
+          for (var i = 0; i < quickFindPlcIds.length; ++i) {
+            console.log(quickFindPlcIds[i]);
+            plcIds.push(quickFindPlcIds[i].substr(2));
+          }
+          whereParts.id = {$in: plcIds};
+          q = q.replace(/qp\w+\s*/g, '');
+        }
+        if (q)                   { whereParts.dNam = {$regex: q, $options:'i'}; }
+
+        console.log('whereParts', whereParts);
+
         if (whereParts)                 { args.where = JSON.stringify(whereParts); }
 
         if ($routeParams.sort)          { args.sort = $routeParams.sort; }

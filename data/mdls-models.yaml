@@ -157,6 +157,11 @@ D:
       dNam: When Deleted
       desc: When deleted.
       type: datetime
+    id:
+      dNam: id
+      desc: Unique base56 encoded string computed based on dId
+      type: string
+      note: This MAY be an issue with scaling in MongoDb
     iDCode:
       dNam: Id Code
       desc: Generic Code
@@ -231,6 +236,9 @@ D:
       dNam: When Updated
       desc: When updated.
       type: datetime
+    valid:
+      dNam: Verified/Valid
+      type: boolean
     vBy:
       dNam: Verified By
       type: ObjectID
@@ -392,6 +400,11 @@ Plc:
     bdry:
       dNam: Boundary Slug
       type: string # temporary field in this collection
+    langs: # temporary field in this collection
+      dNam: Languages
+      dNamS: langs
+      type: list
+      note: list of 'lngIso' codes, ie, en,es,fr,it, etc
     mkrCode:
       dNam: Marker Code
       desc: Number of attempts made to make contact
@@ -409,11 +422,12 @@ Plc:
       dNamS: mkrCode
       type: boolean
     pt:
-      dNam: Lng/Lat Coordinate
+      # dNam: Lng/Lat Coordinate
+      dNam: Lat/Lng Coordinate
       dNamS: pt
       type: Pt
-      desc: longitude,latitude x,y
-      note: see http://geojson.org/geojson-spec.html
+      desc: latitude, longitude, x,y
+      note: see http://geojson.org/geojson-spec.html, choosing to use Google Map API format
 Poly:
   meta:
     baseClass  : ListBase

@@ -65,7 +65,8 @@
             center: that.center,
             zoom: that.zoom,
             draggable: that.draggable,
-            mapTypeId : google.maps.MapTypeId.ROADMAP
+//            mapTypeId : google.maps.MapTypeId.ROADMAP
+            mapTypeId : google.maps.MapTypeId.HYBRID
           }));
 
           google.maps.event.addListener(_instance, 'dragstart',
@@ -158,6 +159,10 @@
           return;
         }
 
+        // hackage
+        if (typeof(mkrState) === 'undefined') {
+          mkrState = 0;
+        }
         var mkrStates = ['new', 'try_1', 'try_1_contacted', 'try_2', 'try_2_contacted', 'try_3', 'try_3_contacted'];
         var spritesPath = 'img/map/sprites/';
         var markerHeight;
@@ -230,6 +235,8 @@
         that.markers.unshift({
           'lat': lat,
           'lng': lng,
+          'mkrNo': mkrNo,
+          'mkrState': mkrState,
           'draggable': false,
           'icon': icon,
           'infoWindowContent': infoWindowContent,
@@ -318,8 +325,8 @@
   /**
    * Map directive
    */
-  googleMapsModule.directive('googleMap', ['$log', '$timeout', '$filter', function ($log, $timeout,
-      $filter) {
+  googleMapsModule.directive('googleMap', ['$log', '$timeout', '$filter', 'Restangular', function ($log, $timeout,
+      $filter, Restangular) {
 
     var controller = function ($scope, $element) {
 
@@ -450,8 +457,23 @@
                 if (scope.$parent.selectedItemIndex !== undefined) {
                   var item = scope.$parent.items[scope.$parent.selectedItemIndex];
                   if (item.pt === undefined) {
-                    item.pt = [cm.longitude, cm.latitude];
+                    cm.mkrNo = item.mkrNo;
+                    cm.mkrState = item.mkrState || 0;
+                    item.pt = [cm.latitude, cm.longitude];
                     scope.markers.push(cm);
+
+                    _m.addMarker(cm.latitude, cm.longitude, undefined, cm.mkrNo, cm.mkrState, undefined, undefined, undefined, undefined, true);
+
+                    var Plc = Restangular.one('plcs', item._id);
+                    var data = JSON.stringify({'actions':{'$set':{'flds':{'pt':item.pt}}}});
+
+                    Plc.customPUT(undefined, undefined, undefined, data).then(function(itemUpdated) {
+                      console.log('success!');
+                    }, function errorCallback() {
+                      console.log('Oops error from server :(');
+                    });
+
+
                   }
                 }
 

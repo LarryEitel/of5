@@ -9771,5 +9771,42 @@ html .halflings {
 }
 
 .google-map img {
-  max-width: none;
+    max-width: none;
+}
+.google-map {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #777777;
+    margin: 3px;
+}
+
+
+tr.item, td.item {
+    line-height: 15px;
+    font-size: 10px;
+}
+
+.item-id {
+    font-size: 10px;
+}
+td.item-id {
+    text-align: center;
+    width: 20px;
+}
+
+td.item-mkr {
+    font-size: 12px;
+    text-align: center;
+    width: 20px;
+}
+td.item-bdry {
+    width: 10px;
+}
+
+td.item-actions {
+    width: 20px;
+}
+
+td.item-dNam {
+    font-size: 14px;
 }

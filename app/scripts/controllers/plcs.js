@@ -8,7 +8,8 @@ angular.module('ofApp')
     function ($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll) {
 
       var SJO = {latitude: 9.988002927, longitude: -84.20538052916};
-      var defaultCenter = SJO;
+      var BR06 = {latitude: 9.968179612738837, longitude: -84.16628122329712};
+      var defaultCenter = BR06;
 
 
       angular.extend($scope, {
@@ -20,7 +21,7 @@ angular.module('ofApp')
         centerProperty: defaultCenter,
 
         /** the initial zoom level of the map */
-        zoomProperty: 13,
+        zoomProperty: 18,
 
         /** list of markers to put in the map */
         markersProperty: [ {
@@ -43,16 +44,14 @@ angular.module('ofApp')
           }
         }
       });
-
+//      https://maps.google.com/?ll=43.133061,-105.46875&spn=39.414809,61.523437&t=h&z=4
       $scope.itemMkrClick = function(index) {
+        console.log('itemMkrClick.index', index);
         $scope.selectedItemIndex = index;
-//        console.log('itemMkrClick', index, $scope.items[index]);
         if ($scope.items[index].pt !== undefined) {
-//          console.log('pt not undefined');
           var pt = $scope.items[index].pt;
-//          console.log('pt', pt);
-////          $scope.centerProperty = {latitude: pt[0], longitude: pt[1]};
-          $scope.position.coords = {latitude: pt[1], longitude: pt[0]};
+          console.log('pt', pt);
+          $scope.position.coords = {latitude: pt[0], longitude: pt[1]};
         }
 //        $location.hash('top');
 //        $anchorScroll();{
@@ -62,12 +61,6 @@ angular.module('ofApp')
         $anchorScroll();
       };
 
-
-      // $scope.gMap = {};
-      // $scope.gMap.latLngFromLl = function(ll) {
-      //   var LatLng = ll.split(',');
-      //   return new google.maps.LatLng(LatLng[0], LatLng[1]);
-      // };
       var defaultRouteArgs = {
         ll: SJO,
         cngSlug: 'crherbs',
@@ -151,16 +144,16 @@ angular.module('ofApp')
       ];
 
       $scope.cngAreas = [
-        {bdry: 'crherbs', slug: 'crherbsca', 'nam': 'Cariari'},
-        {bdry: 'crherbs', slug: 'crherbsla', 'nam': 'Los Arcos'}
+        {bdry: 'crherbs', slug: 'crherbsca', 'nam': 'Cariari'}
+//        {bdry: 'crherbs', slug: 'crherbsla', 'nam': 'Los Arcos'}
       ];
 
       $scope.cngAreaTerrs = [
   //        {slug: '', 'nam': ''},
-        {bdry: 'crherbsca', slug: 'crherbsca01', 'nam': 'CA-01 (bogus)'},
-        {bdry: 'crherbsca', slug: 'crherbsca12', 'nam': 'CA-12'},
-        {bdry: 'crherbsla', slug: 'crherbsla01', 'nam': 'LA-01 (bogus)'},
-        {bdry: 'crherbsla', slug: 'crherbsla02', 'nam': 'LA-02 (bogus)'}
+//        {bdry: 'crherbsca', slug: 'crherbsca01', 'nam': 'CA-01 (bogus)'},
+        {bdry: 'crherbsca', slug: 'crherbsca12', 'nam': 'CA-12'}
+//        {bdry: 'crherbsla', slug: 'crherbsla01', 'nam': 'LA-01 (bogus)'},
+//        {bdry: 'crherbsla', slug: 'crherbsla02', 'nam': 'LA-02 (bogus)'}
       ];
 
       if (!$routeParams.sort) {$routeParams.sort = defaultRouteArgs.sort;}
@@ -242,6 +235,13 @@ angular.module('ofApp')
         Plcs.getList(args)
           .then(function (items) {
             $scope.items = items._items;
+            var objs = items._items;
+            for (var i= 0; i<objs.length; ++i) {
+              var obj = objs[i];
+              if (typeof(obj.pt) !== 'undefined') {
+                $scope.markersProperty.push({latitude: obj.pt[0], longitude: obj.pt[1], draggable: true, mkrNo: obj.mkrNo, mkrState: obj.mkrState});
+              }
+            }
 
 
 
@@ -263,9 +263,9 @@ angular.module('ofApp')
           $scope.items.push($scope.newItem);
           $scope.newItem = {};
 
-          // todo Can't set Pristine
-          $scope.myForm.$setPristine();
-          $scope.myForm.$pristine = true;
+//          // todo Can't set Pristine
+//          $scope.myForm.$setPristine();
+//          $scope.myForm.$pristine = true;
         });
       };
 

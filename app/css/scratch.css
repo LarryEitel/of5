@@ -1,0 +1,30 @@
+
+tr.item, td.item {
+    line-height: 15px;
+    font-size: 10px;
+}
+
+.item-id {
+    font-size: 10px;
+}
+td.item-id {
+    text-align: center;
+    width: 20px;
+}
+
+td.item-mkr {
+    font-size: 12px;
+    text-align: center;
+    width: 20px;
+}
+td.item-bdry {
+    width: 10px;
+}
+
+td.item-actions {
+    width: 20px;
+}
+
+td.item-dNam {
+    font-size: 14px;
+}

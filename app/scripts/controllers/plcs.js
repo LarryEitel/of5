@@ -10,12 +10,11 @@ angular.module('ofApp')
       var SJO = {latitude: 9.988002927, longitude: -84.20538052916};
       var BR06 = {latitude: 9.968179612738837, longitude: -84.16628122329712};
       var defaultCenter = BR06;
-      var defaultLatLng = '9.988002927,-84.20538052916';
-
+      var defaultLatLng = defaultCenter.latitude.toString() + ',' + defaultCenter.longitude.toString();
 
       if ($routeParams.ll && typeof($routeParams.ll) === 'string') {
-        console.log('ll', $routeParams.ll);
         var ll = $routeParams.ll.split(',');
+        defaultLatLng = ll;
         defaultCenter = {latitude: parseFloat(ll[0]), longitude: parseFloat(ll[1])};
       }
 

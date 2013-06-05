@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/angular-google-maps.js" afterPath="$PROJECT_DIR$/app/scripts/angular-google-maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/scratch.css" afterPath="$PROJECT_DIR$/app/css/scratch.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319823538" ignored="false" />
     <file path="/app.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370299403653" ignored="false" />
-    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370471415845" ignored="false" />
+    <file path="/plcs.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472161628" ignored="false" />
     <file path="/plc-edit.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369350118598" ignored="false" />
     <file path="/plc-view.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369945880479" ignored="false" />
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370459667278" ignored="false" />
@@ -178,6 +173,7 @@
     <file path="/scratch.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370437888477" ignored="false" />
     <file path="/map.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370365684111" ignored="false" />
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472081628" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,12 +196,12 @@
       <file leaf-file-name="plcs.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="40" selection-start="5404" selection-end="5404" vertical-scroll-proportion="0.66372794">
+            <state line="13" column="0" selection-start="615" selection-end="615" vertical-scroll-proportion="0.29974812">
               <folding>
-                <element signature="e#7920#9391#0" expanded="false" />
-                <element signature="e#9418#9485#0" expanded="false" />
-                <element signature="e#9529#9957#0" expanded="false" />
-                <element signature="e#10000#10546#0" expanded="false" />
+                <element signature="e#7950#9421#0" expanded="false" />
+                <element signature="e#9448#9515#0" expanded="false" />
+                <element signature="e#9559#9987#0" expanded="false" />
+                <element signature="e#10030#10576#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -278,7 +274,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
     <option name="y" value="8" />
-    <option name="width" value="977" />
+    <option name="width" value="1231" />
     <option name="height" value="1005" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -626,14 +622,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="8" width="977" height="1005" extended-state="0" />
+    <frame x="7" y="8" width="1231" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2885246" sideWeight="0.67218935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22583404" sideWeight="0.67218935" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -809,12 +805,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="40" selection-start="5404" selection-end="5404" vertical-scroll-proportion="0.66372794">
+        <state line="13" column="0" selection-start="615" selection-end="615" vertical-scroll-proportion="0.29974812">
           <folding>
-            <element signature="e#7920#9391#0" expanded="false" />
-            <element signature="e#9418#9485#0" expanded="false" />
-            <element signature="e#9529#9957#0" expanded="false" />
-            <element signature="e#10000#10546#0" expanded="false" />
+            <element signature="e#7950#9421#0" expanded="false" />
+            <element signature="e#9448#9515#0" expanded="false" />
+            <element signature="e#9559#9987#0" expanded="false" />
+            <element signature="e#10030#10576#0" expanded="false" />
           </folding>
         </state>
       </provider>

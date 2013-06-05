@@ -9795,7 +9795,7 @@ td.item-id {
 }
 
 td.item-mkr {
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     width: 20px;
 }
@@ -9806,7 +9806,9 @@ td.item-bdry {
 td.item-actions {
     width: 20px;
 }
-
+.bold {
+    font-weight: bold;
+}
 td.item-dNam {
     font-size: 14px;
 }

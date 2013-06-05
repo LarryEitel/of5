@@ -14,7 +14,7 @@
   </div>
   <div class="google-map"
        center="position.coords"
-       zoom="zoomProperty"
+       zoom="z"
        markers="markersProperty"
        latitude="clickedLatitudeProperty"
        longitude="clickedLongitudeProperty"
@@ -71,7 +71,9 @@
         <!--Bdry-->
         <td class="item item-bdry">{{item.bdry.substr(7)}}</td>
         <!--Marker-->
-        <td ng-click="itemMkrClick($index)" class="item item-mkr"><span>{{item.mkrNo}}</span> {{item.pt}}</td>
+        <td ng-click="itemMkrClick($index)"
+          class="item item-mkr bold">{{item.mkrNo}}
+          <span ng-hide="item.pt">?</span></td>
         <!--dNam-->
         <td class="item item-dNam">
           <b><span>{{item.dNam}}</span></b>

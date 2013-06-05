@@ -10,7 +10,14 @@ angular.module('ofApp')
       var SJO = {latitude: 9.988002927, longitude: -84.20538052916};
       var BR06 = {latitude: 9.968179612738837, longitude: -84.16628122329712};
       var defaultCenter = BR06;
+      var defaultLatLng = '9.988002927,-84.20538052916';
 
+
+      if ($routeParams.ll && typeof($routeParams.ll) === 'string') {
+        console.log('ll', $routeParams.ll);
+        var ll = $routeParams.ll.split(',');
+        defaultCenter = {latitude: parseFloat(ll[0]), longitude: parseFloat(ll[1])};
+      }
 
       angular.extend($scope, {
         position: {
@@ -24,13 +31,7 @@ angular.module('ofApp')
         zoomProperty: 18,
 
         /** list of markers to put in the map */
-        markersProperty: [ {
-          latitude: defaultCenter.latitude,
-          longitude: defaultCenter.longitude,
-          draggable: true,
-          mkrNo: 6,
-          mkrState: 0
-        }],
+        markersProperty: [],
 
         // These 2 properties will be set when clicking on the map
         clickedLatitudeProperty: null,
@@ -40,7 +41,17 @@ angular.module('ofApp')
           click: function (mapModel, eventName, originalEventArgs) {
             // 'this' is the directive's scope
             $log.log('user defined event on map directive with scope', this);
-            $log.log('user defined event: ' + eventName, mapModel, originalEventArgs);
+//            $log.log('user defined event: ' + eventName, mapModel, originalEventArgs);
+          },
+          dragend: function (mapModel, eventName, originalEventArgs) {
+            // 'this' is the directive's scope
+
+            var center = this.$parent.centerProperty;
+            var ll = center.latitude.toString() + ',' + center.longitude.toString();
+            console.log('ll', ll);
+            $scope.ll = ll;
+            $location.ll = ll;
+            $routeParams.ll = mapModel.ll;
           }
         }
       });
@@ -51,7 +62,8 @@ angular.module('ofApp')
         if ($scope.items[index].pt !== undefined) {
           var pt = $scope.items[index].pt;
           console.log('pt', pt);
-          $scope.position.coords = {latitude: pt[0], longitude: pt[1]};
+//          $scope.position.coords = {latitude: pt[0], longitude: pt[1]};
+          $scope.ll = pt[0].toString() + ',' + pt[1].toString();
         }
 //        $location.hash('top');
 //        $anchorScroll();{
@@ -62,68 +74,17 @@ angular.module('ofApp')
       };
 
       var defaultRouteArgs = {
-        ll: SJO,
+        ll: defaultLatLng,
         cngSlug: 'crherbs',
         cngAreaSlug: 'crherbsca',
         cngAreaTerrSlug: 'crherbsca12',
         q: '',
         sort: 'bdry,w',
         filter: 'cngAreaTerr:crherbs',
+        z: 18, // zoom level
         pp: 5, // items per page
         pg: 5 // page
       };
-
-      // $scope.gMap.myMarkers = [];
-      // $scope.gMap.myMarkers.push(new google.maps.Marker({
-      //   map: $scope.gMap.myMap,
-      //   position: defaultRouteArgs.ll
-      // }));
-
-      // $scope.gMap.addMarker = function($event) {
-      //   $scope.gMap.myMarkers.push(new google.maps.Marker({
-      //     map: $scope.gMap.myMap,
-      //     position: $event.latLng
-      //   }));
-      // };
-//
-//      $scope.map.setMarkerPosition = function(marker, lat, lng) {
-//        marker.setPosition(new google.maps.LatLng(lat, lng));
-//      };
-
-//      $scope.gMap.mapOptions = {
-//        center: defaultRouteArgs.ll,
-//        zoom: 13,
-//        mapTypeId: google.maps.MapTypeId.ROADMAP
-//      };
-//
-//      $scope.$watch('myMap', function(){
-//        $scope.setHome();
-//      });
-//
-//      $scope.setHome = function() {
-//        $scope.homeMarker = new google.maps.Marker({
-//          map: $scope.gMap.myMap,
-//          position: $scope.gMap.mapOptions.center
-//        });
-//      };
-
-//    $scope.setZoomMessage = function(zoom) {
-//      $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
-//      console.log(zoom,'zoomed')
-//    };
-//
-//    $scope.openMarkerInfo = function(marker) {
-//      $scope.currentMarker = marker;
-//      $scope.currentMarkerLat = marker.getPosition().lat();
-//      $scope.currentMarkerLng = marker.getPosition().lng();
-//      $scope.myInfoWindow.open($scope.myMap, marker);
-//    };
-//
-//    $scope.setMarkerPosition = function(marker, lat, lng) {
-//      marker.setPosition(new google.maps.LatLng(lat, lng));
-//    };
-
-
 
 
       $scope.items = [];
@@ -134,6 +95,8 @@ angular.module('ofApp')
   //      $scope.cngAreaTerrId = $routeParams.cngAreaTerrSlug || defaultRouteArgs.cngAreaTerrSlug;
   //      $scope.filter = $routeParams.filter || defaultRouteArgs.filter;
       $scope.q = $routeParams.q || defaultRouteArgs.q;
+      $scope.ll = $routeParams.ll || defaultRouteArgs.ll;
+      $scope.z = parseInt($routeParams.z, 10) || defaultRouteArgs.z;
       $scope.pp = $routeParams.pp || defaultRouteArgs.pp;
       $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
       $scope.sort = $routeParams.sort || defaultRouteArgs.sort;
@@ -168,6 +131,16 @@ angular.module('ofApp')
       $scope.location = $location;
       $scope.routeParams = $routeParams;
 
+      $scope.$watch('ll', function(newValue) {
+        $routeParams.ll = newValue;
+        $location.search('ll', newValue);
+        $scope.ll = newValue;
+      });
+
+      $scope.$watch('z', function(newValue) {
+        $location.search('z', newValue);
+        $scope.z = parseInt(newValue, 10);
+      });
 
       $scope.$watch('cngAreaTerrId', function(newValue) {
   //        console.log('$scope.cngAreaTerrId:', $scope.cngAreaTerrId);
@@ -179,7 +152,6 @@ angular.module('ofApp')
 
       $scope.$watch('routeParams', (function(newVal, oldVal) {
         return angular.forEach(newVal, function(v, k) {
-
           if (k !== 'where') {
   //            console.log('$scope.$watch', k, v);
             $scope[k] = v;
@@ -225,7 +197,7 @@ angular.module('ofApp')
         }
         if (q)                   { whereParts.dNam = {$regex: q, $options:'i'}; }
 
-        console.log('whereParts', whereParts);
+//        console.log('whereParts', whereParts);
 
         if (whereParts)                 { args.where = JSON.stringify(whereParts); }
 
@@ -238,8 +210,38 @@ angular.module('ofApp')
             var objs = items._items;
             for (var i= 0; i<objs.length; ++i) {
               var obj = objs[i];
+              obj.mkrUpdate = function(e, mkrDat) {
+
+                var Plc = Restangular.one('plcs', mkrDat.dat._id);
+                // # 8 [9.967907515620249, -84.16737824678421]
+                var fldsToPut = {
+                  'pt': [e.latLng.lat(), e.latLng.lng()]
+                };
+
+                var data = JSON.stringify({'actions': {'$set': {'flds': fldsToPut}}});
+
+                console.log('customPUT', data);
+
+                Plc.customPUT(undefined, undefined, undefined, data)
+                  .then(
+                    function(itemUpdated) {
+                      console.log('put success', itemUpdated);
+                    },
+                    function errorCallback() {
+                      console.log('mkrUpdate Oops error from server :(');
+                    }
+                  );
+              };
+
               if (typeof(obj.pt) !== 'undefined') {
-                $scope.markersProperty.push({latitude: obj.pt[0], longitude: obj.pt[1], draggable: true, mkrNo: obj.mkrNo, mkrState: obj.mkrState});
+                $scope.markersProperty.push({
+                  latitude: obj.pt[0],
+                  longitude: obj.pt[1],
+                  draggable: true,
+                  mkrNo: obj.mkrNo,
+                  mkrState: obj.mkrState,
+                  dat: obj
+                });
               }
             }
 

@@ -41,17 +41,14 @@ angular.module('ofApp')
             // 'this' is the directive's scope
             $log.log('user defined event on map directive with scope', this);
 //            $log.log('user defined event: ' + eventName, mapModel, originalEventArgs);
-          },
-          dragend: function (mapModel, eventName, originalEventArgs) {
-            // 'this' is the directive's scope
-
-            var center = this.$parent.centerProperty;
-            var ll = center.latitude.toString() + ',' + center.longitude.toString();
-            console.log('ll', ll);
-            $scope.ll = ll;
-            $location.ll = ll;
-            $routeParams.ll = mapModel.ll;
-          }
+          } //,
+//          dragend: function (mapModel, eventName, originalEventArgs) {
+//            var center = this.$parent.centerProperty;
+//            var ll = center.latitude.toString() + ',' + center.longitude.toString();
+//            $scope.ll = ll;
+////            $location.ll = ll;
+////            $routeParams.ll = mapModel.ll;
+//          }
         }
       });
 //      https://maps.google.com/?ll=43.133061,-105.46875&spn=39.414809,61.523437&t=h&z=4
@@ -130,11 +127,11 @@ angular.module('ofApp')
       $scope.location = $location;
       $scope.routeParams = $routeParams;
 
-      $scope.$watch('ll', function(newValue) {
-        $routeParams.ll = newValue;
-        $location.search('ll', newValue);
-        $scope.ll = newValue;
-      });
+//      $scope.$watch('ll', function(newValue) {
+////        $routeParams.ll = newValue;
+////        $location.search('ll', newValue);
+//        $scope.ll = newValue;
+//      });
 
       $scope.$watch('z', function(newValue) {
         $location.search('z', newValue);
@@ -309,6 +306,7 @@ angular.module('ofApp')
       };
       $scope.edit = function ($index) {
         var item = $scope.items[$index];
+//        $routeParams.ll = $scope.ll;
         return $location.path('/plc/' + item._id + '/edit');
       };
       $scope.view = function ($index) {

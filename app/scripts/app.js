@@ -46,7 +46,7 @@
         this.center = options.center;
       }
       this.routeParams.ll = this.ll;
-      this.mapEl = $("#map");
+      this.mapEl = $('#map');
       this.mapTypes = {
         m: 'roadmap',
         h: 'hybrid'
@@ -71,7 +71,6 @@
     }
 
     GMap.prototype.onClick = function(e) {
-      console.log('onClick', e);
       if (this.rootScope.selectedItemIndex > -1) {
         return this.addPlcMkr(e.latLng.lat(), e.latLng.lng());
       }
@@ -84,18 +83,16 @@
       marker = new GMarker(this.map, lat, lng, icon);
       this.rootScope.selectedItem.pt = [lat, lng];
       this.rootScope.selectedItemIndex = -1;
-      this.rootScope.$$phase || this.rootScope.$apply();
-      console.log('@rootScope.selectedItem', this.rootScope.selectedItem);
-      return console.log('marker', marker);
+      return this.rootScope.$$phase || this.rootScope.$apply();
     };
 
     GMap.prototype.onDragStart = function() {
-      return this.dragging = true;
+      this.dragging = true;
+      return true;
     };
 
     GMap.prototype.setCenter = function(latLng) {
-      console.log('center before', this.center);
-      return console.log('center after', this.center);
+      return console.log('setCenter', this.center);
     };
 
     GMap.prototype.onDragEnd = function() {
@@ -170,8 +167,8 @@
         draggable: this.draggable,
         icon: this.icon
       });
-      google.maps.event.addListener(this.marker, "dragend", this.dragend);
-      google.maps.event.addListener(this.marker, "click", this.click);
+      google.maps.event.addListener(this.marker, 'dragend', this.dragend);
+      google.maps.event.addListener(this.marker, 'click', this.click);
       return this.show();
     };
 
@@ -192,92 +189,93 @@
 
   })();
 
-  angular.module("ofApp", ["restangular", "ngCookies", "ui.bootstrap"]);
+  angular.module('ofApp', ['restangular', 'ngCookies', 'ui.bootstrap']);
 
-  angular.module("ofApp").config([
-    "$httpProvider", function($httpProvider) {
-      $httpProvider.defaults.headers.common.Authorization = "Basic admin@orgtec.com:xxxxxx";
-      return $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+  angular.module('ofApp').config([
+    '$httpProvider', function($httpProvider) {
+      $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx';
+      $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+      return $httpProvider.defaults.headers.post['Content-Type'];
     }
   ]);
 
-  angular.module("ofApp").config([
-    "RestangularProvider", function(RestangularProvider) {
-      RestangularProvider.setBaseUrl("http://exi.xchg.com/api");
+  angular.module('ofApp').config([
+    'RestangularProvider', function(RestangularProvider) {
+      RestangularProvider.setBaseUrl('http://exi.xchg.com/api');
       RestangularProvider.setListTypeIsArray(false);
       return RestangularProvider.setResponseExtractor(function(response, operation, what) {
-        if (what === "users" && operation === "getList") {
-          localStorage.setItem("lsuser", JSON.stringify(response._items[0]));
+        if (what === 'users' && operation === 'getList') {
+          localStorage.setItem('lsuser', JSON.stringify(response._items[0]));
         }
         return response;
       });
     }
   ]);
 
-  angular.module("ofApp").config([
-    "$routeProvider", "$locationProvider", "$httpProvider", function($routeProvider, $locationProvider, $httpProvider) {
+  angular.module('ofApp').config([
+    '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
       var access, interceptor;
 
       access = routingConfig.accessLevels;
-      $routeProvider.when("/plcs", {
-        templateUrl: "views/plcs.html",
-        controller: "PlcsCtrl",
+      $routeProvider.when('/plcs', {
+        templateUrl: 'views/plcs.html',
+        controller: 'PlcsCtrl',
         access: access.anon
       });
-      $routeProvider.when("/plc/:id/edit", {
-        templateUrl: "views/plc-form.html",
-        controller: "PlcFormCtrl",
+      $routeProvider.when('/plc/:id/edit', {
+        templateUrl: 'views/plc-form.html',
+        controller: 'PlcFormCtrl',
         access: access.anon
       });
-      $routeProvider.when("/plc/insert", {
-        templateUrl: "views/plc-form.html",
-        controller: "PlcFormCtrl",
+      $routeProvider.when('/plc/insert', {
+        templateUrl: 'views/plc-form.html',
+        controller: 'PlcFormCtrl',
         access: access.anon
       });
-      $routeProvider.when("/plc/:id", {
-        templateUrl: "views/plc-view.html",
-        controller: "PlcViewCtrl",
+      $routeProvider.when('/plc/:id', {
+        templateUrl: 'views/plc-view.html',
+        controller: 'PlcViewCtrl',
         access: access.anon
       });
-      $routeProvider.when("/", {
-        templateUrl: "views/partials/home.html",
-        controller: "HomeCtrl",
+      $routeProvider.when('/', {
+        templateUrl: 'views/partials/home.html',
+        controller: 'HomeCtrl',
         access: access.user
       });
-      $routeProvider.when("/login", {
-        templateUrl: "views/partials/login.html",
-        controller: "LoginCtrl",
+      $routeProvider.when('/login', {
+        templateUrl: 'views/partials/login.html',
+        controller: 'LoginCtrl',
         access: access.anon
       });
-      $routeProvider.when("/logout", {
-        templateUrl: "views/partials/logout.html",
-        controller: "LogoutCtrl",
+      $routeProvider.when('/logout', {
+        templateUrl: 'views/partials/logout.html',
+        controller: 'LogoutCtrl',
         access: access.user
       });
-      $routeProvider.when("/register", {
-        templateUrl: "views/partials/register.html",
-        controller: "RegisterCtrl",
+      $routeProvider.when('/register', {
+        templateUrl: 'views/partials/register.html',
+        controller: 'RegisterCtrl',
         access: access.anon
       });
-      $routeProvider.when("/private", {
-        templateUrl: "/partials/private",
-        controller: "PrivateCtrl",
+      $routeProvider.when('/private', {
+        templateUrl: '/partials/private',
+        controller: 'PrivateCtrl',
         access: access.user
       });
-      $routeProvider.when("/admin", {
-        templateUrl: "/partials/admin",
-        controller: "AdminCtrl",
+      $routeProvider.when('/admin', {
+        templateUrl: '/partials/admin',
+        controller: 'AdminCtrl',
         access: access.admin
       });
-      $routeProvider.when("/404", {
-        templateUrl: "views/partials/404.html",
+      $routeProvider.when('/404', {
+        templateUrl: 'views/partials/404.html',
         access: access["public"]
       });
       $routeProvider.otherwise({
-        redirectTo: "/404"
+        redirectTo: '/404'
       });
       interceptor = [
-        "$location", "$q", function($location, $q) {
+        '$location', '$q', function($location, $q) {
           var error, success;
 
           success = function(response) {
@@ -285,7 +283,7 @@
           };
           error = function(response) {
             if (response.status === 401) {
-              $location.path("/login");
+              $location.path('/login');
               return $q.reject(response);
             } else {
               return $q.reject(response);
@@ -314,7 +312,7 @@
     };
   };
 
-  angular.module("ofApp").factory("GoogleMap", [
+  angular.module('ofApp').factory('GoogleMap', [
     '$rootScope', '$location', '$routeParams', function($rootScope, $location, $routeParams) {
       var SJO, initPosition, initZoom, mapOptions, x;
 
@@ -341,11 +339,11 @@
     }
   ]);
 
-  angular.module("ofApp").run(function($rootScope, $location, Auth) {
-    $rootScope.$on("$routeChangeStart", function(event, next, current) {
+  angular.module('ofApp').run(function($rootScope, $location, Auth) {
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
       $rootScope.error = null;
       if (!(!Auth.authorize(next.access) ? Auth.isLoggedIn() : void 0)) {
-        return $location.path("/login");
+        return $location.path('/login');
       }
     });
     return $rootScope.appInitialized = true;

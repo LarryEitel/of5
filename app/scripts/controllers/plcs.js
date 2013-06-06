@@ -73,23 +73,19 @@
       $scope.location = $location;
       $scope.routeParams = $routeParams;
       $rootScope.$watch("selectedItemIndex", function(newValue) {
-        console.log('$rootScope.$watch', $rootScope);
         $scope.selectedItem = $rootScope.selectedItem;
         return $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue;
       });
       gmap.icon = function(item) {
-        console.log('mapPlcMkr', item);
         return $scope.mkrIcon(item.mkrNo, item.mkrState);
       };
       $scope.itemMkrClick = function(index) {
         var pt;
 
-        console.log("itemMkrClick.index", index);
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index;
         $rootScope.selectedItem = gmap.selectedItem = $scope.items[index];
         if ($scope.items[index].pt !== undefined) {
           pt = $scope.items[index].pt;
-          console.log("pt", pt);
           $scope.ll = llFromLatLng(pt);
         }
         $location.hash("top");

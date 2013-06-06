@@ -85,7 +85,9 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc',
         laxcomma: true,
         '-W117': true,
+        '-W065': true, // Missing radix parameter.
         '-W098': true, // <var> is defined but never used
+        '-W116': true, // Expected '!==' and instead saw '!='.
         '-W083': true, // Don't make functions within a loop.
         '-W040': true, // Possible strict violation. Don't like this but don't understand this complaint: (typeof exports === 'undefined' ? this['routingConfig'] = {} : exports)
         '-W068': true // Wrapping non-IIFE function literals in parens is unnecessary.

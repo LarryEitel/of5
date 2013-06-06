@@ -70,21 +70,17 @@ angular.module("ofApp").controller("PlcsCtrl", \
     $scope.routeParams = $routeParams
 
     $rootScope.$watch "selectedItemIndex", (newValue) ->
-        console.log '$rootScope.$watch', $rootScope
         $scope.selectedItem = $rootScope.selectedItem
         $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue
 
     gmap.icon = (item) ->
-        console.log 'mapPlcMkr', item
         $scope.mkrIcon item.mkrNo, item.mkrState
 
     $scope.itemMkrClick = (index) ->
-        console.log "itemMkrClick.index", index
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index
         $rootScope.selectedItem = gmap.selectedItem = $scope.items[index]
         if $scope.items[index].pt isnt `undefined`
             pt = $scope.items[index].pt
-            console.log "pt", pt
             $scope.ll = llFromLatLng pt
         $location.hash "top"
         $anchorScroll()

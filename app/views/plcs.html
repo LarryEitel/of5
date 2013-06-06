@@ -12,28 +12,9 @@
   <div ng-show="selectedItemIndex>-1">
     <span ng-hide="items[selectedItemIndex].pt">Click to add Marker for: {{items[selectedItemIndex].dNam}}</span>
   </div>
-  <div class="google-map"
-       center="position.coords"
-       zoom="z"
-       markers="markersProperty"
-       latitude="clickedLatitudeProperty"
-       longitude="clickedLongitudeProperty"
-       mark-click="true"
-       draggable="true"
-       fit="false"
-       events="eventsProperty">
-       <!--style="height: 400px; width: 400px;">-->
-  </div>
 
-  <!--<ul>-->
-    <!--<li ng-repeat="marker in markersProperty">-->
-      <!--<a ng-click="map.panTo(marker.getPosition())">Pan to Marker {{$index}}</a>-->
-    <!--</li>-->
-  <!--</ul>-->
+<!--<div id="map" class="google-map"></div>-->
 
-  <!--<div ng-repeat="marker in gMap.myMarkers" ui-map-marker="gMap.myMarkers[$index]"-->
-       <!--ui-event="{'map-click': 'gMap.openMarkerInfo(marker)'}">-->
-  <!--</div>-->
 
   <br/>
   <form class="form-horizontal" name="searchForm" ng-submit="doSearch()">

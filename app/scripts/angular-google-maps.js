@@ -70,7 +70,6 @@
           google.maps.event.addListener(_instance, 'dragstart',
               function () {
                 that.dragging = true;
-//                console.log('map dragstart');
               }
           );
 
@@ -83,16 +82,8 @@
           google.maps.event.addListener(_instance, 'drag',
             function () {
               that.dragging = true;
-//                console.log('map dragging');
             }
           );
-//          google.maps.event.addListener(_instance, 'dragend',
-//            function () {
-//              that.dragging = false;
-//              that.ll = that.center.lat().toString() + ',' + that.center.lng().toString();
-//              console.log('map drag_end');
-//            }
-//          );
 
           google.maps.event.addListener(_instance, 'zoom_changed',
             function () {
@@ -195,9 +186,7 @@
           icon = new google.maps.MarkerImage(spriteImage,
             new google.maps.Size(markerWidth, 12),
             // new google.maps.Point((mkrNo - markerOffset) * markerWidth, (markerNo - markerOffset) * 12),
-            new google.maps.Point(spriteX, spriteY),
-            // new google.maps.Point(0, 0),
-            new google.maps.Point(0, 0));
+            new google.maps.Point(spriteX, spriteY));
         }
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(lat, lng),
@@ -331,13 +320,12 @@
   /**
    * Map directive
    */
-  googleMapsModule.directive('googleMap', ['$rootScope', '$location', '$log', '$timeout', '$filter', 'Restangular',
-    function ($rootScope, $location, $log, $timeout, $filter, Restangular) {
+  googleMapsModule.directive('googleMap', ['$location', '$log', '$timeout', '$filter', 'Restangular',
+    function ($location, $log, $timeout, $filter, Restangular) {
 
-    var controller = function ($rootScope, $location, $scope, $element) {
+    var controller = function ($location, $scope, $element) {
 
       var _m = $scope.map;
-      $rootScope.map = $scope.map;
 
       self.addInfoWindow = function (lat, lng, content) {
         _m.addInfoWindow(lat, lng, content);
@@ -391,18 +379,11 @@
         // Create our model
         var lat = scope.center.latitude;
         var lng = scope.center.longitude;
-        console.log('map center', scope.center.latitude, scope.center.longitude);
-        if (typeof(scope.ll) !== 'undefined') {
-          console.log('map center. ll', scope.ll);
-          var ll = scope.ll.split(',');
-          console.log('ll', ll);
-          console.log('ll', ll);
-        }
         var _m = new MapModel(angular.extend(opts, {
           container: element[0],
           center: new google.maps.LatLng(lat, lng),
           draggable: attrs.draggable === 'true',
-          ll: scope.ll,
+//          ll: scope.ll,
           z: scope.z,
           zoom: scope.zoom
         }));

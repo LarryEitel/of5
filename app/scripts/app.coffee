@@ -10,7 +10,7 @@ latLngFromLl = (ll) ->
 # &ll=9.993552791991132,-84.20888416469096 # SJO airport
 class GMap
     constructor: (options) ->
-        console.log 'GMap.constructor'
+#        console.log 'GMap.constructor'
         @rootScope = options.rootScope
         @dragging = 0
         @location = options.location
@@ -30,7 +30,7 @@ class GMap
 
         #        @navBarHeight = @rootScope.navBarHeight
 
-        @win = $(window)
+#        @win = $(window)
         ##        @crossHairLatEl = $('#mapcrosshairlat')
         ##        @crossHairLngEl = $('#mapcrosshairlng')
         @mapEl = $("#map")
@@ -49,6 +49,7 @@ class GMap
         # this will be moved to GMarker
         #        $('#map-directions-button').click(@getDirections)
 
+#        console.log '@mapEl', @mapEl[0]
         @map = new google.maps.Map(@mapEl[0], {
             zoom: @zoom
             center: new google.maps.LatLng(@center.lat, @center.lng)
@@ -61,43 +62,47 @@ class GMap
         addListener @map, 'zoom_changed', @onZoomChange
         addListener @map, 'dragstart', @onDragStart
         addListener @map, 'dragend', @onDragEnd
+        addListener @map, 'click', @onClick
 
+#        @rootScope.map = @map
         @rootScope.protocol = @location.protocol()
         @rootScope.host = @location.host()
         @rootScope.mapCenter = @center
         @rootScope.mapZoom = @zoom
-        @rootScope.mapType = @mapType
+        @rootScope.mapTypeId = @mapTypeId
 
     #        @updateLocation
     #        @.win[0].google.maps.event.trigger(@map, 'resize')
 
 
-    updateLocation: ->
-        console.log 'updateLocation'
-        if @location.path() == "/map"
-            #            console.log '@center.lat ' + @center.lat
-            #            console.log '@center.lng ' + @center.lng
-            #            console.log '@mapType ' + @mapType
-            #            console.log 'updatelocation before'
-            console.log @location.url()
-            #            console.log @location.path()
-            #            @location.url("map?q=#{@center.lat},#{@center.lng}&t=#{@mapType}&z=#{@zoom}")
-            #            console.log 'updatelocation after'
-            #            console.log @location.url()
-            #            console.log @location.path()
-            @rootScope.$apply()
+    onClick: (e) =>
+        console.log 'onClick', e
+        # if an item marker in the list is selected
+        if @rootScope.selectedItemIndex > -1
+            @addPlcMkr e.latLng.lat(), e.latLng.lng()
 
-    addPlace: =>
-        console.log 'addPlace'
+    addPlcMkr: (lat, lng) =>
+        icon = @icon(@rootScope.selectedItem)
 #        #if confirm("Add a new place?")
 #        lat = @map.getCenter().lat()
 #        lng = @map.getCenter().lng()
 #        #console.log lat, lng
-#        marker = new GMarker(@map, lat, lng)
+        marker = new GMarker(@map, lat, lng, icon)
+        @rootScope.selectedItem.pt = [lat, lng]
+        @rootScope.selectedItemIndex = -1
+        @rootScope.$$phase or @rootScope.$apply()
+        console.log '@rootScope.selectedItem', @rootScope.selectedItem
+        console.log 'marker', marker
 #        # @places.create(territoryno: @preferences.get('territoryno'), point: "POINT (#{lat} #{lng})")
 
     onDragStart: =>
         @dragging = on
+
+    setCenter: (latLng) =>
+        console.log 'center before', @center
+        # new google.maps.LatLng(latLng.lat, latLng.lng)
+#        @map.setCenter (new google.maps.LatLng(latLng.lat, latLng.lng))
+        console.log 'center after', @center
 
     onDragEnd: =>
         @dragging = off
@@ -114,25 +119,25 @@ class GMap
         #        @crossHairLngEl.html(@center.lng)
 
         if not @dragging
-            console.log 'onCenterChanged & !dragging'
+#            console.log 'onCenterChanged & !dragging'
             @rootScope.mapCenter = @center
             @ll = llFromLatLng @center
             @routeParams.ll = @ll
-            #            console.log @ll
-            @rootScope.$apply()
-
             @updateLocation()
 
+    updateLocation: =>
+#        console.log 'updateLocation'
+        @rootScope.$$phase or @rootScope.$apply()
+
     onZoomChange: =>
-        console.log 'onZoomChange'
+#        console.log 'onZoomChange'
         @rootScope.mapZoom = @zoom = @map.getZoom()
         @routeParams.z = @zoom
-        @rootScope.$apply()
         @updateLocation()
 
     onTypeChange: =>
         console.log 'onTypeChange'
-        @mapType = @map.getMapTypeId()
+        @mapTypeId = @map.getMapTypeId()
         #
         #        switch @map.getMapTypeId()
         #            when google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID
@@ -141,27 +146,49 @@ class GMap
         #                @polyOpts = true
         #        # @hybridPolyOpts
         #
-        @rootScope.mapType = @mapType[0]
-        @routeParams.t = @mapType[0]
-        @rootScope.$apply()
+        @rootScope.mapTypeId = @mapTypeId[0]
+        @routeParams.t = @mapTypeId[0]
+#        @rootScope.$apply()
         @updateLocation()
 #        console.log 'onTypeChange'
 
+    addMarker: (lat, lng) =>
+        console.log 'addMarker', lat, lng
+        console.log 'icon', @icon()
+#        #if confirm("Add a new place?")
+#        lat = @map.getCenter().lat()
+#        lng = @map.getCenter().lng()
+#        #console.log lat, lng
+        marker = new GMarker(@map, lat, lng)
+        console.log 'marker', marker
+#        # @places.create(territoryno: @preferences.get('territoryno'), point: "POINT (#{lat} #{lng})")
+
 
 class GMarker
-    #    constructor: (@map, @lat, @lng) ->
-    #        @position = new google.maps.LatLng(@lat, @lng)
-    #        @render()
+    constructor: (@map, @lat, @lng, @icon = null, @draggable = true) ->
+        @position = new google.maps.LatLng(@lat, @lng)
+        @render()
+#        @marker = new google.maps.Marker(
+#            position: new google.maps.LatLng(@lat, @lng)
+#            map: @map
+#            icon: icon
+#        )
+
+        @render()
 
     render: ->
-#        @marker = new google.maps.Marker(
-#            draggable: true
-#        )
-#
-#        google.maps.event.addListener @marker, "dragend", @dragend
-#        google.maps.event.addListener @marker, "click", @click
+        @marker = new google.maps.Marker(
+            draggable: @draggable
+            icon: @icon
+        )
+
+        google.maps.event.addListener @marker, "dragend", @dragend
+        google.maps.event.addListener @marker, "click", @click
 
         @show()
+
+    dragend: =>
+        console.log 'dragend'
 
 #    dragend: =>
 #        if confirm("Are you sure you want to move this marker?")
@@ -172,12 +199,14 @@ class GMarker
 #            # @marker.setPosition( new google.maps.LatLng(@model.get('lat'), @model.get('lng')))
 
     show: =>
-#        @marker.setPosition(@position)
+        @marker.setPosition(@position)
 
         # title = ''
         # @marker.setTitle(title)
-#        @marker.setMap(@map)
+        @marker.setMap(@map)
 
+    click: =>
+        console.log 'mkrClick'
         #  click: =>
         #    infoWindow = new InfoWindow()
         #
@@ -350,13 +379,13 @@ angular.module("ofApp")
 angular.module("ofApp")
     .run ($rootScope, $location, Auth) ->
 
-            $rootScope.$on "$routeChangeStart", (event, next, current) ->
+        $rootScope.$on "$routeChangeStart", (event, next, current) ->
 
-                $rootScope.error = null
+            $rootScope.error = null
 
-                #          console.log($location.$$url);
-                #          $location.path($location.$$url);
-                #        } else {
-                $location.path "/login"  unless Auth.isLoggedIn()  unless Auth.authorize(next.access)
+            #          console.log($location.$$url);
+            #          $location.path($location.$$url);
+            #        } else {
+            $location.path "/login"  unless Auth.isLoggedIn()  unless Auth.authorize(next.access)
 
-            $rootScope.appInitialized = true
+        $rootScope.appInitialized = true

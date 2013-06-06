@@ -1,13 +1,30 @@
 "use strict"
 
+llFromLatLng = (latLng) ->
+    latLng.lat + ',' + latLng.lng
+
+latLngFromLl = (ll) ->
+    llSplit            = ll.split(',')
+    {lat: llSplit[0], lng: llSplit[1]}
+
+spritesPath = "img/map/sprites/"
+
+
+
+
 angular.module("ofApp").controller("PlcsCtrl", \
     ["$rootScope", "$scope", "$location", "$routeParams", "Restangular", "$timeout", "$log", "$anchorScroll", "GoogleMap", \
         ($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll, GoogleMap) ->
-
+    gmap = GoogleMap
+    googleMaps = google.maps
+#    console.log 'gmap', gmap
+    map = gmap.map
+#    console.log 'googleMaps', googleMaps
+#    console.log 'map', map
     defaultRouteArgs =
         cngSlug: "crherbs"
-        cngAreaSlug: "crherbsca"
-        cngAreaTerrSlug: "crherbsca12"
+        cngAreaSlug: "br"
+        cngAreaTerrSlug: "br06"
         q: ""
         sort: "bdry,w"
         filter: "cngAreaTerr:crherbs"
@@ -25,51 +42,61 @@ angular.module("ofApp").controller("PlcsCtrl", \
     $scope.pg = $routeParams.pg or defaultRouteArgs.pg
     $scope.sort = $routeParams.sort or defaultRouteArgs.sort
     $scope.args = defaultRouteArgs
-    $scope.cngs = [
-        slug: "crherbs"
-        nam: "Belen Sur"
-    ]
-    $scope.cngAreas = [
-        bdry: "crherbs"
-        slug: "crherbsca"
-        nam: "Cariari"
-    ]
+    $rootScope.selectedItemIndex = gmap.selectedItem = gmap.selectedItemIndex = -1
+    $scope.bdys =
+        crherbsbr06:
+            slug: "crherbsbr06"
+            cPt: {lat: 9.968179612738837, lng: -84.16628122329712}
+            zoom: 18
+            mapTypeId: 'hybrid'
+            nam: "Bosques Doña Rosa #06"
+#    $scope.cngs = [
+#        slug: "crherbs"
+#        nam: "Belen Sur"
+#    ]
+#    $scope.cngAreas = [
+#        bdry: "crherbs"
+#        slug: "crherbsbr"
+#        nam: "Cariari"
+#    ]
     $scope.cngAreaTerrs = [
-        bdry: "crherbsca"
-        slug: "crherbsca12"
-        nam: "CA-12"
+#        bdry: "crherbsbr"
+        slug: "crherbsbr06"
+        nam: "br06-Bosques Doña Rosa 06"
     ]
     $routeParams.sort = defaultRouteArgs.sort  unless $routeParams.sort
     $rootScope.returnRoute = $location.$$url
     $scope.location = $location
     $scope.routeParams = $routeParams
-    $scope.$watch "z", (newValue) ->
-        $location.search "z", newValue
-        $scope.z = parseInt(newValue, 10)
 
-    $scope.$watch "cngAreaTerrId", (newValue) ->
-        $location.search "cngAreaTerrId", newValue
-        $scope.cngAreaTerrId = newValue
+    $rootScope.$watch "selectedItemIndex", (newValue) ->
+        console.log '$rootScope.$watch', $rootScope
+        $scope.selectedItem = $rootScope.selectedItem
+        $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue
 
-    $scope.$watch "routeParams", ((newVal, oldVal) ->
-        angular.forEach newVal, (v, k) ->
-            if k isnt "where"
-                $scope[k] = v
-                $location.search k, v
+    gmap.icon = (item) ->
+        console.log 'mapPlcMkr', item
+        $scope.mkrIcon item.mkrNo, item.mkrState
 
-    ), true
-    Plcs = Restangular.all("plcs")
-    qry = {}
-    $scope.doClear = ->
-        $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q
-        $scope.doSearch()
+    $scope.itemMkrClick = (index) ->
+        console.log "itemMkrClick.index", index
+        $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index
+        $rootScope.selectedItem = gmap.selectedItem = $scope.items[index]
+        if $scope.items[index].pt isnt `undefined`
+            pt = $scope.items[index].pt
+            console.log "pt", pt
+            $scope.ll = llFromLatLng pt
+        $location.hash "top"
+        $anchorScroll()
+
 
     $scope.doSearch = ->
         args = {}
         q = $scope.q
         whereParts = {}
         whereParts.bdry = $routeParams.cngAreaTerrId  \
-            if typeof ($routeParams.cngAreaTerrId) isnt "boolean" and $routeParams.cngAreaTerrId
+            if typeof ($routeParams.cngAreaTerrId) isnt "boolean" \
+                and $routeParams.cngAreaTerrId
         quickFindPlcIds = q.match(/qp\w+/g)
         if quickFindPlcIds
             plcIds = []
@@ -92,6 +119,41 @@ angular.module("ofApp").controller("PlcsCtrl", \
             $location.search "q", $scope.q  if $scope.q
         ), errorCallback = ->
             console.log "Oops error from server :("
+
+
+
+
+    $scope.$watch "z", (newValue) ->
+        $location.search "z", newValue
+        $scope.z = parseInt(newValue, 10)
+
+    $scope.$watch "cngAreaTerrId", (newValue) ->
+        $location.search "cngAreaTerrId", newValue
+        $scope.cngAreaTerrId = newValue
+        if newValue \
+                and typeof newValue == 'string' \
+                and $routeParams.cngAreaTerrId != newValue
+            bdy = $scope.bdys[newValue]
+            cPt = bdy.cPt
+            map.setCenter (new google.maps.LatLng(cPt.lat, cPt.lng))
+            map.setZoom bdy.zoom
+            map.setMapTypeId bdy.mapTypeId
+            $scope.cngAreaTerrId = newValue
+            $routeParams.cngAreaTerrId = newValue
+
+    $scope.$watch "routeParams", ((newVal, oldVal) ->
+        angular.forEach newVal, (v, k) ->
+            if k isnt "where"
+                $scope[k] = v
+                $location.search k, v
+
+    ), true
+    Plcs = Restangular.all("plcs")
+    qry = {}
+    $scope.doClear = ->
+        $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q
+        $scope.doSearch()
+
 
     $scope.add = ->
         data = "doc=" + JSON.stringify($scope.newItem)
@@ -124,7 +186,47 @@ angular.module("ofApp").controller("PlcsCtrl", \
         item = $scope.items[$index]
         $location.path "/plc/" + item._id
 
-#    $scope.doSearch()
+    $scope.mkrIcon = (mkrNo, mkrState = 0) ->
+        mkrStates = ["new", "try_1", "try_1_contacted", "try_2", "try_2_contacted", "try_3", "try_3_contacted"]
+        markerHeight = undefined
+        markerWidth = undefined
+        spriteImage = undefined
+        spriteX = undefined
+        spriteY = undefined
+        if mkrNo < 10
+            spriteImage = spritesPath + "sprite_1.png"
+            markerWidth = 12
+            spriteX = (mkrNo - 1) * markerWidth
+            spriteY = mkrState * markerHeight
+        else if mkrNo < 100
+            spriteImage = spritesPath + "sprite_2.png"
+            markerWidth = 16
+            spriteX = (mkrNo - 10) * markerWidth
+            spriteY = mkrState * markerHeight
+        else
+            spriteImage = spritesPath + "sprite_3.png"
+            markerWidth = 20
+            spriteX = (mkrNo - 100) * markerWidth
+            spriteY = mkrState * markerHeight
+        spriteY += 1  if spriteY # WHY? It just looks lined up correctly. :)
+
+        # new google.maps.Point((mkrNo - markerOffset) * markerWidth, (markerNo - markerOffset) * 12),
+        icon = new google.maps.MarkerImage(spriteImage, new google.maps.Size(markerWidth, 12), new google.maps.Point(spriteX, spriteY))  if mkrNo and mkrState isnt `undefined`
+        return icon
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $scope.doSearch()
 ])
 
 angular.module("ofApp").controller("PlcFormCtrl", \

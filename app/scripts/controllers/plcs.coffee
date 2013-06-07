@@ -152,7 +152,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
     $scope.patch = (_id, data) ->
         Plc = Restangular.one('plcs', _id)
 
-        Plc.customPUT('undefined', 'undefined', 'undefined', data) \
+        Plc.customPUT(null, null, null, data) \
                 .then ((itemUpdated) ->
             console.log 'success!'
         ), errorCallback = ->
@@ -226,11 +226,11 @@ angular.module('ofApp').controller('PlcsCtrl', \
     $scope.mkrIcon = (mkrNo, mkrState = 0) ->
         mkrStates = ['new', 'try_1', 'try_1_contacted', 'try_2', \
                      'try_2_contacted', 'try_3', 'try_3_contacted']
-        markerHeight = undefined
-        markerWidth = undefined
-        spriteImage = undefined
-        spriteX = undefined
-        spriteY = undefined
+        markerHeight = null
+        markerWidth = null
+        spriteImage = null
+        spriteX = null
+        spriteY = null
         if mkrNo < 10
             spriteImage = spritesPath + 'sprite_1.png'
             markerWidth = 12
@@ -254,7 +254,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
                                 spriteImage, \
                                 new google.maps.Size(markerWidth, 12), \
                                 new google.maps.Point(spriteX, spriteY))  \
-            if mkrNo and mkrState isnt 'undefined'
+            if mkrNo and mkrState > -1
         return icon
 
 
@@ -340,7 +340,7 @@ angular.module('ofApp').controller('PlcFormCtrl', \
                 $set:
                     flds: item
             )
-            Plc.customPUT('undefined', 'undefined', 'undefined', data).then ((itemUpdated) ->
+            Plc.customPUT(null, null, null, data).then ((itemUpdated) ->
                 window.location.href = '#' + $rootScope.returnRoute
             ), errorCallback = ->
                 console.log 'Oops error from server :('
@@ -357,7 +357,7 @@ angular.module('ofApp').controller 'PlcViewCtrl', \
     Plc = Restangular.one('plcs', $routeParams.id)
     Plc.get().then ((item) ->
         $scope.item = item
-        if 'undefined' isnt item.pt
+        if 'pt' in item
             $scope.lng = item.pt[0]
             $scope.lat = item.pt[1]
     ), errorCallback = ->

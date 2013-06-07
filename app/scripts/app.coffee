@@ -7,34 +7,34 @@ latLngFromLl = (ll) ->
     llSplit            = ll.split(',')
     {lat: llSplit[0], lng: llSplit[1]}
 
-class GPoly
-    constructor: (@map, @pts, @bdyData = null) ->
-        @gmaps = google.maps
-        @coords = []
-        for pt in pts
-            @coords.push new @gmaps.LatLng(pt[0], pt[1])
-
-
-        @bdy = new @gmaps.Polygon(
-            paths: @coords
-            strokeColor: "red"
-            strokeOpacity: 0.8
-            strokeWeight: 2
-            fillColor: null
-            fillOpacity: 0.1
-        )
-        @bdy.setMap @map
-        console.log @bdy
-
-    render: ->
-        console.log 'render'
-
-
-    show: =>
-
-
-    click: =>
-        console.log 'mkrClick'
+#class GPoly
+#    constructor: (@map, @pts, @bdyData = null) ->
+#        @gmaps = google.maps
+#        @coords = []
+#        for pt in pts
+#            @coords.push new @gmaps.LatLng(pt[0], pt[1])
+#
+#
+#        @bdy = new @gmaps.Polygon(
+#            paths: @coords
+#            strokeColor: "red"
+#            strokeOpacity: 0.8
+#            strokeWeight: 2
+#            fillColor: null
+#            fillOpacity: 0.1
+#        )
+#        @bdy.setMap @map
+#        console.log @bdy
+#
+#    render: ->
+#        console.log 'render'
+#
+#
+#    show: =>
+#
+#
+#    click: =>
+#        console.log 'mkrClick'
 
 
 # &ll=9.993552791991132,-84.20888416469096 # SJO airport
@@ -325,27 +325,21 @@ angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
     # what's this
     RestangularProvider.setListTypeIsArray false
 
-    #        RestangularProvider.setRequestInterceptor( \
-    #               function(element, operation, route, url) {
-    #          if (operation === 'put') {
-    #            element.actions = '{'$set':{'flds':{'lbl':'Larry'}}}';
-    #            delete element.id;
-    #          }
-    #
-    #          return element;
-    #        });
     RestangularProvider.setResponseExtractor (response, operation, what) ->
         localStorage.setItem 'lsuser', JSON.stringify(response._items[0])  \
             if what is 'users' and operation is 'getList'
         response
 
+#    RestangularProvider.setRequestInterceptor ( element, operation, route, url) ->
+#        if operation == 'put'
+#            element.actions = '{$set:{flds:{nam:"Larry"}}}'
+#            delete element.id
+#
+#        return element
+
 ]
 
-#          if (operation === 'get') {
-#            return response;
-#          } else if (operation === 'getList') {
-#            return response;
-#          }
+
 angular.module('ofApp').config ['$routeProvider', '$locationProvider', '$httpProvider',
     ($routeProvider, $locationProvider, $httpProvider) ->
         access = routingConfig.accessLevels

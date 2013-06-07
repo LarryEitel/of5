@@ -37,7 +37,9 @@
         paths: this.coords,
         strokeColor: "red",
         strokeOpacity: 0.8,
-        strokeWeight: 2
+        strokeWeight: 2,
+        fillColor: null,
+        fillOpacity: 0.1
       });
       this.bdy.setMap(this.map);
       console.log(this.bdy);

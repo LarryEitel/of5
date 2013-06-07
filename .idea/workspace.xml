@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc" />
+    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319823538" ignored="false" />
@@ -171,7 +177,7 @@
     <file path="/map.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370365684111" ignored="false" />
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472917940" ignored="false" />
-    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370635217846" ignored="false" />
+    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370635815647" ignored="false" />
     <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370634028121" ignored="false" />
     <file path="/map.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370497385331" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -193,10 +199,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="1363" selection-start="2780" selection-end="4126" vertical-scroll-proportion="-4.04">
+            <state line="145" column="0" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.48374513">
               <folding>
                 <element signature="e#6445#6845#0" expanded="false" />
               </folding>
@@ -222,12 +228,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="3017" selection-end="3017" vertical-scroll-proportion="2.2052896">
+            <state line="26" column="24" selection-start="639" selection-end="639" vertical-scroll-proportion="-13.6">
               <folding>
-                <element signature="e#3189#3981#0" expanded="false" />
+                <element signature="e#3180#3972#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -274,8 +280,8 @@
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/services.coffee" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
         <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
       </list>
     </option>
   </component>
@@ -693,7 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="12" selection-start="3342" selection-end="3342" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#3189#3981#0" expanded="false" />
+            <element signature="e#3180#3972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -731,12 +737,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="12" selection-start="6565" selection-end="6565" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="{&quot;slug&quot;: 'crherbsbr06'...}" />
-            <marker date="1370634032784" expanded="true" signature="-1:-1" placeholder="{&quot;slug&quot;: 'crherbsbr08'...}" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="{&quot;slug&quot;: 'crherbsbr06'...}" />
+            <marker date="1370635975905" expanded="true" signature="-1:-1" placeholder="{&quot;slug&quot;: 'crherbsbr08'...}" />
           </folding>
         </state>
       </provider>
@@ -759,33 +765,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="23" selection-start="531" selection-end="531" vertical-scroll-proportion="-14.96">
           <folding>
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370635484506" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="1363" selection-start="2780" selection-end="4126" vertical-scroll-proportion="-4.04">
-          <folding>
-            <element signature="e#6445#6845#0" expanded="false" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1370635815762" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="3017" selection-end="3017" vertical-scroll-proportion="2.2052896">
+        <state line="26" column="24" selection-start="639" selection-end="639" vertical-scroll-proportion="-13.6">
           <folding>
-            <element signature="e#3189#3981#0" expanded="false" />
+            <element signature="e#3180#3972#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="0" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.48374513">
+          <folding>
+            <element signature="e#6445#6845#0" expanded="false" />
           </folding>
         </state>
       </provider>

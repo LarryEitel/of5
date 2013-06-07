@@ -148,7 +148,7 @@
         if ($routeParams.sort) {
           args.sort = $routeParams.sort;
         }
-        Plcs.getList(args).then((function(items) {
+        return Plcs.getList(args).then((function(items) {
           var item, _i, _len, _ref;
 
           gmap.removeMkrs();
@@ -168,7 +168,6 @@
         }), errorCallback = function() {
           return console.log('Oops error from server :(');
         });
-        return $scope.loadBdys();
       };
       $scope.loadBdys = function() {
         var bdy, key, _ref, _results;

@@ -142,7 +142,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
             ), errorCallback = ->
                 console.log 'Oops error from server :('
 
-        $scope.loadBdys()
+#        $scope.loadBdys()
 
     $scope.loadBdys = ->
         console.log 'loadBdys'

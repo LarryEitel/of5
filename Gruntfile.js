@@ -32,7 +32,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
-        tasks: ['coffeelint', 'livereload']
+        tasks: ['livereload']
       }
     },
     connect: {
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
         },
         'max_line_length': {
             'value': 100,
-            'level': 'error'
+            'level': 'warn'
         },
         'indentation': {
           "value": 4,

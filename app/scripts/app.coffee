@@ -7,6 +7,36 @@ latLngFromLl = (ll) ->
     llSplit            = ll.split(',')
     {lat: llSplit[0], lng: llSplit[1]}
 
+class GPoly
+    constructor: (@map, @pts, @bdyData = null) ->
+        @gmaps = google.maps
+        @coords = []
+        for pt in pts
+            @coords.push new @gmaps.LatLng(pt[0], pt[1])
+
+
+        @bdy = new @gmaps.Polygon(
+            paths: @coords
+            strokeColor: "red"
+            strokeOpacity: 0.8
+            strokeWeight: 2
+            fillColor: "lightblue"
+            fillOpacity: 0.1
+        )
+        @bdy.setMap @map
+        console.log @bdy
+
+    render: ->
+        console.log 'render'
+
+
+    show: =>
+
+
+    click: =>
+        console.log 'mkrClick'
+
+
 # &ll=9.993552791991132,-84.20888416469096 # SJO airport
 class GMap
     constructor: (options) ->
@@ -56,6 +86,7 @@ class GMap
             mapTypeId: @mapTypes[@mapType]
         })
 
+
         addListener     = google.maps.event.addListener
         addListener @map, 'center_changed', @onCenterChanged
         addListener @map, 'maptypeid_changed', @onTypeChange
@@ -71,7 +102,7 @@ class GMap
         @rootScope.mapZoom = @zoom
         @rootScope.mapTypeId = @mapTypeId
 
-    #        @updateLocation
+#        @updateLocation
     #        @.win[0].google.maps.event.trigger(@map, 'resize')
 
 
@@ -96,6 +127,11 @@ class GMap
             item.patch(item._id, data)
             @rootScope.selectedItemIndex = -1
             @rootScope.$$phase or @rootScope.$apply()
+
+
+    addBdy: (map, item) =>
+        console.log 'addBdy'
+        new GPoly(map, item.pts, item)
 
     addPlcMkr: (map, item) =>
         icon = @icon(item)

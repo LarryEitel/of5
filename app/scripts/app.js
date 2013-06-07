@@ -20,7 +20,6 @@
 
   GMap = (function() {
     function GMap(options) {
-      this.addMarker = __bind(this.addMarker, this);
       this.onTypeChange = __bind(this.onTypeChange, this);
       this.onZoomChange = __bind(this.onZoomChange, this);
       this.updateLocation = __bind(this.updateLocation, this);
@@ -29,6 +28,7 @@
       this.onDragEnd = __bind(this.onDragEnd, this);
       this.setCenter = __bind(this.setCenter, this);
       this.onDragStart = __bind(this.onDragStart, this);
+      this.removeMkrs = __bind(this.removeMkrs, this);
       this.addPlcMkr = __bind(this.addPlcMkr, this);
       this.onClick = __bind(this.onClick, this);
       var addListener;
@@ -71,19 +71,54 @@
     }
 
     GMap.prototype.onClick = function(e) {
+      var data, item;
+
+      console.log('onClick.@rootScope.selectedItemIndex', this.rootScope.selectedItemIndex);
+      console.log('clicked at:', e, [e.latLng.lat(), e.latLng.lng()]);
       if (this.rootScope.selectedItemIndex > -1) {
-        return this.addPlcMkr(e.latLng.lat(), e.latLng.lng());
+        item = this.rootScope.selectedItem;
+        item.pt = [e.latLng.lat(), e.latLng.lng()];
+        this.addPlcMkr(this.map, item);
+        data = JSON.stringify({
+          actions: {
+            $set: {
+              flds: {
+                pt: item.pt
+              }
+            }
+          }
+        });
+        item.patch(item._id, data);
+        this.rootScope.selectedItemIndex = -1;
+        return this.rootScope.$$phase || this.rootScope.$apply();
       }
     };
 
-    GMap.prototype.addPlcMkr = function(lat, lng) {
-      var icon, marker;
+    GMap.prototype.addPlcMkr = function(map, item) {
+      var draggable, icon, itemData, lat, lng;
 
-      icon = this.icon(this.rootScope.selectedItem);
-      marker = new GMarker(this.map, lat, lng, icon);
-      this.rootScope.selectedItem.pt = [lat, lng];
-      this.rootScope.selectedItemIndex = -1;
-      return this.rootScope.$$phase || this.rootScope.$apply();
+      icon = this.icon(item);
+      lat = item.pt[0];
+      lng = item.pt[1];
+      draggable = true;
+      itemData = {
+        _id: item._id,
+        id: item.id,
+        mkrNo: item.mkrNo,
+        dNam: item.dNam,
+        patch: item.patch
+      };
+      return new GMarker(map, lat, lng, icon, draggable, itemData);
+    };
+
+    GMap.prototype.removeMkrs = function() {
+      if (this.rootScope.items) {
+        return angular.forEach(this.rootScope.items, function(v, i) {
+          if (v.mapMkr) {
+            return v.mapMkr.marker.setMap(null);
+          }
+        });
+      }
     };
 
     GMap.prototype.onDragStart = function() {
@@ -127,20 +162,10 @@
     };
 
     GMap.prototype.onTypeChange = function() {
-      console.log('onTypeChange');
       this.mapTypeId = this.map.getMapTypeId();
       this.rootScope.mapTypeId = this.mapTypeId[0];
       this.routeParams.t = this.mapTypeId[0];
       return this.updateLocation();
-    };
-
-    GMap.prototype.addMarker = function(lat, lng) {
-      var marker;
-
-      console.log('addMarker', lat, lng);
-      console.log('icon', this.icon());
-      marker = new GMarker(this.map, lat, lng);
-      return console.log('marker', marker);
     };
 
     return GMap;
@@ -148,32 +173,46 @@
   })();
 
   GMarker = (function() {
-    function GMarker(map, lat, lng, icon, draggable) {
+    function GMarker(map, lat, lng, icon, draggable, itemData) {
       this.map = map;
       this.lat = lat;
       this.lng = lng;
       this.icon = icon != null ? icon : null;
       this.draggable = draggable != null ? draggable : true;
+      this.itemData = itemData != null ? itemData : null;
       this.click = __bind(this.click, this);
       this.show = __bind(this.show, this);
       this.dragend = __bind(this.dragend, this);
-      this.position = new google.maps.LatLng(this.lat, this.lng);
-      this.render();
-      this.render();
-    }
-
-    GMarker.prototype.render = function() {
-      this.marker = new google.maps.Marker({
+      this.gmaps = google.maps;
+      this.position = new this.gmaps.LatLng(this.lat, this.lng);
+      this.marker = new this.gmaps.Marker({
         draggable: this.draggable,
         icon: this.icon
       });
-      google.maps.event.addListener(this.marker, 'dragend', this.dragend);
-      google.maps.event.addListener(this.marker, 'click', this.click);
+      this.gmaps.event.addListener(this.marker, 'dragend', this.dragend);
+      this.gmaps.event.addListener(this.marker, 'click', this.click);
+      this.marker.setPosition(this.position);
+      this.marker.setMap(this.map);
+    }
+
+    GMarker.prototype.render = function() {
+      console.log('render');
       return this.show();
     };
 
-    GMarker.prototype.dragend = function() {
-      return console.log('dragend');
+    GMarker.prototype.dragend = function(e) {
+      var data;
+
+      data = JSON.stringify({
+        actions: {
+          $set: {
+            flds: {
+              pt: [e.latLng.lat(), e.latLng.lng()]
+            }
+          }
+        }
+      });
+      return this.itemData.patch(this.itemData._id, data);
     };
 
     GMarker.prototype.show = function() {
@@ -314,20 +353,24 @@
 
   angular.module('ofApp').factory('GoogleMap', [
     '$rootScope', '$location', '$routeParams', function($rootScope, $location, $routeParams) {
-      var SJO, initPosition, initZoom, mapOptions, x;
+      var BSBR, SJO, initPosition, initZoom, mapOptions, x;
 
       SJO = {
         lat: 9.993552791991132,
         lng: -84.20888416469096
       };
-      initPosition = SJO;
+      BSBR = {
+        lat: 9.971365509675179,
+        lng: -84.16658163070679
+      };
+      initPosition = BSBR;
       initZoom = 16;
       mapOptions = {
         rootScope: $rootScope,
         location: $location,
         routeParams: $routeParams,
         zoom: initZoom,
-        mapType: 'm',
+        mapType: 'h',
         ll: llFromLatLng(initPosition),
         center: {
           lat: initPosition.lat,

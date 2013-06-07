@@ -8,9 +8,7 @@ latLngFromLl = (ll) ->
     {lat: llSplit[0], lng: llSplit[1]}
 
 spritesPath = "img/map/sprites/"
-
-
-
+maxZoom = 19
 
 angular.module("ofApp").controller("PlcsCtrl", \
     ["$rootScope", "$scope", "$location", "$routeParams", "Restangular", "$timeout", "$log", "$anchorScroll", "GoogleMap", \
@@ -22,13 +20,14 @@ angular.module("ofApp").controller("PlcsCtrl", \
 #    console.log 'googleMaps', googleMaps
 #    console.log 'map', map
     defaultRouteArgs =
+        ll: '9.971365509675179,-84.16658163070679'
         cngSlug: "crherbs"
         cngAreaSlug: "br"
         cngAreaTerrSlug: "br06"
         q: ""
         sort: "bdry,w"
         filter: "cngAreaTerr:crherbs"
-        z: 18
+        z: 17
         pp: 5
         pg: 5
 
@@ -37,6 +36,7 @@ angular.module("ofApp").controller("PlcsCtrl", \
     $scope.maxId = null
     $scope.q = $routeParams.q or defaultRouteArgs.q
     $scope.ll = $routeParams.ll or defaultRouteArgs.ll
+    console.log 'll', $scope.ll
     $scope.z = parseInt($routeParams.z, 10) or defaultRouteArgs.z
     $scope.pp = $routeParams.pp or defaultRouteArgs.pp
     $scope.pg = $routeParams.pg or defaultRouteArgs.pg
@@ -46,10 +46,16 @@ angular.module("ofApp").controller("PlcsCtrl", \
     $scope.bdys =
         crherbsbr06:
             slug: "crherbsbr06"
-            cPt: {lat: 9.968179612738837, lng: -84.16628122329712}
+            cPt: {lat: 9.968153195552807, lng: -84.16725754737854}
             zoom: 18
             mapTypeId: 'hybrid'
             nam: "Bosques Doña Rosa #06"
+        crherbsbr08:
+            slug: "crherbsbr08"
+            cPt: {lat: 9.970424700092135, lng: -84.1655137742861}
+            zoom: 18
+            mapTypeId: 'hybrid'
+            nam: "Bosques Doña Rosa #08"
 #    $scope.cngs = [
 #        slug: "crherbs"
 #        nam: "Belen Sur"
@@ -61,8 +67,8 @@ angular.module("ofApp").controller("PlcsCtrl", \
 #    ]
     $scope.cngAreaTerrs = [
 #        bdry: "crherbsbr"
-        slug: "crherbsbr06"
-        nam: "br06-Bosques Doña Rosa 06"
+        {slug: "crherbsbr06", nam: "br06-Bosques Doña Rosa 06"},
+        {slug: "crherbsbr08", nam: "br08-Bosques Doña Rosa 08"}
     ]
     $routeParams.sort = defaultRouteArgs.sort  unless $routeParams.sort
     $rootScope.returnRoute = $location.$$url
@@ -79,12 +85,15 @@ angular.module("ofApp").controller("PlcsCtrl", \
     $scope.itemMkrClick = (index) ->
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index
         $rootScope.selectedItem = gmap.selectedItem = $scope.items[index]
-        if $scope.items[index].pt isnt `undefined`
+        map.setZoom maxZoom
+        if $scope.items[index].pt
+            $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = -1
             pt = $scope.items[index].pt
             $scope.ll = llFromLatLng pt
+            map.setCenter (new google.maps.LatLng(pt[0], pt[1]))
+
         $location.hash "top"
         $anchorScroll()
-
 
     $scope.doSearch = ->
         args = {}
@@ -110,12 +119,33 @@ angular.module("ofApp").controller("PlcsCtrl", \
                 $options: "i"
         args.where = JSON.stringify(whereParts)  if whereParts
         args.sort = $routeParams.sort  if $routeParams.sort
-        Plcs.getList(args).then ((items) ->
-            $scope.items = items._items
-            $location.search "q", $scope.q  if $scope.q
+        Plcs.getList(args) \
+            .then ((items) ->
+                gmap.removeMkrs()
+
+                for item, i in items._items
+                    items._items[i].patch = $scope.patch
+
+
+                    if item.pt
+                        console.log 'adding pt'
+                        items._items[i].mapMkr = gmap.addPlcMkr(map, item)
+
+                $rootScope.items = $scope.items = items._items
+
+                $location.search "q", $scope.q  if $scope.q
+            ), errorCallback = ->
+                console.log "Oops error from server :("
+
+
+    $scope.patch = (_id, data) ->
+        Plc = Restangular.one('plcs', _id)
+
+        Plc.customPUT(`undefined`, `undefined`, `undefined`, data) \
+                .then ((itemUpdated) ->
+            console.log "success!"
         ), errorCallback = ->
             console.log "Oops error from server :("
-
 
 
 

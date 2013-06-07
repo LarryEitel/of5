@@ -77,20 +77,47 @@ class GMap
 
     onClick: (e) =>
         # if an item marker in the list is selected
+        console.log 'onClick.@rootScope.selectedItemIndex', @rootScope.selectedItemIndex
+        console.log 'clicked at:', e, [e.latLng.lat(), e.latLng.lng()]
         if @rootScope.selectedItemIndex > -1
-            @addPlcMkr e.latLng.lat(), e.latLng.lng()
+            #        #if confirm('Add a new place?')
+            #        lat = @map.getCenter().lat()
+            #        lng = @map.getCenter().lng()
+            #        #console.log lat, lng
+            item = @rootScope.selectedItem
+            item.pt = [e.latLng.lat(), e.latLng.lng()]
 
-    addPlcMkr: (lat, lng) =>
-        icon = @icon(@rootScope.selectedItem)
-#        #if confirm('Add a new place?')
-#        lat = @map.getCenter().lat()
-#        lng = @map.getCenter().lng()
-#        #console.log lat, lng
-        marker = new GMarker(@map, lat, lng, icon)
-        @rootScope.selectedItem.pt = [lat, lng]
-        @rootScope.selectedItemIndex = -1
-        @rootScope.$$phase or @rootScope.$apply()
+            @addPlcMkr @map, item
+            data = JSON.stringify actions:
+                $set:
+                    flds:
+                        pt: item.pt
+
+            item.patch(item._id, data)
+            @rootScope.selectedItemIndex = -1
+            @rootScope.$$phase or @rootScope.$apply()
+
+    addPlcMkr: (map, item) =>
+        icon = @icon(item)
+        lat = item.pt[0]
+        lng = item.pt[1]
+        draggable = true
+        itemData = {_id: item._id, id: item.id, mkrNo: item.mkrNo, dNam: item.dNam, patch: item.patch}
+
+        new GMarker(map, lat, lng, icon, draggable, itemData)
+
 #        # @places.create(territoryno: @preferences.get('territoryno'), point: 'POINT (#{lat} #{lng})')
+
+
+    removeMkrs: =>
+        if @rootScope.items
+            angular.forEach @rootScope.items, (v, i) ->
+#                if v.hasOwnProperty('mapMkr')
+                if v.mapMkr
+                    # Remove from map
+                    v.mapMkr.marker.setMap null
+                    # delete v.mapMkr
+
 
     onDragStart: =>
         @dragging = on
@@ -133,7 +160,6 @@ class GMap
         @updateLocation()
 
     onTypeChange: =>
-        console.log 'onTypeChange'
         @mapTypeId = @map.getMapTypeId()
         #
         #        switch @map.getMapTypeId()
@@ -149,43 +175,52 @@ class GMap
         @updateLocation()
 #        console.log 'onTypeChange'
 
-    addMarker: (lat, lng) =>
-        console.log 'addMarker', lat, lng
-        console.log 'icon', @icon()
-#        #if confirm('Add a new place?')
-#        lat = @map.getCenter().lat()
-#        lng = @map.getCenter().lng()
-#        #console.log lat, lng
-        marker = new GMarker(@map, lat, lng)
-        console.log 'marker', marker
-#        # @places.create(territoryno: @preferences.get('territoryno'), point: 'POINT (#{lat} #{lng})')
+#    addMarker: (lat, lng) =>
+#        console.log 'addMarker', lat, lng
+#        console.log 'icon', @icon()
+##        #if confirm('Add a new place?')
+##        lat = @map.getCenter().lat()
+##        lng = @map.getCenter().lng()
+##        #console.log lat, lng
+#        marker = new GMarker(@map, lat, lng)
+#        console.log 'marker', marker
+##        # @places.create(territoryno: @preferences.get('territoryno'), point: 'POINT (#{lat} #{lng})')
 
 
 class GMarker
-    constructor: (@map, @lat, @lng, @icon = null, @draggable = true) ->
-        @position = new google.maps.LatLng(@lat, @lng)
-        @render()
+    constructor: (@map, @lat, @lng, @icon = null, @draggable = true, @itemData = null) ->
+        @gmaps = google.maps
+        @position = new @gmaps.LatLng(@lat, @lng)
+        @marker = new @gmaps.Marker(
+            draggable: @draggable
+            icon: @icon
+        )
+
+        @gmaps.event.addListener @marker, 'dragend', @dragend
+        @gmaps.event.addListener @marker, 'click', @click
+
+        @marker.setPosition(@position)
+        @marker.setMap(@map)
+
+#        @render()
 #        @marker = new google.maps.Marker(
 #            position: new google.maps.LatLng(@lat, @lng)
 #            map: @map
 #            icon: icon
 #        )
 
-        @render()
-
     render: ->
-        @marker = new google.maps.Marker(
-            draggable: @draggable
-            icon: @icon
-        )
-
-        google.maps.event.addListener @marker, 'dragend', @dragend
-        google.maps.event.addListener @marker, 'click', @click
+        console.log 'render'
 
         @show()
 
-    dragend: =>
-        console.log 'dragend'
+    dragend: (e) =>
+        data = JSON.stringify actions:
+            $set:
+                flds:
+                    pt: [e.latLng.lat(), e.latLng.lng()]
+
+        @itemData.patch(@itemData._id, data)
 
 #    dragend: =>
 #        if confirm('Are you sure you want to move this marker?')
@@ -355,7 +390,8 @@ latLngFromLl = (ll) ->
 angular.module('ofApp')
     .factory 'GoogleMap', ['$rootScope', '$location', '$routeParams', ($rootScope, $location, $routeParams) ->
         SJO                     = {lat: 9.993552791991132, lng: -84.20888416469096}
-        initPosition            = SJO
+        BSBR                     = {lat: 9.971365509675179, lng: -84.16658163070679}
+        initPosition            = BSBR
         initZoom                = 16
 
         mapOptions =
@@ -363,7 +399,7 @@ angular.module('ofApp')
             location: $location
             routeParams: $routeParams
             zoom: initZoom
-            mapType: 'm'
+            mapType: 'h'
     #            ll: initPosition.lat + ',' + initPosition.lng
             ll: llFromLatLng initPosition
             center:

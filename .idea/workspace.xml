@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-    </list>
+    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc" />
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369319823538" ignored="false" />
@@ -228,7 +225,7 @@
       <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="551" selection-end="586" vertical-scroll-proportion="0.49244332">
+            <state line="103" column="0" selection-start="3017" selection-end="3017" vertical-scroll-proportion="2.2052896">
               <folding>
                 <element signature="e#3189#3981#0" expanded="false" />
               </folding>
@@ -786,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="551" selection-end="586" vertical-scroll-proportion="0.49244332">
+        <state line="103" column="0" selection-start="3017" selection-end="3017" vertical-scroll-proportion="2.2052896">
           <folding>
             <element signature="e#3189#3981#0" expanded="false" />
           </folding>

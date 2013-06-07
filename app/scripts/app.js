@@ -38,8 +38,7 @@
         strokeColor: "red",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: null,
-        fillOpacity: 0.1,
+        fillOpacity: 0,
         clickable: false
       });
       this.bdy.setMap(this.map);

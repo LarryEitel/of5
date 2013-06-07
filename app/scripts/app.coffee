@@ -21,8 +21,8 @@ class GPoly
             strokeColor: "red"
             strokeOpacity: 0.8
             strokeWeight: 2
-            fillColor: null
-            fillOpacity: 0.1
+#            fillColor: "0xAARRGGBB"
+            fillOpacity: 0
             clickable: false
         )
         @bdy.setMap @map

@@ -136,7 +136,6 @@
     };
 
     GMap.prototype.addBdy = function(map, item) {
-      console.log('addBdy');
       return new GPoly(map, item.pts, item);
     };
 

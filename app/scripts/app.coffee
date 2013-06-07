@@ -26,6 +26,7 @@ class GPoly
             clickable: false
         )
         @bdy.setMap @map
+#        return @bdy
 
     render: ->
         console.log 'render'
@@ -131,7 +132,7 @@ class GMap
 
 
     addBdy: (map, item) =>
-        console.log 'addBdy'
+#        console.log 'addBdy'
         new GPoly(map, item.pts, item)
 
     addPlcMkr: (map, item) =>

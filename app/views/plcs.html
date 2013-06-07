@@ -10,17 +10,24 @@
 
 
   <br/>
-  <form class="form-horizontal" name="searchForm" ng-submit="doSearch()">
+  <div>
+    <div style="float: left; display: inline;">
+      <form class="form-horizontal" name="searchForm" ng-submit="doSearch()">
 
-    <select ng-model="cngAreaTerrId" ng-options="item.slug as item.nam for item in cngAreaTerrs">
-      <option value="">-- Elija Territorio --</option>
-    </select>
+        <select ng-model="cngAreaTerrId" ng-options="item.slug as item.nam for item in cngAreaTerrs">
+          <option value="">-- Elija Territorio --</option>
+        </select>
 
-    <input type="search" results ng-model="q" class="search-query" placeholder="Search" required ui-keydown="{esc: 'doClear()', 13:'doSearch()'}">
-    <span ng-click="doSearch()"><i class="glyphicons-icon right_arrow" style="margin-top: -10px"></i></span>
-    <span ng-click="doClear()" ng-show="q"><i class="glyphicons-icon remove" style="margin: -10px 0 0 -10px"></i></span>
-  </form>
-
+        <input type="search" results ng-model="q" class="search-query" placeholder="Search" required ui-keydown="{esc: 'doClear()', 13:'doSearch()'}">
+        <span ng-click="doSearch()"><i class="glyphicons-icon right_arrow" style="margin-top: -10px"></i></span>
+        <span ng-click="doClear()" ng-show="q"><i class="glyphicons-icon remove" style="margin: -10px 0 0 -10px"></i></span>
+      </form>
+    </div>
+    <div style="float: right; display: inline;">
+      <span ng-show="cngAreaTerrId" ng-hide="editingBdy" ng-click="editBdy(cngAreaTerrId)">Edit Boundary</span>
+      <span ng-show="editingBdy" ng-click="saveBdy(cngAreaTerrId)">Save Changes</span>
+    </div>
+  </div>
 
   <table class="table table-striped table-bordered table-hover">
     <thead style='background: lightgray; border: 1px; border-style: solid; color: #000000;'>

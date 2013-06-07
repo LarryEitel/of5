@@ -7,34 +7,35 @@ latLngFromLl = (ll) ->
     llSplit            = ll.split(',')
     {lat: llSplit[0], lng: llSplit[1]}
 
-#class GPoly
-#    constructor: (@map, @pts, @bdyData = null) ->
-#        @gmaps = google.maps
-#        @coords = []
-#        for pt in pts
-#            @coords.push new @gmaps.LatLng(pt[0], pt[1])
-#
-#
-#        @bdy = new @gmaps.Polygon(
-#            paths: @coords
-#            strokeColor: "red"
-#            strokeOpacity: 0.8
-#            strokeWeight: 2
-#            fillColor: null
-#            fillOpacity: 0.1
-#        )
-#        @bdy.setMap @map
-#        console.log @bdy
-#
-#    render: ->
-#        console.log 'render'
-#
-#
-#    show: =>
-#
-#
-#    click: =>
-#        console.log 'mkrClick'
+class GPoly
+    constructor: (@map, @pts, @bdyData = null) ->
+        # https://developers.google.com/maps/documentation/javascript/reference#PolygonOptions
+        @gmaps = google.maps
+        @coords = []
+        for pt in pts
+            @coords.push new @gmaps.LatLng(pt[0], pt[1])
+
+
+        @bdy = new @gmaps.Polygon(
+            paths: @coords
+            strokeColor: "red"
+            strokeOpacity: 0.8
+            strokeWeight: 2
+            fillColor: null
+            fillOpacity: 0.1
+            clickable: false
+        )
+        @bdy.setMap @map
+
+    render: ->
+        console.log 'render'
+
+
+    show: =>
+
+
+    click: =>
+        console.log 'mkrClick'
 
 
 # &ll=9.993552791991132,-84.20888416469096 # SJO airport

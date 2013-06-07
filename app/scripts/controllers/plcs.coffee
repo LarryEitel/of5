@@ -126,6 +126,8 @@ angular.module('ofApp').controller('PlcsCtrl', \
         args.sort = $routeParams.sort  if $routeParams.sort
         Plcs.getList(args) \
             .then ((items) ->
+                $scope.loadBdys()
+
                 gmap.removeMkrs()
 
                 for item, i in items._items
@@ -142,7 +144,6 @@ angular.module('ofApp').controller('PlcsCtrl', \
             ), errorCallback = ->
                 console.log 'Oops error from server :('
 
-#        $scope.loadBdys()
 
     $scope.loadBdys = ->
         console.log 'loadBdys'

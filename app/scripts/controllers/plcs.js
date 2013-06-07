@@ -152,6 +152,7 @@
         return Plcs.getList(args).then((function(items) {
           var item, _i, _len, _ref;
 
+          $scope.loadBdys();
           gmap.removeMkrs();
           _ref = items._items;
           for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {

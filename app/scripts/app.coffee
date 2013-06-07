@@ -20,8 +20,8 @@ class GPoly
             strokeColor: "red"
             strokeOpacity: 0.8
             strokeWeight: 2
-            fillColor: "lightblue"
-            fillOpacity: 0.1
+#            fillColor: "lightblue"
+#            fillOpacity: 0.1
         )
         @bdy.setMap @map
         console.log @bdy

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 llFromLatLng = (latLng) ->
     latLng.lat + ',' + latLng.lng
@@ -102,11 +102,13 @@ class GMap
         lat = item.pt[0]
         lng = item.pt[1]
         draggable = true
-        itemData = {_id: item._id, id: item.id, mkrNo: item.mkrNo, dNam: item.dNam, patch: item.patch}
+        itemData = {_id: item._id, id: item.id, \
+            mkrNo: item.mkrNo, dNam: item.dNam, patch: item.patch}
 
         new GMarker(map, lat, lng, icon, draggable, itemData)
 
-#        # @places.create(territoryno: @preferences.get('territoryno'), point: 'POINT (#{lat} #{lng})')
+#        # @places.create(territoryno: @preferences.get('territoryno'), \
+#               point: 'POINT (#{lat} #{lng})')
 
 
     removeMkrs: =>
@@ -184,7 +186,8 @@ class GMap
 ##        #console.log lat, lng
 #        marker = new GMarker(@map, lat, lng)
 #        console.log 'marker', marker
-##        # @places.create(territoryno: @preferences.get('territoryno'), point: 'POINT (#{lat} #{lng})')
+##        # @places.create(territoryno: @preferences.get('territoryno'), \
+#           point: 'POINT (#{lat} #{lng})')
 
 
 class GMarker
@@ -286,7 +289,8 @@ angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
     # what's this
     RestangularProvider.setListTypeIsArray false
 
-    #        RestangularProvider.setRequestInterceptor(function(element, operation, route, url) {
+    #        RestangularProvider.setRequestInterceptor( \
+    #               function(element, operation, route, url) {
     #          if (operation === 'put') {
     #            element.actions = '{'$set':{'flds':{'lbl':'Larry'}}}';
     #            delete element.id;
@@ -295,7 +299,8 @@ angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
     #          return element;
     #        });
     RestangularProvider.setResponseExtractor (response, operation, what) ->
-        localStorage.setItem 'lsuser', JSON.stringify(response._items[0])  if what is 'users' and operation is 'getList'
+        localStorage.setItem 'lsuser', JSON.stringify(response._items[0])  \
+            if what is 'users' and operation is 'getList'
         response
 
 ]
@@ -388,7 +393,8 @@ latLngFromLl = (ll) ->
     {lat: llSplit[0], lng: llSplit[1]}
 
 angular.module('ofApp')
-    .factory 'GoogleMap', ['$rootScope', '$location', '$routeParams', ($rootScope, $location, $routeParams) ->
+    .factory 'GoogleMap', ['$rootScope', '$location', '$routeParams', \
+            ($rootScope, $location, $routeParams) ->
         SJO                     = {lat: 9.993552791991132, lng: -84.20888416469096}
         BSBR                     = {lat: 9.971365509675179, lng: -84.16658163070679}
         initPosition            = BSBR
@@ -412,7 +418,6 @@ angular.module('ofApp')
 
 angular.module('ofApp')
     .run ($rootScope, $location, Auth) ->
-
         $rootScope.$on '$routeChangeStart', (event, next, current) ->
 
             $rootScope.error = null
@@ -420,6 +425,8 @@ angular.module('ofApp')
             #          console.log($location.$$url);
             #          $location.path($location.$$url);
             #        } else {
-            $location.path '/login'  unless Auth.isLoggedIn()  unless Auth.authorize(next.access)
+            $location.path '/login'  \
+                unless Auth.isLoggedIn()  \
+                unless Auth.authorize(next.access)
 
         $rootScope.appInitialized = true

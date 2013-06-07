@@ -28,10 +28,11 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/css/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+          '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.coffee',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
-        tasks: ['livereload']
+        tasks: ['coffeelint', 'livereload']
       }
     },
     connect: {
@@ -79,6 +80,32 @@ module.exports = function (grunt) {
         }]
       },
       server: '.tmp'
+    },
+    coffeelint: {
+      app: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+      options: {
+        'no_trailing_whitespace': {
+          'level': 'error'
+        },
+        'max_line_length': {
+            'value': 100,
+            'level': 'error'
+        },
+        'indentation': {
+          "value": 4,
+          'level': 'error'
+        }
+      },
+      tests: {
+        files: {
+          src: ['tests/*.coffee']
+        },
+        options: {
+          'no_trailing_whitespace': {
+            'level': 'error'
+          }
+        }
+      }
     },
     jshint: {
       options: {
@@ -282,7 +309,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'jshint',
+    // 'jshint',
+    'coffeelint',
     // 'test',
     'yaml:dist',
     'useminPrepare',
@@ -301,6 +329,11 @@ module.exports = function (grunt) {
   grunt.registerTask('lint', [
     // 'htmllint',
     'jshint'
+  ]);
+
+  grunt.registerTask('cslint', [
+    // 'htmllint',
+    'coffeelint'
   ]);
 
   grunt.registerTask('default', ['build']);

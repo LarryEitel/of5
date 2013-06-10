@@ -1,47 +1,37 @@
 # http://yaml-online-parser.appspot.com
-Bdry:
+Bdy:
   meta:
     baseClass  : D
-    colNam     : bdrys
+    colNam     : bdys
     dNam       : Boundary
     dNamPlural : Boundaries
-    dNamS      : bdry
+    dNamS      : bdy
     dNamSPlural: boundaries
   fields:
-    donotcall: # temporary field in this collection
-      dNam: Do Not Call
-      type: boolean
     bBox:
-      dNam: Bound Box of All Polygons
+      dNam: Bound Box
       dNamS: bBox
-      type: [topLatitude, rightLongitude, bottomLatitude, leftLatitude]
-      note: perhaps a diff struct based on how google maps calc bBox from poly
-    bdry: # temporary field in this collection
-      dNam: Parent bdry Slug value
+      # type: [[float, float], [float, float]]
+      type: dict
+      note: {ne:northeast_latlng, sw:southwest_latlng] see stackoverflow.com/questions/2494756/fitbounds-in-google-maps-api-v3-does-not-fit-bounds
+    par: # temporary field in this collection
+      dNam: Parent bdy Slug value
       type: string
       note: Used to link this place to another boundary. Later will use field 'pars'
-    centerPt:
+    ptCenter:
       dNam: Center Latitude/Longitude of All Polygons
       dNamS: centerPt
       type: Pt
-    doorCount:
-      dNam: Door Count
+    childCount:
+      dNam: Child Items Count
       type: integer
-      note: there are plcs/places that are only points of reference rather than actual doors.
-    polys:
-      dNam: Boundary Polygons
-      dNamS: polys
-      type: [Poly]
-      note: Since boundaries, such as business may be comprised of non-contiguous boundaries.
+      note: count of doors/items tagged with this bdy as par[ent].
+    pts:
+      dNam: Polygon Points
+      dNamS: pts
+      type: [[float, float]]
     typ: # temporary field in this collection. Will refactor to Typ class
-      dNam: Type of Boundary
-      dNamS: typ
-      type: string
       choices: [cong, cong-area, cong-terr, cong-terr-biz, cong-terr-closed]
-    w: # temporary field in this collection
-      dNam: Sort Weight
-      type: float
-      note: Used to sort items grouped by par (territory)
 Cmp:
   meta:
     desc       : Company
@@ -397,7 +387,7 @@ Plc:
       dNam: Address
       type: string
       note: Street + <house number or apartment number>
-    bdry:
+    bdy:
       dNam: Boundary Slug
       type: string # temporary field in this collection
     langs: # temporary field in this collection
@@ -428,32 +418,6 @@ Plc:
       type: Pt
       desc: latitude, longitude, x,y
       note: see http://geojson.org/geojson-spec.html, choosing to use Google Map API format
-Poly:
-  meta:
-    baseClass  : ListBase
-    dNam       : Polygon
-    dNamPlural : Polygons
-    dNamS      : poly
-    dNamSPlural: polys
-  fields:
-    bBox:
-      dNam: Bound Box of All Polygons
-      dNamS: bBox
-      type: [topLatitude, rightLongitude, bottomLatitude, leftLatitude]
-    pNam:
-      dNam: Polygon Name
-      type: string
-    pNamS:
-      dNam: Short or Abbreviated Polygon Name
-      type: string
-    ptCenter:
-      dNam: Center of All Polygons
-      dNamS: ptCenter
-      type: Pt
-    pts:
-      dNam: Polygon Points
-      dNamS: pts
-      type: [[float, float]]
 Prs:
   meta:
     desc       : Person

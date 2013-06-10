@@ -3,6 +3,7 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+        <item url="file://$PROJECT_DIR$/Gruntfile.js" />
         <item url="file://$PROJECT_DIR$/app/scripts/app.js" />
         <item url="file://$PROJECT_DIR$/app/scripts/services.js" />
       </sourceFilesUrls>
@@ -12,6 +13,7 @@
       <root url="file://$PROJECT_DIR$/app/scripts/plcs.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/map.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <root url="file://$PROJECT_DIR$/Gruntfile.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/app.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/services.js" />
     </CLASSES>

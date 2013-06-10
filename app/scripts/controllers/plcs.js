@@ -24,7 +24,7 @@
 
   angular.module('ofApp').controller('PlcsCtrl', [
     '$rootScope', '$scope', '$location', '$routeParams', 'Restangular', '$timeout', '$log', '$anchorScroll', 'GoogleMap', function($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll, GoogleMap) {
-      var Plcs, defaultRouteArgs, gmap, googleMaps, map, qry;
+      var Bdys, Plcs, defaultRouteArgs, gmap, googleMaps, map, qry;
 
       gmap = GoogleMap;
       googleMaps = google.maps;
@@ -52,51 +52,20 @@
       $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
       $scope.sort = $routeParams.sort || defaultRouteArgs.sort;
       $scope.args = defaultRouteArgs;
-      $rootScope.cngAreaTerrId = $scope.cngAreaTerrId = null;
+      $rootScope.filtBdyId = $scope.filtBdyId = null;
       $rootScope.editingBdy = false;
       $rootScope.bdysLoaded = false;
       $rootScope.selectedItemIndex = gmap.selectedItem = gmap.selectedItemIndex = -1;
-      $rootScope.bdys = $scope.bdys = {
-        crherbsbr06: {
-          slug: 'crherbsbr06',
-          cPt: {
-            lat: 9.968153195552807,
-            lng: -84.16725754737854
-          },
-          zoom: 18,
-          mapTypeId: 'hybrid',
-          nam: 'Bosques Doña Rosa #06',
-          pts: [[9.968973408638314, -84.16704810218715], [9.968834630162002, -84.16738249091311], [9.968687859338182, -84.16774137804002], [9.968576842974961, -84.16801182972485], [9.968357135937447, -84.16856601952634], [9.968235536849983, -84.1688600789591], [9.968290364601158, -84.1689382478004], [9.968185140827481, -84.16925035558872], [9.968071991033325, -84.16959979567874], [9.967896742305653, -84.17004978516898], [9.967619131169556, -84.1698935282033], [9.967423552934315, -84.16974591816535], [9.967035306551264, -84.16945708532839], [9.966685131806567, -84.16939843670873], [9.966378287697097, -84.1691726710474], [9.966023354857446, -84.16893273823939], [9.965734303225522, -84.16857025333104], [9.965613440668452, -84.16826787236042], [9.965819326733603, -84.16803068108251], [9.965957335661212, -84.16799686820771], [9.966182771570422, -84.16790301677798], [9.966307864428352, -84.16775732151905], [9.96656028368469, -84.16746657050498], [9.966602035273382, -84.1673851778044], [9.966674270744669, -84.16718030471891], [9.966646242740357, -84.16689545065421], [9.966659298405238, -84.16670404110766], [9.966688356310634, -84.16638654621703], [9.966646786420888, -84.1661875138058], [9.967314722075486, -84.16630549476103], [9.967907745506793, -84.16639133922605], [9.968658444907955, -84.16649284406267], [9.969173790522499, -84.16652434615186]]
-        },
-        crherbsbr08: {
-          slug: 'crherbsbr08',
-          cPt: {
-            lat: 9.970424700092135,
-            lng: -84.1655137742861
-          },
-          zoom: 18,
-          mapTypeId: 'hybrid',
-          nam: 'Bosques Doña Rosa #08',
-          pts: [[9.970634375109034, -84.16662862265946], [9.969907681451806, -84.16657379040629], [9.96918575418298, -84.16650864293284], [9.96943374126796, -84.16599287415393], [9.969851338243716, -84.16521112187816], [9.970192424609472, -84.1644953963647], [9.970381346368669, -84.16399504832715], [9.970414333758404, -84.16356338864574], [9.970860827824179, -84.16358807368938], [9.971522431696373, -84.1636944279533], [9.971865267262292, -84.16377292236123], [9.97160925842014, -84.16415504435048], [9.971549964164529, -84.1645948033377], [9.971502592657677, -84.16497758355433], [9.971482064948713, -84.16534208232451], [9.971453921969445, -84.1657601923639], [9.971431254046498, -84.16631665124032], [9.971410736324534, -84.1666766097517]]
-        }
-      };
-      $scope.cngAreaTerrs = [
-        {
-          slug: 'crherbsbr06',
-          nam: 'br06-Bosques Doña Rosa 06'
-        }, {
-          slug: 'crherbsbr08',
-          nam: 'br08-Bosques Doña Rosa 08'
-        }
-      ];
+      Bdys = Restangular.all('bdys');
+      Plcs = Restangular.all('plcs');
       if (!$routeParams.sort) {
         $routeParams.sort = defaultRouteArgs.sort;
       }
       $rootScope.returnRoute = $location.$$url;
       $scope.location = $location;
       $scope.routeParams = $routeParams;
-      $rootScope.cngAreaTerrId = $scope.cngAreaTerrId = $routeParams.cngAreaTerrId;
-      console.log('cngAreaTerrId', $rootScope.cngAreaTerrId);
+      $rootScope.filtBdyId = $scope.filtBdyId = $routeParams.filtBdyId;
+      console.log('filtBdyId', $rootScope.filtBdyId);
       $rootScope.$watch('selectedItemIndex', function(newValue) {
         $scope.selectedItem = $rootScope.selectedItem;
         return $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue;
@@ -130,8 +99,8 @@
         args = {};
         q = $scope.q;
         whereParts = {};
-        if (typeof $routeParams.cngAreaTerrId !== 'boolean' && $routeParams.cngAreaTerrId) {
-          whereParts.bdry = $routeParams.cngAreaTerrId;
+        if (typeof $routeParams.filtBdyId !== 'boolean' && $routeParams.filtBdyId) {
+          whereParts.bdry = $routeParams.filtBdyId;
         }
         quickFindPlcIds = q.match(/qp\w+/g);
         if (quickFindPlcIds) {
@@ -168,7 +137,7 @@
           for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
             item = _ref[i];
             items._items[i].patch = $scope.patch;
-            if (item.pt) {
+            if (item.pt && parseInt($routeParams.z, 10) > 16) {
               items._items[i].mapMkr = gmap.addPlcMkr(map, item);
             }
           }
@@ -196,18 +165,53 @@
         return $rootScope.editingBdy = $scope.editingBdy = true;
       };
       $scope.loadBdys = function() {
-        var bdy, bdyPoly, key, _ref;
+        var errorCallback;
 
-        if (!$rootScope.bdysLoaded) {
-          _ref = $scope.bdys;
-          for (key in _ref) {
-            bdy = _ref[key];
-            console.log('loadBdy', key);
-            bdyPoly = gmap.addBdy(map, bdy);
-            $rootScope.bdys[key].poly = $scope.bdys[key].poly = bdyPoly.bdy;
+        return Bdys.getList().then((function(items) {
+          var bdy, bdys, filtBdys, i, item, _i, _len, _ref;
+
+          bdys = {};
+          filtBdys = [];
+          _ref = items._items;
+          for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+            item = _ref[i];
+            bdy = {
+              slug: item.slug,
+              nam: item.nam,
+              ptCenter: [item.ptCenter[0], item.ptCenter[1]],
+              zoom: 18,
+              mapTypeId: 'hybrid'
+            };
+            bdys[item.slug] = bdy;
+            filtBdys.push({
+              slug: item.slug,
+              nam: item.nam
+            });
           }
-        }
-        return $rootScope.bdysLoaded = true;
+          $scope.bdys = bdys;
+          return $scope.filtBdys = filtBdys;
+        }), errorCallback = function() {
+          return console.log('Oops error from server :(');
+        });
+      };
+      $scope.loadBdyPolys = function() {
+        var errorCallback;
+
+        return Bdys.getList().then((function(items) {
+          var bdy, bdys, i, item, _i, _len, _ref;
+
+          bdys = {};
+          _ref = items._items;
+          for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+            item = _ref[i];
+            bdy = item;
+            bdy.bdyPoly = gmap.addBdy(map, bdy);
+            bdys[item.slug] = bdy;
+          }
+          return $rootScope.bdysLoaded = true;
+        }), errorCallback = function() {
+          return console.log('Oops error from server :(');
+        });
       };
       $scope.patch = function(_id, data) {
         var Plc, errorCallback;
@@ -223,19 +227,19 @@
         $location.search('z', newValue);
         return $scope.z = parseInt(newValue, 10);
       });
-      $scope.$watch('cngAreaTerrId', function(newValue) {
-        var bdy, cPt;
+      $scope.$watch('filtBdyId', function(newValue) {
+        var bdy, ptCenter;
 
-        $location.search('cngAreaTerrId', newValue);
-        $rootScope.cngAreaTerrId = $scope.cngAreaTerrId = newValue;
-        if (newValue && typeof newValue === 'string' && $routeParams.cngAreaTerrId !== newValue) {
+        $location.search('filtBdyId', newValue);
+        $rootScope.filtBdyId = $scope.filtBdyId = newValue;
+        if (newValue && typeof newValue === 'string' && $routeParams.filtBdyId !== newValue) {
           bdy = $scope.bdys[newValue];
-          cPt = bdy.cPt;
-          map.setCenter(new google.maps.LatLng(cPt.lat, cPt.lng));
+          ptCenter = bdy.ptCenter;
+          map.setCenter(new google.maps.LatLng(ptCenter[0], ptCenter[1]));
           map.setZoom(bdy.zoom);
           map.setMapTypeId(bdy.mapTypeId);
-          $rootScope.cngAreaTerrId = $scope.cngAreaTerrId = newValue;
-          return $routeParams.cngAreaTerrId = newValue;
+          $rootScope.filtBdyId = $scope.filtBdyId = newValue;
+          return $routeParams.filtBdyId = newValue;
         }
       });
       $scope.$watch('routeParams', (function(newVal, oldVal) {
@@ -248,7 +252,6 @@
           });
         }
       }), true);
-      Plcs = Restangular.all('plcs');
       qry = {};
       $scope.doClear = function() {
         $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q;
@@ -331,6 +334,7 @@
         }
         return icon;
       };
+      $scope.loadBdyPolys();
       return $scope.doSearch();
     }
   ]);

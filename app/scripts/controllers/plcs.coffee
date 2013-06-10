@@ -152,7 +152,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
 
     $scope.loadBdys = ->
-        Bdys.getList()
+        Bdys.getList({sort:'typ,slug'})
             .then ((items) ->
                 bdys = {}
                 filtBdys = []
@@ -163,6 +163,15 @@ angular.module('ofApp').controller('PlcsCtrl', \
                         ptCenter: [item.ptCenter[0], item.ptCenter[1]]
                         zoom: 18
                         mapTypeId: 'hybrid'
+                    if item.typ == "cong-area-residential-terr"
+                        bdy.zoom = 18
+                    else if item.typ == "cong-area"
+                        bdy.zoom = 15
+                    else if item.typ == "cong"
+                        bdy.zoom = 14
+                    else
+                        bdy.zoom = 12
+
                     bdys[item.slug] = bdy
                     filtBdys.push {slug: item.slug, nam: item.nam}
 

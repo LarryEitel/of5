@@ -167,7 +167,9 @@
       $scope.loadBdys = function() {
         var errorCallback;
 
-        return Bdys.getList().then((function(items) {
+        return Bdys.getList({
+          sort: 'typ,slug'
+        }).then((function(items) {
           var bdy, bdys, filtBdys, i, item, _i, _len, _ref;
 
           bdys = {};
@@ -182,6 +184,15 @@
               zoom: 18,
               mapTypeId: 'hybrid'
             };
+            if (item.typ === "cong-area-residential-terr") {
+              bdy.zoom = 18;
+            } else if (item.typ === "cong-area") {
+              bdy.zoom = 15;
+            } else if (item.typ === "cong") {
+              bdy.zoom = 14;
+            } else {
+              bdy.zoom = 12;
+            }
             bdys[item.slug] = bdy;
             filtBdys.push({
               slug: item.slug,

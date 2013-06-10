@@ -8,7 +8,75 @@ latLngFromLl = (ll) ->
     {lat: llSplit[0], lng: llSplit[1]}
 
 class GPoly
-    constructor: (@map, @pts, @bdyData = null) ->
+    defaultOptions:
+        normal:
+            # zIndex: 2 #  	The zIndex compared to other polys.
+            fillColor: 'blue'
+            fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+            strokeColor: 'blue' # The fill opacity between 0.0 and 1.0
+            strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+            strokeWeight: 2 #  	The stroke width in pixels.
+        hover:
+            fillOpacity: .1 # The fill opacity between 0.0 and 1.0
+            strokeWeight: 3 #  	The stroke width in pixels.
+
+    typOptions:
+        cong:
+            roadmap:
+                zIndex: 4 #  	The zIndex compared to other polys.
+                fillColor: 'black'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'black' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 3 #  	The stroke width in pixels.
+            hybrid:
+                zIndex: 0 #  	The zIndex compared to other polys.
+                fillColor: 'white'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'white' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 4 #  	The stroke width in pixels.
+            hover:
+                fillOpacity: .1 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 3 #  	The stroke width in pixels.
+        congArea:
+            roadmap:
+                zIndex: 3 #  	The zIndex compared to other polys.
+                fillColor: 'red'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'red' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 2 #  	The stroke width in pixels.
+            hybrid:
+                zIndex: 3 #  	The zIndex compared to other polys.
+                fillColor: 'red'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'red' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 3 #  	The stroke width in pixels.
+            hover:
+                fillOpacity: .1 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 4 #  	The stroke width in pixels.
+        congAreaResidentialTerr:
+            roadmap:
+                zIndex: 0 #  	The zIndex compared to other polys.
+                fillColor: 'blue'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'blue' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 2 #  	The stroke width in pixels.
+            hybrid:
+                zIndex: 6 #  	The zIndex compared to other polys.
+                fillColor: 'blue'
+                fillOpacity: 0 # The fill opacity between 0.0 and 1.0
+                strokeColor: 'blue' # The fill opacity between 0.0 and 1.0
+                strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 2 #  	The stroke width in pixels.
+            hover:
+                fillOpacity: .1 # The fill opacity between 0.0 and 1.0
+                strokeWeight: 3 #  	The stroke width in pixels.
+
+    constructor: (@map, @pts, @bdyData) ->
         # https://developers.google.com/maps/documentation/javascript/reference#PolygonOptions
         @gmaps = google.maps
         @coords = []
@@ -25,6 +93,10 @@ class GPoly
             fillOpacity: 0
             clickable: false
         )
+        mapTypeId = this.map.mapTypeId or 'hybrid'
+        if @bdyData.typ in ["cong", "congArea","congAreaResidentialTerr"]
+            @bdy.setOptions(@typOptions[this.bdyData.typ][mapTypeId])
+
         @bdy.setMap @map
 #        return @bdy
 
@@ -91,7 +163,7 @@ class GMap
 
         addListener     = google.maps.event.addListener
         addListener @map, 'center_changed', @onCenterChanged
-        addListener @map, 'maptypeid_changed', @onTypeChange
+        addListener @map, 'maptypeid_changed', @onTypeChange # handle this and set polyOptions
         addListener @map, 'zoom_changed', @onZoomChange
         addListener @map, 'dragstart', @onDragStart
         addListener @map, 'dragend', @onDragEnd

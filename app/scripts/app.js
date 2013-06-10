@@ -19,12 +19,95 @@
   };
 
   GPoly = (function() {
+    GPoly.prototype.defaultOptions = {
+      normal: {
+        fillColor: 'blue',
+        fillOpacity: 0,
+        strokeColor: 'blue',
+        strokeOpacity: .8,
+        strokeWeight: 2
+      },
+      hover: {
+        fillOpacity: .1,
+        strokeWeight: 3
+      }
+    };
+
+    GPoly.prototype.typOptions = {
+      cong: {
+        roadmap: {
+          zIndex: 4,
+          fillColor: 'black',
+          fillOpacity: 0,
+          strokeColor: 'black',
+          strokeOpacity: .8,
+          strokeWeight: 3
+        },
+        hybrid: {
+          zIndex: 0,
+          fillColor: 'white',
+          fillOpacity: 0,
+          strokeColor: 'white',
+          strokeOpacity: .8,
+          strokeWeight: 4
+        },
+        hover: {
+          fillOpacity: .1,
+          strokeWeight: 3
+        }
+      },
+      congArea: {
+        roadmap: {
+          zIndex: 3,
+          fillColor: 'red',
+          fillOpacity: 0,
+          strokeColor: 'red',
+          strokeOpacity: .8,
+          strokeWeight: 2
+        },
+        hybrid: {
+          zIndex: 3,
+          fillColor: 'red',
+          fillOpacity: 0,
+          strokeColor: 'red',
+          strokeOpacity: .8,
+          strokeWeight: 3
+        },
+        hover: {
+          fillOpacity: .1,
+          strokeWeight: 4
+        }
+      },
+      congAreaResidentialTerr: {
+        roadmap: {
+          zIndex: 0,
+          fillColor: 'blue',
+          fillOpacity: 0,
+          strokeColor: 'blue',
+          strokeOpacity: .8,
+          strokeWeight: 2
+        },
+        hybrid: {
+          zIndex: 6,
+          fillColor: 'blue',
+          fillOpacity: 0,
+          strokeColor: 'blue',
+          strokeOpacity: .8,
+          strokeWeight: 2
+        },
+        hover: {
+          fillOpacity: .1,
+          strokeWeight: 3
+        }
+      }
+    };
+
     function GPoly(map, pts, bdyData) {
-      var pt, _i, _len;
+      var mapTypeId, pt, _i, _len, _ref;
 
       this.map = map;
       this.pts = pts;
-      this.bdyData = bdyData != null ? bdyData : null;
+      this.bdyData = bdyData;
       this.click = __bind(this.click, this);
       this.show = __bind(this.show, this);
       this.gmaps = google.maps;
@@ -41,6 +124,10 @@
         fillOpacity: 0,
         clickable: false
       });
+      mapTypeId = this.map.mapTypeId || 'hybrid';
+      if ((_ref = this.bdyData.typ) === "cong" || _ref === "congArea" || _ref === "congAreaResidentialTerr") {
+        this.bdy.setOptions(this.typOptions[this.bdyData.typ][mapTypeId]);
+      }
       this.bdy.setMap(this.map);
     }
 

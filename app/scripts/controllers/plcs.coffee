@@ -15,6 +15,9 @@ angular.module('ofApp').controller('PlcsCtrl', \
      'Restangular', '$timeout', '$log', '$anchorScroll', 'GoogleMap', \
         ($rootScope, $scope, $location, $routeParams, \
          Restangular, $timeout, $log, $anchorScroll, GoogleMap) ->
+
+
+    # --------------- should pass in options
     gmap = GoogleMap
     googleMaps = google.maps
 #    console.log 'gmap', gmap
@@ -25,10 +28,11 @@ angular.module('ofApp').controller('PlcsCtrl', \
         ll: '9.971365509675179,-84.16658163070679'
         cngSlug: 'crherbs'
         cngAreaSlug: 'br'
-        cngAreaTerrSlug: 'br06'
+        cngAreaTerrSlug: 'brr06'
         q: ''
         sort: 'bdry,w'
-        filter: 'cngAreaTerr:crherbs'
+        #                ------------------- what's this
+        filter: 'filtBdyId:crherbs'
         z: 17
         pp: 5
         pg: 5
@@ -39,7 +43,6 @@ angular.module('ofApp').controller('PlcsCtrl', \
     $scope.maxId = null
     $scope.q = $routeParams.q or defaultRouteArgs.q
     $scope.ll = $routeParams.ll or defaultRouteArgs.ll
-    console.log 'll', $scope.ll
     $scope.z = parseInt($routeParams.z, 10) or defaultRouteArgs.z
     $scope.pp = $routeParams.pp or defaultRouteArgs.pp
     $scope.pg = $routeParams.pg or defaultRouteArgs.pg
@@ -150,6 +153,47 @@ angular.module('ofApp').controller('PlcsCtrl', \
         bdy.poly.setEditable(true)
         $rootScope.editingBdy = $scope.editingBdy = true
 
+    $scope.showBdyLabels = ->
+        for slug, bdy of $scope.bdys
+
+            minZoom = bdy.zoom
+            if bdy.typ == "congAreaResidentialTerr"
+                strokeColor = '#98F5FF' # cadetblue1
+                fontSize = 12
+                lbl = bdy.nam.split('#')[1]
+                minZoom = 15
+                maxZoom = 17
+            else if bdy.typ == "congArea"
+                strokeColor = '#FF82AB' # palevioletred1
+                fontSize = 16
+                lbl = bdy.nam
+                minZoom = 14
+                maxZoom = 17
+            else if bdy.typ == "cong"
+                strokeColor = 'white'
+                fontSize = 25
+                lbl = bdy.nam
+                minZoom = 13
+                maxZoom = 17
+            else
+                strokeColor = 'white'
+                fontSize = 20
+                lbl = bdy.nam
+                minZoom = 1
+                maxZoom = 20
+
+            # http://google-maps-utility-library-v3.googlecode.com/svn/trunk/maplabel/docs/reference.html
+            mapLabel = new MapLabel(
+                minZoom: minZoom
+                maxZoom: maxZoom
+                strokeColor: strokeColor
+                text: lbl
+                position: new google.maps.LatLng(bdy.ptCenter[0], bdy.ptCenter[1])
+                map: map
+                fontSize: fontSize
+            )
+
+
 
     $scope.loadBdys = ->
         Bdys.getList({sort:'typ,slug'})
@@ -160,23 +204,27 @@ angular.module('ofApp').controller('PlcsCtrl', \
                     bdy =
                         slug: item.slug
                         nam: item.nam
+                        typ: item.typ
                         ptCenter: [item.ptCenter[0], item.ptCenter[1]]
                         zoom: 18
                         mapTypeId: 'hybrid'
-                    if item.typ == "cong-area-residential-terr"
+                    if item.typ == "congAreaResidentialTerr"
                         bdy.zoom = 18
-                    else if item.typ == "cong-area"
+                    else if item.typ == "congArea"
                         bdy.zoom = 15
                     else if item.typ == "cong"
                         bdy.zoom = 14
                     else
                         bdy.zoom = 12
 
+
                     bdys[item.slug] = bdy
                     filtBdys.push {slug: item.slug, nam: item.nam}
 
+
                 $scope.bdys = bdys
                 $scope.filtBdys = filtBdys
+                $scope.showBdyLabels()
 
             ), errorCallback = ->
                 console.log 'Oops error from server :('
@@ -318,10 +366,8 @@ angular.module('ofApp').controller('PlcsCtrl', \
         return icon
 
 
-
-
-    $scope.loadBdyPolys()
     $scope.doSearch()
+    $scope.loadBdyPolys()
 ])
 
 angular.module('ofApp').controller('PlcFormCtrl', \

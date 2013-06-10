@@ -33,10 +33,10 @@
         ll: '9.971365509675179,-84.16658163070679',
         cngSlug: 'crherbs',
         cngAreaSlug: 'br',
-        cngAreaTerrSlug: 'br06',
+        cngAreaTerrSlug: 'brr06',
         q: '',
         sort: 'bdry,w',
-        filter: 'cngAreaTerr:crherbs',
+        filter: 'filtBdyId:crherbs',
         z: 17,
         pp: 5,
         pg: 5
@@ -46,7 +46,6 @@
       $scope.maxId = null;
       $scope.q = $routeParams.q || defaultRouteArgs.q;
       $scope.ll = $routeParams.ll || defaultRouteArgs.ll;
-      console.log('ll', $scope.ll);
       $scope.z = parseInt($routeParams.z, 10) || defaultRouteArgs.z;
       $scope.pp = $routeParams.pp || defaultRouteArgs.pp;
       $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
@@ -164,6 +163,51 @@
         bdy.poly.setEditable(true);
         return $rootScope.editingBdy = $scope.editingBdy = true;
       };
+      $scope.showBdyLabels = function() {
+        var bdy, fontSize, lbl, mapLabel, minZoom, slug, strokeColor, _ref, _results;
+
+        _ref = $scope.bdys;
+        _results = [];
+        for (slug in _ref) {
+          bdy = _ref[slug];
+          minZoom = bdy.zoom;
+          if (bdy.typ === "congAreaResidentialTerr") {
+            strokeColor = '#98F5FF';
+            fontSize = 12;
+            lbl = bdy.nam.split('#')[1];
+            minZoom = 15;
+            maxZoom = 17;
+          } else if (bdy.typ === "congArea") {
+            strokeColor = '#FF82AB';
+            fontSize = 16;
+            lbl = bdy.nam;
+            minZoom = 14;
+            maxZoom = 17;
+          } else if (bdy.typ === "cong") {
+            strokeColor = 'white';
+            fontSize = 25;
+            lbl = bdy.nam;
+            minZoom = 13;
+            maxZoom = 17;
+          } else {
+            strokeColor = 'white';
+            fontSize = 20;
+            lbl = bdy.nam;
+            minZoom = 1;
+            maxZoom = 20;
+          }
+          _results.push(mapLabel = new MapLabel({
+            minZoom: minZoom,
+            maxZoom: maxZoom,
+            strokeColor: strokeColor,
+            text: lbl,
+            position: new google.maps.LatLng(bdy.ptCenter[0], bdy.ptCenter[1]),
+            map: map,
+            fontSize: fontSize
+          }));
+        }
+        return _results;
+      };
       $scope.loadBdys = function() {
         var errorCallback;
 
@@ -180,13 +224,14 @@
             bdy = {
               slug: item.slug,
               nam: item.nam,
+              typ: item.typ,
               ptCenter: [item.ptCenter[0], item.ptCenter[1]],
               zoom: 18,
               mapTypeId: 'hybrid'
             };
-            if (item.typ === "cong-area-residential-terr") {
+            if (item.typ === "congAreaResidentialTerr") {
               bdy.zoom = 18;
-            } else if (item.typ === "cong-area") {
+            } else if (item.typ === "congArea") {
               bdy.zoom = 15;
             } else if (item.typ === "cong") {
               bdy.zoom = 14;
@@ -200,7 +245,8 @@
             });
           }
           $scope.bdys = bdys;
-          return $scope.filtBdys = filtBdys;
+          $scope.filtBdys = filtBdys;
+          return $scope.showBdyLabels();
         }), errorCallback = function() {
           return console.log('Oops error from server :(');
         });
@@ -345,8 +391,8 @@
         }
         return icon;
       };
-      $scope.loadBdyPolys();
-      return $scope.doSearch();
+      $scope.doSearch();
+      return $scope.loadBdyPolys();
     }
   ]);
 

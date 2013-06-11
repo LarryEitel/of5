@@ -78,7 +78,8 @@ angular.module('ofApp').controller('PlcsCtrl', \
         $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue
 
     gmap.icon = (item) ->
-        $scope.mkrIcon2 item.mkrNo, item.mkrState
+        # $scope.mkrIcon2 item.mkrNo, item.mkrState
+        $scope.mkrIcon item.mkrNo, item.mkrState
 
     $scope.itemMkrClick = (index) ->
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index

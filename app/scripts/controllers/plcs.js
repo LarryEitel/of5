@@ -72,7 +72,7 @@
         return $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue;
       });
       gmap.icon = function(item) {
-        return $scope.mkrIcon2(item.mkrNo, item.mkrState);
+        return $scope.mkrIcon(item.mkrNo, item.mkrState);
       };
       $scope.itemMkrClick = function(index) {
         var pt;

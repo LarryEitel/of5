@@ -364,7 +364,7 @@
           mkrState = 0;
         }
         mkrStates = ['new', 'try_1', 'try_1_contacted', 'try_2', 'try_2_contacted', 'try_3', 'try_3_contacted'];
-        markerHeight = null;
+        markerHeight = 12;
         markerWidth = null;
         spriteImage = null;
         spriteX = null;
@@ -376,12 +376,12 @@
           spriteY = mkrState * markerHeight;
         } else if (mkrNo < 100) {
           spriteImage = spritesPath + 'sprite_2.png';
-          markerWidth = 16;
+          markerWidth = 14;
           spriteX = (mkrNo - 10) * markerWidth;
           spriteY = mkrState * markerHeight;
         } else {
           spriteImage = spritesPath + 'sprite_3.png';
-          markerWidth = 20;
+          markerWidth = 18;
           spriteX = (mkrNo - 100) * markerWidth;
           spriteY = mkrState * markerHeight;
         }
@@ -389,7 +389,7 @@
           spriteY += 1;
         }
         if (mkrNo && mkrState > -1) {
-          icon = new google.maps.MarkerImage(spriteImage, new google.maps.Size(markerWidth, 12), new google.maps.Point(spriteX, spriteY));
+          icon = new google.maps.MarkerImage(spriteImage, new google.maps.Size(markerWidth, 12), new google.maps.Point(spriteX, spriteY), new google.maps.Point(markerWidth / 2, markerHeight / 2));
         }
         return icon;
       };

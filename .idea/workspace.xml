@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/map/markers/small/black/numbers/Thumbs.db" afterPath="$PROJECT_DIR$/app/img/map/markers/small/black/numbers/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/map/sprites/sprite_1.png" afterPath="$PROJECT_DIR$/app/img/map/sprites/sprite_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/map/sprites/sprite_2.png" afterPath="$PROJECT_DIR$/app/img/map/sprites/sprite_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/map/sprites/sprite_3.png" afterPath="$PROJECT_DIR$/app/img/map/sprites/sprite_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -174,7 +180,7 @@
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472917940" ignored="false" />
     <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370900664605" ignored="false" />
-    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370976617754" ignored="false" />
+    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370990150839" ignored="false" />
     <file path="/map.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370497385331" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/modernizr/test/js/unit-caniuse.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370638675575" ignored="false" />
     <file path="$PROJECT_DIR$/data/mdls-models.json" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370791447700" ignored="false" />
@@ -198,31 +204,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="2644" selection-end="2651" vertical-scroll-proportion="-12.72">
+            <state line="361" column="40" selection-start="12018" selection-end="12018" vertical-scroll-proportion="0.6879795">
               <folding>
                 <element signature="e#832#1132#0" expanded="false" />
                 <element signature="e#2724#3245#0" expanded="false" />
+                <element signature="e#3280#4888#0" expanded="false" />
                 <element signature="e#5302#6616#0" expanded="false" />
                 <element signature="e#6653#7761#0" expanded="false" />
                 <element signature="e#7802#8237#0" expanded="false" />
                 <element signature="e#8577#8817#0" expanded="false" />
                 <element signature="e#8866#8938#0" expanded="false" />
                 <element signature="e#8993#9555#0" expanded="false" />
-                <element signature="e#13644#16367#0" expanded="false" />
-                <element signature="e#16426#17439#0" expanded="false" />
+                <element signature="e#13770#16493#0" expanded="false" />
+                <element signature="e#16552#17565#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plcs.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="29" selection-start="2762" selection-end="2769" vertical-scroll-proportion="0.33248082">
-              <folding />
+            <state line="81" column="0" selection-start="2739" selection-end="2807" vertical-scroll-proportion="23.88">
+              <folding>
+                <element signature="e#3467#5366#0" expanded="false" />
+                <element signature="e#5408#5577#0" expanded="false" />
+                <element signature="e#5619#5831#0" expanded="false" />
+                <element signature="e#5873#7218#0" expanded="false" />
+                <element signature="e#7255#8540#0" expanded="false" />
+                <element signature="e#8581#9152#0" expanded="false" />
+                <element signature="e#9195#9518#0" expanded="false" />
+                <element signature="e#9719#10309#0" expanded="false" />
+                <element signature="e#10373#10623#0" expanded="false" />
+                <element signature="e#10683#10808#0" expanded="false" />
+                <element signature="e#10840#11167#0" expanded="false" />
+                <element signature="e#12214#13556#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,7 +268,7 @@
       <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="330" column="15" selection-start="11585" selection-end="11585" vertical-scroll-proportion="-127.36">
+            <state line="305" column="49" selection-start="11031" selection-end="11031" vertical-scroll-proportion="-106.28">
               <folding>
                 <element signature="e#7028#7820#0" expanded="false" />
               </folding>
@@ -636,7 +656,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="20" width="1245" height="993" extended-state="0" />
+    <frame x="7" y="20" width="1245" height="993" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -737,14 +757,15 @@
           <folding>
             <element signature="e#832#1132#0" expanded="false" />
             <element signature="e#2724#3245#0" expanded="false" />
+            <element signature="e#3280#4888#0" expanded="false" />
             <element signature="e#5302#6616#0" expanded="false" />
             <element signature="e#6653#7761#0" expanded="false" />
             <element signature="e#7802#8237#0" expanded="false" />
             <element signature="e#8577#8817#0" expanded="false" />
             <element signature="e#8866#8938#0" expanded="false" />
             <element signature="e#8993#9555#0" expanded="false" />
-            <element signature="e#13644#16367#0" expanded="false" />
-            <element signature="e#16426#17439#0" expanded="false" />
+            <element signature="e#13770#16493#0" expanded="false" />
+            <element signature="e#16552#17565#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -821,9 +842,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="2739" selection-end="2807" vertical-scroll-proportion="23.88">
+          <folding>
+            <element signature="e#3467#5366#0" expanded="false" />
+            <element signature="e#5408#5577#0" expanded="false" />
+            <element signature="e#5619#5831#0" expanded="false" />
+            <element signature="e#5873#7218#0" expanded="false" />
+            <element signature="e#7255#8540#0" expanded="false" />
+            <element signature="e#8581#9152#0" expanded="false" />
+            <element signature="e#9195#9518#0" expanded="false" />
+            <element signature="e#9719#10309#0" expanded="false" />
+            <element signature="e#10373#10623#0" expanded="false" />
+            <element signature="e#10683#10808#0" expanded="false" />
+            <element signature="e#10840#11167#0" expanded="false" />
+            <element signature="e#12214#13556#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="330" column="15" selection-start="11585" selection-end="11585" vertical-scroll-proportion="-127.36">
+        <state line="305" column="49" selection-start="11031" selection-end="11031" vertical-scroll-proportion="-106.28">
           <folding>
             <element signature="e#7028#7820#0" expanded="false" />
           </folding>
@@ -832,26 +873,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="2644" selection-end="2651" vertical-scroll-proportion="-12.72">
+        <state line="361" column="40" selection-start="12018" selection-end="12018" vertical-scroll-proportion="0.6879795">
           <folding>
             <element signature="e#832#1132#0" expanded="false" />
             <element signature="e#2724#3245#0" expanded="false" />
+            <element signature="e#3280#4888#0" expanded="false" />
             <element signature="e#5302#6616#0" expanded="false" />
             <element signature="e#6653#7761#0" expanded="false" />
             <element signature="e#7802#8237#0" expanded="false" />
             <element signature="e#8577#8817#0" expanded="false" />
             <element signature="e#8866#8938#0" expanded="false" />
             <element signature="e#8993#9555#0" expanded="false" />
-            <element signature="e#13644#16367#0" expanded="false" />
-            <element signature="e#16426#17439#0" expanded="false" />
+            <element signature="e#13770#16493#0" expanded="false" />
+            <element signature="e#16552#17565#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="29" selection-start="2762" selection-end="2769" vertical-scroll-proportion="0.33248082">
-          <folding />
         </state>
       </provider>
     </entry>

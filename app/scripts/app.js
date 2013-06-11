@@ -332,19 +332,23 @@
       return this.show();
     };
 
-    GMarker.prototype.dragend = function(e) {
+    GMarker.prototype.dragend = function() {
       var data;
 
-      data = JSON.stringify({
-        actions: {
-          $set: {
-            flds: {
-              pt: [e.latLng.lat(), e.latLng.lng()]
+      if (confirm('Are you sure you want to move this marker?')) {
+        data = JSON.stringify({
+          actions: {
+            $set: {
+              flds: {
+                pt: [e.latLng.lat(), e.latLng.lng()]
+              }
             }
           }
-        }
-      });
-      return this.itemData.patch(this.itemData._id, data);
+        });
+        return this.itemData.patch(this.itemData._id, data);
+      } else {
+        return this.marker.setPosition(this.position);
+      }
     };
 
     GMarker.prototype.show = function() {

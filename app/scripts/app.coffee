@@ -327,21 +327,18 @@ class GMarker
 
         @show()
 
-    dragend: (e) =>
-        data = JSON.stringify actions:
-            $set:
-                flds:
-                    pt: [e.latLng.lat(), e.latLng.lng()]
 
-        @itemData.patch(@itemData._id, data)
+    dragend: =>
+        if confirm('Are you sure you want to move this marker?')
+            data = JSON.stringify actions:
+                $set:
+                    flds:
+                        pt: [e.latLng.lat(), e.latLng.lng()]
 
-#    dragend: =>
-#        if confirm('Are you sure you want to move this marker?')
-#            # @model.set(lat:  @marker.position.lat(), lng: @marker.position.lng())
-#            # @model.save()
-#        else
-#            # move back to original position
-#            # @marker.setPosition( new google.maps.LatLng(@model.get('lat'), @model.get('lng')))
+            @itemData.patch(@itemData._id, data)
+        else
+            # move back to original position
+            @marker.setPosition(@position)
 
     show: =>
         @marker.setPosition(@position)

@@ -2,9 +2,688 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\404.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-bootstrap\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-bootstrap\ui-bootstrap-tpls.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-bootstrap\ui-bootstrap-tpls.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-bootstrap\ui-bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-bootstrap\ui-bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-cookies\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-cookies\angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-cookies\angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-cookies\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-mocks\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-mocks\angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-mocks\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-resource\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-resource\angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-resource\angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-resource\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-sanitize\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-sanitize\angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-sanitize\angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-sanitize\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-scenario\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-scenario\angular-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-scenario\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-scenario\jstd-scenario-adapter-config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-scenario\jstd-scenario-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\gruntFile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\event\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\event\event.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\event\test\eventSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\format\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\format\format.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\format\test\formatSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\highlight\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\highlight\highlight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\highlight\highlight.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\highlight\test\highlightSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\ie-shiv\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\ie-shiv\ie-shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\if\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\if\if.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\if\test\ifSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\inflector\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\inflector\inflector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\inflector\test\inflectorSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\jq\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\jq\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\jq\jq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\jq\test\jqSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\keypress\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\keypress\keypress.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\keypress\test\keydownSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\keypress\test\keypressSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\keypress\test\keyupSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\mask\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\mask\mask.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\mask\test\maskSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\reset\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\reset\reset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\reset\stylesheets\reset.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\reset\test\resetSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\route\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\route\route.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\route\test\routeSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\scrollfix\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\scrollfix\scrollfix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\scrollfix\test\scrollfixSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\showhide\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\showhide\showhide.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\showhide\test\showhideSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\unique\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\unique\test\uniqueSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\unique\unique.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\validate\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\validate\test\validateSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\modules\validate\validate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\.travis\after_success.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\.travis\before_script.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\css\cssLoading.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\css\prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\img\github-16px.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\vendor\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\vendor\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\vendor\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\vendor\prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\assets\vendor\require.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\core\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\core\prettifyDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\out\tasks\directory_names_concat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular-ui-utils\test\karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\angular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\angular\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\css\bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\apple-touch-icon-114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\apple-touch-icon-57-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\apple-touch-icon-72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\ico\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bootstrap-docs-readme.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bs-docs-bootstrap-features.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bs-docs-masthead-pattern.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bs-docs-responsive-illustrations.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\bs-docs-twitter-github.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\8020select.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\adoptahydrant.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\breakingnews.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\fleetio.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\gathercontent.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\jshint.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\kippt.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\example-sites\soundready.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-carousel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-fluid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-justified-nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-marketing-narrow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-marketing.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-signin.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-starter.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\bootstrap-example-sticky-footer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\browser-icon-chrome.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\browser-icon-firefox.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\browser-icon-safari.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\slide-01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\slide-02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\examples\slide-03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\grid-baseline-20px.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\less-logo-large.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\img\responsive-illustrations.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\application.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap-typeahead.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\google-code-prettify\prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\google-code-prettify\prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\holder\holder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\assets\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\base-css.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\build\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\build\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\components.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\customize.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\carousel.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\fluid.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\hero.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\justified-nav.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\marketing-narrow.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\signin.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\starter-template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\sticky-footer-navbar.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\examples\sticky-footer.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\extend.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\getting-started.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\javascript.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\scaffolding.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\layout.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\base-css.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\components.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\customize.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\extend.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\getting-started.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\index.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\javascript.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\docs\templates\pages\scaffolding.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\bootstrap-typeahead.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\phantom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\server.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-affix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-alert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-button.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-carousel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-phantom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-popover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-scrollspy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-tab.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-transition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\unit\bootstrap-typeahead.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\vendor\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\vendor\qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\js\tests\vendor\qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\accordion.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\bootstrap.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\breadcrumbs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\button-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\carousel.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\close.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\code.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\component-animations.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\dropdowns.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\hero-unit.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\labels-badges.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\layouts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\media.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\modals.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\navs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\pager.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\popovers.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\progress-bars.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\reset.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive-1200px-min.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive-767px-max.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive-768px-979px.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive-navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive-utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\responsive.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\scaffolding.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\sprites.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\css-tests.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\css-tests.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\forms-responsive.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\forms.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\navbar-fixed-top.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\navbar-static-top.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tests\navbar.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\thumbnails.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\tooltip.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\type.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\less\wells.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\bootstrap\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\CHANGES" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\CONTRIBUTORS.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-sham.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-sham.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-sham.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-shim.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-shim.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\es5-shim.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\helpers\h-kill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\helpers\h-matchers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\helpers\h.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\index.min.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\lib\jasmine-html.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\lib\jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\lib\jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\lib\jasmine_favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\lib\json2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-array.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-date.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-function.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-number.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-object.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\es5-shim\tests\spec\s-string.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\jquery\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\build.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\jsl.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\lib\json3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\lib\json3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\page\background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\page\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\page\page.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\page\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\test\test_browser.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\test\test_json3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\vendor\closure-compiler.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\vendor\curl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\vendor\prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\json3\vendor\require.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.backbone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.backbone.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.compat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.compat.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.legacy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.legacy.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.mobile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.mobile.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\dist\lodash.underscore.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\lodash\lodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\a-download.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\audio-audiodata-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\audio-webaudio-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\battery-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\battery-level.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\blob-constructor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\canvas-todataurl-type.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\contenteditable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\contentsecuritypolicy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\contextmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\cors.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-backgroundposition-shorthand.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-backgroundposition-xy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-backgroundrepeat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-backgroundsizecover.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-boxsizing.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-calc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-cubicbezierrange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-displayrunin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-displaytable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-filters.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-hyphens.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-lastchild.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-mask.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-mediaqueries.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-objectfit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-overflow-scrolling.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-pointerevents.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-positionsticky.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-regions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-remunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-resize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-scrollbars.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-subpixelfont.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-supports.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-userselect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-vhunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-vmaxunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-vminunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\css-vwunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\custom-protocol-handler.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dataview-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dom-classlist.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dom-createElement-attrs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dom-dataset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\dom-microdata.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-datalist.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-details.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-output.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-progress-meter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-ruby.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-time.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\elem-track.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\emoji.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\es5-strictmode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\event-deviceorientation-motion.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\exif-orientation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\file-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\file-filesystem.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-fileinput.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-formattribute.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-inputnumber-l10n.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-placeholder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-speechinput.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\forms-validation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\fullscreen-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\gamepad.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\getusermedia.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\ie8compat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\iframe-sandbox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\iframe-seamless.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\iframe-srcdoc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\img-apng.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\img-webp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\json.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\lists-reversed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\mathml.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\network-connection.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\network-eventsource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\network-xhr2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\notification.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\performance.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\pointerlock-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\quota-management-api.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\requestanimationframe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\script-async.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\script-defer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\style-scoped.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\svg-filters.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\unicode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\url-data-uri.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\userdata.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\vibration.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\web-intents.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\webgl-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\websockets-binary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\window-framed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\workers-blobworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\workers-dataworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\feature-detects\workers-sharedworkers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\grunt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\media\Modernizr 2 Logo.ai" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\media\Modernizr 2 Logo.eps" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\media\Modernizr 2 Logo.pdf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\media\Modernizr 2 Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\media\Modernizr 2 Logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\basic.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\Windsong-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\Windsong-webfont.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\Windsong-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\Windsong-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\Windsong-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\apng_test.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\before-after.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\form_validation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\ga.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\green5x5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\hashchange.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\mathml.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\mathml_ref.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\modernizr-1.7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\png_alpha_result.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\pushstate.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\red30x30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\ruby.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\stroked-text.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\svg-html-blur.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\svg-img.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\svg-img.svg.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\svg_blur.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\table.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\text-shadow1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\text-shadow2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\windsong_font.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\caniuse_files\xhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\basic.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\dumpdata.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\lib\detect-global.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\lib\jquery-1.7b2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\lib\jsonselect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\lib\polyfills.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\lib\uaparser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\setup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\unit-caniuse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\js\unit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\qunit\qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\qunit\qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\modernizr\test\qunit\run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\CONTRIBUTE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\dependencies\angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\dependencies\angular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\dependencies\lodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\restangular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\restangular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\dist\restangular.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\karma.underscore.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\license.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\src\restangular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\components\restangular\test\restangularSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\1d62acb4.ourfield.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\228dd92c.style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\246f5c21.map.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\39723bc0.glyphicons.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\44b52e74.halflings.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\5ceec946.app.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\5de6888b.of.xchg.com.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\css\a3170136.scratch.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\data\mdls-models.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\data\schema\esen.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\data\schema\v01.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\header.tpl.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\09d5e908.search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\2d5413a7.glyphicons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\2e254ab4.home.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\3ba3ecce.map.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\40e913f1.help.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\46761e73.white-dot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\494652d5.crosshair.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\6fab796e.add.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\77a3def4.menu.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\7da132aa.glyphicons_halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\8e3bd4d2.glyphicons_halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\972cb88e.glyphicons-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\9b164e42.signout.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\9f377750.directions.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\b2780a3c.list.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\b9ec1858.clearmap.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\c414f803.positiondots.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\ccfd3b43.position.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\e8520816.layers.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\fe09e66a.blue-dot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\glyphicons-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\glyphicons.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\glyphicons_halflings-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\images\glyphicons_halflings.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\04c9c594.apple-touch-icon-72x72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\23bb1446.glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\5d462625.glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\6f1a9932.apple-touch-icon-114x114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\9ceb89de.apple-touch-icon-57x57.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\9ceb89de.apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\dfa2fd80.apple-touch-icon-96x96.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\dfa2fd80.logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\00000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\001.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\002.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\003.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\004.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\009.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\091.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\123.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\1digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\225.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\2digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\3digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\567.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\888.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\91.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\csg-51262f60970aa.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\g2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\g3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\gray.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\001.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\002.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\003.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\004.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\08.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\09.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\091.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\123.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\1digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\225.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\2digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\3digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\888.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\imgs\gray.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\inhome.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\line.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\nocall.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\noinhome.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\sprite1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\sprite2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\sprite3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\001.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\08.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\09.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\123.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\1digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\225.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\2digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\3digits.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test imgs\gray.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\markers\1\test.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\sprites\sprite_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\sprites\sprite_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\img\map\sprites\sprite_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\notifications.tpl.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\scripts\9cb36e85.scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\styles\05d0d2ce.main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\404.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\admin.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\home.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\login.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\logout.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\private.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\partials\register.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-form.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plc-view.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Larry\__prjs\yo\of5\dist\views\plcs.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/img/Thumbs.db" afterPath="$PROJECT_DIR$/app/img/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -179,7 +858,7 @@
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472917940" ignored="false" />
     <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370900664605" ignored="false" />
-    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370906353081" ignored="false" />
+    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370976617754" ignored="false" />
     <file path="/map.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370497385331" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/modernizr/test/js/unit-caniuse.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370638675575" ignored="false" />
     <file path="$PROJECT_DIR$/data/mdls-models.json" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370791447700" ignored="false" />
@@ -203,16 +882,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="368" column="0" selection-start="12214" selection-end="12214" vertical-scroll-proportion="0.12698413">
+            <state line="386" column="25" selection-start="12864" selection-end="12864" vertical-scroll-proportion="-16.12">
               <folding>
-                <element signature="e#776#1076#0" expanded="false" />
-                <element signature="e#3172#4704#0" expanded="false" />
-                <element signature="e#8393#8633#0" expanded="false" />
-                <element signature="e#8682#8754#0" expanded="false" />
-                <element signature="e#8809#9371#0" expanded="false" />
+                <element signature="e#832#1132#0" expanded="false" />
+                <element signature="e#2673#3194#0" expanded="false" />
+                <element signature="e#5251#6565#0" expanded="false" />
+                <element signature="e#6602#7710#0" expanded="false" />
+                <element signature="e#7751#8186#0" expanded="false" />
+                <element signature="e#8526#8766#0" expanded="false" />
+                <element signature="e#8815#8887#0" expanded="false" />
+                <element signature="e#8942#9504#0" expanded="false" />
+                <element signature="e#13593#16316#0" expanded="false" />
+                <element signature="e#16375#17388#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -236,11 +920,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="33" selection-start="1963" selection-end="1963" vertical-scroll-proportion="-12.92">
-              <folding />
+            <state line="328" column="0" selection-start="11568" selection-end="11568" vertical-scroll-proportion="0.18030691">
+              <folding>
+                <element signature="e#7028#7820#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,17 +962,17 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
-        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
+        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
-    <option name="y" value="8" />
-    <option name="width" value="1076" />
-    <option name="height" value="1005" />
+    <option name="y" value="20" />
+    <option name="width" value="1245" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -559,18 +1245,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="8" width="1076" height="1005" extended-state="0" />
+    <frame x="7" y="20" width="1245" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2800789" sideWeight="0.6769231" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24006763" sideWeight="0.6782713" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32307693" sideWeight="0.9983593" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3217287" sideWeight="0.9983593" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -658,11 +1344,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#776#1076#0" expanded="false" />
-            <element signature="e#3172#4704#0" expanded="false" />
-            <element signature="e#8393#8633#0" expanded="false" />
-            <element signature="e#8682#8754#0" expanded="false" />
-            <element signature="e#8809#9371#0" expanded="false" />
+            <element signature="e#832#1132#0" expanded="false" />
+            <element signature="e#2673#3194#0" expanded="false" />
+            <element signature="e#5251#6565#0" expanded="false" />
+            <element signature="e#6602#7710#0" expanded="false" />
+            <element signature="e#7751#8186#0" expanded="false" />
+            <element signature="e#8526#8766#0" expanded="false" />
+            <element signature="e#8815#8887#0" expanded="false" />
+            <element signature="e#8942#9504#0" expanded="false" />
+            <element signature="e#13593#16316#0" expanded="false" />
+            <element signature="e#16375#17388#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -677,7 +1368,9 @@
     <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="12" selection-start="3342" selection-end="3342" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#7028#7820#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -742,22 +1435,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="33" selection-start="1963" selection-end="1963" vertical-scroll-proportion="-12.92">
-          <folding />
+        <state line="386" column="25" selection-start="12864" selection-end="12864" vertical-scroll-proportion="-16.12">
+          <folding>
+            <element signature="e#832#1132#0" expanded="false" />
+            <element signature="e#2673#3194#0" expanded="false" />
+            <element signature="e#5251#6565#0" expanded="false" />
+            <element signature="e#6602#7710#0" expanded="false" />
+            <element signature="e#7751#8186#0" expanded="false" />
+            <element signature="e#8526#8766#0" expanded="false" />
+            <element signature="e#8815#8887#0" expanded="false" />
+            <element signature="e#8942#9504#0" expanded="false" />
+            <element signature="e#13593#16316#0" expanded="false" />
+            <element signature="e#16375#17388#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="368" column="0" selection-start="12214" selection-end="12214" vertical-scroll-proportion="0.12698413">
+        <state line="328" column="0" selection-start="11568" selection-end="11568" vertical-scroll-proportion="0.18030691">
           <folding>
-            <element signature="e#776#1076#0" expanded="false" />
-            <element signature="e#3172#4704#0" expanded="false" />
-            <element signature="e#8393#8633#0" expanded="false" />
-            <element signature="e#8682#8754#0" expanded="false" />
-            <element signature="e#8809#9371#0" expanded="false" />
+            <element signature="e#7028#7820#0" expanded="false" />
           </folding>
         </state>
       </provider>

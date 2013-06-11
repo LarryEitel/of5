@@ -8,6 +8,7 @@ latLngFromLl = (ll) ->
     {lat: llSplit[0], lng: llSplit[1]}
 
 spritesPath = 'img/map/sprites/'
+mapMarkersPath = 'img/map/markers/small/white/numbers/'
 maxZoom = 19
 
 angular.module('ofApp').controller('PlcsCtrl', \
@@ -77,7 +78,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
         $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue
 
     gmap.icon = (item) ->
-        $scope.mkrIcon item.mkrNo, item.mkrState
+        $scope.mkrIcon2 item.mkrNo, item.mkrState
 
     $scope.itemMkrClick = (index) ->
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index
@@ -133,6 +134,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
 
                     if item.pt and parseInt($routeParams.z, 10) > 16
+#                        items._items[i].mapMkr = gmap.addPlcMkr(map, item)
                         items._items[i].mapMkr = gmap.addPlcMkr(map, item)
 
                 $rootScope.items = $scope.items = items._items
@@ -363,6 +365,42 @@ angular.module('ofApp').controller('PlcsCtrl', \
                                 new google.maps.Size(markerWidth, 12), \
                                 new google.maps.Point(spriteX, spriteY))  \
             if mkrNo and mkrState > -1
+        return icon
+
+
+    $scope.mkrIcon2 = (mkrNo, mkrState = 0) ->
+        iconImage = mapMarkersPath + mkrNo + '.png'
+#        console.log iconImage
+#        marker_base_width = 60
+#        marker_height = 60
+
+        mkrHeight = 12
+        if mkrNo < 10
+            mkrWidth = 12
+#            mkrWidth = marker_base_width
+#            scaleWidth = 14
+        else if mkrNo < 100
+            mkrWidth = 14
+#            mkrWidth = parseInt(marker_base_width * 1.15, 10)
+#            scaleWidth = 16
+        else
+            mkrWidth = 20
+#            mkrWidth = parseInt(marker_base_width * 1.6, 10)
+#            scaleWidth = 22
+
+#        icon =  new google.maps.MarkerImage(
+#            iconImage,
+#            new google.maps.Size(mkrWidth, mkrHeight),
+#            new google.maps.Point(0, 0),
+#            null,
+##            new google.maps.Point(0, marker_height/2), #anchor is bottom center of the scaled image
+#            new google.maps.Size(scaleWidth, 14))
+
+        icon =  new google.maps.MarkerImage(
+            iconImage,
+            new google.maps.Size(mkrWidth, mkrHeight),
+            new google.maps.Point(0, 0))
+
         return icon
 
 

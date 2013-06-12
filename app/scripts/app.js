@@ -332,7 +332,7 @@
       return this.show();
     };
 
-    GMarker.prototype.dragend = function() {
+    GMarker.prototype.dragend = function(e) {
       var data;
 
       if (confirm('Are you sure you want to move this marker?')) {

@@ -324,11 +324,10 @@ class GMarker
 
     render: ->
         console.log 'render'
-
         @show()
 
 
-    dragend: =>
+    dragend: (e) =>
         if confirm('Are you sure you want to move this marker?')
             data = JSON.stringify actions:
                 $set:

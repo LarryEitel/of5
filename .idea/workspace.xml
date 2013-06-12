@@ -4,9 +4,6 @@
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -177,7 +174,7 @@
     <file path="/map.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370365684111" ignored="false" />
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472917940" ignored="false" />
-    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370992227973" ignored="false" />
+    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370999795083" ignored="false" />
     <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370993570681" ignored="false" />
     <file path="/map.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370497385331" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/modernizr/test/js/unit-caniuse.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370638675575" ignored="false" />
@@ -202,10 +199,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="0.31043592">
+            <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-4.7">
               <folding>
                 <element signature="e#835#1135#0" expanded="false" />
                 <element signature="e#8769#9009#0" expanded="false" />
@@ -230,19 +227,17 @@
       <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
+            <state line="31" column="64" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="18" selection-start="2563" selection-end="2563" vertical-scroll-proportion="-12.92">
-              <folding>
-                <element signature="e#7034#7826#0" expanded="false" />
-              </folding>
+            <state line="311" column="61" selection-start="11205" selection-end="11205" vertical-scroll-proportion="0.2672634">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -279,8 +274,8 @@
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
+        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
       </list>
     </option>
   </component>
@@ -378,6 +373,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app.coffee" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,7 +608,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="1255" y="561" width="656" height="487" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24006763" sideWeight="0.67346936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24006763" sideWeight="0.6782713" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -677,15 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="12" selection-start="3342" selection-end="3342" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#7034#7826#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="0" selection-end="347" vertical-scroll-proportion="0.0" />
@@ -719,13 +749,6 @@
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="323" selection-start="1029" selection-end="1029" vertical-scroll-proportion="-16.68" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
@@ -765,18 +788,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="18" selection-start="2563" selection-end="2563" vertical-scroll-proportion="-12.92">
-          <folding>
-            <element signature="e#7034#7826#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="0.31043592">
+        <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-4.7">
           <folding>
             <element signature="e#835#1135#0" expanded="false" />
             <element signature="e#8769#9009#0" expanded="false" />
@@ -785,6 +799,20 @@
             <element signature="e#13962#16685#0" expanded="false" />
             <element signature="e#16744#17757#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="64" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="61" selection-start="11205" selection-end="11205" vertical-scroll-proportion="0.2672634">
+          <folding />
         </state>
       </provider>
     </entry>

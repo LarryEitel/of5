@@ -30,7 +30,7 @@ class GPoly
                 strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
                 strokeWeight: 3 #  	The stroke width in pixels.
             hybrid:
-                zIndex: 0 #  	The zIndex compared to other polys.
+                zIndex: 100 #  	The zIndex compared to other polys.
                 fillColor: 'white'
                 fillOpacity: 0 # The fill opacity between 0.0 and 1.0
                 strokeColor: 'white' # The fill opacity between 0.0 and 1.0
@@ -48,7 +48,7 @@ class GPoly
                 strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
                 strokeWeight: 2 #  	The stroke width in pixels.
             hybrid:
-                zIndex: 3 #  	The zIndex compared to other polys.
+                zIndex: 103 #  	The zIndex compared to other polys.
                 fillColor: 'red'
                 fillOpacity: 0 # The fill opacity between 0.0 and 1.0
                 strokeColor: 'red' # The fill opacity between 0.0 and 1.0
@@ -66,7 +66,7 @@ class GPoly
                 strokeOpacity: .8 # The fill opacity between 0.0 and 1.0
                 strokeWeight: 2 #  	The stroke width in pixels.
             hybrid:
-                zIndex: 6 #  	The zIndex compared to other polys.
+                zIndex: 106 #  	The zIndex compared to other polys.
                 fillColor: 'blue'
                 fillOpacity: 0 # The fill opacity between 0.0 and 1.0
                 strokeColor: 'blue' # The fill opacity between 0.0 and 1.0

@@ -9,7 +9,7 @@ latLngFromLl = (ll) ->
 
 spritesPath = 'img/map/sprites/'
 mapMarkersPath = 'img/map/markers/small/white/numbers/'
-maxZoom = 19
+mapMaxZoom = 19
 
 angular.module('ofApp').controller('PlcsCtrl', \
     ['$rootScope', '$scope', '$location', '$routeParams', \
@@ -84,7 +84,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
     $scope.itemMkrClick = (index) ->
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index
         $rootScope.selectedItem = gmap.selectedItem = $scope.items[index]
-        map.setZoom maxZoom
+        map.setZoom mapMaxZoom
         if $scope.items[index].pt
             $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = -1
             pt = $scope.items[index].pt
@@ -138,6 +138,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 #                        items._items[i].mapMkr = gmap.addPlcMkr(map, item)
                         items._items[i].mapMkr = gmap.addPlcMkr(map, item)
 
+
                 $rootScope.items = $scope.items = items._items
 
                 $location.search 'q', $scope.q  if $scope.q
@@ -166,24 +167,28 @@ angular.module('ofApp').controller('PlcsCtrl', \
                 lbl = bdy.nam.split('#')[1]
                 minZoom = 15
                 maxZoom = 17
+                zIndex = 10 + 99999
             else if bdy.typ == "congArea"
                 strokeColor = '#FF82AB' # palevioletred1
                 fontSize = 16
                 lbl = bdy.nam
                 minZoom = 14
                 maxZoom = 17
+                zIndex = 20 + 99999
             else if bdy.typ == "cong"
                 strokeColor = 'white'
                 fontSize = 25
                 lbl = bdy.nam
                 minZoom = 13
                 maxZoom = 17
+                zIndex = 30 + 99999
             else
                 strokeColor = 'white'
                 fontSize = 20
                 lbl = bdy.nam
                 minZoom = 1
                 maxZoom = 20
+                zIndex = 1000
 
             # http://google-maps-utility-library-v3.googlecode.com/svn/trunk/maplabel/docs/reference.html
             mapLabel = new MapLabel(
@@ -194,7 +199,9 @@ angular.module('ofApp').controller('PlcsCtrl', \
                 position: new google.maps.LatLng(bdy.ptCenter[0], bdy.ptCenter[1])
                 map: map
                 fontSize: fontSize
+                zIndex: zIndex
             )
+            x=0
 
 
 

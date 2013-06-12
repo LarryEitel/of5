@@ -44,7 +44,7 @@
           strokeWeight: 3
         },
         hybrid: {
-          zIndex: 0,
+          zIndex: 100,
           fillColor: 'white',
           fillOpacity: 0,
           strokeColor: 'white',
@@ -66,7 +66,7 @@
           strokeWeight: 2
         },
         hybrid: {
-          zIndex: 3,
+          zIndex: 103,
           fillColor: 'red',
           fillOpacity: 0,
           strokeColor: 'red',
@@ -88,7 +88,7 @@
           strokeWeight: 2
         },
         hybrid: {
-          zIndex: 6,
+          zIndex: 106,
           fillColor: 'blue',
           fillOpacity: 0,
           strokeColor: 'blue',

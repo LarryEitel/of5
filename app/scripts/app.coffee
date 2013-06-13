@@ -156,10 +156,10 @@ class GMap
 #        console.log '@mapEl', @mapEl[0]
         @map = new google.maps.Map(@mapEl[0], {
             zoom: @zoom
+            visualRefresh: true
             center: new google.maps.LatLng(@center.lat, @center.lng)
             mapTypeId: @mapTypes[@mapType]
         })
-
 
         addListener     = google.maps.event.addListener
         addListener @map, 'center_changed', @onCenterChanged
@@ -512,12 +512,16 @@ angular.module('ofApp')
                 lat: initPosition.lat
                 lng: initPosition.lng
 
-        x = 0
         return new GMap(mapOptions)
     ]
 
 angular.module('ofApp')
-    .run ($rootScope, $location, Auth) ->
+    .run ($rootScope, $location, $routeParams, Auth) ->
+        $rootScope.currBdy = {}
+        $rootScope.$on '$routeChangeSuccess', (event, next, current) ->
+            $rootScope.currPath = $location.$$path
+            $rootScope.title = $location.$$search.title
+
         $rootScope.$on '$routeChangeStart', (event, next, current) ->
 
             $rootScope.error = null

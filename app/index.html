@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/halflings.css">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/scratch.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
     <!-- endbuild -->
 
 
@@ -53,7 +54,10 @@
     <!-- Add your site or application content here -->
 
 
-    <div id="map" class="google-map"></div>
+    <h4 class="navbar"><a ng-href="#/">OurField</a> | <a ng-href="#/plcs">Places</a><a ng-href="#/logout" ng-show="user._id"> | Logout</a></h4>
+
+    <h3 >{{title}}</h3>
+    <div id="map" ng-hide="currPath=='/'" class="{{printView && 'google-map-print' || 'google-map'}}"></div>
     <div class="container-fluid" ng-view></div>
 
 

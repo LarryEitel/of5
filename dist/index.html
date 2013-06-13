@@ -26,7 +26,7 @@
     <link sizes="114x114" rel="apple-touch-icon-precomposed" href="img/6f1a9932.apple-touch-icon-114x114-precomposed.png">
     <link rel="publisher" href="https://plus.google.com/109995415644936562121">
 
-    <link rel="stylesheet" href="styles/05d0d2ce.main.css">
+    <link rel="stylesheet" href="styles/b45d4cad.main.css" media="print">
 
 
 
@@ -46,7 +46,10 @@
     <!-- Add your site or application content here -->
 
 
-    <div id="map" class="google-map"></div>
+    <h4 class="navbar"><a ng-href="#/">OurField</a> | <a ng-href="#/plcs">Places</a><a ng-href="#/logout" ng-show="user._id"> | Logout</a></h4>
+
+    <h3>{{title}}</h3>
+    <div id="map" ng-hide="currPath=='/'" class="{{printView && 'google-map-print' || 'google-map'}}"></div>
     <div class="container-fluid" ng-view=""></div>
 
 
@@ -67,7 +70,7 @@
     <script src="components/lodash/lodash.js"></script>
     <script src="components/restangular/src/restangular.js"></script>
 
-    <script src="scripts/27ee9318.scripts.js"></script>
+    <script src="scripts/a09ba2e3.scripts.js"></script>
   </body>
 
 

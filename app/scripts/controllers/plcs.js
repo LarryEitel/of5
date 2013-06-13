@@ -25,7 +25,7 @@
   mapMaxZoom = 19;
 
   angular.module('ofApp').controller('PlcsCtrl', [
-    '$rootScope', '$scope', '$location', '$routeParams', 'Restangular', '$timeout', '$log', '$anchorScroll', 'GoogleMap', function($rootScope, $scope, $location, $routeParams, Restangular, $timeout, $log, $anchorScroll, GoogleMap) {
+    '$rootScope', '$scope', '$location', '$routeParams', '$cookies', 'Restangular', '$timeout', '$log', '$anchorScroll', 'GoogleMap', function($rootScope, $scope, $location, $routeParams, $cookies, Restangular, $timeout, $log, $anchorScroll, GoogleMap) {
       var Bdys, Plcs, defaultRouteArgs, gmap, googleMaps, map, qry;
 
       gmap = GoogleMap;
@@ -52,11 +52,143 @@
       $scope.pp = $routeParams.pp || defaultRouteArgs.pp;
       $scope.pg = $routeParams.pg || defaultRouteArgs.pg;
       $scope.sort = $routeParams.sort || defaultRouteArgs.sort;
+      $scope.media = $routeParams.media || '';
+      $rootScope.printView = $scope.printView = $routeParams.media === 'prn';
       $scope.args = defaultRouteArgs;
       $rootScope.filtBdyId = $scope.filtBdyId = null;
       $rootScope.editingBdy = false;
       $rootScope.bdysLoaded = false;
       $rootScope.selectedItemIndex = gmap.selectedItem = gmap.selectedItemIndex = -1;
+      $scope.bdyViews = {
+        crherbsbrr01: [
+          {
+            nam: 'Main',
+            zoom: 17,
+            llCenter: '9.973437968382253,-84.16134049039584',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr02: [
+          {
+            nam: 'Main',
+            zoom: 17,
+            llCenter: '9.97349638016292,-84.16631358847928',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr03: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.973667700855833,-84.16967939293744',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr04: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.971095930944049,-84.16924278118506',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr05: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.97113872118877,-84.16887763435983',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr06: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.96906003005786,-84.16883676999466',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'E',
+            zoom: 19,
+            llCenter: '9.969028329520771,-84.16865974419967',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'W',
+            zoom: 19,
+            llCenter: '9.969178907047947,-84.16866779082672',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr07: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.967435883191067,-84.16807573414316',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr08: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.967593806754337,-84.16492581199572',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr09: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.969137449721174,-84.16503919625961',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'NE',
+            zoom: 19,
+            llCenter: '9.969412187521936,-84.1647307422229',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'SW',
+            zoom: 19,
+            llCenter: '9.968801952286398,-84.1655944135257',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr10: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.970525510722636,-84.16511999919874',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'NW',
+            zoom: 19,
+            llCenter: '9.970512302225993,-84.1655813391493',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'E',
+            zoom: 19,
+            llCenter: '9.970916482013722,-84.16447090461713',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbrr11: [
+          {
+            nam: 'Main',
+            zoom: 18,
+            llCenter: '9.970053746032534,-84.16725222757447',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'N',
+            zoom: 19,
+            llCenter: '9.970510760384416,-84.16725222757447',
+            mapTypeId: 'hybrid'
+          }, {
+            nam: 'S',
+            zoom: 19,
+            llCenter: '9.969612581282494,-84.16717712572205',
+            mapTypeId: 'hybrid'
+          }
+        ]
+      };
       Bdys = Restangular.all('bdys');
       Plcs = Restangular.all('plcs');
       if (!$routeParams.sort) {
@@ -71,17 +203,22 @@
         $scope.selectedItem = $rootScope.selectedItem;
         return $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue;
       });
-      $scope.printView = false;
       $scope.togglePrintView = function() {
-        $scope.printView = !$scope.printView;
+        $rootScope.printView = $scope.printView = !$scope.printView;
         if ($scope.printView) {
-          return console.log('PrintView Set On');
+          console.log('PrintView Set On');
+          return $location.search('media', 'prn');
         } else {
-          return console.log('PrintView Set On');
+          console.log('PrintView Set On');
+          return $location.search('media', '');
         }
       };
       gmap.icon = function(item) {
-        return $scope.mkrIcon2(item.mkrNo, item.mkrState);
+        if ($scope.printView) {
+          return $scope.mkrIcon2(item.mkrNo, item.mkrState);
+        } else {
+          return $scope.mkrIcon(item.mkrNo, item.mkrState);
+        }
       };
       $scope.itemMkrClick = function(index) {
         var pt;
@@ -105,7 +242,6 @@
           console.log('currently editing a boundary');
           return;
         }
-        console.log('doSearch');
         args = {};
         q = $scope.q;
         whereParts = {};
@@ -138,6 +274,7 @@
         if ($routeParams.sort) {
           args.sort = $routeParams.sort;
         }
+        args.pp = $routeParams.pp || 200;
         return Plcs.getList(args).then((function(items) {
           var item, _i, _len, _ref;
 
@@ -302,18 +439,23 @@
         return $scope.z = parseInt(newValue, 10);
       });
       $scope.$watch('filtBdyId', function(newValue) {
-        var bdy, ptCenter;
+        var bdy, llCenter, ptCenter;
 
         $location.search('filtBdyId', newValue);
         $rootScope.filtBdyId = $scope.filtBdyId = newValue;
+        bdy = '';
         if (newValue && typeof newValue === 'string' && $routeParams.filtBdyId !== newValue) {
           bdy = $scope.bdys[newValue];
           ptCenter = bdy.ptCenter;
           map.setCenter(new google.maps.LatLng(ptCenter[0], ptCenter[1]));
+          llCenter = latLngFromLl($scope.bdyViews[newValue][0].llCenter);
+          map.setCenter(new google.maps.LatLng(llCenter.lat, llCenter.lng));
+          map.setZoom($scope.bdyViews[newValue][0].zoom);
           map.setZoom(bdy.zoom);
           map.setMapTypeId(bdy.mapTypeId);
           $rootScope.filtBdyId = $scope.filtBdyId = newValue;
-          return $routeParams.filtBdyId = newValue;
+          $routeParams.filtBdyId = newValue;
+          return $routeParams.title = bdy.nam;
         }
       });
       $scope.$watch('routeParams', (function(newVal, oldVal) {

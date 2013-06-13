@@ -1,8 +1,5 @@
 /*http://designshack.net/articles/css/6-thinks-i-learned-about-print-stylesheets-from-html5-boilerplate/*/
 
-.noprint {display: none;}
-
-
 * {
     background: transparent !important;
     color: black !important;
@@ -66,4 +63,8 @@ h2, h3 {
 
 .page-header, #map-canvas, #list {
     display: block;
+}
+
+.noprint {
+    display: none !important;
 }

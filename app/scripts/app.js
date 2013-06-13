@@ -181,6 +181,7 @@
       };
       this.map = new google.maps.Map(this.mapEl[0], {
         zoom: this.zoom,
+        visualRefresh: true,
         center: new google.maps.LatLng(this.center.lat, this.center.lng),
         mapTypeId: this.mapTypes[this.mapType]
       });
@@ -489,7 +490,7 @@
 
   angular.module('ofApp').factory('GoogleMap', [
     '$rootScope', '$location', '$routeParams', function($rootScope, $location, $routeParams) {
-      var BSBR, SJO, initPosition, initZoom, mapOptions, x;
+      var BSBR, SJO, initPosition, initZoom, mapOptions;
 
       SJO = {
         lat: 9.993552791991132,
@@ -513,12 +514,16 @@
           lng: initPosition.lng
         }
       };
-      x = 0;
       return new GMap(mapOptions);
     }
   ]);
 
-  angular.module('ofApp').run(function($rootScope, $location, Auth) {
+  angular.module('ofApp').run(function($rootScope, $location, $routeParams, Auth) {
+    $rootScope.currBdy = {};
+    $rootScope.$on('$routeChangeSuccess', function(event, next, current) {
+      $rootScope.currPath = $location.$$path;
+      return $rootScope.title = $location.$$search.title;
+    });
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
       $rootScope.error = null;
       if (!(!Auth.authorize(next.access) ? Auth.isLoggedIn() : void 0)) {

@@ -9770,7 +9770,7 @@ html .halflings {
   background-position: -456px -168px;
 }
 
-.google-map img {
+.google-map img, .google-map-print img {
     max-width: none;
 }
 .google-map {
@@ -9780,10 +9780,19 @@ html .halflings {
     margin: 3px;
 }
 
+.google-map-print {
+    width: 700px;
+    height: 700px;
+    text-align: center;
+    border: 2px solid #777777;
+    margin: 3px;
+    page-break-after: always
+}
+
 
 tr.item, td.item {
-    line-height: 15px;
-    font-size: 10px;
+    line-height: 10px;
+    font-size: 8px;
 }
 
 .item-id {
@@ -9810,5 +9819,76 @@ td.item-actions {
     font-weight: bold;
 }
 td.item-dNam {
-    font-size: 14px;
+    font-size: 10px;
+}
+
+/*http://designshack.net/articles/css/6-thinks-i-learned-about-print-stylesheets-from-html5-boilerplate/*/
+
+* {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+}
+
+/* Black prints faster: h5bp.com/s */
+a, a:visited {
+    text-decoration: underline;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+}
+
+/* Don't show links for images, or javascript/internal links */
+pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group;
+}
+
+/* h5bp.com/t */
+tr, img {
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h2, h3 {
+    page-break-after: avoid;
+}
+
+.navbar, .subnav, #map-crosshair {
+    display: none;
+}
+
+.page-header, #map-canvas, #list {
+    display: block;
+}
+
+.noprint {
+    display: none !important;
 }

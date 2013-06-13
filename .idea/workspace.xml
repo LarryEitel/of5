@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/home.html" afterPath="$PROJECT_DIR$/app/views/partials/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/map.css" afterPath="$PROJECT_DIR$/app/css/map.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/print.css" afterPath="$PROJECT_DIR$/app/css/print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/scratch.css" afterPath="$PROJECT_DIR$/app/css/scratch.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc" />
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371141064343" ignored="false" />
@@ -226,10 +214,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratch.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scratch.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/css/scratch.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="372" selection-end="372" vertical-scroll-proportion="0.6319703">
+            <state line="30" column="17" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -451,72 +448,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="of5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plcs.coffee" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -851,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="7" selection-start="33" selection-end="33" vertical-scroll-proportion="-0.65384614">
@@ -925,7 +849,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/css/scratch.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="372" selection-end="372" vertical-scroll-proportion="0.6319703">
+        <state line="30" column="17" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

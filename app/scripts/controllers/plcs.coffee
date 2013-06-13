@@ -77,9 +77,18 @@ angular.module('ofApp').controller('PlcsCtrl', \
         $scope.selectedItem = $rootScope.selectedItem
         $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue
 
+    $scope.printView = false
+    $scope.togglePrintView = ->
+        $scope.printView = !$scope.printView
+        if $scope.printView
+            console.log 'PrintView Set On'
+        else
+            console.log 'PrintView Set On'
+
+
     gmap.icon = (item) ->
-#        $scope.mkrIcon2 item.mkrNo, item.mkrState
-        $scope.mkrIcon item.mkrNo, item.mkrState
+        $scope.mkrIcon2 item.mkrNo, item.mkrState
+#        $scope.mkrIcon item.mkrNo, item.mkrState
 
     $scope.itemMkrClick = (index) ->
         $rootScope.selectedItemIndex = gmap.selectedItemIndex = $scope.selectedItemIndex = index

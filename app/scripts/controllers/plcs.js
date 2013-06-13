@@ -71,8 +71,17 @@
         $scope.selectedItem = $rootScope.selectedItem;
         return $rootScope.selectedItemIndex = $scope.selectedItemIndex = newValue;
       });
+      $scope.printView = false;
+      $scope.togglePrintView = function() {
+        $scope.printView = !$scope.printView;
+        if ($scope.printView) {
+          return console.log('PrintView Set On');
+        } else {
+          return console.log('PrintView Set On');
+        }
+      };
       gmap.icon = function(item) {
-        return $scope.mkrIcon(item.mkrNo, item.mkrState);
+        return $scope.mkrIcon2(item.mkrNo, item.mkrState);
       };
       $scope.itemMkrClick = function(index) {
         var pt;

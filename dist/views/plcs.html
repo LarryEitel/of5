@@ -6,9 +6,10 @@
 
 <!--<div id="map" class="google-map"></div>-->
 
+  <!--<span ng-click="togglePrintView()">Set <span ng-show="!printView">Printer</span><span ng-show="printView">Screen</span> Friendly</span>-->
 
   <br>
-  <div>
+  <div ng-class="{'noprint': printView}">
     <div style="float: left; display: inline">
       <form class="form-horizontal" name="searchForm" ng-submit="doSearch()">
 

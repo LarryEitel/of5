@@ -1,0 +1,23 @@
+body {
+  background: white;
+}
+#donate, #position {
+  display: none;
+}
+.navbar, .subnav, #map-crosshair {
+  display: none;
+}
+.container-fluid  {
+    display: none;
+}
+
+.page-header, #map-canvas, #list {
+  display: block;
+}
+
+a:link, a:visited {
+  color: black;
+  background: transparent;
+  font-weight: normal;
+  text-decoration: none;
+}

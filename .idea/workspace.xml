@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/restangular/src/restangular.js" afterPath="$PROJECT_DIR$/app/components/restangular/src/restangular.js" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +17,7 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370823503968" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370495226921" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370886638245" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371134531827" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370182905726" ignored="false" />
@@ -199,18 +201,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-4.7">
-              <folding>
-                <element signature="e#835#1135#0" expanded="false" />
-                <element signature="e#8769#9009#0" expanded="false" />
-                <element signature="e#9058#9130#0" expanded="false" />
-                <element signature="e#9185#9747#0" expanded="false" />
-                <element signature="e#13962#16685#0" expanded="false" />
-                <element signature="e#16744#17757#0" expanded="false" />
-              </folding>
+            <state line="82" column="0" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.39769822">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plcs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13" selection-start="196" selection-end="197" vertical-scroll-proportion="-0.68">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,7 +222,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="4" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-13.730769">
+            <state line="61" column="4" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,16 +231,16 @@
       <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="64" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-6.5384617">
+            <state line="30" column="0" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="311" column="61" selection-start="11205" selection-end="11205" vertical-scroll-proportion="0.2672634">
+            <state line="309" column="9" selection-start="11142" selection-end="11142" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -274,15 +278,15 @@
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
         <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
     <option name="y" value="20" />
-    <option name="width" value="1245" />
+    <option name="width" value="1521" />
     <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -420,6 +424,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plcs.coffee" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -430,8 +460,8 @@
     <property name="options.lastSelected" value="editing.templates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-app" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="localhost9000" serverId="2b31a5f1-1151-4285-99f4-cfb4076afa44">
     <servers>
@@ -600,15 +630,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="20" width="1245" height="993" extended-state="0" />
+    <frame x="7" y="20" width="1521" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="1255" y="561" width="656" height="487" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24006763" sideWeight="0.6782713" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24331734" sideWeight="0.6782713" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -617,6 +646,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="1255" y="561" width="656" height="487" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2492864" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -695,17 +725,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="9" selection-start="11219" selection-end="11219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#835#1135#0" expanded="false" />
-            <element signature="e#8769#9009#0" expanded="false" />
-            <element signature="e#9058#9130#0" expanded="false" />
-            <element signature="e#9185#9747#0" expanded="false" />
-            <element signature="e#13962#16685#0" expanded="false" />
-            <element signature="e#16744#17757#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -731,11 +761,6 @@
         <state line="10" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="23" selection-start="531" selection-end="531" vertical-scroll-proportion="-14.96" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/restangular/src/restangular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="657" column="5" selection-start="24736" selection-end="24736" vertical-scroll-proportion="0.33333334" />
@@ -753,65 +778,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="61" selection-start="8292" selection-end="8292" vertical-scroll-proportion="0.6971917">
-          <folding />
-        </state>
+        <state line="226" column="61" selection-start="8292" selection-end="8292" vertical-scroll-proportion="0.6971917" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="4" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-13.730769">
+        <state line="61" column="4" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="2739" selection-end="2807" vertical-scroll-proportion="23.88">
-          <folding>
-            <element signature="e#5417#5586#0" expanded="false" />
-            <element signature="e#5628#5840#0" expanded="false" />
-            <element signature="e#5882#7418#0" expanded="false" />
-            <element signature="e#7455#8740#0" expanded="false" />
-            <element signature="e#8781#9352#0" expanded="false" />
-            <element signature="e#9395#9718#0" expanded="false" />
-            <element signature="e#9919#10509#0" expanded="false" />
-            <element signature="e#10573#10823#0" expanded="false" />
-            <element signature="e#10883#11008#0" expanded="false" />
-            <element signature="e#11040#11367#0" expanded="false" />
-            <marker date="1370998283199" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1370998283199" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370998283199" expanded="false" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370998283199" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370998283199" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="28" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-4.7">
-          <folding>
-            <element signature="e#835#1135#0" expanded="false" />
-            <element signature="e#8769#9009#0" expanded="false" />
-            <element signature="e#9058#9130#0" expanded="false" />
-            <element signature="e#9185#9747#0" expanded="false" />
-            <element signature="e#13962#16685#0" expanded="false" />
-            <element signature="e#16744#17757#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="64" selection-start="1539" selection-end="1539" vertical-scroll-proportion="-6.5384617">
+        <state line="30" column="0" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="311" column="61" selection-start="11205" selection-end="11205" vertical-scroll-proportion="0.2672634">
+        <state line="309" column="9" selection-start="11142" selection-end="11142" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="15" selection-start="522" selection-end="522" vertical-scroll-proportion="0.021065675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="196" selection-end="197" vertical-scroll-proportion="-0.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.39769822">
           <folding />
         </state>
       </provider>

@@ -60,6 +60,22 @@
       $rootScope.bdysLoaded = false;
       $rootScope.selectedItemIndex = gmap.selectedItem = gmap.selectedItemIndex = -1;
       $scope.bdyViews = {
+        crherbs: [
+          {
+            nam: 'Main',
+            zoom: 14,
+            llCenter: '9.976819295953407,-84.16194130521517',
+            mapTypeId: 'hybrid'
+          }
+        ],
+        crherbsbr: [
+          {
+            nam: 'Main',
+            zoom: 15,
+            llCenter: '9.971071018203258,-84.15988136869173',
+            mapTypeId: 'hybrid'
+          }
+        ],
         crherbsbrr01: [
           {
             nam: 'Main',
@@ -239,7 +255,10 @@
         var args, errorCallback, i, plcIds, q, quickFindPlcIds, whereParts;
 
         if ($rootScope.editingBdy) {
-          console.log('currently editing a boundary');
+          return;
+        }
+        gmap.removeMkrs();
+        if (((typeof $routeParams.filtBdyId === 'boolean' || !$routeParams.filtBdyId) && !$scope.q) || (typeof $routeParams.filtBdyId === 'boolean' && !$scope.q)) {
           return;
         }
         args = {};
@@ -277,8 +296,6 @@
         return Plcs.getList(args).then((function(items) {
           var item, _i, _len, _ref;
 
-          $scope.loadBdys();
-          gmap.removeMkrs();
           _ref = items._items;
           for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
             item = _ref[i];
@@ -454,7 +471,12 @@
           map.setMapTypeId(bdy.mapTypeId);
           $rootScope.filtBdyId = $scope.filtBdyId = newValue;
           $routeParams.filtBdyId = newValue;
-          return $routeParams.title = bdy.nam;
+          $rootScope.title = $scope.title = $routeParams.title = bdy.nam;
+          return console.log('newValue inside', newValue, bdy.nam);
+        } else if ($routeParams.filtBdyId !== newValue) {
+          console.log('newValue', '');
+          $rootScope.title = $scope.title = '';
+          return $routeParams.title = '';
         }
       });
       $scope.$watch('routeParams', (function(newVal, oldVal) {
@@ -567,6 +589,7 @@
         icon = new google.maps.MarkerImage(iconImage, new google.maps.Size(mkrWidth, mkrHeight), new google.maps.Point(0, 0));
         return icon;
       };
+      $scope.loadBdys();
       $scope.doSearch();
       return $scope.loadBdyPolys();
     }

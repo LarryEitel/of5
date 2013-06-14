@@ -518,6 +518,7 @@ angular.module('ofApp')
 angular.module('ofApp')
     .run ($rootScope, $location, $routeParams, Auth) ->
         $rootScope.currBdy = {}
+        $rootScope.title = ''
         $rootScope.$on '$routeChangeSuccess', (event, next, current) ->
             $rootScope.currPath = $location.$$path
             $rootScope.title = $location.$$search.title

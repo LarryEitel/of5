@@ -56,6 +56,10 @@ angular.module('ofApp').controller('PlcsCtrl', \
     $rootScope.bdysLoaded = false
     $rootScope.selectedItemIndex = gmap.selectedItem = gmap.selectedItemIndex = -1
     $scope.bdyViews =
+        crherbs:
+                                [{nam: 'Main', zoom:14, llCenter: '9.976819295953407,-84.16194130521517', mapTypeId: 'hybrid'}]
+        crherbsbr:
+                                [{nam: 'Main', zoom:15, llCenter: '9.971071018203258,-84.15988136869173', mapTypeId: 'hybrid'}]
         crherbsbrr01:
                                 [{nam: 'Main', zoom:17, llCenter: '9.973437968382253,-84.16134049039584', mapTypeId: 'hybrid'}]
         crherbsbrr02:
@@ -141,8 +145,14 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
     $scope.doSearch = ->
         if $rootScope.editingBdy
-            console.log 'currently editing a boundary'
             return
+
+        gmap.removeMkrs()
+
+        if ((typeof ($routeParams.filtBdyId) is 'boolean' or !$routeParams.filtBdyId) and !$scope.q) \
+                or (typeof ($routeParams.filtBdyId) is 'boolean' and !$scope.q)
+            return
+
 
         args = {}
         q = $scope.q
@@ -170,9 +180,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 #        args.pp = $routeParams.pp || 200
         Plcs.getList(args) \
             .then ((items) ->
-
-                $scope.loadBdys()
-                gmap.removeMkrs()
+#
 
                 for item, i in items._items
                     items._items[i].patch = $scope.patch
@@ -348,10 +356,13 @@ angular.module('ofApp').controller('PlcsCtrl', \
             map.setMapTypeId bdy.mapTypeId
             $rootScope.filtBdyId = $scope.filtBdyId = newValue
             $routeParams.filtBdyId = newValue
-            $routeParams.title = bdy.nam
-#        else if newValue
-#            $routeParams.title = ''
+            $rootScope.title = $scope.title = $routeParams.title = bdy.nam
+            console.log 'newValue inside', newValue, bdy.nam
 
+        else if $routeParams.filtBdyId != newValue
+            console.log 'newValue', ''
+            $rootScope.title = $scope.title = ''
+            $routeParams.title = ''
 
     $scope.$watch 'routeParams', ((newVal, oldVal) ->
         if !$rootScope.editingBdy
@@ -471,8 +482,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
         return icon
 
-
-
+    $scope.loadBdys()
     $scope.doSearch()
     $scope.loadBdyPolys()
 ])

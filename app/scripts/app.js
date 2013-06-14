@@ -520,6 +520,7 @@
 
   angular.module('ofApp').run(function($rootScope, $location, $routeParams, Auth) {
     $rootScope.currBdy = {};
+    $rootScope.title = '';
     $rootScope.$on('$routeChangeSuccess', function(event, next, current) {
       $rootScope.currPath = $location.$$path;
       return $rootScope.title = $location.$$search.title;

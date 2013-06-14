@@ -6,7 +6,7 @@
 
 <!--<div id="map" class="google-map"></div>-->
 
-    <span class="noprint" ng-click="togglePrintView()">
+    <span class="noprint" ng-click="togglePrintView()" ng-show="title && items">
       Set
       <span ng-show="!printView">Printer</span>
       <span ng-show="printView">Screen</span> Friendly
@@ -31,7 +31,7 @@
       <span ng-show="editingBdy" ng-click="saveBdy(cngAreaTerrId)">Save Changes</span>
     </div>
   </div>
-  <h3 ng-show="title">{{title}}</h3>
+  <h3 ng-show="title && items">{{title}}</h3>
   <table ng-show="items" class="table table-striped table-bordered table-hover">
     <thead style="background: lightgray; border: 1px; border-style: solid; color: #000000">
       <tr>
@@ -81,8 +81,9 @@
     </tbody>
   </table>
 
+
   <br>
-  <button ng-hide="printView" class="btn btn-primary" ng-click="insert()">Add</button>
+  <button ng-hide="printView || !title" class="btn btn-primary" ng-click="insert()">Add</button>
 
 
   <!--<form name="myForm" ng-submit="add()">-->

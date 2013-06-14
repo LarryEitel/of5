@@ -167,7 +167,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
                 $options: 'i'
         args.where = JSON.stringify(whereParts)  if whereParts
         args.sort = $routeParams.sort  if $routeParams.sort
-        args.pp = $routeParams.pp || 200
+#        args.pp = $routeParams.pp || 200
         Plcs.getList(args) \
             .then ((items) ->
 

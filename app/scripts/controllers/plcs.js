@@ -274,7 +274,6 @@
         if ($routeParams.sort) {
           args.sort = $routeParams.sort;
         }
-        args.pp = $routeParams.pp || 200;
         return Plcs.getList(args).then((function(items) {
           var item, _i, _len, _ref;
 

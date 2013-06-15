@@ -383,9 +383,9 @@ angular.module('ofApp').controller('PlcsCtrl', \
         $scope.doSearch()
 
     $scope.moveDown = ($index) ->
-#        confirmMove = confirm('Move up?')
-#        if confirmMove
-#            console.log 'confirmMove'
+        confirmMove = confirm('Move Down?')
+        if !confirmMove
+            return
         # clone some details from the item the user clicked the Plus (Insert) Icon
         itemFrom = $scope.items[$index]
 
@@ -415,9 +415,9 @@ angular.module('ofApp').controller('PlcsCtrl', \
             console.log 'Oops error from server :('
 
     $scope.moveUp = ($index) ->
-#        confirmMove = confirm('Move up?')
-#        if confirmMove
-#            console.log 'confirmMove'
+        confirmMove = confirm('Move up?')
+        if confirmMove
+            return
         # clone some details from the item the user clicked the Plus (Insert) Icon
         itemFrom = $scope.items[$index]
 
@@ -645,6 +645,9 @@ angular.module('ofApp').controller('PlcFormCtrl', \
                 item.tags = []
 #            if 'undefined' isnt item.lng and 'undefined' isnt item.lat
 #                item.pt = [item.lng, item.lat]
+
+            if item.typ == 'ref'
+                item.pt = []
 
             delete item.lat
             delete item.lng

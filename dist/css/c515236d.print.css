@@ -38,6 +38,7 @@ thead {
 /* h5bp.com/t */
 tr, img {
     page-break-inside: avoid;
+    page-break-after:auto;
 }
 
 img {

@@ -501,8 +501,12 @@
         return $scope.doSearch();
       };
       $scope.moveDown = function($index) {
-        var Plc, data, errorCallback, itemFrom, itemNext, newValueForNext_w;
+        var Plc, confirmMove, data, errorCallback, itemFrom, itemNext, newValueForNext_w;
 
+        confirmMove = confirm('Move Down?');
+        if (!confirmMove) {
+          return;
+        }
         itemFrom = $scope.items[$index];
         itemNext = $scope.items[$index + 1];
         if ($index === 0) {
@@ -527,8 +531,12 @@
         });
       };
       $scope.moveUp = function($index) {
-        var Plc, data, errorCallback, itemFrom, itemPrevious, newValueForPrevious_w;
+        var Plc, confirmMove, data, errorCallback, itemFrom, itemPrevious, newValueForPrevious_w;
 
+        confirmMove = confirm('Move up?');
+        if (confirmMove) {
+          return;
+        }
         itemFrom = $scope.items[$index];
         itemPrevious = $scope.items[$index - 1];
         if ($index === $scope.items.length - 1) {
@@ -744,6 +752,9 @@
             item.tags = item.tags.split(',');
           } else {
             item.tags = [];
+          }
+          if (item.typ === 'ref') {
+            item.pt = [];
           }
           delete item.lat;
           delete item.lng;

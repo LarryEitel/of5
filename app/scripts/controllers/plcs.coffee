@@ -603,6 +603,7 @@ angular.module('ofApp').controller('PlcFormCtrl', \
             $scope.item.typ = item.typ or ''
             $scope.item.addr = item.addr
             $scope.item.desc = item.desc
+            $scope.item.w = item.w
             if typeof (item.tags) isnt 'undefined'
                 $scope.item.tags = item.tags.join(',')
             else
@@ -649,6 +650,8 @@ angular.module('ofApp').controller('PlcFormCtrl', \
             delete item.lng
             delete item._id
 
+
+            item.w += .000000001
             data = JSON.stringify(actions:
                 $set:
                     flds: item

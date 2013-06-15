@@ -366,7 +366,6 @@ class GMarker
 #        event.preventDefault()
 #        alert 'move'
 
-
 #'use strict'
 angular.module 'ofApp', ['restangular', 'ngCookies', 'ui.bootstrap']
 
@@ -390,6 +389,7 @@ angular.module('ofApp').config ['$httpProvider', ($httpProvider) ->
 angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
     RestangularProvider.setBaseUrl 'http://exi.xchg.com/api'
 #    RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
+
 
     # what's this
     RestangularProvider.setListTypeIsArray false

@@ -698,6 +698,7 @@
           $scope.item.typ = item.typ || '';
           $scope.item.addr = item.addr;
           $scope.item.desc = item.desc;
+          $scope.item.w = item.w;
           if (typeof item.tags !== 'undefined') {
             $scope.item.tags = item.tags.join(',');
           } else {
@@ -747,6 +748,7 @@
           delete item.lat;
           delete item.lng;
           delete item._id;
+          item.w += .000000001;
           data = JSON.stringify({
             actions: {
               $set: {

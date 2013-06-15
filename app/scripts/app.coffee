@@ -388,8 +388,8 @@ angular.module('ofApp').config ['$httpProvider', ($httpProvider) ->
     return $httpProvider.defaults.headers.post['Content-Type']
 ]
 angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
-#    RestangularProvider.setBaseUrl 'http://exi.xchg.com/api'
-    RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
+    RestangularProvider.setBaseUrl 'http://exi.xchg.com/api'
+#    RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
 
     # what's this
     RestangularProvider.setListTypeIsArray false

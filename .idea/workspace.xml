@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plc-form.html" afterPath="$PROJECT_DIR$/app/views/plc-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/scratch.css" afterPath="$PROJECT_DIR$/app/css/scratch.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
@@ -210,10 +203,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plcs.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="628" column="26" selection-start="23490" selection-end="23490" vertical-scroll-proportion="0.1685254">
+            <state line="628" column="26" selection-start="23490" selection-end="23490" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#10685#11793#0" expanded="false" />
                 <element signature="e#11834#12269#0" expanded="false" />
@@ -269,10 +262,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="368" column="0" selection-start="12644" selection-end="12644" vertical-scroll-proportion="-1.94">
+            <state line="392" column="0" selection-start="13916" selection-end="13916" vertical-scroll-proportion="0.667107">
               <folding />
             </state>
           </provider>
@@ -306,12 +299,12 @@
         <option value="$PROJECT_DIR$/app/css/print.css" />
         <option value="$PROJECT_DIR$/app/css/map.css" />
         <option value="$PROJECT_DIR$/app/views/partials/home.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/css/scratch.css" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/plc-form.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
+        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
       </list>
     </option>
   </component>
@@ -785,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="368" column="0" selection-start="12644" selection-end="12644" vertical-scroll-proportion="-1.94">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="47" selection-start="2897" selection-end="2897" vertical-scroll-proportion="-15.038462">
@@ -821,7 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="628" column="26" selection-start="23490" selection-end="23490" vertical-scroll-proportion="0.1685254">
+        <state line="628" column="26" selection-start="23490" selection-end="23490" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#10685#11793#0" expanded="false" />
             <element signature="e#11834#12269#0" expanded="false" />
@@ -831,6 +817,13 @@
             <element signature="e#20665#21745#0" expanded="false" />
             <element signature="e#23048#23415#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="392" column="0" selection-start="13916" selection-end="13916" vertical-scroll-proportion="0.667107">
+          <folding />
         </state>
       </provider>
     </entry>

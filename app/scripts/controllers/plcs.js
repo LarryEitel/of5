@@ -294,12 +294,18 @@
           args.sort = $routeParams.sort;
         }
         return Plcs.getList(args).then((function(items) {
-          var item, _i, _len, _ref;
+          var item, mkrNo, _i, _len, _ref;
 
+          mkrNo = 1;
           _ref = items._items;
           for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
             item = _ref[i];
             items._items[i].patch = $scope.patch;
+            delete items._items[i].mkrNo;
+            if (item.typ !== 'ref') {
+              items._items[i].mkrNo = mkrNo;
+              mkrNo += 1;
+            }
             if (item.pt && parseInt($routeParams.z, 10) > 16) {
               items._items[i].mapMkr = gmap.addPlcMkr(map, item);
             }
@@ -494,6 +500,83 @@
         $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q;
         return $scope.doSearch();
       };
+      $scope.moveDown = function($index) {
+        var Plc, data, errorCallback, itemFrom, itemNext, newValueForNext_w;
+
+        itemFrom = $scope.items[$index];
+        itemNext = $scope.items[$index + 1];
+        if ($index === 0) {
+          newValueForNext_w = itemFrom.w - 1.00000001;
+        } else {
+          newValueForNext_w = itemFrom.w - ((itemFrom.w - $scope.items[$index - 1].w) / 2);
+        }
+        data = JSON.stringify({
+          actions: {
+            $set: {
+              flds: {
+                w: newValueForNext_w
+              }
+            }
+          }
+        });
+        Plc = Restangular.one('plcs', itemNext._id);
+        return Plc.customPUT(null, null, null, data).then((function(itemChanged) {
+          return $scope.doSearch();
+        }), errorCallback = function() {
+          return console.log('Oops error from server :(');
+        });
+      };
+      $scope.moveUp = function($index) {
+        var Plc, data, errorCallback, itemFrom, itemPrevious, newValueForPrevious_w;
+
+        itemFrom = $scope.items[$index];
+        itemPrevious = $scope.items[$index - 1];
+        if ($index === $scope.items.length - 1) {
+          newValueForPrevious_w = itemFrom.w + 1.00000001;
+        } else if ($index === 0) {
+          newValueForPrevious_w = itemFrom.w - 1.00000001;
+        } else {
+          newValueForPrevious_w = itemFrom.w + (($scope.items[$index + 1].w - itemFrom.w) / 2);
+        }
+        data = JSON.stringify({
+          actions: {
+            $set: {
+              flds: {
+                w: newValueForPrevious_w
+              }
+            }
+          }
+        });
+        Plc = Restangular.one('plcs', itemPrevious._id);
+        return Plc.customPUT(null, null, null, data).then((function(itemChanged) {
+          return $scope.doSearch();
+        }), errorCallback = function() {
+          return console.log('Oops error from server :(');
+        });
+      };
+      $scope.insertAfter = function($index) {
+        var blankItem, confirmInsert, data, itemFrom;
+
+        confirmInsert = confirm('Insert a new place?');
+        if (!confirmInsert) {
+          return;
+        }
+        itemFrom = $scope.items[$index];
+        blankItem = {
+          nam: 'Nuevo lugar en blanco.',
+          bdry: itemFrom.bdry
+        };
+        if ($index === $scope.items.length - 1) {
+          blankItem.w = itemFrom.w + 1.00000001;
+        } else {
+          blankItem.w = itemFrom.w + (($scope.items[$index + 1].w - itemFrom.w) / 2);
+        }
+        data = 'doc=' + JSON.stringify(blankItem);
+        Plcs = Restangular.all('plcs');
+        return Plcs.post(data).then(function(itemAdded) {
+          return $scope.doSearch();
+        });
+      };
       $scope.add = function() {
         var data;
 
@@ -513,7 +596,7 @@
           item = $scope.items[$index];
           Plc = Restangular.one('plcs', item._id);
           return Plc.remove().then((function() {
-            return $scope.items.splice($index, 1);
+            return $scope.doSearch();
           }), errorCallback = function() {
             console.log('Oops error from server :(');
             return $location.path('/plc/' + $routeParams.id);
@@ -612,6 +695,7 @@
           $scope.item.bdry = item.bdry || '';
           $scope.item.nam = item.nam || '';
           $scope.item.namS = item.namS || '';
+          $scope.item.typ = item.typ || '';
           $scope.item.addr = item.addr;
           $scope.item.desc = item.desc;
           if (typeof item.tags !== 'undefined') {
@@ -655,18 +739,14 @@
             return console.log('Oops error from server :(');
           });
         } else {
-          if ('undefined' !== item.tags && item.tags > '') {
+          if (typeof item.tags !== 'undefined' && item.tags > '') {
             item.tags = item.tags.split(',');
           } else {
             item.tags = [];
           }
-          if ('undefined' !== item.lng && 'undefined' !== item.lat) {
-            item.pt = [item.lng, item.lat];
-            delete item.lat;
-            delete item.lng;
-          }
+          delete item.lat;
+          delete item.lng;
           delete item._id;
-          console.log('item', item);
           data = JSON.stringify({
             actions: {
               $set: {

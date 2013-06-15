@@ -377,7 +377,7 @@
 
   angular.module('ofApp').config([
     'RestangularProvider', function(RestangularProvider) {
-      RestangularProvider.setBaseUrl('http://exi.xchg.com/api');
+      RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
       RestangularProvider.setListTypeIsArray(false);
       return RestangularProvider.setResponseExtractor(function(response, operation, what) {
         if (what === 'users' && operation === 'getList') {

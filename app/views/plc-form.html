@@ -5,31 +5,26 @@
     <br/>
 
     <form name="form">
+      Territory: <input type="text" ng-model="item.bdry">
+      Type: <input type="text" ng-model="item.typ"><br/>
+      Name: <input type="text" ng-model="item.nam">
+      Address: <input type="text" ng-model="item.addr"> <br/>
+      Description: <textarea ng-model="item.desc" rows="2" cols="100"></textarea>
 
-        <label>Territory</label>
-          <input type="text" ng-model="item.bdry">
-        <label>Name</label>
-          <input type="text" ng-model="item.nam">
-        <label>Abbreviation</label>
-          <input type="text" ng-model="item.namS">
+      <!--<label>Abbreviation</label>-->
+      <!--<input type="text" ng-model="item.namS">-->
 
-        <label>Address</label>
-          <input type="text" ng-model="item.addr">
+      <!--<label>Tags</label>-->
+      <!--<input type="text" ng-model="item.tags">-->
 
-        <label>Description</label>
-          <input type="text" ng-model="item.desc">
-
-        <label>Tags</label>
-          <input type="text" ng-model="item.tags">
-
-        <label>Longitude</label>
-          <input type="text" ng-model="item.lng">
-        <label>Latitude</label>
-          <input type="text" ng-model="item.lat">
+      <!--<label>Longitude</label>-->
+      <!--<input type="text" ng-model="item.lng">-->
+      <!--<label>Latitude</label>-->
+      <!--<input type="text" ng-model="item.lat">-->
 
 
 
-        <hr>
+      <hr>
         <!--<button class="btn btn-primary" ng-click="save(item)" ng-disabled="!hasChanges()||form.$invalid">Save</button>-->
         <button class="btn btn-primary" ng-click="save(item)">Save</button>
         <button class="btn btn-warning" ng-click="abandonChanges()">Abandon</button>

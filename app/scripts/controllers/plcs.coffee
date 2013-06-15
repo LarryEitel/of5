@@ -181,10 +181,15 @@ angular.module('ofApp').controller('PlcsCtrl', \
         Plcs.getList(args) \
             .then ((items) ->
 #
-
+                mkrNo = 1
                 for item, i in items._items
                     items._items[i].patch = $scope.patch
 
+                    # temporary until mkrNo removed from model
+                    delete items._items[i].mkrNo
+                    if item.typ != 'ref'
+                        items._items[i].mkrNo = mkrNo
+                        mkrNo += 1
 
                     if item.pt and parseInt($routeParams.z, 10) > 16
 #                        items._items[i].mapMkr = gmap.addPlcMkr(map, item)
@@ -377,6 +382,97 @@ angular.module('ofApp').controller('PlcsCtrl', \
         $scope.q = $scope.location.q = $scope.routeParams.q = defaultRouteArgs.q
         $scope.doSearch()
 
+    $scope.moveDown = ($index) ->
+#        confirmMove = confirm('Move up?')
+#        if confirmMove
+#            console.log 'confirmMove'
+        # clone some details from the item the user clicked the Plus (Insert) Icon
+        itemFrom = $scope.items[$index]
+
+        # easiest is to put next item's w value between this item and the previous
+
+        # this should NOT be the last item because button is not shown if it is
+        itemNext = $scope.items[$index + 1]
+
+        # need to calc sort w(eight) value
+        # if the first item in list, just subtract 1 to w
+        # .00000001 makes it a float!!! exact value not important
+        if $index == 0
+            newValueForNext_w = itemFrom.w - 1.00000001
+
+        # else avg
+        else
+            newValueForNext_w = itemFrom.w - ((itemFrom.w - $scope.items[$index - 1].w) / 2)
+
+        data = JSON.stringify(actions:
+            $set:
+                flds: {w: newValueForNext_w}
+        )
+        Plc = Restangular.one('plcs', itemNext._id)
+        Plc.customPUT(null, null, null, data).then ((itemChanged) ->
+            $scope.doSearch()
+        ), errorCallback = ->
+            console.log 'Oops error from server :('
+
+    $scope.moveUp = ($index) ->
+#        confirmMove = confirm('Move up?')
+#        if confirmMove
+#            console.log 'confirmMove'
+        # clone some details from the item the user clicked the Plus (Insert) Icon
+        itemFrom = $scope.items[$index]
+
+        # this should NOT be the first item because button is not shown if zero
+        itemPrevious = $scope.items[$index - 1]
+
+        # easiest is to put previous item's w value between this item and the next
+        # need to calc sort w(eight) value
+        # if the last item in list, just add 1 to w
+        # .00000001 makes it a float!!! exact value not important
+        if $index == $scope.items.length - 1
+            newValueForPrevious_w = itemFrom.w + 1.00000001
+
+        # this should NOT be zero because button is not shown if zero
+        else if $index == 0
+            newValueForPrevious_w = itemFrom.w - 1.00000001
+
+        # else avg
+        else
+            newValueForPrevious_w = itemFrom.w + (($scope.items[$index + 1].w - itemFrom.w) / 2)
+
+        data = JSON.stringify(actions:
+            $set:
+                flds: {w: newValueForPrevious_w}
+        )
+        Plc = Restangular.one('plcs', itemPrevious._id)
+        Plc.customPUT(null, null, null, data).then ((itemChanged) ->
+            $scope.doSearch()
+        ), errorCallback = ->
+            console.log 'Oops error from server :('
+
+
+    $scope.insertAfter = ($index) ->
+        confirmInsert = confirm('Insert a new place?')
+        if !confirmInsert
+            return
+
+        # clone some details from the item the user clicked the Plus (Insert) Icon
+        itemFrom = $scope.items[$index]
+
+        blankItem = {nam: 'Nuevo lugar en blanco.', bdry:itemFrom.bdry}
+
+        # need to calc sort w(eight) value
+        # if the last item in list, just add 1 to w
+        if $index == $scope.items.length - 1
+            blankItem.w = itemFrom.w + 1.00000001
+
+        # else avg
+        else
+            blankItem.w = itemFrom.w + (($scope.items[$index + 1].w - itemFrom.w) / 2)
+
+        data = 'doc=' + JSON.stringify(blankItem)
+        Plcs = Restangular.all('plcs')
+        Plcs.post(data).then (itemAdded) ->
+            $scope.doSearch()
 
     $scope.add = ->
         data = 'doc=' + JSON.stringify($scope.newItem)
@@ -392,7 +488,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
             item = $scope.items[$index]
             Plc = Restangular.one('plcs', item._id)
             Plc.remove().then (->
-                $scope.items.splice $index, 1
+                $scope.doSearch()
             ), errorCallback = ->
                 console.log 'Oops error from server :('
                 $location.path '/plc/' + $routeParams.id
@@ -504,6 +600,7 @@ angular.module('ofApp').controller('PlcFormCtrl', \
             $scope.item.bdry = item.bdry or ''
             $scope.item.nam = item.nam or ''
             $scope.item.namS = item.namS or ''
+            $scope.item.typ = item.typ or ''
             $scope.item.addr = item.addr
             $scope.item.desc = item.desc
             if typeof (item.tags) isnt 'undefined'
@@ -539,18 +636,19 @@ angular.module('ofApp').controller('PlcFormCtrl', \
                 console.log 'Oops error from server :('
 
         else
-            if 'undefined' isnt item.tags and item.tags > ''
+#            if typeof(item.typ) isnt 'undefined' and item.typ > ''
+#                item.typ
+            if typeof(item.tags) isnt 'undefined' and item.tags > ''
                 item.tags = item.tags.split(',')
             else
                 item.tags = []
-            if 'undefined' isnt item.lng and 'undefined' isnt item.lat
-                item.pt = [item.lng, item.lat]
-                delete item.lat
+#            if 'undefined' isnt item.lng and 'undefined' isnt item.lat
+#                item.pt = [item.lng, item.lat]
 
-                delete item.lng
+            delete item.lat
+            delete item.lng
             delete item._id
 
-            console.log 'item', item
             data = JSON.stringify(actions:
                 $set:
                     flds: item

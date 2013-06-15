@@ -2,12 +2,13 @@
 tr.item, td.item {
     line-height: 10px;
     font-size: 8px;
+    padding: 4px;
 }
 
 .item-id {
-    font-size: 10px;
 }
 td.item-id {
+    font-size: 11px;
     text-align: center;
     width: 20px;
 }
@@ -28,5 +29,16 @@ td.item-actions {
     font-weight: bold;
 }
 td.item-dNam {
+    font-size: 10px;
+}
+
+div.bdyNotes {
+    width: 100%;
+    padding: 0 5px 0 5px;
+    margin-top: 5px;
+    border: solid 1px rgb(221, 221, 221);
+}
+.bdyNotes p {
+    width: 100%;
     font-size: 10px;
 }

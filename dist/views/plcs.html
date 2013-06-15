@@ -32,17 +32,26 @@
     </div>
   </div>
   <h3 ng-show="title && items">{{title}}</h3>
+
+
+  <div class="bdyNotes">
+      <p><b>PUERTAS TOTALES:</b> {{bdy.totalDoors}}
+        <scan ng-repeat="note in bdy.notes">
+            <b>{{note.title | uppercase }}:</b> {{note.note}}
+        </scan>
+      </p>
+  </div>
+
   <table ng-show="items" class="table table-striped table-bordered table-hover">
-    <!--<thead style='background: lightgrey; border: 1px; border-style: solid; color: #000000;'>-->
-    <thead>
+    <thead style="background: lightgrey; border: 1px; border-style: solid; color: #000000">
       <tr>
-        <td style="text-align: center">Id</td>
-        <td ng-hide="printView">Ed</td>
-        <td ng-hide="printView">Bdry</td>
-        <td style="text-align: center">#</td>
-        <td>Nombre/Dirección/Descripción</td>
-        <td ng-hide="printView">Del</td>
-        <td ng-show="printView" colspan="3">Resultados</td>
+        <td style="text-align: center"><b>Id</b></td>
+        <td ng-hide="printView"><b>Ed</b></td>
+        <td ng-hide="printView"><b>Bdry</b></td>
+        <td style="text-align: center"><b>#</b></td>
+        <td><b>Nombre/Dirección/Descripción</b></td>
+        <td ng-hide="printView"><b>Del</b></td>
+        <td ng-show="printView" colspan="3"><b>Resultados</b></td>
 
       </tr>
     </thead>
@@ -61,7 +70,7 @@
         <td ng-hide="printView" class="item item-bdry">{{item.bdry.substr(7)}}</td>
         <!--Marker-->
         <td ng-click="itemMkrClick($index)" class="item item-mkr bold">{{item.mkrNo}}
-          <span ng-hide="item.pt || !item.mkrNo">?</span></td>
+          <span ng-hide="item.pt != [] || !item.mkrNo">?</span></td>
         <!--dNam-->
         <td class="item item-dNam">
           <span>{{item.dNam}}</span>

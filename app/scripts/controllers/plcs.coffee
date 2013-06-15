@@ -61,33 +61,44 @@ angular.module('ofApp').controller('PlcsCtrl', \
         crherbsbr:
                                 [{nam: 'Main', zoom:15, llCenter: '9.971071018203258,-84.15988136869173', mapTypeId: 'hybrid'}]
         crherbsbrr01:
-                                [{nam: 'Main', zoom:17, llCenter: '9.973437968382253,-84.16134049039584', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:17, llCenter: '9.973437968382253,-84.16134049039584', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr02:
-                                [{nam: 'Main', zoom:17, llCenter: '9.97349638016292,-84.16631358847928', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:17, llCenter: '9.97349638016292,-84.16631358847928', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr03:
-                                [{nam: 'Main', zoom:18, llCenter: '9.973667700855833,-84.16967939293744', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:18, llCenter: '9.973667700855833,-84.16967939293744', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr04:
-                                [{nam: 'Main', zoom:18, llCenter: '9.971095930944049,-84.16924278118506', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:18, llCenter: '9.971095930944049,-84.16924278118506', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr05:
-                                [{nam: 'Main', zoom:18, llCenter: '9.97113872118877,-84.16887763435983', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:18, llCenter: '9.97113872118877,-84.16887763435983', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr06:
-                                [{nam: 'Main', zoom:18, llCenter: '9.96906003005786,-84.16883676999466', mapTypeId: 'hybrid'},
+                                [{nam: 'Main', zoom:18, llCenter: '9.96906003005786,-84.16883676999466', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]},
                                 {nam: 'E', zoom:19, llCenter: '9.969028329520771,-84.16865974419967', mapTypeId: 'hybrid'},
                                 {nam: 'W', zoom:19, llCenter: '9.969178907047947,-84.16866779082672', mapTypeId: 'hybrid'}]
         crherbsbrr07:
-                                [{nam: 'Main', zoom:18, llCenter: '9.967435883191067,-84.16807573414316', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:18, llCenter: '9.967435883191067,-84.16807573414316', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr08:
-                                [{nam: 'Main', zoom:18, llCenter: '9.967593806754337,-84.16492581199572', mapTypeId: 'hybrid'}]
+                                [{nam: 'Main', zoom:18, llCenter: '9.967593806754337,-84.16492581199572', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]}]
         crherbsbrr09:
-                                [{nam: 'Main', zoom:18, llCenter: '9.969137449721174,-84.16503919625961', mapTypeId: 'hybrid'},
+                                [{nam: 'Main', zoom:18, llCenter: '9.969137449721174,-84.16503919625961', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]},
                                 {nam: 'NE', zoom:19, llCenter: '9.969412187521936,-84.1647307422229', mapTypeId: 'hybrid'},
                                 {nam: 'SW', zoom:19, llCenter: '9.968801952286398,-84.1655944135257', mapTypeId: 'hybrid'}]
         crherbsbrr10:
-                                [{nam: 'Main', zoom:18, llCenter: '9.970525510722636,-84.16511999919874', mapTypeId: 'hybrid'},
+                                [{nam: 'Main', zoom:18, llCenter: '9.970525510722636,-84.16511999919874', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]},
                                 {nam: 'NW', zoom:19, llCenter: '9.970512302225993,-84.1655813391493', mapTypeId: 'hybrid'},
                                 {nam: 'E', zoom:19, llCenter: '9.970916482013722,-84.16447090461713', mapTypeId: 'hybrid'}]
         crherbsbrr11:
-                                [{nam: 'Main', zoom:18, llCenter: '9.970053746032534,-84.16725222757447', mapTypeId: 'hybrid'},
+                                [{nam: 'Main', zoom:18, llCenter: '9.970053746032534,-84.16725222757447', mapTypeId: 'hybrid', \
+                                    notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]},
                                 {nam: 'N', zoom:19, llCenter: '9.970510760384416,-84.16725222757447', mapTypeId: 'hybrid'},
                                 {nam: 'S', zoom:19, llCenter: '9.969612581282494,-84.16717712572205', mapTypeId: 'hybrid'}]
 
@@ -180,7 +191,6 @@ angular.module('ofApp').controller('PlcsCtrl', \
 #        args.pp = $routeParams.pp || 200
         Plcs.getList(args) \
             .then ((items) ->
-#
                 mkrNo = 1
                 for item, i in items._items
                     items._items[i].patch = $scope.patch
@@ -191,12 +201,16 @@ angular.module('ofApp').controller('PlcsCtrl', \
                         items._items[i].mkrNo = mkrNo
                         mkrNo += 1
 
+
                     if item.pt and parseInt($routeParams.z, 10) > 16
 #                        items._items[i].mapMkr = gmap.addPlcMkr(map, item)
                         items._items[i].mapMkr = gmap.addPlcMkr(map, item)
 
 
                 $rootScope.items = $scope.items = items._items
+#                $scope.bdys[item.bdry].totalDoors = mkrNo - 1
+                $scope.bdy = $scope.bdyViews[item.bdry][0]
+                $scope.bdy.totalDoors = mkrNo - 1
 
                 $location.search 'q', $scope.q  if $scope.q
             ), errorCallback = ->

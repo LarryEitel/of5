@@ -81,7 +81,13 @@
             nam: 'Main',
             zoom: 17,
             llCenter: '9.973437968382253,-84.16134049039584',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr02: [
@@ -89,7 +95,13 @@
             nam: 'Main',
             zoom: 17,
             llCenter: '9.97349638016292,-84.16631358847928',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr03: [
@@ -97,7 +109,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.973667700855833,-84.16967939293744',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr04: [
@@ -105,7 +123,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.971095930944049,-84.16924278118506',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr05: [
@@ -113,7 +137,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.97113872118877,-84.16887763435983',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr06: [
@@ -121,7 +151,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.96906003005786,-84.16883676999466',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }, {
             nam: 'E',
             zoom: 19,
@@ -139,7 +175,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.967435883191067,-84.16807573414316',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr08: [
@@ -147,7 +189,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.967593806754337,-84.16492581199572',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }
         ],
         crherbsbrr09: [
@@ -155,7 +203,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.969137449721174,-84.16503919625961',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }, {
             nam: 'NE',
             zoom: 19,
@@ -173,7 +227,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.970525510722636,-84.16511999919874',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }, {
             nam: 'NW',
             zoom: 19,
@@ -191,7 +251,13 @@
             nam: 'Main',
             zoom: 18,
             llCenter: '9.970053746032534,-84.16725222757447',
-            mapTypeId: 'hybrid'
+            mapTypeId: 'hybrid',
+            notes: [
+              {
+                title: 'Direcciónes a este territorio',
+                note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'
+              }
+            ]
           }, {
             nam: 'N',
             zoom: 19,
@@ -311,6 +377,8 @@
             }
           }
           $rootScope.items = $scope.items = items._items;
+          $scope.bdy = $scope.bdyViews[item.bdry][0];
+          $scope.bdy.totalDoors = mkrNo - 1;
           if ($scope.q) {
             return $location.search('q', $scope.q);
           }

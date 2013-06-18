@@ -602,7 +602,7 @@
         var Plc, confirmMove, data, errorCallback, itemFrom, itemPrevious, newValueForPrevious_w;
 
         confirmMove = confirm('Move up?');
-        if (confirmMove) {
+        if (!confirmMove) {
           return;
         }
         itemFrom = $scope.items[$index];
@@ -765,6 +765,7 @@
         $scope.mode = 'Update';
         Plc = Restangular.one('plcs', $routeParams.id);
         Plc.get().then((function(item) {
+          $scope.etag = item.etag;
           $scope.dNam = item.dNam;
           $scope.item = {};
           $scope.item._id = item._id || null;
@@ -803,7 +804,7 @@
         }
       };
       $scope.save = function(item) {
-        var Plcs, data;
+        var Plcs, data, error, headers;
 
         data = {};
         console.log('save');
@@ -817,7 +818,12 @@
           });
         } else {
           if (typeof item.tags !== 'undefined' && item.tags > '') {
-            item.tags = item.tags.split(',');
+            try {
+              item.tags = item.tags.split(',');
+            } catch (_error) {
+              error = _error;
+              console.log('spit error');
+            }
           } else {
             item.tags = [];
           }
@@ -835,6 +841,9 @@
               }
             }
           });
+          headers = {
+            'If-Match': $scope.etag
+          };
           return Plc.customPUT(null, null, null, data).then((function(itemUpdated) {
             return window.location.href = '#' + $rootScope.returnRoute;
           }), errorCallback = function() {

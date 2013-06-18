@@ -430,7 +430,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
     $scope.moveUp = ($index) ->
         confirmMove = confirm('Move up?')
-        if confirmMove
+        if !confirmMove
             return
         # clone some details from the item the user clicked the Plus (Insert) Icon
         itemFrom = $scope.items[$index]
@@ -608,6 +608,7 @@ angular.module('ofApp').controller('PlcFormCtrl', \
         $scope.mode = 'Update'
         Plc = Restangular.one('plcs', $routeParams.id)
         Plc.get().then ((item) ->
+            $scope.etag = item.etag
             $scope.dNam = item.dNam
             $scope.item = {}
             $scope.item._id = item._id or null
@@ -650,11 +651,17 @@ angular.module('ofApp').controller('PlcFormCtrl', \
             ), errorCallback = ->
                 console.log 'Oops error from server :('
 
+
         else
 #            if typeof(item.typ) isnt 'undefined' and item.typ > ''
 #                item.typ
+
             if typeof(item.tags) isnt 'undefined' and item.tags > ''
-                item.tags = item.tags.split(',')
+                try
+                    item.tags = item.tags.split(',')
+                catch error
+                    console.log 'spit error'
+
             else
                 item.tags = []
 #            if 'undefined' isnt item.lng and 'undefined' isnt item.lat
@@ -673,10 +680,13 @@ angular.module('ofApp').controller('PlcFormCtrl', \
                 $set:
                     flds: item
             )
+            headers = {'If-Match': $scope.etag}
+#            headers = {'ETag': $scope.etag, 'If-Match': $scope.etag}
             Plc.customPUT(null, null, null, data).then ((itemUpdated) ->
                 window.location.href = '#' + $rootScope.returnRoute
             ), errorCallback = ->
                 console.log 'Oops error from server :('
+
 
 
     $scope.abandonChanges = ->

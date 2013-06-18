@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c88-3648-40c7-a7f5-be0721b84622" name="Default" comment="yaml schemas etc">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/app/scripts/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/plcs.html" afterPath="$PROJECT_DIR$/app/views/plcs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/plcs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/restangular/src/restangular.js" afterPath="$PROJECT_DIR$/app/components/restangular/src/restangular.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/scratch.css" afterPath="$PROJECT_DIR$/app/css/scratch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="of5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +20,7 @@
     <file path="/plcs.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371332587328" ignored="false" />
     <file path="/a.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370495226921" ignored="false" />
     <file path="/a.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369260919125" ignored="false" />
-    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371245087218" ignored="false" />
+    <file path="/Dummy.txt" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371579046123" ignored="false" />
     <file path="/.gitignore" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369511053857" ignored="false" />
     <file path="/ModelCore.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1369244239866" ignored="false" />
     <file path="/a.html" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370182905726" ignored="false" />
@@ -172,8 +175,8 @@
     <file path="/map.css" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371153315810" ignored="false" />
     <file path="/angular-google-maps.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370453316093" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/restangular/dist/dependencies/angular.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370472917940" ignored="false" />
-    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371155318864" ignored="false" />
-    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371332999558" ignored="false" />
+    <file path="/app.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371592139565" ignored="false" />
+    <file path="/plcs.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1371596630622" ignored="false" />
     <file path="/map.coffee" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370497385331" ignored="false" />
     <file path="$PROJECT_DIR$/dist/components/modernizr/test/js/unit-caniuse.js" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370638675575" ignored="false" />
     <file path="$PROJECT_DIR$/data/mdls-models.json" changelist="53861c88-3648-40c7-a7f5-be0721b84622" time="1370791447700" ignored="false" />
@@ -207,21 +210,9 @@
       <file leaf-file-name="plcs.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="21" selection-start="5324" selection-end="5324" vertical-scroll-proportion="-0.06521739">
+            <state line="432" column="12" selection-start="21161" selection-end="21161" vertical-scroll-proportion="0.4641089">
               <folding>
-                <element signature="e#14380#15879#0" expanded="false" />
-                <element signature="e#15916#17024#0" expanded="false" />
-                <element signature="e#17065#17500#0" expanded="false" />
-                <element signature="e#18256#19498#0" expanded="false" />
-                <element signature="e#19562#19743#0" expanded="false" />
-                <element signature="e#19944#21073#0" expanded="false" />
-                <element signature="e#21115#22435#0" expanded="false" />
-                <element signature="e#22483#23246#0" expanded="false" />
-                <element signature="e#23276#23533#0" expanded="false" />
-                <element signature="e#23575#23977#0" expanded="false" />
-                <element signature="e#24323#25797#0" expanded="false" />
-                <element signature="e#25855#26935#0" expanded="false" />
-                <element signature="e#28273#28640#0" expanded="false" />
+                <element signature="e#22484#23247#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -239,7 +230,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="47" selection-start="2897" selection-end="2897" vertical-scroll-proportion="-39.23077">
+            <state line="60" column="47" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -248,14 +239,8 @@
       <file leaf-file-name="plcs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="38" selection-start="3516" selection-end="3516" vertical-scroll-proportion="-8.038462">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="75" column="38" selection-start="3516" selection-end="3516" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -263,7 +248,7 @@
       <file leaf-file-name="plc-form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/plc-form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="354" selection-end="354" vertical-scroll-proportion="-5.230769">
+            <state line="8" column="30" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -272,7 +257,7 @@
       <file leaf-file-name="scratch.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/css/scratch.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+            <state line="42" column="22" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -290,7 +275,7 @@
       <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="391" column="0" selection-start="13915" selection-end="13915" vertical-scroll-proportion="-10.1">
+            <state line="400" column="0" selection-start="14213" selection-end="14213" vertical-scroll-proportion="-7.0">
               <folding />
             </state>
           </provider>
@@ -324,20 +309,19 @@
         <option value="$PROJECT_DIR$/app/css/map.css" />
         <option value="$PROJECT_DIR$/app/views/partials/home.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/views/plc-form.html" />
         <option value="$PROJECT_DIR$/app/css/print.css" />
-        <option value="$PROJECT_DIR$/app/css/scratch.css" />
         <option value="$PROJECT_DIR$/app/views/plcs.html" />
+        <option value="$PROJECT_DIR$/app/css/scratch.css" />
+        <option value="$PROJECT_DIR$/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/plcs.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="6" />
-    <option name="width" value="1686" />
-    <option name="height" value="993" />
+    <option name="y" value="24" />
+    <option name="width" value="1196" />
+    <option name="height" value="1019" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -444,7 +428,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,8 +446,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="of5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plcs.coffee" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -477,8 +491,8 @@
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-app" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="localhost9000" serverId="2b31a5f1-1151-4285-99f4-cfb4076afa44">
     <servers>
@@ -647,18 +661,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="6" width="1686" height="993" extended-state="0" />
+    <frame x="0" y="24" width="1196" height="1019" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15640394" sideWeight="0.6782713" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22663139" sideWeight="0.680916" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3217287" sideWeight="0.9983593" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31908396" sideWeight="0.9983593" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -738,7 +752,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -769,14 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/css/map.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="16" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0" />
+        <state line="18" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/home.html">
@@ -786,14 +793,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plc-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="354" selection-end="354" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="391" column="0" selection-start="13915" selection-end="13915" vertical-scroll-proportion="-10.1">
+        <state line="8" column="30" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -814,48 +814,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="47" selection-start="2897" selection-end="2897" vertical-scroll-proportion="-39.23077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/scratch.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+        <state line="60" column="47" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/plcs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="38" selection-start="3516" selection-end="3516" vertical-scroll-proportion="-8.038462">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="75" column="38" selection-start="3516" selection-end="3516" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/scratch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="22" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="839" column="17" selection-start="31269" selection-end="31273" vertical-scroll-proportion="0.33288044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="400" column="0" selection-start="14213" selection-end="14213" vertical-scroll-proportion="-7.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/plcs.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="21" selection-start="5324" selection-end="5324" vertical-scroll-proportion="-0.06521739">
+        <state line="432" column="12" selection-start="21161" selection-end="21161" vertical-scroll-proportion="0.4641089">
           <folding>
-            <element signature="e#14380#15879#0" expanded="false" />
-            <element signature="e#15916#17024#0" expanded="false" />
-            <element signature="e#17065#17500#0" expanded="false" />
-            <element signature="e#18256#19498#0" expanded="false" />
-            <element signature="e#19562#19743#0" expanded="false" />
-            <element signature="e#19944#21073#0" expanded="false" />
-            <element signature="e#21115#22435#0" expanded="false" />
-            <element signature="e#22483#23246#0" expanded="false" />
-            <element signature="e#23276#23533#0" expanded="false" />
-            <element signature="e#23575#23977#0" expanded="false" />
-            <element signature="e#24323#25797#0" expanded="false" />
-            <element signature="e#25855#26935#0" expanded="false" />
-            <element signature="e#28273#28640#0" expanded="false" />
+            <element signature="e#22484#23247#0" expanded="false" />
           </folding>
         </state>
       </provider>

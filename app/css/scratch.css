@@ -40,5 +40,6 @@ div.bdyNotes {
 }
 .bdyNotes p {
     width: 100%;
+    line-height: 12px;
     font-size: 10px;
 }

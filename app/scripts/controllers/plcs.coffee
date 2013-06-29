@@ -17,7 +17,6 @@ angular.module('ofApp').controller('PlcsCtrl', \
         ($rootScope, $scope, $location, $routeParams, $cookies, \
          Restangular, $timeout, $log, $anchorScroll, GoogleMap) ->
 
-
     # --------------- should pass in options
     gmap = GoogleMap
     googleMaps = google.maps
@@ -101,6 +100,17 @@ angular.module('ofApp').controller('PlcsCtrl', \
                                     notes: [{title: 'Direcciónes a este territorio', note: 'saliendo del Salon del Reino de los Testigos de Jehovah, dobla  a la derecha y continuar al sur 600 mtrs, al final de la calle dobla a la izquierda,  en el primer semaforo dobla a la derecha, continuar hasta que llegar a la entradad de Bosques de Dona Rosa y entrar doblando a la derecha, coja la proxima derecha y la primera casa esta 100 metros mano izquierda'}]},
                                 {nam: 'N', zoom:19, llCenter: '9.970510760384416,-84.16725222757447', mapTypeId: 'hybrid'},
                                 {nam: 'S', zoom:19, llCenter: '9.969612581282494,-84.16717712572205', mapTypeId: 'hybrid'}]
+
+#    console.log '$rootScope.tkn', $rootScope.tkn
+#    LoggedInRestangular.service.init($rootScope.tkn)
+#    Bdys = LoggedInRestangular.all('bdys')
+#    Plcs = LoggedInRestangular.all('plcs')
+#
+#    LoggedInRestangular = Restangular.withConfig((restangularConfigurer) ->
+#            restangularConfigurer.setDefaultHeaders {'Authorization':'Basic admin@orgtec.com:eeee'}
+#    )
+#    Bdys = LoggedInRestangular.all('bdys')
+#    Plcs = LoggedInRestangular.all('plcs')
 
     Bdys = Restangular.all('bdys')
     Plcs = Restangular.all('plcs')
@@ -189,7 +199,9 @@ angular.module('ofApp').controller('PlcsCtrl', \
         args.where = JSON.stringify(whereParts)  if whereParts
         args.sort = $routeParams.sort  if $routeParams.sort
 #        args.pp = $routeParams.pp || 200
-        Plcs.getList(args) \
+
+#        Plcs.customGETLIST(args, {'Authentication-Token':'three'}, {'Authentication-Token':'two'}) \
+        Plcs.getList(args, {'Authentication-Token': $rootScope.tkn}) \
             .then ((items) ->
                 mkrNo = 1
                 for item, i in items._items
@@ -277,7 +289,7 @@ angular.module('ofApp').controller('PlcsCtrl', \
 
 
     $scope.loadBdys = ->
-        Bdys.getList({sort:'typ,slug'})
+        Bdys.getList({sort:'typ,slug'}, {'Authentication-Token': $rootScope.tkn})
             .then ((items) ->
                 bdys = {}
                 filtBdys = []
@@ -310,10 +322,8 @@ angular.module('ofApp').controller('PlcsCtrl', \
             ), errorCallback = ->
                 console.log 'Oops error from server :('
 
-
-
     $scope.loadBdyPolys = ->
-        Bdys.getList()
+        Bdys.getList(null, {'Authentication-Token': $rootScope.tkn})
             .then ((items) ->
                 bdys = {}
                 for item, i in items._items

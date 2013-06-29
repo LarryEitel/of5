@@ -382,40 +382,53 @@ angular.module 'ofApp', ['restangular', 'ngCookies', 'ui.bootstrap']
 #       .otherwise({redirectTo: '/'});
 #   });
 angular.module('ofApp').config ['$httpProvider', ($httpProvider) ->
-    $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx'
+#    $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx'
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
     return $httpProvider.defaults.headers.post['Content-Type']
 ]
 angular.module('ofApp').config ['RestangularProvider', (RestangularProvider) ->
 #    RestangularProvider.setBaseUrl 'http://exi.xchg.com/api'
-    RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
+    RestangularProvider.setBaseUrl('http://localhost:5000/api')
 
 
     # what's this
     RestangularProvider.setListTypeIsArray false
 
-    RestangularProvider.setResponseExtractor (response, operation, what) ->
-        localStorage.setItem 'lsuser', JSON.stringify(response._items[0])  \
-            if what is 'users' and operation is 'getList'
-        response
+#    RestangularProvider.setResponseExtractor (response, operation, what) ->
+#        response
 
-#    RestangularProvider.setRequestInterceptor ( element, operation, route, url) ->
-#        if operation == 'put'
-#            console.log 'requestintercept'
-##            element.actions = '{$set:{flds:{nam:"Larry"}}}'
-##            delete element.id
-#
-#        return element
+    RestangularProvider.setRequestInterceptor ( element, operation, route, url) ->
+        if operation == 'put'
+            console.log 'requestintercept'
+#            element.actions = '{$set:{flds:{nam:"Larry"}}}'
+#            delete element.id
+
+        return element
 
 ]
+#angular.module('ofApp').factory 'LoggedInRestangular', ['$rootScope', 'Restangular', ($rootScope, Restangular) ->
+#    Restangular.withConfig ($rootScope, RestangularConfigurer) ->
+#        RestangularConfigurer.setDefaultHeaders {'Authorization':'Basic admin@orgtec.com:xxxxxx'}
+#]
+#
+#angular.module('ofApp').factory 'LoggedInRestangular', (Restangular) ->
+#    service = {}
+#    instance = null
+#    service.init = (tkn) ->
+#        instance = Restangular.init()
+#    service.get = ->
+#        instance
+#
+#    service
 
 angular.module('ofApp').config ['$routeProvider', '$locationProvider', '$httpProvider',
     ($routeProvider, $locationProvider, $httpProvider) ->
         access = routingConfig.accessLevels
+        console.log 'routeConfig', access
         $routeProvider.when '/plcs',
             templateUrl: 'views/plcs.html'
             controller: 'PlcsCtrl'
-            access: access.anon
+            access: access.user
 
         $routeProvider.when '/plc/:id/edit',
             templateUrl: 'views/plc-form.html'
@@ -515,7 +528,7 @@ angular.module('ofApp')
     ]
 
 angular.module('ofApp')
-    .run ($rootScope, $location, $routeParams, Auth) ->
+    .run ['$rootScope', '$location', '$routeParams', 'Auth', ($rootScope, $location, $routeParams, Auth) ->
         $rootScope.currBdy = {}
         $rootScope.title = ''
         $rootScope.$on '$routeChangeSuccess', (event, next, current) ->
@@ -523,14 +536,15 @@ angular.module('ofApp')
             $rootScope.title = $location.$$search.title
 
         $rootScope.$on '$routeChangeStart', (event, next, current) ->
-
+            console.log 'next', next
             $rootScope.error = null
-
-            #          console.log($location.$$url);
-            #          $location.path($location.$$url);
-            #        } else {
-            $location.path '/login'  \
-                unless Auth.isLoggedIn()  \
-                unless Auth.authorize(next.access)
+            unless Auth.authorize(next.access)
+                if Auth.isLoggedIn()
+                    console.log '$routeChangeStart. isLogged in'
+#                    $location.path "/"
+                else
+                    $location.path "/login"
 
         $rootScope.appInitialized = true
+
+    ]

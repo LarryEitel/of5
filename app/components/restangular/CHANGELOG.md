@@ -1,3 +1,57 @@
+#1.0.2
+* First final release
+* Added `one` and `all` to all collection methods
+* Added `fullResponse` for getting the full `$http` response in every call
+* Improved documentation on `addElemTransformer`
+* Configuration can be set globally on either `RestangularProvider` or `Restangular`
+
+#0.8.9
+* Fix call to `isOverridenMethod` in `setMethodOverriders`.
+
+#0.8.8
+* Removed extra trailling slash for elements without ID. Thanks @cboden
+
+#0.8.7
+* Bugfix for Refactor
+
+#0.8.6
+* Ditched the buggy `$resource` and using `$http` inside :D
+
+#0.8.4
+* Fixed bug with defaultHttpFields for scoped configuration
+* Added `defaultHeaders`
+
+#0.8.3
+* Fixed bug with URLHandler. Now it uses local configuration as well
+* Added error interceptor
+* Fixed minor bugs
+
+
+#0.8.0
+* Big refactor to use scoped configurations
+
+#0.7.3
+* All configuration can be done via either `Restangular` or `RestangularProvider`
+* url field now is called getRestangularUrl
+* `id` configuration from `restangularFields` now accepts nested (dotted) properties
+
+#0.7.1
+* Added `defaultRequestParams` to set default request query parameters
+
+#0.7.0
+* RequestInterceptor wasn't being called in getList
+* Removed extra `/` when no restangularWhat is provided. This is fixed by Angular's team since version 1.1.5 but this fixes it for all versions including 1.0.X
+* Added documentation for supported AngularJS versions
+* Added url method to elements which returns the URL of the current object
+
+# 0.6.9
+* Wrapping everything in an anonymous self executed function to not expose anything
+
+# 0.6.7
+* Bug fix for a regresion error using _.omit
+* Added element transformers to transform any Restangularized element.
+* Added putElement method to collection to put a certain element at an index and return a promise of the updated array.
+
 # 0.6.5
 * Added `Restangular.copy` for copying objects
 

@@ -359,7 +359,9 @@
         if ($routeParams.sort) {
           args.sort = $routeParams.sort;
         }
-        return Plcs.getList(args).then((function(items) {
+        return Plcs.getList(args, {
+          'Authentication-Token': $rootScope.tkn
+        }).then((function(items) {
           var item, mkrNo, _i, _len, _ref;
 
           mkrNo = 1;
@@ -457,6 +459,8 @@
 
         return Bdys.getList({
           sort: 'typ,slug'
+        }, {
+          'Authentication-Token': $rootScope.tkn
         }).then((function(items) {
           var bdy, bdys, filtBdys, i, item, _i, _len, _ref;
 
@@ -498,7 +502,9 @@
       $scope.loadBdyPolys = function() {
         var errorCallback;
 
-        return Bdys.getList().then((function(items) {
+        return Bdys.getList(null, {
+          'Authentication-Token': $rootScope.tkn
+        }).then((function(items) {
           var bdy, bdys, i, item, _i, _len, _ref;
 
           bdys = {};

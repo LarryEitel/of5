@@ -78,6 +78,17 @@ module.exports = function(grunt) {
         singleRun: true,
         autoWatch: false
       },
+      travis: {
+        singleRun: true,
+        autoWatch: false,
+        browsers: ['Firefox']
+      },
+      travisUnderscore: {
+        singleRun: true,
+        autoWatch: false,
+        browsers: ['Firefox'],
+        configFile: 'karma.underscore.conf.js',
+      },
       buildUnderscore: {
         configFile: 'karma.underscore.conf.js',
         singleRun: true,
@@ -123,6 +134,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['bowerInstall', 'bower', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'zip']);
 
   grunt.registerTask('test', ['karma:build', 'karma:buildUnderscore']);
+  
+  grunt.registerTask('travis', ['karma:travis', 'karma:travisUnderscore']);
 
   // Provides the "bump" task.
   grunt.registerTask('bump', 'Increment version number', function() {
@@ -142,7 +155,7 @@ module.exports = function(grunt) {
       grunt.file.write(file, JSON.stringify(json, null, '  '));
     }
     updateFile('package.json');
-    updateFile('component.json');
+    updateFile('bower.json');
     grunt.log.ok('Version bumped to ' + version);
   });
 

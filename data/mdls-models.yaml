@@ -255,6 +255,9 @@ Email:
       dNam: Email Address
       desc: Email address.
       type: string
+    reg:
+      dNam: User Registration Email
+      type: boolean
 ListBase: # previous name embed
   meta:
     baseClass  : D

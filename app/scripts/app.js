@@ -369,7 +369,6 @@
 
   angular.module('ofApp').config([
     '$httpProvider', function($httpProvider) {
-      $httpProvider.defaults.headers.common.Authorization = 'Basic admin@orgtec.com:xxxxxx';
       $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
       return $httpProvider.defaults.headers.post['Content-Type'];
     }
@@ -377,13 +376,13 @@
 
   angular.module('ofApp').config([
     'RestangularProvider', function(RestangularProvider) {
-      RestangularProvider.setBaseUrl('http://localhost\\:5000/api');
+      RestangularProvider.setBaseUrl('http://localhost:5000/api');
       RestangularProvider.setListTypeIsArray(false);
-      return RestangularProvider.setResponseExtractor(function(response, operation, what) {
-        if (what === 'users' && operation === 'getList') {
-          localStorage.setItem('lsuser', JSON.stringify(response._items[0]));
+      return RestangularProvider.setRequestInterceptor(function(element, operation, route, url) {
+        if (operation === 'put') {
+          console.log('requestintercept');
         }
-        return response;
+        return element;
       });
     }
   ]);
@@ -393,10 +392,11 @@
       var access, interceptor;
 
       access = routingConfig.accessLevels;
+      console.log('routeConfig', access);
       $routeProvider.when('/plcs', {
         templateUrl: 'views/plcs.html',
         controller: 'PlcsCtrl',
-        access: access.anon
+        access: access.user
       });
       $routeProvider.when('/plc/:id/edit', {
         templateUrl: 'views/plc-form.html',
@@ -518,20 +518,27 @@
     }
   ]);
 
-  angular.module('ofApp').run(function($rootScope, $location, $routeParams, Auth) {
-    $rootScope.currBdy = {};
-    $rootScope.title = '';
-    $rootScope.$on('$routeChangeSuccess', function(event, next, current) {
-      $rootScope.currPath = $location.$$path;
-      return $rootScope.title = $location.$$search.title;
-    });
-    $rootScope.$on('$routeChangeStart', function(event, next, current) {
-      $rootScope.error = null;
-      if (!(!Auth.authorize(next.access) ? Auth.isLoggedIn() : void 0)) {
-        return $location.path('/login');
-      }
-    });
-    return $rootScope.appInitialized = true;
-  });
+  angular.module('ofApp').run([
+    '$rootScope', '$location', '$routeParams', 'Auth', function($rootScope, $location, $routeParams, Auth) {
+      $rootScope.currBdy = {};
+      $rootScope.title = '';
+      $rootScope.$on('$routeChangeSuccess', function(event, next, current) {
+        $rootScope.currPath = $location.$$path;
+        return $rootScope.title = $location.$$search.title;
+      });
+      $rootScope.$on('$routeChangeStart', function(event, next, current) {
+        console.log('next', next);
+        $rootScope.error = null;
+        if (!Auth.authorize(next.access)) {
+          if (Auth.isLoggedIn()) {
+            return console.log('$routeChangeStart. isLogged in');
+          } else {
+            return $location.path("/login");
+          }
+        }
+      });
+      return $rootScope.appInitialized = true;
+    }
+  ]);
 
 }).call(this);
